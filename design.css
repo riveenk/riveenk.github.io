@@ -338,7 +338,7 @@
 .body-header {
     margin: 0px;
     color: #1b1b32;
-    font-size: large;
+    font-size: x-large;
     margin-top: 8px;
     margin-bottom: 0;
 }
@@ -445,7 +445,7 @@
     flex-wrap: wrap;
     margin-bottom: 20px;
     width: 20vw;
-    min-width: 200px;
+    min-width: 250px;
     margin-left: auto;
     margin-right: auto;
 }
