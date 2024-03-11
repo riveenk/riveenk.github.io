@@ -1,0 +1,168 @@
+.message {
+    background-color: #ddd;
+    color: #555;
+    border-radius: 10px;
+    padding: 10px;
+    width: auto;
+    max-width: 70%;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+  .message-sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .message-body {
+    font-size: 0.9em;
+  }
+
+  .instagram-post {
+    width: 45%;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #15202b;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    height: auto;
+    min-width: 250px;
+  }
+
+  .profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+  }
+
+  .poster-name {
+    font-weight: bold;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: #fff;
+  }
+
+  .image-block {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider {
+    width: 200%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .slider img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.profile-info {
+    display: flex;
+    Flex: 1;
+    margin-bottom: 10px;
+}
+  .caption {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #eee;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    margin-top: 20px;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    color: #111;
+    font-family: georgia;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .notused {
+  	background-color: #FFFF00;
+  }
+  
+  .sounds{
+  	background-color: #30C5FF;
+  }
+
+  .box{
+    display: flex;
+    flex-wrap: wrap;
+  }
+.block{
+    background-color: #363457; 
+      padding: 20px;
+      width: 40%;
+      color: white;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 10px;
+      min-width: 300px;
+      color: #dedede;
+  }
+  
+  .block img{
+    width: 100%;
+      height: auto;
+  }
+  
+  .block p{
+    margin-top: 10px;
+      margin-bottom: 0px;
+  }
+  
+  .heading {
+    
+    font-size: large;
+      font-weight: bold;
+      color: white;
+  }
+  
+  .buttons{
+    margin-top: 10px;
+      display: flex;
+  }
+  
+  .buttons button{
+    padding: auto;
+      max-height: 50px;
+      height: 3em;
+      margin-right: 5px;
+      width: 50%;
+  }
+
+  .buttons a {
+    color: #111;
+    font-style: normal;
+    font-size: medium;
+    text-decoration: none;
+  }
+
+  .warning {
+    border: red;
+    border-radius: 10px;
+    font-size: small;
+    border-style: solid;
+    padding: 20px;
+  }

@@ -1,0 +1,33 @@
+OPEN CODE LICENSE for HTTPS://RIVEEN-PK.GITHUB.IO
+
+Copyright (c) 2024 - Present | Riveen Kumanayaka
+
+1) Permission is hereby granted:
+    a) Freely of Charge
+    b) To all users 
+2) In accordance with GitHub terms and conditions to:
+    a) View
+    b) Fork (Create your own copy of the repository within GitHub)
+    c) Suggest changes 
+        to the source code (Defined henceforth according to Section 4)
+3) And to:
+    a) Share copies free of Charge
+    b) Build-upon or create transformative works
+    c) Implement their own version on private or public networks
+4) Given that it only extends to the Source code. The "Source Code" refers to:
+    a) The .html file(s), .css file(s) and .js file(s)
+    b) Only inclusive of the strictly programmatic content
+    c) Excluding any and all content (creative or otherwise)
+        i) Example: <code> creative content </code>
+        ii) No content between programmatic tags are considered code, unless specifically and expressly indicated.
+    Separate licenses are indicated within the website's Copyright Page for the creative content.
+5) This license is subject to the following conditions:
+    a) Visible and unambigious attribution to the author including a link to https://riveen-pk.github.io
+        i) An example: Template by Riveen Kumanayaka
+        ii) The example is not authoritative and users are free to decide the nature given it adheres to the licence
+    b) The license is not and endorsement of the source code, nor does the author endorse your version(s)
+        i) No statements should be made stating or implying a business or otherwise relationship between you and the author.
+    c) The source code or your version(s) may not be sold or shared in exchange for any payment (of any shape or form).
+    d) Your version(s) may only be shared subject to the same  or a similar license. However, this may not:
+        i) Revoke the original author's right to be identified as the creator.
+        ii) Revoke users the right to to use, copy, modify, distribute within a private network as a minimum.
