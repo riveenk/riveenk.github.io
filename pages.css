@@ -13,10 +13,13 @@
   .message-sender {
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: auto;
+    text-align: left;
   }
 
   .message-body {
-    font-size: 0.9em;
+    font-size: auto;
+    text-align: left;
   }
 
   .instagram-post {
