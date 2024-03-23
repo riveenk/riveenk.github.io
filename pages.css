@@ -3,7 +3,7 @@
     color: #555;
     border-radius: 10px;
     padding: 10px;
-    width: auto;
+    width: medium;
     max-width: 70%;
     margin-bottom: 10px;
     margin-left: 10px;
@@ -13,7 +13,7 @@
   .message-sender {
     font-weight: bold;
     margin-bottom: 5px;
-    font-size: auto;
+    font-size: medium;
     text-align: left;
   }
 
