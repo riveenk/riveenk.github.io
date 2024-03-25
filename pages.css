@@ -169,3 +169,7 @@
     border-style: solid;
     padding: 20px;
   }
+
+  .about-me a {
+    text-decoration: none;
+  }
