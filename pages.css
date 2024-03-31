@@ -173,3 +173,25 @@
   .about-me a {
     text-decoration: none;
   }
+
+  .writings {
+    border: solid #000;
+	border-width: 2px;
+    padding: 10px 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+  .writings button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: solid #1b1b32;
+    background-color: #1b1b32;
+    color: #efefef;
+    font-weight: bold;
+    }
+    
+  .writings h3 {
+    line-height: 0.5em;
+    }
