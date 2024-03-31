@@ -195,3 +195,7 @@
   .writings h3 {
     line-height: 0.5em;
     }
+
+.writings w {
+    color: red;
+    }
