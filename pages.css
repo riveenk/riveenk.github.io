@@ -201,3 +201,26 @@
 .writings w {
     color: red;
     }
+
+	.redir-notice{
+    border: #2669eb solid 3px;
+    padding: 10px 20px;
+    font-size: large;
+    text-align: center;
+    border-radius: 10px; 
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    .redir-notice button {
+    border: #2669eb solid 3px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #2669eb;
+    color: white;
+    font-family: consolas;
+    font-weight: bold;
+    font-size: medium;
+    margin-bottom: 10px;
+    }
