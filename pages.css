@@ -226,3 +226,7 @@
     font-size: medium;
     margin-bottom: 10px;
     }
+
+    .redir-notice button:hover {
+	    cursor: pointer;
+    }
