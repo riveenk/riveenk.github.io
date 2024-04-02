@@ -5,7 +5,7 @@ function changeRedir() {
   redirect = false;
 }
 
-function redirect() {
+function redirecter() {
   if (redirect) {
     window.location.href = "https://www.instagram.com/photo.rpk/";
   }
