@@ -230,3 +230,22 @@
     .redir-notice button:hover {
 	    cursor: pointer;
     }
+
+            .indent {
+            margin-left: 40px;
+        }
+        .pat {
+            color: gray;
+        }
+        .pat-align {
+            text-align: center;
+            margin: auto;
+            width: 50%;
+        }
+        .pat-pair {
+            display: inline-block;
+        }
+        .dialogue {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+        }
