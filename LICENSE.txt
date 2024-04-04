@@ -22,7 +22,7 @@ Copyright (c) 2024 - Present | Riveen Kumanayaka
         ii) No content between programmatic tags are considered code, unless specifically and expressly indicated.
     Separate licenses are indicated within the website's Copyright Page for the creative content.
 5) This license is subject to the following conditions:
-    a) Visible and unambigious attribution to the author including a link to https://riveen-pk.github.io
+    a) Visible and unambigious attribution to the author including a link to https://riveenk.github.io
         i) An example: Template by Riveen Kumanayaka
         ii) The example is not authoritative and users are free to decide the nature given it adheres to the licence
     b) The license is not and endorsement of the source code, nor does the author endorse your version(s)
