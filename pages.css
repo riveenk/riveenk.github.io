@@ -251,3 +251,33 @@
     margin-left: 40px;
         }
 
+ .container {
+      display: inline-block;
+    }
+
+    .text {
+      display: inline-block;
+      margin-right: 10px; 
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+    }
+    .dropdown select:focus {
+      outline: none;
+    }
+    
+    .dropdown option {
+      padding: 10px;
+    }
