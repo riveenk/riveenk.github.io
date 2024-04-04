@@ -260,11 +260,11 @@
       margin-right: 10px; 
     }
     
-    .dropdown {
+    .searchDrop {
       position: relative;
       display: inline-block;
     }
-    .dropdown select {
+    .searchDrop select {
       appearance: none;
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -274,10 +274,10 @@
       background-color: #fff;
       cursor: pointer;
     }
-    .dropdown select:focus {
+    .searchDrop select:focus {
       outline: none;
     }
     
-    .dropdown option {
+    .searchDrop option {
       padding: 10px;
     }
