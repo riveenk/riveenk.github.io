@@ -33,3 +33,9 @@ script.src = 'https://cdn.ywxi.net/js/1.js';
 script.type = 'text/javascript';
 script.async = true;
 document.head.appendChild(script);
+
+// Function to add the correct JS file
+var script = document.createElement('script');
+script.src = '/func.js';
+script.type = 'text/javascript';
+document.head.appendChild(script);
