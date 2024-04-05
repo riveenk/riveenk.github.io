@@ -30,5 +30,6 @@ function hideDropdown() {
 // Function to add Trusted Site JS
 var script = document.createElement('script');
 script.src = 'https://cdn.ywxi.net/js/1.js';
+script.type = 'text/javascript';
 script.async = true;
 document.head.appendChild(script);
