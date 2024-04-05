@@ -11,6 +11,7 @@ function redirecter() {
   }
 }
 
+// Function for the dropdown of the nav bar to stay for a second
 var timeout;
 
 function showDropdown() {
@@ -25,3 +26,9 @@ function hideDropdown() {
         dropdownContent.style.display = "none";
     }, 1000);
 }
+
+// Function to add Trusted Site JS
+var script = document.createElement('script');
+script.src = 'https://cdn.ywxi.net/js/1.js';
+script.async = true;
+document.head.appendChild(script);
