@@ -281,3 +281,21 @@
     .searchDrop option {
       padding: 10px;
     }
+
+
+    .archive-post {
+    	width: 100%;
+        height: auto;
+        display: flex;
+        margin-top: 30px;
+        flex-wrap: wrap;
+
+    }
+    
+    .archive-data {
+    	min-width: 200px;
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 10px;
+        border: #1b1b32 2px solid;
+    }
