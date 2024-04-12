@@ -1,0 +1,153 @@
+.header {
+    background-color: brown;
+    margin-bottom: 0px;
+    padding: 20px;
+    color: antiquewhite;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 701px) {
+    .header-text {
+        margin-top: 40px;
+        margin-bottom: 0px;
+        margin-left: 20px;
+    }
+
+    .subheader-text {
+        margin-top: 5px;
+        font-weight: normal;
+        font-style: italic;
+        margin-left: 20px;
+    }
+
+    .nav {
+        background-color: goldenrod;
+        margin-top: 0px;
+        padding-left: 20px;
+    }
+
+    .nav button {
+        border: 0px;
+        background-color: goldenrod;
+        padding: 20px;
+        font-size: medium;
+    }
+
+    .content {
+        background-color: whitesmoke;
+        padding: 20px;
+        width: 75%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .header-text {
+        margin-top: 40px;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: larger;
+        text-align: center;
+    }
+
+    .subheader-text {
+        margin-top: 5px;
+        font-weight: normal;
+        font-style: italic;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: medium;
+        text-align: center;
+    }
+
+    .nav {
+        background-color: goldenrod;
+        margin-top: 0px;
+        padding-left: 20px;
+        align-content: center;
+    }
+
+    .nav button {
+        border: 0px;
+        background-color: goldenrod;
+        padding: 20px;
+        font-size: medium;
+    }
+
+    .content {
+        background-color: whitesmoke;
+        padding: 20px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+    }
+}
+
+.nav button:hover {
+    background-color: darkgoldenrod;
+    transition: ease-in-out;
+}
+
+@media screen and (min-width: 501px) {
+    .web-body {
+        background-color: antiquewhite;
+        width: calc(100%-40px);
+        height: max-content;
+        padding: 35px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header-text {
+        margin-top: 40px;
+        margin-bottom: 0px;
+        margin-left: 20px;
+        font-size: large;
+    }
+
+    .subheader-text {
+        margin-top: 5px;
+        font-weight: normal;
+        font-style: italic;
+        margin-left: 20px;
+        font-size: small;
+    }
+
+    .nav {
+        background-color: goldenrod;
+        margin-top: 0px;
+        padding-left: 20px;
+        overflow-x:scroll;
+    }
+
+    .nav button {
+        border: 0px;
+        background-color: goldenrod;
+        padding: 20px;
+        font-size: small;
+    }
+
+    .web-body {
+        background-color: antiquewhite;
+        width: calc(100%-40px);
+        height: max-content;
+        padding: 7px;
+    }
+
+    .content {
+        background-color: whitesmoke;
+        padding: 20px;
+        width: 80%;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        
+    }
+}
