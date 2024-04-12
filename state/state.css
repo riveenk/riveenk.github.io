@@ -41,7 +41,6 @@
         width: 75%;
         margin-left: auto;
         margin-right: auto;
-        display: flex;
     }
 }
 
@@ -85,7 +84,6 @@
         width: 90%;
         margin-left: auto;
         margin-right: auto;
-        display: flex;
     }
 }
 
@@ -97,8 +95,10 @@
 @media screen and (min-width: 501px) {
     .web-body {
         background-color: antiquewhite;
+        font-family: Arial, Helvetica, sans-serif;
         width: calc(100%-40px);
-        height: max-content;
+        height: 100%;
+        min-height: 50vh;
         padding: 35px;
     }
 }
@@ -107,15 +107,17 @@
     .header-text {
         margin-top: 40px;
         margin-bottom: 0px;
-        margin-left: 20px;
+        margin-left: auto;
+        margin-right: auto;
         font-size: large;
     }
 
     .subheader-text {
-        margin-top: 5px;
+        margin-top: 10px;
         font-weight: normal;
         font-style: italic;
-        margin-left: 20px;
+        margin-left: auto;
+        margin-right: auto;
         font-size: small;
     }
 
@@ -129,15 +131,21 @@
     .nav button {
         border: 0px;
         background-color: goldenrod;
-        padding: 20px;
+        padding-left: 7px;
+        padding-right: 7px;
+        padding-top: 15px;
+        padding-bottom: 15px;
         font-size: small;
     }
 
     .web-body {
         background-color: antiquewhite;
+        font-family: Arial, Helvetica, sans-serif;
         width: calc(100%-40px);
-        height: max-content;
+        height: 100%;
+        min-height: 50vh;
         padding: 7px;
+        font-size: small;
     }
 
     .content {
@@ -147,7 +155,67 @@
         margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
-        display: flex;
-        
+    }
+
+    .footer-items {
+        font-size: small;
     }
 }
+
+.footer {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: brown;
+    color: #ededed;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-heading {
+    color: #fff;
+}
+
+.footer-items {
+    width: calc(100%-40px);
+    height: max-content;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.a {
+    color: white;
+    font-style: normal;
+}
+
+.writings {
+    border: solid goldenrod;
+	border-width: 2px;
+    padding: 10px 20px;
+    width: 40%;
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    }
+    
+  .writings button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: solid brown;
+    background-color: brown;
+    color: #efefef;
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 100%;
+    }
+    
+  .writings h3 {
+    line-height: 0.5em;
+    }
+
+  .writings w {
+    color: red;
+    }
