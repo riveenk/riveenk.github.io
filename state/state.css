@@ -1,5 +1,5 @@
 .header {
-    background-color: brown;
+    background-color: #960018;
     margin-bottom: 0px;
     padding: 20px;
     color: antiquewhite;
@@ -23,21 +23,23 @@
     }
 
     .nav {
-        background-color: goldenrod;
+        background-color: #f4bf43;
         margin-top: 0px;
         padding-left: 20px;
     }
 
     .nav button {
         border: 0px;
-        background-color: goldenrod;
+        background-color: #f4bf43;
         padding: 20px;
         font-size: medium;
     }
 
     .content {
         background-color: whitesmoke;
-        padding: 20px;
+        padding: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
         width: 75%;
         margin-left: auto;
         margin-right: auto;
@@ -65,7 +67,7 @@
     }
 
     .nav {
-        background-color: goldenrod;
+        background-color: #f4bf43;
         margin-top: 0px;
         padding-left: 20px;
         align-content: center;
@@ -73,14 +75,14 @@
 
     .nav button {
         border: 0px;
-        background-color: goldenrod;
+        background-color: #f4bf43;
         padding: 20px;
         font-size: medium;
     }
 
     .content {
         background-color: whitesmoke;
-        padding: 20px;
+        padding: 30px;
         width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -88,7 +90,7 @@
 }
 
 .nav button:hover {
-    background-color: darkgoldenrod;
+    background-color: goldenrod;
     transition: ease-in-out;
 }
 
@@ -122,7 +124,7 @@
     }
 
     .nav {
-        background-color: goldenrod;
+        background-color: #f4bf43;
         margin-top: 0px;
         padding-left: 20px;
         overflow-x:scroll;
@@ -130,7 +132,7 @@
 
     .nav button {
         border: 0px;
-        background-color: goldenrod;
+        background-color: #f4bf43;
         padding-left: 7px;
         padding-right: 7px;
         padding-top: 15px;
@@ -150,11 +152,16 @@
 
     .content {
         background-color: whitesmoke;
-        padding: 20px;
+        padding: 30px;
         width: 80%;
         margin-top: 10px;
         margin-left: auto;
         margin-right: auto;
+        font-size: small;
+    }
+
+    .wiki-box {
+        font-size: small;
     }
 
     .footer-items {
@@ -164,7 +171,7 @@
 
 .footer {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: brown;
+    background-color: #960018;
     color: #ededed;
     padding-left: 20px;
     padding-right: 20px;
@@ -190,32 +197,56 @@
     font-style: normal;
 }
 
-.writings {
-    border: solid goldenrod;
-	border-width: 2px;
-    padding: 10px 20px;
-    width: 40%;
-    min-width: 200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    }
+.content hr {
+    color: #000;
+    margin-bottom: 40px;
+}
     
-  .writings button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: solid brown;
-    background-color: brown;
-    color: #efefef;
-    font-weight: bold;
-    margin-bottom: 5px;
-    width: 100%;
-    }
-    
-  .writings h3 {
+  .content h3 {
     line-height: 0.5em;
     }
 
-  .writings w {
+  .content a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .content a:hover {
+    color: #960018;
+  }
+
+  .content p {
+    margin-bottom: 40px;
+  }
+
+  .content w {
     color: red;
     }
+
+  .wiki-box {
+    background-color: #bbb;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(100%-60px);
+  }
+
+  .wiki-box p {
+    margin-bottom: 10px;
+  }
+
+  .wiki-box div {
+    width: 48%;
+    border: #000 solid;
+    margin-right: auto;
+    margin-left: auto;
+
+  }
+
+  .wiki-box div img {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
