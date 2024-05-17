@@ -9,19 +9,10 @@
     <script src="/func.js"></script>
 </head>
 <body>
-    <div class="header">
-        <div>
-            <h1 class="header-text">Lord's Kingdom of Scalmropia</h1>
-            <h3 class="subheader-text">Maintained by the Ministry of State Affairs on behalf of Our Lord Creator, and His Majesty the King.</h3>
-        </div>
-    </div>
-    <div class="nav">
-        <a href="/page/stories-poems.html"><button>Back</button></a>
-        <a href="/state/index.html"><button>Home</button></a>
-        <a href="/state/tales.html"><button>Tales</button></a>
-        <a href="/state/world.html"><button>World</button></a>
-        <a href="https://scalmropia.tumblr.com/"><button>Media</button></a>
-    </div>
+    <script> 
+        document.body.appendChild(headerDivSc);
+        document.body.appendChild(navDivSc);
+    </script>
     <div class="web-body">
         <div class="content">
             <h2>Tales From Scalmropia</h2>
@@ -30,17 +21,12 @@
             <h3> <a href='/publications/pollys-revenge.html'> Polly's Revenge </a></h3>
             <p> Short Story: A mysterious typewriter appears at heartbroken Polly's door step. When it is revealed that the typewriter grants wishes, Polly decides that this new found power is perfect for exacting revenge. <w> Warning: Graphic storytelling - Not suitable for some audiences. </w> </p>
             <hr>
-            
-
         </div>
     </div>
 
-    <div class="footer">
-        <div class="footer-items">
-            <a href="/page/notice.html" class="a"> Terms and Conditions </a> | 
-            <a href="/page/contact-us.html" class="a">Inquiries</a> |
-            <a href="/page/copyright.html" class="a">© Government of Scalmropia </a>
-        </div>
-    </div>
+    <script>
+        footerDivSc.appendChild(footerItemsDivSc);
+        document.body.appendChild(footerDivSc);
+    </script>
 
 </body>
