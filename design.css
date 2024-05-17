@@ -35,12 +35,16 @@
         font-family: Arial, Helvetica, sans-serif;
         display: inline-block;
         color: #fff;
+        background-color: #363457;
         width: fit-content;
         margin-right: 0px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        padding: 10px;
+        padding: 20px;
         font-size: medium;
+        border-style: none;
+    }
+
+    .nav-items:hover {
+        background-color: #2a2842;
     }
 
     .nav{
@@ -52,7 +56,8 @@
     padding: 0px;
     padding-left: 70px;
     margin: 0px;
-    width: 100%; }
+    width: 100%;
+    }
 
     .dropdown {
         display: inline;
@@ -62,17 +67,6 @@
             width: fit-content;
             margin-right: 0px;
             font-size: medium;
-      }
-
-      .dropbtn {
-        font-size: medium;  
-        border: none;
-        outline: none;
-        color: white;
-        padding: 14px 16px;
-        background-color: inherit;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
       }
 }
 
@@ -111,6 +105,7 @@
         display: inline-block;
         font-size: small;
         color: #fff;
+        background-color: #363457;
         width: fit-content;
         margin-right: 00px;
         margin-top: 10px;
@@ -308,6 +303,7 @@
         padding-bottom: 30px;
         width: 50vw;
         height: auto;
+        text-align: justify;
     }
 }
 
@@ -322,6 +318,7 @@
         width: 100%;
         height: auto;
 	font-size: small;
+    text-align: justify;
     }
 
     .web-body {
