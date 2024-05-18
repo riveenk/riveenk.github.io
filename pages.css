@@ -123,6 +123,7 @@
       margin-bottom: 10px;
       min-width: 200px;
       color: #dedede;
+      text-align: left;
   }
   
   .block img{
@@ -132,7 +133,7 @@
   
   .block p{
     margin-top: 10px;
-      margin-bottom: 0px;
+      margin-bottom: 10px;
   }
   
   .heading {
@@ -140,6 +141,7 @@
     font-size: large;
       font-weight: bold;
       color: white;
+      margin-top: 10px;
   }
   
   .buttons{
@@ -194,14 +196,53 @@
     margin-bottom: 5px;
     width: 100%;
     }
-    
+
+  .writings button:hover  {
+    background-color: #fff;
+    color: #1b1b32;
+  } 
+
   .writings h3 {
     line-height: 1.2em;
     }
 
-.writings w {
+  .writings w {
     color: red;
     }
+
+
+    .writingsSc {
+      border: solid #960018;
+    border-width: 2px;
+      padding: 10px 20px;
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      background-color: antiquewhite;
+      }
+      
+    .writingsSc button {
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: solid #960018;
+      background-color: #960018;
+      color: #efefef;
+      font-weight: bold;
+      margin-bottom: 5px;
+      width: 100%;
+      }
+  
+    .writingsSc button:hover  {
+      background-color: antiquewhite;
+      color: #960018;
+    } 
+  
+    .writingsSc h3 {
+      line-height: 1.2em;
+      }
+
 
 	.redir-notice{
     border: #2669eb solid 3px;
