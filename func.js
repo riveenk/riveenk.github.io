@@ -144,6 +144,7 @@ const navLinksSc = [
   { text: "Back", href: "/page/stories-poems.html" },
   { text: "Home", href: "/state/index.html" },
   { text: "Tales", href: "/state/tales.html" },
+  { text: "ID/ Visa", href: "/state/documents.html" },
   { text: "World", href: "/state/world.html" },
   { text: "Media", href: "https://scalmropia.tumblr.com/" }
 ];
@@ -224,3 +225,29 @@ script.src = 'https://cdn.ywxi.net/js/1.js';
 script.type = 'text/javascript';
 script.async = true;
 document.head.appendChild(script);
+
+// Adding the meta data
+// meta charset="UTF-8">
+// <meta name="description" content="Free Web tutorials">
+// <meta name="keywords" content="HTML, CSS, JavaScript">
+// <meta name="author" content="John Doe">
+// <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+var metaOne = document.createElement('meta');
+metaOne.charset = "UTF-8";
+document.head.appendChild(metaOne);
+
+var metaTwo = document.createElement('meta');
+metaTwo.name = "description";
+metaTwo.content = "A random blogger with too much free time.";
+document.head.appendChild(metaTwo);
+
+var metaThree = document.createElement('meta');
+metaThree.name = "keywords";
+metaThree.content = "Riveen, Riveen Kumanayaka, Blogger, Student, Random, Sri Lankan, Sinhala, Debating, Astronomy, Teaching, Poetry, Prose";
+document.head.appendChild(metaThree);
+
+var metaFour = document.createElement('meta');
+metaFour.name = "author";
+metaFour.content = "Riveen Kumanayaka";
+document.head.append(metaFour);
