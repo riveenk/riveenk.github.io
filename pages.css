@@ -341,3 +341,19 @@
         padding-right: 10px;
         border: #1b1b32 2px solid;
     }
+
+  .terms {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    width: 80%;
+    background-color: rgb(255, 247, 237);
+  }
+
+  .terms th{
+    background-color: antiquewhite;
+    font-size: medium;
+  }
+
+  .terms td {
+    text-align: left;
+  }
