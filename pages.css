@@ -227,6 +227,12 @@
       width: 100%; /* Full width on smaller screens */
       padding: 15px; /* Reduced padding for smaller screens */
     }
+    .writings h3 {
+      font-size: 14px;
+    }
+    .writings p {
+      font-size: 11px;
+    }
   }
   
     
