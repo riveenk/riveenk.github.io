@@ -178,38 +178,50 @@
 
   .writings {
     border: solid #000;
-	border-width: 2px;
-    padding: 10px 20px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    }
-    
+    border-width: 2px;
+    padding: 20px;
+    width: 70%;
+    max-width: 800px; /* Adjust max-width as per your preference */
+    margin: 0 auto 30px; /* Center align and add bottom margin */
+    background-color: #ffffff; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    text-align: left;
+  }
+  
   .writings button {
     padding: 10px 20px;
-    border-radius: 10px;
-    border: solid #1b1b32;
-    background-color: #1b1b32;
-    color: #efefef;
+    border-radius: 5px;
+    border: none;
+    background-color: #363457;
+    color: #fff;
     font-weight: bold;
-    margin-bottom: 5px;
-    width: 100%;
-    }
-
-  .writings button:hover  {
-    background-color: #fff;
-    color: #1b1b32;
-  } 
-
+    cursor: pointer;
+    width: 100%; /* Button takes full width */
+    margin-top: 10px; /* Top margin */
+  }
+  
+  .writings button:hover {
+    background-color: #2a2842;
+  }
+  
   .writings h3 {
-    line-height: 1.2em;
-    }
-
+    font-size: 20px; /* Adjust font size */
+    color: #333;
+    margin-bottom: 10px; /* Bottom margin for title */
+    margin-top: 0; /* Remove top margin */
+  }
+  
+  .writings p {
+    font-size: 16px; /* Adjust font size */
+    color: #444;
+    line-height: 1.5; /* Line height for readability */
+  }
+  
   .writings w {
-    color: red;
-    }
-
+    color: red; /* Warning text color */
+  }
+    
 
     .writingsSc {
       border: solid #960018;
