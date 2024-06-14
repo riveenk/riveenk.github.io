@@ -180,8 +180,8 @@
     border: solid #000;
     border-width: 2px;
     padding: 20px;
-    width: 70%;
-    max-width: 800px; /* Adjust max-width as per your preference */
+    width: 90%; /* Adjusted width for better responsiveness */
+    max-width: 800px; /* Maximum width for larger screens */
     margin: 0 auto 30px; /* Center align and add bottom margin */
     background-color: #ffffff; /* Background color */
     border-radius: 8px; /* Rounded corners */
@@ -221,6 +221,14 @@
   .writings w {
     color: red; /* Warning text color */
   }
+  
+  @media (max-width: 768px) {
+    .writings {
+      width: 100%; /* Full width on smaller screens */
+      padding: 15px; /* Reduced padding for smaller screens */
+    }
+  }
+  
     
 
     .writingsSc {
