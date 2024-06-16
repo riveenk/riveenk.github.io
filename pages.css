@@ -176,6 +176,7 @@
     text-decoration: none;
   }
 
+  @media (min-width: 768px) {
   .writings {
     border: solid #000;
     border-width: 2px;
@@ -221,6 +222,7 @@
   .writings w {
     color: red; /* Warning text color */
   }
+}
   
   @media (max-width: 768px) {
     .writings {
