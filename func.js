@@ -34,7 +34,7 @@ dropdownContentDiv.classList.add("dropdown-content");
 const dropdownLinks = [
   { text: "Creatives", href: "/page/stories-poems.html" },
   { text: "Projects", href: "/page/projects.html" },
-  { text: "Photos", href: "/page/photos.html" },
+  { text: "Photos🔗", href: "/page/photos.html" },
   { text: "Archive", href: "/page/archive.html" }
 ];
 
@@ -209,6 +209,11 @@ script.src = 'https://cdn.ywxi.net/js/1.js';
 script.type = 'text/javascript';
 script.async = true;
 document.head.appendChild(script);
+
+// Function to load the Font Awesome Set
+const faSet = document.createElement('link');
+faSet.rel = "stylesheet";
+faSet.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 
 // Adding the meta data
 const metaOne = document.createElement('meta');

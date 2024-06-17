@@ -176,13 +176,11 @@
     text-decoration: none;
   }
 
-  @media (min-width: 768px) {
   .writings {
     border: solid #000;
     border-width: 2px;
     padding: 20px;
-    width: 90%; /* Adjusted width for better responsiveness */
-    max-width: 800px; /* Maximum width for larger screens */
+    width: 45%; /* Adjusted width for better responsiveness */
     margin: 0 auto 30px; /* Center align and add bottom margin */
     background-color: #ffffff; /* Background color */
     border-radius: 8px; /* Rounded corners */
@@ -222,11 +220,18 @@
   .writings w {
     color: red; /* Warning text color */
   }
-}
   
+    
+  @media (max-width: 1200px) {
+    .writings {
+      width: 90%; /* Full width on smaller screens */
+      padding: 15px; /* Reduced padding for smaller screens */
+    }
+  }
+
   @media (max-width: 768px) {
     .writings {
-      width: 80%; /* Full width on smaller screens */
+      width: 90%; /* Full width on smaller screens */
       padding: 15px; /* Reduced padding for smaller screens */
     }
     .writings h3 {
