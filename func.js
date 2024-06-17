@@ -34,7 +34,7 @@ dropdownContentDiv.classList.add("dropdown-content");
 const dropdownLinks = [
   { text: "Creatives", href: "/page/stories-poems.html" },
   { text: "Projects", href: "/page/projects.html" },
-  { text: "Photos🔗", href: "/page/photos.html" },
+  { text: "Photos🔗", href: "https://www.instagram.com/photo.rpk/" },
   { text: "Archive", href: "/page/archive.html" }
 ];
 
