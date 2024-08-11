@@ -1,186 +1,190 @@
-<style>
-    body {
-        margin: 0px;
-       font-family: helvetica;
-    }
-
-    .bar {
-        background-color: #1b1b32;
-    }
-
-    .bar button{
-        background-color: #62627F;
-        color: whitesmoke;
-        border-width: 0;
-        padding: 10px;
-    }
-    
-    .top-end {
-        background-color: #1b1b32;
-       padding: 20px;
-       color: white;
-       display: flex;
-    }
-    
-    .top-end p, h1 {
-        margin: 0px;
-       margin-bottom: 10px;
-    }
-    
-    .top-end p {
-        font-size: 2.5vw;
-       color: #D0D0E2;
-    }
-    
-    .top-end h1 {
-        font-size: 4vw;
-    }
-    
-    .top-image {
-        width: 30%;
-       max-width: 250px;
-    }
-    
-    .top-image img {
-        box-shadow: 0 0 30px black;
-       width: 100%;
-    }
-    
-    .top-text {
-        padding-left: 35px; 
-       margin-top: auto; 
-       margin-bottom: auto;
-       width: 75%;
-    }
-    
-    .top-text img {
-           display: block; 
-           height: auto; 
-           width: 15vw; 
-           margin-right: 10%;
-           margin-left: auto;
-       }
-   
-    @media (max-width: 650px){
-        .top-end {
-           display: block;
-           width: 70%;
-           padding-left: 0px;
-           padding-right: 0px;
-           box-shadow: 10px 10px 10px black;
-           margin-left: auto;
-           margin-right: auto;
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0px;
+            font-family: helvetica;
         }
 
         .bar {
-            background-color: #62627F;
-        }
-
-        .bar button{
             background-color: #1b1b32;
-        }
-
-        .behind {
-            background-color: #62627F;
-            width: 100%;
-            padding-top: 10vw;
-            padding-bottom: 15vw;
-        }
-       
-        .top-image {
-           width: 80%;
-           height: auto;
-           margin-top: 8vw;
-           margin-left: auto;
-           margin-right: auto;
-           max-width: none;
-       }
-       
-        .top-end p, h1 {
-            margin-left: 10%;
-       }
-       
-       .top-end p {
-           font-size: medium;
-       }
-       
-       .top-end h1 {
-           font-size: x-large;
-       }
-       
-       .top-text {
-           padding-left: 0px; 
-           margin-top: 8vw; 
-           margin-bottom: 5vw;
-           width: 100%;
-           margin-left: auto;
-           margin-right: auto;
-       }
-       
-       .top-text img {
-           display: block; 
-           height: auto; 
-           width: 25%; 
-           margin-left: 10%;
-           margin-right: auto;
-       }
-    }
-    
-    @media (min-width: 1000px){
-        .top-end {
-           width: 50%;
-           margin-left: auto;
-           margin-right: auto;
-           box-shadow: 10px 10px 10px black;
-       }
-
-       .top-end p{
-            font-size: large;
-       }
-
-       .top-end h1 {
-            font-size: x-large;
-       }
-
-       .top-text img {
-           display: block; 
-           height: auto; 
-           width: 20%; 
-           margin-left: auto;
-           margin-right: 1%;
-       }
-
-       .bar {
-            background-color: #62627F;
         }
 
         .bar button {
-            background-color: #1b1b32;
+            background-color: #62627F;
+            color: whitesmoke;
+            border-width: 0;
+            padding: 10px;
         }
-       
-       .behind {
-        background-color: #62627F;
-        padding-top: 5vw;
-        padding-bottom: 5vw;
-       }
-    }
-   </style>
+
+        .top-end {
+            background-color: #1b1b32;
+            padding: 20px;
+            color: white;
+            display: flex;
+        }
+
+        .top-end p, .top-end h1 {
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+
+        .top-end p {
+            font-size: 2.5vw;
+            color: #D0D0E2;
+        }
+
+        .top-end h1 {
+            font-size: 4vw;
+        }
+
+        .top-image {
+            width: 30%;
+            max-width: 250px;
+        }
+
+        .top-image img {
+            box-shadow: 0 0 30px black;
+            width: 100%;
+        }
+
+        .top-text {
+            padding-left: 35px;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 75%;
+        }
+
+        .top-text img {
+            display: block;
+            height: auto;
+            width: 15vw;
+            margin-right: 10%;
+            margin-left: auto;
+        }
+
+        @media (max-width: 600px) {
+            .top-end {
+                display: block;
+                width: 70%;
+                padding-left: 0px;
+                padding-right: 0px;
+                box-shadow: 10px 10px 10px black;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .bar {
+                background-color: #62627F;
+            }
+
+            .bar button {
+                background-color: #1b1b32;
+            }
+
+            .behind {
+                background-color: #62627F;
+                width: 100%;
+                padding-top: 10vw;
+                padding-bottom: 15vw;
+            }
+
+            .top-image {
+                width: 80%;
+                height: auto;
+                margin-top: 8vw;
+                margin-left: auto;
+                margin-right: auto;
+                max-width: none;
+            }
+
+            .top-end p, .top-end h1 {
+                margin-left: 10%;
+            }
+
+            .top-end p {
+                font-size: medium;
+            }
+
+            .top-end h1 {
+                font-size: x-large;
+            }
+
+            .top-text {
+                padding-left: 0px;
+                margin-top: 8vw;
+                margin-bottom: 5vw;
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .top-text img {
+                display: block;
+                height: auto;
+                width: 25%;
+                margin-left: 10%;
+                margin-right: auto;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .top-end {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+                box-shadow: 10px 10px 10px black;
+            }
+
+            .top-end p {
+                font-size: large;
+            }
+
+            .top-end h1 {
+                font-size: x-large;
+            }
+
+            .top-text img {
+                display: block;
+                height: auto;
+                width: 20%;
+                margin-left: auto;
+                margin-right: 1%;
+            }
+
+            .bar {
+                background-color: #62627F;
+            }
+
+            .bar button {
+                background-color: #1b1b32;
+            }
+
+            .behind {
+                background-color: #62627F;
+                padding-top: 5vw;
+                padding-bottom: 5vw;
+            }
+        }
+    </style>
+</head>
 
 <body>
-   <div class="bar">
-    <a href = "/index.html"><button>Go Back to Riveen's Blog</button></a>
-   </div>
-   <div class="behind">
-   <div class="top-end">
-       <div class="top-image">
-           <img src = "/media/wbc-image.png">
-     </div>
-     <div class="top-text">
-         <h1> Wanna Be Cancelled? </h1>
-       <p> Podcast by Wolfie and Riveen </p><br>
-       <img src="/media/Spotify_Full_Logo_RGB_White.png">
-     </div>
-   </div>
-   </div>
+    <div class="bar">
+        <a href="/index.html"><button>Go Back to Riveen's Blog</button></a>
+    </div>
+    <div class="behind">
+        <div class="top-end">
+            <div class="top-image">
+                <img src="/media/wbc-image.png" alt="Podcast Cover">
+            </div>
+            <div class="top-text">
+                <h1>Wanna Be Cancelled?</h1>
+                <p>Podcast by Wolfie and Riveen</p>
+                <img src="/media/Spotify_Full_Logo_RGB_White.png" alt="Spotify Logo">
+            </div>
+        </div>
+    </div>
 </body>
-   
+</html>
