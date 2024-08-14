@@ -51,6 +51,15 @@ body {
     line-height: 1.5;
 }
 
+.copyright-box {
+    background-color: #1b1b32;
+    border: #1b1b32;
+    color: #f9f9f9;
+    height: 15px;
+    margin-bottom: -17px;
+    z-index: 999;
+}
+
 /* Desktop View */
 @media screen and (min-width: 501px) {
     .header-text {
