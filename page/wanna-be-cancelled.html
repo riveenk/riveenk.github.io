@@ -1,191 +1,239 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            margin: 0px;
-            font-family: helvetica;
-        }
+<title>Wanna Be Cancelled: Podcast</title>
+<style>
+	body { 
+        margin: 0px; 
+        font-family: Arial, Helvetica, sans-serif; 
+        background-color: #444; }
 
-        .bar {
-            background-color: #1b1b32;
-        }
+.wbc-post {
+    width: 60vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 0px;
+    display: flex;
+}    
+.wbc-intro {
+    background-color: #282828;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    line-height: 1.1em;
+}
+.wbc-people {
+    width: 100%; 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center; 
+    margin-bottom: 15px;
 
-        .bar button {
-            background-color: #62627F;
-            color: whitesmoke;
-            border-width: 0;
-            padding: 10px;
-        }
+}
+.wbc-people img {
+    height: 30px;   
+    width: 30px; 
+    box-shadow: 0px 0px 7px 0px #A68EC2;
+    border-radius: 50%;
+    margin-right: 10px; 
+}
+.wbc-people p {
+    color: #ededed;
+    font-weight: bold;
+}
+.wbc-listen {
+    margin: 15px;
+    border-radius: 30px;
+    display: flex; 
+    flex-wrap: wrap;
+}
+.wbc-listen-button {
+    margin-left: 15;
+    background-color: #282828;
+    padding: 10px 15px;
+    border-radius: 30px;
+    display: flex; 
+    flex-wrap: wrap;
+    border-style: none;
+}
 
-        .top-end {
-            background-color: #1b1b32;
-            padding: 20px;
-            color: white;
-            display: flex;
-        }
+.wbc-listen :hover{
+    cursor: pointer;
+    background-color: #444;
+    border-radius: 30px;
+}
 
-        .top-end p, .top-end h1 {
-            margin: 0px;
-            margin-bottom: 10px;
-        }
+.wbc-listen-button p, a {
+    text-decoration: none;
+}
 
-        .top-end p {
-            font-size: 2.5vw;
-            color: #D0D0E2;
-        }
+.wbc-listen-button p, img {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
-        .top-end h1 {
-            font-size: 4vw;
-        }
+.wbc-latest-epi {
+    margin: 15px;
+    border-radius: 10px;
+    height: 15vh;
+    flex-grow: 100;
+    background-color: #282828;
+}
 
-        .top-image {
-            width: 30%;
-            max-width: 250px;
-        }
+.wbc-latest-epi p {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
 
-        .top-image img {
-            box-shadow: 0 0 30px black;
-            width: 100%;
-        }
+.wbc-latest-epi iframe {
+    margin-bottom: 5px;
+    margin-top: auto;
+}
 
-        .top-text {
-            padding-left: 35px;
-            margin-top: auto;
-            margin-bottom: auto;
-            width: 75%;
-        }
+.wbc-post-img {
+      height: 100%;
+      width: auto;
+      left: -60%;
+      top: -50%
 
-        .top-text img {
-            display: block;
-            height: auto;
-            width: 15vw;
-            margin-right: 10%;
-            margin-left: auto;
-        }
+  }
 
-        @media (max-width: 500px) {
-            .top-end {
-                display: block;
-                width: 70%;
-                padding-left: 0px;
-                padding-right: 0px;
-                box-shadow: 10px 10px 10px black;
-                margin-left: auto;
-                margin-right: auto;
-            }
+  .wbc-post p {
+    color: #dfdfdf;
+    font-size: small;
+    margin: 0px;
+  }
 
-            .bar {
-                background-color: #62627F;
-            }
+  .wbc-post-right {
+    padding-bottom: 5px;
+  }
 
-            .bar button {
-                background-color: #1b1b32;
-            }
+@media only screen and (min-width: 1001px) {
+  .wbc-post {
+      width: 60vw;
+      display: flex;
+  }
+  .wbc-post-img-cont {
+    width: 50vw; 
+    height: 50vw; 
+    margin: 0px;
+    max-height: 500px;
+    max-width: 350px;
+    overflow: hidden;
+  }
+  .wbc-post-right {
+    background-color: #121111; 
+    min-width: 350px; 
+    width: 60vw; 
+    height: auto; 
+    margin: 0;
+  }
+}
 
-            .behind {
-                background-color: #62627F;
-                width: 100%;
-                padding-top: 10vw;
-                padding-bottom: 15vw;
-            }
+@media only screen and (max-width: 1000px) and (min-width: 601px) {
+  .wbc-post {
+      width: 60vw;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      margin-bottom: 5vw;
+  }
+  .wbc-post-img-cont {
+    width: 100%;
+    height: 30vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .wbc-post-img {
+    width: 60vw;
+    height: auto;
+  }
+  .wbc-post-right {
+    background-color: #121111;  
+    width: 60vw; 
+    height: auto; 
+    margin: 0;
+  }
+}
 
-            .top-image {
-                width: 80%;
-                height: auto;
-                margin-top: 8vw;
-                margin-left: auto;
-                margin-right: auto;
-                max-width: none;
-            }
+@media only screen and (max-width: 600px) {
+    .wbc-post {
+      width: 85vw;
+      margin-left: auto;
+      margin-right: auto;
+      display: grid;
+      margin-bottom: 5vw;
+  }
+  .wbc-post-img-cont {
+    width: 100%;
+    height: 50vw;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .wbc-post-img {
+    width: 85vw;
+    height: auto;
+  }
+  .wbc-post-right {
+    background-color: #121111;  
+    width: 85vw; 
+    height: auto; 
+    margin: 0;
+  }
+}
 
-            .top-end p, .top-end h1 {
-                margin-left: 10%;
-            }
-
-            .top-end p {
-                font-size: medium;
-            }
-
-            .top-end h1 {
-                font-size: x-large;
-            }
-
-            .top-text {
-                padding-left: 0px;
-                margin-top: 8vw;
-                margin-bottom: 5vw;
-                width: 80%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .top-text img {
-                display: block;
-                height: auto;
-                width: 25%;
-                margin-top: 2vw;
-                margin-left: 10%;
-                margin-right: auto;
-            }
-        }
-
-        @media (min-width: 1000px) {
-            .top-end {
-                width: 50%;
-                margin-left: auto;
-                margin-right: auto;
-                box-shadow: 10px 10px 10px black;
-            }
-
-            .top-end p {
-                font-size: large;
-            }
-
-            .top-end h1 {
-                font-size: x-large;
-            }
-
-            .top-text img {
-                display: block;
-                height: auto;
-                width: 20%;
-                margin-left: auto;
-                margin-right: 1%;
-            }
-
-            .bar {
-                background-color: #62627F;
-            }
-
-            .bar button {
-                background-color: #1b1b32;
-            }
-
-            .behind {
-                background-color: #62627F;
-                padding-top: 5vw;
-                padding-bottom: 5vw;
-            }
-        }
-    </style>
+</style>
 </head>
+
 <body>
-    <div class="bar">
-        <a href="/index.html"><button>Go Back to Riveen's Blog</button></a>
+<div style="height: auto; min-height: 100vh;">
+  <div class="wbc-post">
+    <div class = "wbc-post-img-cont">
+  	    <img class="wbc-post-img" src = "/media/wbc-bg.jpg">
     </div>
-    <div class="behind">
-        <div class="top-end">
-            <div class="top-image">
-                <img src="/media/wbc-image.png" alt="Podcast Cover">
+    <div class = "wbc-post-right">
+        <div class = "wbc-intro">
+            <div class = "wbc-people">
+                <img src="/media/wbc-image.png">
+                <p >Wanna Be Cancelled?</p>
             </div>
-            <div class="top-text">
-                <h1>Wanna Be Cancelled?</h1>
-                <p>Podcast by Wolfie and Riveen</p>
-                <img src="/media/Spotify_Full_Logo_RGB_White.png" alt="Spotify Logo">
-            </div>
+            <p>We're a podcast about humans and, I don't know, everything! It could seem like the most innocent episode at a point and us just, asking to be cancelled in another. Trust me, we're worth the trouble. Anyways, thank you for reading the description up to this point. You can go back to doing something important now. Unless you are bored and just want to listen to two randos' yapping... Then, feel free to sit back, grab a snack, and let our thoughts stack.</p>
+        </div>
+        <div class = "wbc-listen">
+            <a href="https://open.spotify.com/show/3JOaF66buYbpTTc8qaMJ5F?si=085131837ef949d4"><button class="wbc-listen-button"><img src="/media/Spotify_Logo.png" style="height: 15px;"> <p>&nbsp;&nbsp;Listen on Spotify</p></button></a>
+        </div>
+        <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+        <script>
+            window.onSpotifyIframeApiReady = (IFrameAPI) => {
+            const element = document.getElementById('embed-iframe');
+            const options = {
+                uri: 'spotify:episode:7yHDlmXhJDcbqX0O33Zc5e', // This is Episode Two
+                width: '100%',
+                height: '100%',
+                theme: 'dark'
+                };
+            const callback = (EmbedController) => {};
+            IFrameAPI.createController(element, options, callback);
+            };
+
+        </script>
+        <div class="wbc-latest-epi">
+            <p>Latest Episode</p>
+            <div id="embed-iframe"></div>
         </div>
     </div>
+  </div>
+</div>
+
 </body>
 </html>
+
