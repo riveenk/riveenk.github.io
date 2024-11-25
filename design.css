@@ -38,6 +38,15 @@ body {
     display: block;
 }
 
+.copyright-box {
+    background-color: #1b1b32;
+    border: #1b1b32;
+    color: #f9f9f9;
+    height: 15px;
+    margin-bottom: -17px;
+    z-index: 999;
+}
+
 .web-body {
     display: flex;
     flex-wrap: wrap;
@@ -49,15 +58,6 @@ body {
     box-sizing: border-box;
     justify-content: center;
     line-height: 1.5;
-}
-
-.copyright-box {
-    background-color: #1b1b32;
-    border: #1b1b32;
-    color: #f9f9f9;
-    height: 15px;
-    margin-bottom: -17px;
-    z-index: 999;
 }
 
 /* Desktop View */
@@ -161,7 +161,7 @@ body {
         color: #444;
         padding: 20px;
         width: 60%;
-        text-align: justify;
+        text-align: left;
     }
 }
 
@@ -269,7 +269,7 @@ body {
         padding: 40px;
         width: 100%; /* Ensure body content does not exceed half the viewport width */
         box-sizing: border-box;
-        text-align: justify;
+        text-align: left;
         margin: 0 auto; /* Center content */
     }
 }
@@ -282,7 +282,7 @@ body {
         width: 100%;
         box-sizing: border-box;
         font-size: small;
-        text-align: justify;
+        text-align: left;
     }
 
     .web-body {
@@ -360,7 +360,7 @@ body {
         padding: 40px;
         width: 60%; /* Body-main takes up 60% of the screen on large screens */
         box-sizing: border-box;
-        text-align: justify;
+        text-align: left;
         margin: 0 auto; /* Center content */
     }
     
