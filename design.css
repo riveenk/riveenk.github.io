@@ -24,7 +24,7 @@ body {
 
 .navbar ul {
     padding: 20px;
-    padding-top: 10px;
+    padding-top: 15px;
     margin-left: 10px;
     margin-bottom: 0;
 }
@@ -94,6 +94,7 @@ body {
     font-weight: bold;
     color: #fff;
     margin-top: 50px;
+    margin-bottom: 10px;
 }
 
 .subheader-text {
@@ -173,6 +174,7 @@ body {
     color: #555;
     width: 100%;
 }
+
 
 /* Responsive Styles */
 @media screen and (max-width: 700px) {
