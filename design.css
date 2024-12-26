@@ -10,7 +10,7 @@ body {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    padding-left: 10px;
+    padding-left: 35px;
     background-color: #1B1B32;
     width: 100%;
     display: flex;
@@ -25,7 +25,6 @@ body {
 .navbar ul {
     padding: 20px;
     padding-top: 15px;
-    margin-left: 10px;
     margin-bottom: 0;
 }
 
@@ -94,7 +93,7 @@ body {
     font-weight: bold;
     color: #fff;
     margin-top: 50px;
-    margin-bottom: 05px;
+    margin-bottom: 5px;
 }
 
 .subheader-text {
