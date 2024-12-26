@@ -390,3 +390,50 @@
   .terms td {
     text-align: left;
   }
+
+  .library-buttons {
+    display: grid;
+    gap: 20px; /* Space between buttons */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+}
+
+.library-buttons a {
+    text-decoration: none;
+    color: #363457;
+}
+
+.library-button {
+    background-color: #DDD;
+    border: 0px solid #EDEDED;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; /* Ensures image and text are stacked */
+    align-items: center; /* Centers the content */
+    gap: 20px; /* Space between image and text */
+    font-size: medium;
+}
+
+.library-button:hover {
+    background-color: #CDCDCD;
+}
+
+.library-button img {
+    width: 80%;
+    object-fit: contain;
+}
+
+.library-button span {
+    margin-top: 10px; /* Space between image and text */
+}
+
+@media (max-width: 600px) {
+    .library-button img {
+        width: 60%; /* Smaller images on narrow screens */
+    }
+}
+
