@@ -16,6 +16,7 @@ body {
     display: flex;
     overflow: hidden;
     box-sizing: border-box;
+    border-width: 0px;
 }
 
 .navbar li {
