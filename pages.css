@@ -475,7 +475,7 @@ td {
 }
 
 .stopwatch {
-  font-size: 10em;
+  font-size: 10vw;
   margin-bottom: 20px;
   font-family: 'Fira Mono', monospace;
   color: #1b1b32;
