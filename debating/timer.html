@@ -79,10 +79,10 @@
             <ul><a href="/index.html">Home</a></ul>
             <ul><a href="/page/library.html">Library</a></ul>
             <ul><a href="/page/about-me.html">About Me</a></ul>
-            <ul style="color: #1b1b32; background-color: rgb(175, 214, 239);">Debating Timer</ul>
+            <ul style="color: #1b1b32; background-color: #f5f5f5;" id="nav">Debating Timer</ul>
         </li>
 
-        <div class="web-body" id="bodyMain" style="height: 90vh;">
+        <div class="web-body" id="bodyMain" style="min-height: 90vh; height: max-content;">
             <div class="body-main" style="justify-items: center; background-color: transparent; margin-top: auto; margin-bottom: auto;">
                 <div class="stopwatch">00:00:00</div>
                 <div class="controls">
@@ -122,6 +122,7 @@
             const toggleSettingsBtn = document.getElementById('toggleSettingsBtn');
             const settingsBox = document.getElementById('settingsBox');
             const bodyMain = document.getElementById('bodyMain')
+            const nav = document.getElementById('nav')
     
             let startTime = null;
             let isRunning = false;
@@ -146,13 +147,17 @@
                 const gracePeriod = settings.gracePeriod * 1000;
     
                 if (timeDifference >= totalSpeechTime + gracePeriod) {
-                    bodyMain.style.backgroundColor = '#ff686b'; // Grace period exceeded
+                    bodyMain.style.backgroundColor = '#ff686b';
+                    nav.style.backgroundColor = '#ff686b';
                 } else if (timeDifference >= totalSpeechTime) {
-                    bodyMain.style.backgroundColor = '#ffbf69'; // Within grace period
+                    bodyMain.style.backgroundColor = '#ffbf69';
+                    nav.style.backgroundColor = '#ffbf69';
                 } else if (timeDifference >= totalSpeechTime - 60000) {
-                    bodyMain.style.backgroundColor = '#fcefb4'; // Last minute
+                    bodyMain.style.backgroundColor = '#fcefb4';
+                    nav.style.backgroundColor = '#fcefb4';
                 } else {
-                    bodyMain.style.backgroundColor = '#f5f5f5'; // Default
+                    bodyMain.style.backgroundColor = '#f5f5f5';
+                    nav.style.backgroundColor = '#f5f5f5';
                 }
             }
     
@@ -176,7 +181,8 @@
                 startTime = null;
                 elapsedTime = 0;
                 stopwatchDisplay.textContent = '00:00:00';
-                bodyMain.style.backgroundColor = '#f5f5f5'; // Reset background color
+                bodyMain.style.backgroundColor = '#f5f5f5';
+                nav.style.backgroundColor = '#f5f5f5';
             });
     
             toggleSettingsBtn.addEventListener('click', () => {
@@ -187,7 +193,6 @@
                 }
             });
     
-            // Access settings when required
             function getSettings() {
                 const speechLength = parseInt(speechLengthInput.value, 10) || 0;
                 const replyLength = parseInt(replyLengthInput.value, 10) || 0;
