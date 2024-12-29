@@ -10,28 +10,28 @@ function createNavItem(text, href) {
 }
 
 // Create footer elements
-    const footerDiv = document.createElement("div");
-    footerDiv.classList.add("footer");
-    footerDiv.style.textAlign = "center"
+const footerDiv = document.createElement("div");
+footerDiv.classList.add("footer");
+footerDiv.style.textAlign = "center"
 
-    function createFooterItem(contentHTML) {
-      const footerItem = document.createElement("div");
-      footerItem.classList.add("footer-items");
+function createFooterItem(contentHTML) {
+  const footerItem = document.createElement("div");
+  footerItem.classList.add("footer-items");
 
-      const footerItemContent = document.createElement("div");
-      footerItemContent.innerHTML = `${contentHTML}`;
+  const footerItemContent = document.createElement("div");
+  footerItemContent.innerHTML = `${contentHTML}`;
 
-      footerItem.appendChild(footerItemContent);
+  footerItem.appendChild(footerItemContent);
 
-      return footerItem;
-    }
+  return footerItem;
+}
 
-    const footerItem2 = createFooterItem('<a href="/page/copyright.html" class="a-no-und"> Copyright © All Rights Reserved </a> |<a href="/page/notice.html" class="a-no-und"> Notice to Visitors </a> | <a href="/page/credits-disclaimers.html" class="a-no-und">Credits and Disclaimers</a>');
+const footerItem2 = createFooterItem('<a href="/page/copyright.html" class="a-no-und"> Copyright © All Rights Reserved </a> |<a href="/page/notice.html" class="a-no-und"> Notice to Visitors </a> | <a href="/page/credits-disclaimers.html" class="a-no-und">Credits and Disclaimers</a>');
 
-    // Append all footer items to the footer div
-    footerItem2.style.marginLeft = "auto"
-    footerItem2.style.marginRight = "auto"
-    footerDiv.appendChild(footerItem2);
+// Append all footer items to the footer div
+footerItem2.style.marginLeft = "auto"
+footerItem2.style.marginRight = "auto"
+footerDiv.appendChild(footerItem2);
 
 
 // Function to add Trusted Site JS

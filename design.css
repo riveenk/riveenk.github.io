@@ -2,7 +2,10 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    background-color: #363457;
+    padding: 0px;
 }
 
 /* Navbar */
@@ -198,11 +201,14 @@ body {
     .post-block {
         width: 90%;
     }
-    .header-text, .subheader-text {
+
+    .header-text,
+    .subheader-text {
         width: 90%;
         margin-left: auto;
         margin-right: auto;
     }
+
     .header {
         padding: 10px 5%;
     }
