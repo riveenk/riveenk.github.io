@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<head>
+    <title> Riveen Kumanayaka </title>
+    <link rel="stylesheet" href="/design.css">
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <script src="/func.js"></script>
+</head>
+
+<style>
+    .stopwatch {
+        font-size: 10em;
+        margin-bottom: 20px;
+        font-family: 'Fira Mono', monospace;
+        color: #1b1b32;
+    }
+    .controls {
+        margin-top: 30px;
+    }
+    .controls button {
+        font-size: 1em;
+        padding: 20px;
+        margin: 5px;
+        cursor: pointer;
+        border: none;
+        border-radius: 8px;
+        background-color: #363457;
+        color: white;
+        transition: background-color 0.3s;
+        box-sizing: border-box;
+        opacity: 0.5;
+    }
+    .controls img {
+        width: 30px;
+    }
+    .controls button:hover {
+        background-color: #363457;
+        opacity: 1;
+    }
+    .settings-container {
+        margin-top: 20px;
+    }
+    .settings {
+        display: none;
+        margin-top: 10px;
+        padding: 25px;
+        background-color: rgb(175, 214, 239);
+        border: 1px solid #1b1b32;
+        border-radius: 5px;
+        color: #1b1b32;
+        box-sizing: border-box;
+    }
+    .settings input {
+        margin: 5px;
+        padding: 5px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    .settings label {
+        margin-right: 10px;
+    }
+    .toggle-settings {
+        font-size: 1em;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        background-color: #1b1b32;
+        color: white;
+        transition: background-color 0.3s;
+    }
+    .toggle-settings:hover {
+        background-color: #1b1b32;
+    }
+</style>
+
+<body  style = "background-color: #363457;">
+        <li class="navbar">
+            <ul><a href="/index.html">Home</a></ul>
+            <ul><a href="/page/library.html">Library</a></ul>
+            <ul><a href="/page/about-me.html">About Me</a></ul>
+            <ul style="color: #1b1b32; background-color: rgb(175, 214, 239);">Debating Timer</ul>
+        </li>
+
+        <div class="web-body" id="bodyMain" style="height: 90vh;">
+            <div class="body-main" style="justify-items: center; background-color: transparent; margin-top: auto; margin-bottom: auto;">
+                <div class="stopwatch">00:00:00</div>
+                <div class="controls">
+                    <button id="startPauseBtn"><img src="/media/icon-play.png"></button>
+                    <button id="resetBtn"><img src="/media/icon-reset.png"></button>
+                    <button class="toggle-settings" id="toggleSettingsBtn"><img src="/media/icon-settings.png"></button>
+                </div>
+
+                    <div class="settings" id="settingsBox">
+                        <label for="speechLength">Speech Length:</label>
+                        <input type="number" id="speechLength" min="0" value="7" max="15">
+                        <label for="speechLength">Mins</label>
+
+                        <br>
+                        <label for="replyLength">Reply Speech Length</label>
+                        <input type="number" id="replyLength" min="0" value="4" max="10">
+                        <label for="speechLength">Mins</label>
+
+                        <br>
+                        <label for="gracePeriod">Grace Period</label>
+                        <input type="number" id="gracePeriod" min="0" value="15" max="60">
+                        <label for="speechLength">Secs</label>
+                        <br>
+                        <label for="toggleReply">Enable Reply Timer:</label>
+                        <input type="checkbox" id="toggleReply">
+                    </div>
+                        </div>
+                    </div>    
+    <script>
+            const stopwatchDisplay = document.querySelector('.stopwatch');
+            const startPauseBtn = document.getElementById('startPauseBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const speechLengthInput = document.getElementById('speechLength');
+            const replyLengthInput = document.getElementById('replyLength');
+            const gracePeriodInput = document.getElementById('gracePeriod');
+            const toggleReplyInput = document.getElementById('toggleReply');
+            const toggleSettingsBtn = document.getElementById('toggleSettingsBtn');
+            const settingsBox = document.getElementById('settingsBox');
+            const bodyMain = document.getElementById('bodyMain')
+    
+            let startTime = null;
+            let isRunning = false;
+            let elapsedTime = 0;
+            let intervalId = null;
+    
+            function formatTime(milliseconds) {
+                const totalSeconds = Math.floor(milliseconds / 1000);
+                const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+                const seconds = String(totalSeconds % 60).padStart(2, '0');
+                const ms = String(Math.floor((milliseconds % 1000) / 10)).padStart(2, '0');
+                return `${minutes}:${seconds}:${ms}`;
+            }
+    
+            function updateDisplay() {
+                const currentTime = new Date().getTime();
+                const timeDifference = currentTime - startTime + elapsedTime;
+                stopwatchDisplay.textContent = formatTime(timeDifference);
+    
+                const settings = getSettings();
+                const totalSpeechTime = (toggleReplyInput.checked ? settings.replyLength : settings.speechLength) * 60 * 1000;
+                const gracePeriod = settings.gracePeriod * 1000;
+    
+                if (timeDifference >= totalSpeechTime + gracePeriod) {
+                    bodyMain.style.backgroundColor = '#ff686b'; // Grace period exceeded
+                } else if (timeDifference >= totalSpeechTime) {
+                    bodyMain.style.backgroundColor = '#ffbf69'; // Within grace period
+                } else if (timeDifference >= totalSpeechTime - 60000) {
+                    bodyMain.style.backgroundColor = '#fcefb4'; // Last minute
+                } else {
+                    bodyMain.style.backgroundColor = '#f5f5f5'; // Default
+                }
+            }
+    
+            startPauseBtn.addEventListener('click', () => {
+                if (isRunning) {
+                    // Pause the stopwatch
+                    clearInterval(intervalId);
+                    elapsedTime += new Date().getTime() - startTime;
+                } else {
+                    // Start or resume the stopwatch based on system time
+                    startTime = new Date().getTime();
+                    intervalId = setInterval(updateDisplay, 10);
+                }
+                isRunning = !isRunning;
+            });
+    
+            resetBtn.addEventListener('click', () => {
+                // Reset the stopwatch
+                clearInterval(intervalId);
+                isRunning = false;
+                startTime = null;
+                elapsedTime = 0;
+                stopwatchDisplay.textContent = '00:00:00';
+                bodyMain.style.backgroundColor = '#f5f5f5'; // Reset background color
+            });
+    
+            toggleSettingsBtn.addEventListener('click', () => {
+                if (settingsBox.style.display === 'none' || settingsBox.style.display === '') {
+                    settingsBox.style.display = 'block';
+                } else {
+                    settingsBox.style.display = 'none';
+                }
+            });
+    
+            // Access settings when required
+            function getSettings() {
+                const speechLength = parseInt(speechLengthInput.value, 10) || 0;
+                const replyLength = parseInt(replyLengthInput.value, 10) || 0;
+                const gracePeriod = parseInt(gracePeriodInput.value, 10) || 0;
+                const enableReply = toggleReplyInput.checked;
+    
+                return { speechLength, replyLength, gracePeriod, enableReply };
+            }
+    </script>
+    <script>
+        document.body.appendChild(footerDiv);
+    </script>
+</body>
