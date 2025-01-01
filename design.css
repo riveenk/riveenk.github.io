@@ -212,6 +212,10 @@ body {
     .header {
         padding: 10px 5%;
     }
+
+    .navbar {
+        padding-left: 10px;
+    }
 }
 
 @media screen and (min-width: 701px) and (max-width: 800px) {

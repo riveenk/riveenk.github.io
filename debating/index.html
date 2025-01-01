@@ -12,10 +12,92 @@
 
 </head>
 
+<style>
+    .collapsible {
+        background-color: #403e65;
+        color: #f5f5f5;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 17px;
+        font-weight: 200;
+        text-align: center;
+    }
+
+    .active,
+    .collapsible:hover {
+        background-color: #2d2c4d;
+    }
+    
+    .content {
+        display: none;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #d9d9d9;
+    }
+
+    .presentations {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        justify-items: center;
+        padding: 10px auto;
+        padding-bottom: 0px;
+    }
+
+    .presentations div {
+        background-color: #f6f6f6;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .presentations div img {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+
+    .presentations div h3 {
+        font-size: 16px;
+        color: #f5f5f5;
+        background-color: #666;
+        padding: 10px;
+        margin-bottom: 0px;
+        font-weight: 400;
+    }
+
+    .debating-buttons {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .debating-buttons button {
+        font-size: 15px;
+        padding: 10px 15px;
+        border-radius: 10px;
+        background-color: #403e65;
+        color: #f5f5f5;
+        border-width: 0px;
+        margin: 5px;
+        opacity: 0.7;
+    }
+
+    .debating-buttons button:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+</style>
+
 <body style="padding: 0px;">
     <li class="navbar">
         <ul><a href="/index.html">Home</a></ul>
-        <ul style="background-color: #363457;"><a href="/page/library">Library</a></ul>
+        <ul><a href="/page/library.html">Library</a></ul>
         <ul><a href="/page/about-me.html">About Me</a></ul>
     </li>
     <div class="header">
@@ -26,24 +108,73 @@
 
     <div class="web-body">
         <div class="body-main">
-            <div>
-                <h3>Presentations on Debating</h3>
+            <div style="margin-bottom: 25px;" class="debating-buttons">
+                <a href="/debating/timer.html"><button>Debating Timer</button></a>  
+                <a href="/debating/glossary.html"><button>Glossary</button></a> 
+                <a href="/debating/apd.html"><button style="width: 90px; background-color: #b42a1b;">APD</button></a>   
+                <a href="/debating/bpd.html"><button style="width: 90px; background-color: #214ED3;">BPD</button></a>   
+                <a href="/debating/wsdc.html"><button style="width: 90px; background-color: #8c916c;">WSDC</button></a> 
             </div>
             <div>
-                <h3>Debating Formats</h3>
+            <button type="button" class="collapsible">Presentations on Debating</button>
+            <div class="content">
+                <div class="presentations">
+                    <div>
+                        <img src="/media/happy-new-year.png" style="width: 100%;">
+                        <a href="#" style="text-decoration: none;">
+                            <h3>
+                                View Presentation</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <img src="/media/happy-new-year.png" style="width: 100%;">
+                        <a href="#" style="text-decoration: none;">
+                            <h3>
+                                View Presentation</h3>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3>Articles on Debating</h3>
             </div>
-            <div>
-                <h3>Glossary</h3>
+            <button type="button" class="collapsible" style="margin-top: 10px;">Articles on Debating</button>
+            <div class="content">
+                <div class="presentations">
+                    <div>
+                        <img src="/media/happy-new-year.png" style="width: 100%;">
+                        <a href="#" style="text-decoration: none;">
+                            <h3>
+                                View Presentation</h3>
+                        </a>
+                    </div>
+                    <div>
+                        <img src="/media/happy-new-year.png" style="width: 100%;">
+                        <a href="#" style="text-decoration: none;">
+                            <h3>
+                                View Presentation</h3>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <script>
-        document.body.appendChild(footerDiv);
-    </script>
+        <script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+
+            document.body.appendChild(footerDiv);
+        </script>
 </body>
 
 </html>

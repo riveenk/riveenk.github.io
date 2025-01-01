@@ -423,13 +423,14 @@ td {
 
 .library-buttons {
   display: grid;
-  gap: 20px;
-  /* Space between buttons */
+  gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  /* Responsive grid */
   justify-content: center;
-  align-items: start;
+  align-items: center;
   padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
 }
 
 .library-buttons a {
@@ -445,12 +446,11 @@ td {
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  /* Ensures image and text are stacked */
   align-items: center;
-  /* Centers the content */
   gap: 20px;
-  /* Space between image and text */
   font-size: medium;
+  max-width: 15vw;
+  max-height: 15vw;
 }
 
 .library-button:hover {
@@ -464,13 +464,11 @@ td {
 
 .library-button span {
   margin-top: 10px;
-  /* Space between image and text */
 }
 
 @media (max-width: 600px) {
   .library-button img {
     width: 60%;
-    /* Smaller images on narrow screens */
   }
 }
 
@@ -480,9 +478,11 @@ td {
   font-family: 'Fira Mono', monospace;
   color: #1b1b32;
 }
+
 .controls {
   margin-top: 30px;
 }
+
 .controls button {
   font-size: 1em;
   padding: 20px;
@@ -496,16 +496,20 @@ td {
   box-sizing: border-box;
   opacity: 0.5;
 }
+
 .controls img {
   width: 30px;
 }
+
 .controls button:hover {
   background-color: #363457;
   opacity: 1;
 }
+
 .settings-container {
   margin-top: 20px;
 }
+
 .settings {
   display: none;
   margin-top: 10px;
@@ -516,6 +520,7 @@ td {
   color: #1b1b32;
   box-sizing: border-box;
 }
+
 .settings input {
   margin: 5px;
   padding: 5px;
@@ -523,9 +528,11 @@ td {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
+
 .settings label {
   margin-right: 10px;
 }
+
 .toggle-settings {
   font-size: 1em;
   padding: 10px 20px;
@@ -536,6 +543,48 @@ td {
   color: white;
   transition: background-color 0.3s;
 }
+
 .toggle-settings:hover {
   background-color: #1b1b32;
+}
+
+.search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.search-container input {
+  padding: 10px;
+  max-width: 600px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.glossary-list {
+  max-width: 600px;
+  margin: 0 auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+.glossary-item {
+  padding: 15px;
+  background-color: #ededed;
+  border: 1px solid #555;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.glossary-item:hover {
+  background: #f0f8ff;
+}
+
+.term {
+  font-weight: bold;
+}
+
+.definition {
+  margin-top: 5px;
 }
