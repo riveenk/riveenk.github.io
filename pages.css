@@ -422,15 +422,15 @@ td {
 }
 
 .library-buttons {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: fit-content;
 }
 
 .library-buttons a {
@@ -449,9 +449,7 @@ td {
   align-items: center;
   gap: 20px;
   font-size: medium;
-  max-width: 15vw;
-  max-height: 15vw;
-  width: auto;
+  width: fit-content;
   height: auto;
 }
 
@@ -471,6 +469,10 @@ td {
 @media (max-width: 600px) {
   .library-button img {
     width: 60%;
+  }
+  .library-button {
+    max-width: none;
+    max-height: none;
   }
 }
 
