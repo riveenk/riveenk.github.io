@@ -13,49 +13,26 @@
 </head>
 
 <style>
-    .collapsible {
-        background-color: #403e65;
-        color: #f5f5f5;
-        cursor: pointer;
-        padding: 18px;
-        width: 100%;
-        border: none;
-        text-align: left;
-        outline: none;
-        font-size: 17px;
-        font-weight: 200;
-        text-align: center;
-    }
-
-    .active,
-    .collapsible:hover {
-        background-color: #2d2c4d;
-    }
-    
-    .content {
-        display: none;
-        padding: 20px;
-        margin-bottom: 20px;
-        background-color: #d9d9d9;
-    }
-
     .presentations {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        justify-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: left;
         padding: 10px auto;
         padding-bottom: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
     }
 
     .presentations div {
-        background-color: #f6f6f6;
-        padding: 20px;
+        background-color: #dfdfdf;
+        padding: 10px;
         text-align: center;
         width: 100%;
         max-width: 300px;
         margin-bottom: 10px;
         box-sizing: border-box;
+        margin-right: 20px;
     }
 
     .presentations div img {
@@ -70,11 +47,29 @@
         padding: 10px;
         margin-bottom: 0px;
         font-weight: 400;
+        margin-top: 10px;
+    }
+
+    .presentations div h2 {
+        font-size: 18px;
+        text-align: left;
+        text-wrap: wrap;
+        margin: 12px 05px;
+    }
+
+    .presentations div p {
+        font-size: 14px;
+        text-align: left;
+        margin: -5px 5px;
+        margin-bottom: 15px;
     }
 
     .debating-buttons {
         display: flex;
         flex-wrap: wrap;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .debating-buttons button {
@@ -109,50 +104,23 @@
     <div class="web-body">
         <div class="body-main">
             <div style="margin-bottom: 25px;" class="debating-buttons">
-                <a href="/debating/timer.html"><button>Debating Timer</button></a>  
-                <a href="/debating/glossary.html"><button>Glossary</button></a> 
-                <a href="/debating/apd.html"><button style="width: 90px; background-color: #b42a1b;">APD</button></a>   
-                <a href="/debating/bpd.html"><button style="width: 90px; background-color: #214ED3;">BPD</button></a>   
-                <a href="/debating/wsdc.html"><button style="width: 90px; background-color: #8c916c;">WSDC</button></a> 
+                <a href="/debating/timer.html"><button>Debating Timer</button></a>
+                <a href="/debating/glossary.html"><button>Glossary</button></a>
+                <a href="/debating/apd.html"><button style="width: 90px; background-color: #b42a1b;">APD</button></a>
+                <a href="/debating/bpd.html"><button style="width: 90px; background-color: #214ED3;">BPD</button></a>
+                <a href="/debating/wsdc.html"><button style="width: 90px; background-color: #8c916c;">WSDC</button></a>
             </div>
-            <div>
-            <button type="button" class="collapsible">Presentations on Debating</button>
-            <div class="content">
-                <div class="presentations">
-                    <div>
-                        <img src="/media/happy-new-year.png" style="width: 100%;">
-                        <a href="#" style="text-decoration: none;">
-                            <h3>
-                                View Presentation</h3>
-                        </a>
-                    </div>
-                    <div>
-                        <img src="/media/happy-new-year.png" style="width: 100%;">
-                        <a href="#" style="text-decoration: none;">
-                            <h3>
-                                View Presentation</h3>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <button type="button" class="collapsible" style="margin-top: 10px;">Articles on Debating</button>
-            <div class="content">
-                <div class="presentations">
-                    <div>
-                        <img src="/media/happy-new-year.png" style="width: 100%;">
-                        <a href="#" style="text-decoration: none;">
-                            <h3>
-                                View Presentation</h3>
-                        </a>
-                    </div>
-                    <div>
-                        <img src="/media/happy-new-year.png" style="width: 100%;">
-                        <a href="#" style="text-decoration: none;">
-                            <h3>
-                                View Presentation</h3>
-                        </a>
-                    </div>
+
+            <div class="presentations" style="justify-items: left;">
+                <div>
+                    <img src="/media/how-to-make-a-debating-motion.jpg" style="width: 100%;">
+                    <h2>How To Make a Debating Motion</h2>
+                    <p>Today we will be talking about motions. I would be using debating terms like “motion” here and
+                        there, but I will always include a link of that word</p>
+                    <a href="/post/2024/05/how-to-make-a-debating-motion.html" style="text-decoration: none;">
+                        <h3>
+                            Read Article</h3>
+                    </a>
                 </div>
             </div>
         </div>
