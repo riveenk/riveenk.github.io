@@ -7,7 +7,6 @@
     <link rel="icon" type="image/png" href="/media/favicon.png">
     <link rel="stylesheet" type="text/css" href="/design.css">
     <link rel="stylesheet" type="text/css" href="/pages.css">
-    <script src="/func.js"></script>
 
 </head>
 <body style="padding: 0px;">
@@ -30,8 +29,13 @@
         <br>
         <div class="warning">
             Warning! This story includes graphic scenes with extreme violence, which can be unsuitable for some audiences. If you are disturbed by bloody and descriptive violence, please refrain from reading this.
+            <button id="blur-button" class="blur-poem">We'll See</button>
         </div>
         <br>
+          <div id="blurred-poem" style = "filter: blur(5px); /* Initial blurred state */
+          -moz-filter: blur(5px); /* For Firefox */
+          -o-filter: blur(5px); /* For older Opera versions */
+          -ms-filter: blur(5px); /* For older IE versions */">
         <p>
             A dark void appears from the lengths<br />Of my sight: An uncommon sight,
             both to man<br />And to the dead. Death.<br />And from, a frightened pair of
@@ -59,9 +63,11 @@
             Afraid.
           </p>
           <p>And I?<br />I smile. <br />I laugh.</p>
+        </div>
     </div>
 </div>
 
+<script src="/func.js"></script>
 <script>
     document.body.appendChild(footerDiv);
 </script>

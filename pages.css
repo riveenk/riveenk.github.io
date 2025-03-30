@@ -170,11 +170,27 @@ td {
 }
 
 .warning {
-  border: red;
+  border: #ED2939;
   border-radius: 10px;
   font-size: small;
   border-style: solid;
   padding: 20px;
+  background-color: #fe9f9f;
+  color: #A91101;
+}
+
+.blur-poem {
+  background-color: white;
+  padding: 6px 8px;
+  font-size: small;
+  border-style: none;
+  border-radius: 5px;
+  color: #A91101;
+}
+
+.blur-poem:hover {
+  background-color: #A91101;
+  color: white;
 }
 
 .about-me a {
@@ -564,8 +580,8 @@ td {
 
 .glossary-item {
   padding: 15px;
-  background-color: #ededed;
-  border: 1px solid #555;
+  background-color: #fff;
+  border: 1px none #fff;
   margin-bottom: 10px;
   text-align: left;
 }
