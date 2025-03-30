@@ -85,6 +85,6 @@ button.addEventListener("click", () => {
         div.style.mozFilter = "blur(5px)";
         div.style.oFilter = "blur(5px)";
         div.style.msFilter = "blur(5px)";
-        button.textContent = "We'll See";
+        button.textContent = "I'll be Fine";
     }
 });
