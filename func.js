@@ -65,3 +65,26 @@ const metaFour = document.createElement('meta');
 metaFour.name = "author";
 metaFour.content = "Riveen Kumanayaka";
 document.head.appendChild(metaFour);
+
+// Toggle between blur
+
+const button = document.getElementById("blur-button");
+const div = document.getElementById("blurred-poem");
+
+button.addEventListener("click", () => {
+    if (div.style.filter === "blur(5px)" || div.style.mozFilter === "blur(5px)" || div.style.oFilter === "blur(5px)" || div.style.msFilter === "blur(5px)") {
+        // Remove the blur effect for all types
+        div.style.filter = "";
+        div.style.mozFilter = "";
+        div.style.oFilter = "";
+        div.style.msFilter = "";
+        button.textContent = "Nope, Cover it";
+            } else {
+        // Apply the blur effect for all types
+        div.style.filter = "blur(5px)";
+        div.style.mozFilter = "blur(5px)";
+        div.style.oFilter = "blur(5px)";
+        div.style.msFilter = "blur(5px)";
+        button.textContent = "We'll See";
+    }
+});
