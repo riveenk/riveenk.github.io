@@ -58,6 +58,7 @@ body {
 .body-subheader {
     margin: 0;
     width: 100%;
+    text-align: left;
 }
 
 .body-header {
