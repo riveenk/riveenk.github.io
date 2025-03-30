@@ -186,16 +186,12 @@ td {
   border-width: 2px;
   padding: 20px;
   width: 45%;
-  /* Adjusted width for better responsiveness */
   margin: 0 auto 30px;
-  /* Center align and add bottom margin */
   background-color: #ffffff;
-  /* Background color */
   border-radius: 8px;
-  /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Box shadow for depth */
   text-align: left;
+  position: relative;
 }
 
 .writings button {
@@ -206,10 +202,11 @@ td {
   color: #fff;
   font-weight: bold;
   cursor: pointer;
-  width: 100%;
-  /* Button takes full width */
-  margin-top: 10px;
-  /* Top margin */
+  width: calc(100% - 40px);
+  margin-bottom: 10px;
+  margin-top: 15px;
+  position: absolute;
+  bottom: 0;
 }
 
 .writings button:hover {
@@ -218,43 +215,35 @@ td {
 
 .writings h3 {
   font-size: 20px;
-  /* Adjust font size */
   color: #333;
   margin-bottom: 10px;
-  /* Bottom margin for title */
   margin-top: 0;
-  /* Remove top margin */
 }
 
 .writings p {
   font-size: 16px;
-  /* Adjust font size */
   color: #444;
   line-height: 1.5;
-  /* Line height for readability */
+  margin-bottom: 20px;
 }
 
 .writings w {
   color: red;
-  /* Warning text color */
 }
 
 
 @media (max-width: 1200px) {
   .writings {
     width: 90%;
-    /* Full width on smaller screens */
     padding: 15px;
-    /* Reduced padding for smaller screens */
+    min-height: 500px;
   }
 }
 
 @media (max-width: 768px) {
   .writings {
     width: 90%;
-    /* Full width on smaller screens */
     padding: 15px;
-    /* Reduced padding for smaller screens */
   }
 
   .writings h3 {
@@ -439,8 +428,8 @@ td {
 }
 
 .library-button {
-  background-color: #DDD;
-  border: 0px solid #EDEDED;
+  background-color: #fff;
+  border: 0px solid #fff;
   padding: 30px;
   text-align: center;
   border-radius: 8px;
@@ -449,16 +438,16 @@ td {
   align-items: center;
   gap: 20px;
   font-size: medium;
-  width: fit-content;
+  width: auto;
   height: auto;
 }
 
 .library-button:hover {
-  background-color: #CDCDCD;
+  background-color: #eee;
 }
 
 .library-button img {
-  width: 80%;
+  width: 60%;
   object-fit: contain;
 }
 
