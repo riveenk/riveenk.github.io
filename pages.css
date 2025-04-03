@@ -868,3 +868,7 @@ td {
     text-align: center;
   }
 }
+
+.error-msg {
+  vertical-align: middle;
+}
