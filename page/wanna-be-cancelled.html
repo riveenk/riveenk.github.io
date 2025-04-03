@@ -1,249 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-<title>Wanna Be Cancelled: Podcast</title>
-<style>
-	body { 
-        margin: 0px; 
-        font-family: Arial, Helvetica, sans-serif; 
-        background-color: #444; }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riveen Kumanayaka</title>
+  <link rel="icon" type="image/png" href="/media/favicon.png">
+  <link rel="stylesheet" type="text/css" href="/design.css">
+  <link rel="stylesheet" type="text/css" href="/pages.css">
+  <script src="/func.js"></script>
 
-.wbc-post {
-    width: 60vw;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    padding: 0px;
-    display: flex;
-}    
-.wbc-intro {
-    background-color: #282828;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding: 10px;
-    margin: 15px;
-    border-radius: 10px;
-    line-height: 1.1em;
-}
-.wbc-people {
-    width: 100%; 
-    display: flex; 
-    flex-wrap: wrap; 
-    align-items: center; 
-    margin-bottom: 15px;
-
-}
-.wbc-people img {
-    height: 30px;   
-    width: 30px; 
-    box-shadow: 0px 0px 7px 0px #dfdfdf;
-    border-radius: 50%;
-    margin-right: 10px; 
-}
-.wbc-people p {
-    color: #ededed;
-    font-weight: bold;
-}
-.wbc-listen {
-    margin: 15px;
-    border-radius: 30px;
-    display: flex; 
-    flex-wrap: wrap;
-}
-.wbc-listen-button {
-    margin-left: 15;
-    background-color: #282828;
-    padding: 10px 15px;
-    border-radius: 30px;
-    display: flex; 
-    flex-wrap: wrap;
-    border-style: none;
-}
-
-.wbc-listen :hover{
-    cursor: pointer;
-    background-color: #444;
-    border-radius: 30px;
-}
-
-.wbc-listen-button p, a {
-    text-decoration: none;
-}
-
-.wbc-listen-button p, img {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.wbc-latest-epi {
-    margin: 15px;
-    border-radius: 10px;
-    height: 15vh;
-    flex-grow: 100;
-    background-color: #282828;
-}
-
-.wbc-latest-epi p {
-    padding-left: 30px;
-    padding-right: 30px;
-    padding: 10px;
-    font-size: x-large;
-    font-weight: bold;
-    padding-bottom: 5px;
-}
-
-.wbc-latest-epi iframe {
-    margin-bottom: 5px;
-    margin-top: auto;
-}
-
-.wbc-post-img {
-      height: 100%;
-      width: auto;
-      left: -60%;
-      top: -50%
-
-  }
-
-  .wbc-post p {
-    color: #dfdfdf;
-    font-size: small;
-    margin: 0px;
-  }
-
-  .wbc-post-right {
-    padding-bottom: 5px;
-  }
-
-@media only screen and (min-width: 1001px) {
-  .wbc-post {
-      width: 60vw;
-      display: flex;
-  }
-  .wbc-post-img-cont {
-    width: 50vw; 
-    height: 50vw; 
-    margin: 0px;
-    max-height: 500px;
-    max-width: 350px;
-    overflow: hidden;
-  }
-  .wbc-post-right {
-    background-color: #121111; 
-    min-width: 350px; 
-    width: 60vw; 
-    height: auto; 
-    margin: 0;
-  }
-  .wbc-listen-button img {
-    height: 30px;
-  }
-}
-
-@media only screen and (max-width: 1000px) {
-    .wbc-post {
-      width: 85vw;
-      margin-left: auto;
-      margin-right: auto;
-      display: grid;
-      margin-bottom: 5vw;
-  }
-  .wbc-post-img-cont {
-    width: 100%;
-    height: 50vw;
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
-  .wbc-post-img {
-    width: 85vw;
-    height: auto;
-  }
-  .wbc-post-right {
-    background-color: #121111;  
-    width: 85vw; 
-    height: auto; 
-    margin: 0;
-  }
-  .wbc-people p {
-    font-size: large;
-    line-height: 1.5em;
-    margin-left: 12px;
-
-  }
-  .wbc-people img {
-    height: 40px;
-    width: 40px;
-    margin-top: 12px;
-    margin-left: 12px;
-    box-shadow: 0px 0px 10px 0px #dfdfdf;
-  }
-  .wbc-listen p {
-    font-size: large;
-    margin-top: auto;
-    margin-bottom: auto;
-  }
-  .wbc-listen-button img {
-    height: 30px;
-  }
-  .wbc-latest-epi p {
-    font-size: large;
-    margin-left: 12px;
-    margin-top: 12px;;
-  }
-  .wbc-intro p {
-    font-size: larger;
-  }
-}
-</style>
 </head>
 
-<body>
-<div style="height: auto; min-height: 100vh;">
-  <div class="wbc-post">
-    <div class = "wbc-post-img-cont">
-  	    <img class="wbc-post-img" src = "/media/wbc-bg.jpg">
-    </div>
-    <div class = "wbc-post-right">
-        <div class = "wbc-intro">
-            <div class = "wbc-people">
-                <img src="/media/wbc-image.png">
-                <p >Wanna Be Cancelled?</p>
-            </div>
-            <p>We're a podcast about humans and, I don't know, everything! It could seem like the most innocent episode at a point and us just, asking to be cancelled in another. Trust me, we're worth the trouble. Anyways, thank you for reading the description up to this point. You can go back to doing something important now. Unless you are bored and just want to listen to two randos' yapping... Then, feel free to sit back, grab a snack, and let our thoughts stack.</p>
-        </div>
-        <div class = "wbc-listen">
-            <a href="https://open.spotify.com/show/3JOaF66buYbpTTc8qaMJ5F?si=085131837ef949d4">
-                <button class="wbc-listen-button">
-                    <img src="/media/Spotify_Logo.png"> 
-                    <p>&nbsp;&nbsp;Listen on Spotify</p>
-                </button>
-            </a>
-        </div>
-        <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
-        <script>
-            window.onSpotifyIframeApiReady = (IFrameAPI) => {
-            const element = document.getElementById('embed-iframe');
-            const options = {
-                uri: 'spotify:episode:7yHDlmXhJDcbqX0O33Zc5e', // This is Episode Two
-                width: '100%',
-                height: '100%',
-                theme: 'dark'
-                };
-            const callback = (EmbedController) => {};
-            IFrameAPI.createController(element, options, callback);
-            };
+<body style="padding: 0px;">
+  <ul class="navbar-wbc">
+    <a href="/index.html">
+      <li>Home</li>
+    </a>
+    <a href="/page/stories-poems.html">
+      <li>Writing</li>
+    </a>
+    <a href="/debating/index.html">
+      <li>Debating</li>
+    </a>
+    <a href="/page/wanna-be-cancelled.html">
+      <li>Podcast</li>
+    </a>
+    <a href="/page/about-me.html">
+      <li>About Me</li>
+    </a>
+  </ul>
 
-        </script>
-        <div class="wbc-latest-epi">
-            <p>Latest Episode</p>
-            <div id="embed-iframe"></div>
+  <style>
+    .footer {
+      background-color: #222;
+    }
+
+    body {
+      background-color: #222;
+    }
+
+    .web-body {
+      display: block;
+      padding-bottom: 40px;
+    }
+
+  </style>
+  <div class="web-body">
+    <div class="wbc-main-box">
+      <img src="/media/wbc-image.png">
+      <div class="wbc-about-box">
+        <p>We're a podcast about humans and, I don't know, everything! It could seem like the most innocent episode at a
+          point and us just, asking to be cancelled in another. Trust me, we're worth the trouble. Anyways, thank you
+          for reading the description up to this point. You can go back to doing something important now. Unless you are
+          bored and just want to listen to two randos' yapping... Then, feel free to sit back, grab a snack, and let our
+          thoughts stack.</p>
+        <div class="wbc-latest-episode" style="margin-top: 25px;">
+          Latest Episode
         </div>
+      </div>
+    </div>
+
+    <hr class="wbc-hr">
+    <div class="wbc-main-box">
+      <div class="wbc-episode">
+        Episode 1
+      </div>
+      <div class="wbc-episode">
+        Episode 2
+      </div>
     </div>
   </div>
-</div>
 
+  <script>
+    document.body.appendChild(footerDiv);
+  </script>
 </body>
-</html>
 
+</html>

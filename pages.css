@@ -177,6 +177,8 @@ td {
   padding: 20px;
   background-color: #fe9f9f;
   color: #A91101;
+  line-height: 1.5em;
+  text-align: left;
 }
 
 .blur-poem {
@@ -475,6 +477,7 @@ td {
   .library-button img {
     width: 60%;
   }
+
   .library-button {
     max-width: none;
     max-height: none;
@@ -486,10 +489,14 @@ td {
   margin-bottom: 20px;
   font-family: 'Fira Mono', monospace;
   color: #1b1b32;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .controls {
   margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .controls button {
@@ -596,4 +603,244 @@ td {
 
 .definition {
   margin-top: 5px;
+}
+
+.theme {
+  background-color: #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.theme div {
+  background-color: #bbb;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+  width: calc(50% - 45px);
+  margin-bottom: 20px;
+}
+
+.theme h3 {
+  margin: 0px;
+}
+
+.theme p {
+  margin: 0px;
+  margin-top: 05px;
+}
+
+.theme img {
+  height: 50px;
+}
+
+@media screen and (max-width: 450px) {
+  .theme div {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+}
+
+.debating-intro {
+  margin-bottom: 20px;
+}
+
+.row {
+  display: grid;
+  grid: 100% / auto auto auto;
+  padding: 30px;
+  gap: 15px
+}
+
+.box {
+  background-color: #d5e2ff;
+  border-color: #363457;
+  border-width: 2px;
+  border-style: solid;
+  padding: 15px 25px;
+  margin: 0px;
+  margin-top: 15px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.box:hover {
+  background-color: #bacefb;
+}
+
+.box h3 {
+  margin-bottom: 0;
+}
+
+.box p {
+  text-align: left;
+}
+
+.timings {
+  border-color: #444444;
+  background-color: #efefef;
+  border-width: 2px;
+  border-style: solid;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px 25px;
+  margin: 0px;
+  margin-top: 25px;
+  border-radius: 10px;
+}
+
+.time-val {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.debating-intro {
+  text-align: left;
+}
+
+.navbar-wbc {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 35px;
+  background-color: #222;
+  width: 100%;
+  display: flex;
+  overflow: scroll;
+  box-sizing: border-box;
+  border-width: 0px;
+}
+
+.navbar-wbc ul {
+  flex: 1;
+  background-color: #222;
+}
+
+.navbar-wbc li {
+  padding: 20px;
+  padding-top: 15px;
+  margin-bottom: 0;
+  color: aliceblue;
+}
+
+@media screen and (max-width: 700px) {
+  .navbar-wbc li {
+    min-width: 75px;
+  }
+}
+
+.navbar-wbc a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar-wbc li:hover {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.wbc-main-box {
+  display: flex;
+  gap: 20px;
+  font-size: medium;
+  margin: auto;
+}
+
+.wbc-main-box img {
+  max-width: 500px;
+}
+
+.wbc-about-box p {
+  margin: 0px;
+}
+
+.wbc-latest-episode {
+  background-color: #444;
+  padding: 15px 20px;
+  color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wbc-episode {
+  background-color: #444;
+  padding: 15px 20px;
+  color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wbc-hr {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1400px) {
+  .wbc-main-box, .wbc-hr {
+    width: 65%;
+  }
+  .wbc-about-box {
+    padding: 15px 20px;
+  }
+  .wbc-main-box img {
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .wbc-main-box, .wbc-hr {
+    width: 75%;
+  }
+  .wbc-about-box {
+    padding: 0;
+  }
+  .wbc-main-box img {
+    width: 25vw;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .wbc-main-box, .wbc-hr {
+    width: 75%;
+    flex-wrap: wrap;
+  }
+  .wbc-about-box {
+    padding: 0;
+  }
+  .wbc-main-box img {
+    width: 25vw;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wbc-main-box, .wbc-hr {
+    width: 85%;
+    flex-wrap: wrap;
+  }
+  .wbc-about-box {
+    padding: 0;
+  }
+  .wbc-main-box img {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  .wbc-about-box p {
+    text-align: center;
+  }
 }

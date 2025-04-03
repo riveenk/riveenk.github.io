@@ -26,7 +26,7 @@ function createFooterItem(contentHTML) {
   return footerItem;
 }
 
-const footerItem2 = createFooterItem('<a href="/page/copyright.html" class="a-no-und"> Copyright © All Rights Reserved </a> |<a href="/page/notice.html" class="a-no-und"> Notice to Visitors </a> | <a href="/page/credits-disclaimers.html" class="a-no-und">Credits and Disclaimers</a>');
+const footerItem2 = createFooterItem('<a href="/page/copyright.html" class="a-no-und"> Copyright © All Rights Reserved </a> |<a href="/page/notice.html" class="a-no-und"> Notice to Visitors </a> | <a href="/page/archive.html" class="a-no-und">Archive</a>');
 
 // Append all footer items to the footer div
 footerItem2.style.marginLeft = "auto"
@@ -88,3 +88,7 @@ button.addEventListener("click", () => {
         button.textContent = "I'll be Fine";
     }
 });
+
+
+
+
