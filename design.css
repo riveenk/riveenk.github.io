@@ -34,6 +34,10 @@ body {
     .navbar li {
         min-width: 75px;
     }
+    .navbar {
+        padding-left: 10px;
+        padding-right: 45px;
+    }
 }
 
 .navbar a {
