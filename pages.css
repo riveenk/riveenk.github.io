@@ -970,3 +970,15 @@ td {
   opacity: 1;
   cursor: pointer;
 }
+
+.img-caption {
+  margin-bottom: 0px;
+  margin-top: 2px;
+  font-size: x-small;
+  color: #555;
+}
+
+.img-caption a {
+  color: #555;
+  text-decoration: underline;
+}
