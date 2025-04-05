@@ -338,27 +338,13 @@ td {
 }
 
 .indent {
-  margin-left: 40px;
-}
-
-.pat {
-  color: gray;
-}
-
-.pat-align {
-  text-align: center;
-  margin: auto;
-  width: 50%;
-}
-
-.pat-pair {
-  display: inline-block;
+  text-indent: 4ch;
 }
 
 .dialogue {
-  margin-top: 0;
-  margin-bottom: 0.2em;
-  margin-left: 40px;
+  margin: 0;
+  line-height: 1.8em;
+  text-indent: 8ch;
 }
 
 .container {
