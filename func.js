@@ -26,7 +26,7 @@ function createFooterItem(contentHTML) {
   return footerItem;
 }
 
-const footerItem2 = createFooterItem('<a href="/page/copyright.html" class="a-no-und"> Copyright © All Rights Reserved </a> |<a href="/page/notice.html" class="a-no-und"> Notice to Visitors </a> | <a href="/page/archive.html" class="a-no-und">Archive</a>');
+const footerItem2 = createFooterItem('<a href="/page/copyright.html" class="a-no-und">Copyright © All Rights Reserved</a> | <a href="/page/notice.html" class="a-no-und">Notice to Visitors</a> | <a href="/page/archive.html" class="a-no-und">Archive</a>');
 
 // Append all footer items to the footer div
 footerItem2.style.marginLeft = "auto"
@@ -72,21 +72,21 @@ const button = document.getElementById("blur-button");
 const div = document.getElementById("blurred-poem");
 
 button.addEventListener("click", () => {
-    if (div.style.filter === "blur(5px)" || div.style.mozFilter === "blur(5px)" || div.style.oFilter === "blur(5px)" || div.style.msFilter === "blur(5px)") {
-        // Remove the blur effect for all types
-        div.style.filter = "";
-        div.style.mozFilter = "";
-        div.style.oFilter = "";
-        div.style.msFilter = "";
-        button.textContent = "Nope, Cover it";
-            } else {
-        // Apply the blur effect for all types
-        div.style.filter = "blur(5px)";
-        div.style.mozFilter = "blur(5px)";
-        div.style.oFilter = "blur(5px)";
-        div.style.msFilter = "blur(5px)";
-        button.textContent = "I'll be Fine";
-    }
+  if (div.style.filter === "blur(5px)" || div.style.mozFilter === "blur(5px)" || div.style.oFilter === "blur(5px)" || div.style.msFilter === "blur(5px)") {
+    // Remove the blur effect for all types
+    div.style.filter = "";
+    div.style.mozFilter = "";
+    div.style.oFilter = "";
+    div.style.msFilter = "";
+    button.textContent = "Nope, Cover it";
+  } else {
+    // Apply the blur effect for all types
+    div.style.filter = "blur(5px)";
+    div.style.mozFilter = "blur(5px)";
+    div.style.oFilter = "blur(5px)";
+    div.style.msFilter = "blur(5px)";
+    button.textContent = "I'll be Fine";
+  }
 });
 
 
