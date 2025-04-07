@@ -720,9 +720,15 @@ td {
   background-color: #222;
   width: 100%;
   display: flex;
-  overflow: scroll;
+  overflow-x: scroll;
   box-sizing: border-box;
   border-width: 0px;
+  scrollbar-width: none;
+}
+
+.navbar-wbc::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .navbar-wbc ul {

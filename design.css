@@ -14,10 +14,16 @@ body {
     background-color: #1B1B32;
     width: 100%;
     display: flex;
-    overflow: scroll;
+    overflow-x: scroll;
     box-sizing: border-box;
     border-width: 0px;
+    scrollbar-width: none;
 }
+
+.navbar::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+  }
 
 .navbar ul {
     flex: 1;
