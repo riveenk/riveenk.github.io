@@ -90,9 +90,7 @@
 
             const val = Math.sin((Math.PI * (diffDays - root1)) / (root2 - root1));
             const val2 = 1 - Math.abs(val);
-            const opacity = Math.round(val2 * 100) / 100
-
-            heart.style.opacity = `${opacity}`
+            const opacity = Math.round(val2 * 100) / 100            
         }
         updateheartPosition();
     </script>
