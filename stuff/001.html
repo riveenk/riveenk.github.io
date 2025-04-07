@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riveen Kumanayaka</title>
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/design.css">
+    <link rel="stylesheet" type="text/css" href="/pages.css">
+    <script src="/func.js"></script>
+</head>
+
+<style>
+    .circle-container {
+        width: 100%;
+    }
+
+    .circle {
+        width: 30vw;
+        height: 30vw;
+        min-width: 280px;
+        min-height: 280px;
+        background-color: #111335;
+        border-radius: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 45px;
+    }
+
+    .heart {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 40%;
+        min-width: 220px;
+    }
+
+    .navbar {
+        background-color: #0c0e29;
+    }
+
+    .navbar li:hover {
+        background-color: #111335;
+    }
+
+    .footer,
+    body {
+        background-color: #0c0e29;
+    }
+</style>
+
+<body style="padding: 0px;">
+    <ul class="navbar">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/page/stories-poems.html">Writing</a></li>
+        <li><a href="/debating/index.html">Debating</a></li>
+        <li><a href="/page/wanna-be-cancelled.html">Podcast</a></li>
+        <li><a href="/page/about-me.html">About Me</a></li>
+    </ul>
+
+    <div class="web-body" style="background-color: #0c0e29;">
+        <div class="body-main" style="position: relative; background-color: transparent;">
+
+            <div class="circle-container">
+                <div class="circle">
+                    <img src="/media/heart.svg" id="heart" alt="heart" class="heart">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function updateheartPosition() {
+            const backContainer = document.querySelector('.circle-container');
+            const heart = document.getElementById('heart');
+            if (!backContainer || !heart) return;
+
+            const root1 = 106;
+            const root2 = 286;
+
+            const today = new Date();
+            const year = new Date().getFullYear();
+            const start = new Date(year, 0, 1);
+
+            const diffTime = Math.abs(today - start);
+            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+            const val = Math.sin((Math.PI * (diffDays - root1)) / (root2 - root1));
+            const val2 = 1 - Math.abs(val);
+            const opacity = Math.round(val2 * 100) / 100
+
+            // Position the heart
+            heart.style.opacity = `${opacity}`
+        }
+        updateheartPosition();
+    </script>
+    <script>
+        document.body.appendChild(footerDiv);
+    </script>
+</body>
+
+</html>
