@@ -38,29 +38,12 @@
         width: 40%;
         min-width: 220px;
     }
-
-    .navbar {
-        background-color: #0c0e29;
-    }
-
-    .navbar li:hover {
-        background-color: #111335;
-    }
-
-    .footer,
-    body {
-        background-color: #0c0e29;
-    }
 </style>
 
 <body style="padding: 0px;">
-    <ul class="navbar">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/page/stories-poems.html">Writing</a></li>
-        <li><a href="/debating/index.html">Debating</a></li>
-        <li><a href="/page/wanna-be-cancelled.html">Podcast</a></li>
-        <li><a href="/page/about-me.html">About Me</a></li>
-    </ul>
+    <script>
+        createNavBar("#0c0e29", "#0c0e29", "#111335", 0);
+    </script>
 
     <div class="web-body" style="background-color: #0c0e29;">
         <div class="body-main" style="position: relative; background-color: transparent; height: 90vh;">
@@ -90,7 +73,7 @@
 
             const val = Math.sin((Math.PI * (diffDays - root1)) / (root2 - root1));
             const val2 = 1 - Math.abs(val);
-            const opacity = Math.round(val2 * 100) / 100            
+            const opacity = Math.round(val2 * 100) / 100
         }
         updateheartPosition();
     </script>
