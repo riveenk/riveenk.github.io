@@ -195,7 +195,17 @@ td {
   color: white;
 }
 
-.about-me a {
+.about-me {
+  padding: 30px;
+}
+
+.about-me img {
+  border-radius: 50%;
+  width: 60%;
+
+}
+
+.about-me h2 {
   text-decoration: none;
 }
 

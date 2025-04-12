@@ -89,6 +89,53 @@ button.addEventListener("click", () => {
   }
 });
 
+function createNavBar(primary, secondary, hover, highlight) {
+  const navBar = document.createElement("ul");
+  navBar.className = "navbar";
+  navBar.style.backgroundColor = primary;
 
+  const navList = [
+    ["Home", "/index.html"],
+    ["Writing", "/publications/index.html"],
+    ["Debating", "/debating/index.html"],
+    ["Podcast", "/page/wanna-be-cancelled.html"],
+    ["About Me", "/page/about-me"]
+  ];
 
+  const css = `
+    .header, .footer, body {
+      background-color: ${secondary};
+    }
+    .navbar {
+      background-color: ${primary};
+    }
+    .navbar li:hover {
+      background-color: ${hover};
+    }
+  `;
+  
+  const style = document.createElement("style");
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+  document.head.appendChild(style);
 
+  for (let i = 0; i < navList.length; i++) {
+    const block = document.createElement("a");
+    block.href = navList[i][1];
+
+    const label = document.createElement("li");
+    label.textContent = navList[i][0];
+
+    if (i === highlight) {
+      block.style.backgroundColor = secondary;
+    }
+
+    block.appendChild(label);
+    navBar.appendChild(block);
+  }
+
+  document.body.appendChild(navBar);
+}
