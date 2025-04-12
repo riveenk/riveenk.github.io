@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="/media/favicon.png">
     <link rel="stylesheet" type="text/css" href="/design.css">
     <link rel="stylesheet" type="text/css" href="/pages.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
@@ -19,14 +20,16 @@
         <li><a href="/page/wanna-be-cancelled.html">Podcast</a></li>
         <li><a href="/page/about-me.html">About Me</a></li>
     </ul>
-    <div class="web-body" id="bodyMain" style="min-height: 90vh; height: max-content;">
-        <div class="body-main"
+    <div class="web-body" id="webBody" style="min-height: 90vh; height: max-content;">
+        <div class="body-main" id="bodyMain"
             style="justify-items: center; background-color: transparent; margin-top: auto; margin-bottom: auto; overflow-x: hidden;">
             <div class="stopwatch">00:00:00</div>
             <div class="controls">
                 <button id="startPauseBtn"><img src="/media/icon-play.png"></button>
                 <button id="resetBtn"><img src="/media/icon-reset.png"></button>
                 <button class="toggle-settings" id="toggleSettingsBtn"><img src="/media/icon-settings.png"></button>
+                <button id="fullScreenButton" onclick="openFullscreen()"><i id="fSLabel" style="font-size:large"
+                        class="fa">&#xf065;</i></button>
             </div>
 
             <div class="settings" id="settingsBox">
@@ -50,7 +53,6 @@
         </div>
     </div>
     <script>
-        // Debating Timer
         const stopwatchDisplay = document.querySelector('.stopwatch');
         const startPauseBtn = document.getElementById('startPauseBtn');
         const resetBtn = document.getElementById('resetBtn');
@@ -60,7 +62,7 @@
         const toggleReplyInput = document.getElementById('toggleReply');
         const toggleSettingsBtn = document.getElementById('toggleSettingsBtn');
         const settingsBox = document.getElementById('settingsBox');
-        const bodyMain = document.getElementById('bodyMain')
+        const webBody = document.getElementById('webBody')
         const nav = document.getElementById('nav')
 
         let startTime = null;
@@ -86,16 +88,16 @@
             const gracePeriod = settings.gracePeriod * 1000;
 
             if (timeDifference >= totalSpeechTime + gracePeriod) {
-                bodyMain.style.backgroundColor = '#ff686b';
+                webBody.style.backgroundColor = '#ff686b';
                 nav.style.backgroundColor = '#ff686b';
             } else if (timeDifference >= totalSpeechTime) {
-                bodyMain.style.backgroundColor = '#ffbf69';
+                webBody.style.backgroundColor = '#ffbf69';
                 nav.style.backgroundColor = '#ffbf69';
             } else if (timeDifference >= totalSpeechTime - 60000) {
-                bodyMain.style.backgroundColor = '#fcefb4';
+                webBody.style.backgroundColor = '#fcefb4';
                 nav.style.backgroundColor = '#fcefb4';
             } else {
-                bodyMain.style.backgroundColor = '#f5f5f5';
+                webBody.style.backgroundColor = '#f5f5f5';
                 nav.style.backgroundColor = '#f5f5f5';
             }
         }
@@ -120,7 +122,7 @@
             startTime = null;
             elapsedTime = 0;
             stopwatchDisplay.textContent = '00:00:00';
-            bodyMain.style.backgroundColor = '#f5f5f5';
+            webBody.style.backgroundColor = '#f5f5f5';
             nav.style.backgroundColor = '#f5f5f5';
         });
 
@@ -139,6 +141,45 @@
             const enableReply = toggleReplyInput.checked;
 
             return { speechLength, replyLength, gracePeriod, enableReply };
+        }
+
+        var timerScreen = document.getElementById('webBody');
+        var fSButton = document.getElementById('fullScreenButton');
+
+        function openFullscreen() {
+            if (timerScreen.requestFullscreen) {
+                timerScreen.requestFullscreen();
+            } else if (timerScreen.webkitRequestFullscreen) { /* Safari */
+                timerScreen.webkitRequestFullscreen();
+            } else if (timerScreen.msRequestFullscreen) { /* IE11 */
+                timerScreen.msRequestFullscreen();
+            }
+            fSButton.onclick = closeFullscreen;
+                fSButton.innerHTML = "";
+                const icon = document.createElement("i");
+                icon.id = "fSLabel";
+                icon.style.fontSize = "large";
+                icon.className = "fa";
+                icon.innerHTML = "&#xf066;";
+                fSButton.appendChild(icon);
+        }
+
+        function closeFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) { /* Safari */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE11 */
+                document.msExitFullscreen();
+            }
+            fSButton.onclick = openFullscreen;
+                fSButton.innerHTML = "";
+                const icon = document.createElement("i");
+                icon.id = "fSLabel";
+                icon.style.fontSize = "large";
+                icon.className = "fa";
+                icon.innerHTML = "&#xf065;";
+                fSButton.appendChild(icon);
         }
 
         document.body.appendChild(footerDiv);
