@@ -788,27 +788,13 @@ td {
 
 .wbc-about-box p {
   margin: 0px;
+  width: 100%;
 }
 
-.wbc-latest-episode {
-  background-color: #444;
-  padding: 15px 20px;
-  color: white;
-  border-radius: 10px;
-  margin-top: 10px;
-  width: 100%;
-  box-sizing: border-box;
+.wbc-about-box h1 {
+  font-size: xx-large;
 }
 
-.wbc-episode {
-  background-color: #444;
-  padding: 15px 20px;
-  color: white;
-  border-radius: 10px;
-  margin-top: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
 
 .wbc-hr {
   margin-top: 25px;
@@ -850,7 +836,27 @@ td {
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1000px) {
+
+  .wbc-main-box,
+  .wbc-hr {
+    width: 85%;
+    flex-wrap: wrap;
+  }
+
+  .wbc-about-box {
+    padding: 0;
+    width: 100%;
+  }
+
+  .wbc-main-box img {
+    width: 25vw;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
 
   .wbc-main-box,
   .wbc-hr {
@@ -862,23 +868,9 @@ td {
     padding: 0;
   }
 
-  .wbc-main-box img {
-    width: 25vw;
-    margin-right: auto;
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-
-  .wbc-main-box,
-  .wbc-hr {
-    width: 85%;
-    flex-wrap: wrap;
-  }
-
-  .wbc-about-box {
-    padding: 0;
+  .title-box {
+    width: 75%;
+    margin: auto;
   }
 
   .wbc-main-box img {
@@ -890,6 +882,10 @@ td {
   }
 
   .wbc-about-box p {
+    text-align: center;
+  }
+
+  .wbc-about-box h1 {
     text-align: center;
   }
 }

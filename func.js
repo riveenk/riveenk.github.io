@@ -140,3 +140,4 @@ function createNavBar(primary, secondary, hover, highlight) {
 
   document.body.appendChild(navBar);
 }
+
