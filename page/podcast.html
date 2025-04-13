@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riveen Kumanayaka</title>
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/design.css">
+    <link rel="stylesheet" type="text/css" href="/pages.css">
+    <script src="/func.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="padding: 0px;">
+    <script>
+        createNavBar("#222", "#563c5c", "#412947", 3);
+    </script>
+    <style>
+        .wbc-player {
+            background-color: #563c5c;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            color: #fff;
+        }
+
+        .wbc-player img {
+            width: 30%;
+            height: auto;
+            /* Maintain aspect ratio */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px 3px #222;
+        }
+
+
+        .audio-player {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .audio-player h2 {
+            text-align: left;
+            margin-bottom: 0px;
+            margin-top: 10px;
+        }
+
+        .audio-player p {
+            text-align: left;
+            margin: 2px auto;
+        }
+
+        .audio-player table,
+        th,
+        td {
+            width: 100%;
+            border: 0px none;
+        }
+
+        .audio-func {
+            margin-bottom: 10px;
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .audio-func button {
+            background-color: #fff;
+            color: #563c5c;
+            padding: 10px;
+            border-width: 0px;
+        }
+
+        .audio-func button:hover {
+            background-color: #412947;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        @media (min-width: 700px) and (max-width: 1320px) {
+            .wbc-player {
+                flex-direction: column;
+                align-items: center;
+                padding: 50px;
+            }
+
+            .wbc-player img {
+                width: 100%;
+            }
+
+            .audio-player {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .wbc-player {
+                flex-direction: column;
+                align-items: center;
+                padding: 5vw;
+            }
+
+            .wbc-player img {
+                width: 100%;
+            }
+
+            .audio-player {
+                width: 100%;
+            }
+        }
+
+
+        .progress-bar {
+            height: 3px;
+            background-color: #fff;
+            padding: 0px;
+            margin: 5px auto;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #ae93cb;
+            width: 50%;
+        }
+
+        .time {
+            padding: 0px;
+            width: 10px;
+            font-family: consolas;
+            color: #fff;
+            font-size: small;
+        }
+
+        .wbc-episodes {
+            padding: 20px;
+            background-color: #412947;
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-height: 1000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+        }
+
+        .wbc-episodes.collapsed {
+            max-height: 0;
+            padding: 0 !important;
+            margin-top: 0 !important;
+        }
+
+
+        .wbc-episode {
+            display: flex;
+            align-items: center;
+            /* vertically center the image + text */
+            gap: 15px;
+            /* space between image and text */
+            background-color: #fcfcfc;
+            width: 100%;
+            padding: 15px;
+            flex-wrap: nowrap;
+            /* prevents breaking onto next line */
+            overflow: hidden;
+            /* avoids layout break from long text */
+        }
+
+
+        .wbc-episode:hover {
+            background-color: #563c5c;
+            color: #fff;
+        }
+
+        .wbc-episode img {
+            height: 50px;
+            width: 50px;
+            object-fit: cover;
+            flex-shrink: 0;
+            /* don’t let image shrink */
+        }
+
+
+        .wbc-episode h3 {
+            margin: 0;
+            font-size: 1rem;
+            white-space: nowrap;
+            /* optional: prevent text wrap */
+            overflow: hidden;
+            /* optional: truncate overflow */
+            text-overflow: ellipsis;
+            /* optional: show "..." if too long */
+            flex-grow: 1;
+        }
+
+        .title-box {
+            margin-bottom: 60px;
+        }
+    </style>
+
+    <div class="web-body">
+        <div class="body-main">
+            <div class="wbc-about-box">
+                <div class="title-box">
+                    <h1>Wanna Be Cancelled?</h1>
+                    <p>We're a podcast about humans and, I don't know, everything! It could seem like the most innocent
+                        episode at a
+                        point and us just, asking to be cancelled in another. Trust me, we're worth the trouble.
+                        Anyways,
+                        thank you
+                        for reading the description up to this point. You can go back to doing something important now.
+                        Unless you are
+                        bored and just want to listen to two randos' yapping... Then, feel free to sit back, grab a
+                        snack,
+                        and let our
+                        thoughts stack.</p>
+                </div>
+                <div class="wbc-player" style="margin-top: 25px;">
+                    <img src="/media/wbc-image.png">
+                    <div class="audio-player">
+                        <h2 id="title">EP1 - Social Media and the Whole Thing</h2>
+                        <p>Wolfie and Riveen</p>
+                        <table>
+                            <tr>
+                                <td class="time" id="spent">00:00</td>
+                                <td>
+                                    <div class="progress-bar">
+                                        <div class="progress" id="progress"></div>
+                                    </div>
+                                </td>
+                                <td class="time" id="length">11:11</td>
+                            </tr>
+                        </table>
+                        <div class="audio-func">
+                            <button id="previous" onclick="prevEpisode()"><i style="font-size:large"
+                                    class="fa">&#xf04a;</i></button>
+                            <button id="play-pause"><i id="fSLabel" style="font-size:large"
+                                    class="fa">&#xf04b;</i></button>
+                            <button id="next" onclick="nextEpisode()"><i style="font-size:large"
+                                    class="fa">&#xf04e;</i></button>
+                            <button id="playlist" onclick="showList()"><i style="font-size:large"
+                                    class="fa">&#xf0c9;</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="wbc-episodes" id="wbc-episodes">
+                    <div class="wbc-episode" id="ep2" onclick="selectEpisode(2)">
+                        <img src="https://dummyimage.com/100/000/fff">
+                        <h3>EP2 - The Limit of Opinion Entitlement</h3>
+                    </div>
+
+                    <div class="wbc-episode" id="ep1" onclick="selectEpisode(1)">
+                        <img src="https://dummyimage.com/100/000/fff">
+                        <h3>EP1 - Social Media and the Whole Thing</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const episodes = [["EP1 - Social Media and the Whole Thing"], ["EP2 - The Limit of Opinion Entitlement"]];
+        const audioName = document.getElementById("title");
+        const playlist = document.getElementById("wbc-episodes");
+        var episode = 0
+        var epaudio = null;
+
+        function selectEpisode(ep) {
+            const name = episodes[ep - 1][0];
+            audioName.textContent = name;
+            episode = ep - 1
+            epaudio = episodes[ep - 1][1]
+        }
+
+        function playEpisode() {
+        }
+
+        function pauseEpisode() {
+
+        }
+
+            function nextEpisode() {
+                const newEp = episode + 2
+                if (newEp <= episodes.length) 
+                {
+                    selectEpisode(episode + 2);
+                }
+            }
+
+        function prevEpisode() {
+            const newEp = episode
+                if (0 <= newEp) 
+                {
+                    selectEpisode(episode);
+                }
+        }
+
+        function showList() {
+            playlist.classList.toggle("collapsed");
+        }
+
+        document.body.appendChild(footerDiv);
+    </script>
+</body>
+
+</html>
