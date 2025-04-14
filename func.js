@@ -99,7 +99,7 @@ function createNavBar(primary, secondary, hover, highlight) {
     ["Home", "/index.html"],
     ["Writing", "/publications/index.html"],
     ["Debating", "/debating/index.html"],
-    ["Podcast", "/page/wanna-be-cancelled.html"],
+    ["Podcast", "/page/podcast.html"],
     ["About Me", "/page/about-me"]
   ];
 

@@ -789,6 +789,7 @@ td {
 .wbc-about-box p {
   margin: 0px;
   width: 100%;
+  text-align: left;
 }
 
 .wbc-about-box h1 {
@@ -866,10 +867,13 @@ td {
 
   .wbc-about-box {
     padding: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .title-box {
-    width: 75%;
+    width: 85%;
     margin: auto;
   }
 
