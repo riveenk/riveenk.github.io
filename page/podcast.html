@@ -42,10 +42,16 @@
             min-width: 0;
         }
 
+        .audio-player audio {
+            display: none;
+        }
+
         .audio-player h2 {
             text-align: left;
             margin-bottom: 0px;
             margin-top: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
         .audio-player p {
@@ -112,18 +118,34 @@
             }
         }
 
+        .hover-circle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            display: none;
+            z-index: 2;
+        }
+
 
         .progress-bar {
-            height: 3px;
+            height: 5px;
             background-color: #fff;
             padding: 0px;
             margin: 5px auto;
+            cursor: pointer;
+            position: relative;
         }
 
         .progress {
             height: 100%;
             background-color: #ae93cb;
-            width: 50%;
+            width: 0%;
+            pointer-events: none;
         }
 
         .time {
@@ -172,6 +194,7 @@
         .wbc-episode:hover {
             background-color: #563c5c;
             color: #fff;
+            cursor: pointer;
         }
 
         .wbc-episode img {
@@ -220,23 +243,28 @@
                 <div class="wbc-player" style="margin-top: 25px;">
                     <img src="/media/wbc-image.png">
                     <div class="audio-player">
-                        <h2 id="title">EP1 - Social Media and the Whole Thing</h2>
+                        <h2 id="title">EP3 - How Society Always Moves On</h2>
                         <p>Wolfie and Riveen</p>
+                        <audio controls id="audio-file">
+                            <source src="null" type="audio/ogg">
+                        </audio>
                         <table>
                             <tr>
                                 <td class="time" id="spent">00:00</td>
                                 <td>
                                     <div class="progress-bar">
+                                        <div class="hover-circle" id="hover-circle"></div>
                                         <div class="progress" id="progress"></div>
                                     </div>
+
                                 </td>
-                                <td class="time" id="length">11:11</td>
+                                <td class="time" id="length">00:00</td>
                             </tr>
                         </table>
                         <div class="audio-func">
                             <button id="previous" onclick="prevEpisode()"><i style="font-size:large"
                                     class="fa">&#xf04a;</i></button>
-                            <button id="play-pause"><i id="fSLabel" style="font-size:large"
+                            <button id="play-pause" onclick="playEpisode()"><i id="fSLabel" style="font-size:large"
                                     class="fa">&#xf04b;</i></button>
                             <button id="next" onclick="nextEpisode()"><i style="font-size:large"
                                     class="fa">&#xf04e;</i></button>
@@ -245,7 +273,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="wbc-episodes" id="wbc-episodes">
+                <div class="wbc-episodes collapsed" id="wbc-episodes">
                     <div class="wbc-episode" id="ep2" onclick="selectEpisode(2)">
                         <img src="https://dummyimage.com/100/000/fff">
                         <h3>EP2 - The Limit of Opinion Entitlement</h3>
@@ -261,45 +289,116 @@
     </div>
 
     <script>
-        const episodes = [["EP1 - Social Media and the Whole Thing"], ["EP2 - The Limit of Opinion Entitlement"]];
+        const episodes = [
+            ["EP1 - Social Media and the Whole Thing", "/media/wbc-e1.mp3"],
+            ["EP2 - The Limit of Opinion Entitlement", "/media/wbc-e2.mp3"],
+        ];
+
         const audioName = document.getElementById("title");
         const playlist = document.getElementById("wbc-episodes");
-        var episode = 0
-        var epaudio = null;
+        const audioPlayer = document.getElementById("audio-file");
+        const playPauseButton = document.getElementById("play-pause");
+        const playPauseLabel = document.getElementById("fSLabel");
+        const audioLenLabel = document.getElementById("length");
+        const audioElaLabel = document.getElementById("spent");
+        const progressBar = document.querySelector(".progress-bar");
+        const progress = document.getElementById("progress");
+        const hoverCircle = document.getElementById("hover-circle");
+
+        let episode = 2;
+        let interval = null;
+
+        progressBar.addEventListener("mousemove", (e) => {
+            const rect = progressBar.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            hoverCircle.style.left = `${x}px`;
+            hoverCircle.style.display = "block";
+        });
+
+        progressBar.addEventListener("mouseleave", () => {
+            hoverCircle.style.display = "none";
+        });
+
 
         function selectEpisode(ep) {
             const name = episodes[ep - 1][0];
             audioName.textContent = name;
-            episode = ep - 1
-            epaudio = episodes[ep - 1][1]
+            episode = ep - 1;
+            audioPlayer.src = episodes[ep - 1][1];
+
+            audioPlayer.addEventListener('loadedmetadata', () => {
+                const minutes = Math.floor(audioPlayer.duration / 60);
+                const seconds = Math.floor(audioPlayer.duration % 60);
+                audioLenLabel.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }, { once: true });
+
+            audioPlayer.load();
+            audioElaLabel.textContent = "00:00";
+            progress.style.width = "0%";
+        }
+
+        function updateTime() {
+            const minutes = Math.floor(audioPlayer.currentTime / 60);
+            const seconds = Math.floor(audioPlayer.currentTime % 60);
+            audioElaLabel.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+            const percent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progress.style.width = `${percent}%`;
+        }
+
+        function startUpdatingTime() {
+            if (interval) clearInterval(interval);
+            interval = setInterval(() => {
+                if (!audioPlayer.paused) updateTime();
+            }, 500);
         }
 
         function playEpisode() {
+            audioPlayer.play();
+            playPauseButton.onclick = pauseEpisode;
+            playPauseLabel.innerHTML = "&#xf04c;";
+            startUpdatingTime();
         }
 
         function pauseEpisode() {
-
+            audioPlayer.pause();
+            playPauseButton.onclick = playEpisode;
+            playPauseLabel.innerHTML = "&#xf04b;";
         }
 
-            function nextEpisode() {
-                const newEp = episode + 2
-                if (newEp <= episodes.length) 
-                {
-                    selectEpisode(episode + 2);
-                }
+        function nextEpisode() {
+            const newEp = episode + 2;
+            if (newEp <= episodes.length) {
+                selectEpisode(newEp);
+                pauseEpisode();
             }
+        }
 
         function prevEpisode() {
-            const newEp = episode
-                if (0 <= newEp) 
-                {
-                    selectEpisode(episode);
-                }
+            const newEp = episode;
+            if (0 <= newEp) {
+                selectEpisode(episode);
+                pauseEpisode();
+            }
         }
 
         function showList() {
             playlist.classList.toggle("collapsed");
         }
+
+        // Click to seek
+        progressBar.addEventListener("click", (e) => {
+            const rect = progressBar.getBoundingClientRect();
+            const clickX = e.clientX - rect.left;
+            const width = rect.width;
+            const percent = clickX / width;
+            const newTime = percent * audioPlayer.duration;
+            audioPlayer.currentTime = newTime;
+            updateTime(); // immediate feedback
+        });
+
+        // Load initial episode
+        selectEpisode(2);
 
         document.body.appendChild(footerDiv);
     </script>
