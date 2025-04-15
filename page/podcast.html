@@ -390,7 +390,7 @@
             const name = episodes[epIndex][0];
             audioName.textContent = name;
             descriptionText.innerHTML = `<b>Description:</b> ${episodes[epIndex][2]}`;
-            audioPlayer.src = episodes[epIndex][1];
+            audioPlayer.innerHTML = `<source id="audio-source" src="${episodes[epIndex][1]}" type="audio/mp3">`
 
             if (episodes[epIndex][3]) {
                 tw.style.display = "block";
