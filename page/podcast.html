@@ -222,13 +222,12 @@
             margin-bottom: 60px;
         }
     </style>
-
     <div class="web-body">
         <div class="body-main">
             <div class="wbc-about-box">
-                <div class="title-box">
-                    <h1>Wanna Be Cancelled?</h1>
-                    <p>We're a podcast about humans and, I don't know, everything! It could seem like the most innocent
+                <div class="header">
+                    <h1 class="header-text" style="text-align: left; margin-top: 25px; line-height: 1.2em;">Wanna Be Cancelled?</h1>
+                    <h3 class="subheader-text" style="line-height: 1.4em; font-size: medium; margin-top: 15px; color: #ddd; width: 90%; text-align: left; margin-bottom: 25px;">We're a podcast about humans and, I don't know, everything! It could seem like the most innocent
                         episode at a
                         point and us just, asking to be cancelled in another. Trust me, we're worth the trouble.
                         Anyways,
@@ -238,7 +237,7 @@
                         bored and just want to listen to two randos' yapping... Then, feel free to sit back, grab a
                         snack,
                         and let our
-                        thoughts stack.</p>
+                        thoughts stack.</h3>
                 </div>
                 <div class="wbc-player" style="margin-top: 25px;">
                     <img src="/media/wbc-image.png">
@@ -290,8 +289,8 @@
 
     <script>
         const episodes = [
-            ["EP1 - Social Media and the Whole Thing", "/media/wbc-e1.mp3"],
-            ["EP2 - The Limit of Opinion Entitlement", "/media/wbc-e2.mp3"],
+            ["EP1 - Social Media and the Whole Thing", "https://archive.org/download/wbc_20250414/wbc-e1.mp3"],
+            ["EP2 - The Limit of Opinion Entitlement", "https://archive.org/download/wbc_20250414/wbc-e2.mp3"],
         ];
 
         const audioName = document.getElementById("title");
@@ -321,10 +320,10 @@
 
 
         function selectEpisode(ep) {
-            const name = episodes[ep - 1][0];
-            audioName.textContent = name;
             episode = ep - 1;
-            audioPlayer.src = episodes[ep - 1][1];
+            const name = episodes[episode][0];
+            audioName.textContent = name;
+            audioPlayer.src = episodes[episode][1];
 
             audioPlayer.addEventListener('loadedmetadata', () => {
                 const minutes = Math.floor(audioPlayer.duration / 60);
