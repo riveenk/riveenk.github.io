@@ -97,10 +97,47 @@
             cursor: pointer;
         }
 
+        .tw {
+            border: red 3px solid;
+            background-color: #fe9f9f;
+            color: #a91101;
+            padding: 20px;
+            font-size: small;
+            border-radius: 10px;
+            display: inline;
+        }
+
+        .tw button {
+            padding: 5px 10px;
+            border-width: 0;
+            background-color: white;
+            color: a91101;
+        }
+
+        .description {
+            background-color: #412947;
+            color: #dcdcdc;
+            padding: 20px;
+            font-size: small;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+        }
+
+        .description.collapsed {
+            display: none;
+            max-height: 0;
+            padding: 0 !important;
+            margin-top: 0 !important;
+        }
+
         @media (min-width: 700px) and (max-width: 1320px) {
             .wbc-player {
                 flex-direction: column;
                 align-items: center;
+                padding: 50px;
+            }
+
+            .description {
                 padding: 50px;
             }
 
@@ -118,6 +155,11 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 5vw;
+            }
+
+            .description {
+                padding: 5vw;
+
             }
 
             .wbc-player img {
@@ -251,7 +293,10 @@
                         and let our
                         thoughts stack.</p>
                 </div>
-                <div class="wbc-player" style="margin-top: 25px;">
+                <div class="warning" id="tw">
+
+                </div>
+                <div class="wbc-player" style="margin-top: 5px;">
                     <img src="/media/wbc-image.png">
                     <div class="audio-player">
                         <h2 id="title">EP3 - How Society Always Moves On</h2>
@@ -281,16 +326,21 @@
                                     class="fa">&#xf04e;</i></button>
                             <button id="playlist" onclick="showList()"><i style="font-size:large"
                                     class="fa">&#xf0c9;</i></button>
+                            <button id="toggle-desc" onclick="showDesc()"><i style="font-size:large"
+                                    class="fa">&#xf249;</i></button>
                         </div>
                     </div>
                 </div>
+                <div class="description" id="description" style="text-align: left;">
+                    <p id="wbc-description" style="text-align: left;"></p>
+                </div>
                 <div class="wbc-episodes collapsed" id="wbc-episodes">
-                    <div class="wbc-episode" id="ep2" onclick="selectEpisode(2)">
+                    <div class="wbc-episode" id="ep2" onclick="selectEpisode(1)">
                         <img src="https://dummyimage.com/100/000/fff">
                         <h3>EP2 - The Limit of Opinion Entitlement</h3>
                     </div>
 
-                    <div class="wbc-episode" id="ep1" onclick="selectEpisode(1)">
+                    <div class="wbc-episode" id="ep1" onclick="selectEpisode(0)">
                         <img src="https://dummyimage.com/100/000/fff">
                         <h3>EP1 - Social Media and the Whole Thing</h3>
                     </div>
@@ -301,8 +351,8 @@
 
     <script>
         const episodes = [
-            ["EP1 - Social Media and the Whole Thing", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e1.mp3"],
-            ["EP2 - The Limit of Opinion Entitlement", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e2.mp3"],
+            ["EP1 - Social Media and the Whole Thing", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e1.mp3", "What does it take to be an influencer? And what role does the audience actually play within this system? Find out with us! (Wolfie regrets his bad mic and would like to apologise)", null],
+            ["EP2 - The Limit of Opinion Entitlement", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e2.mp3", " People are entitled to their opinions. Many say that there is a certain extent to it. But, what is this extent? Listen to us yap for about this for almost an hour. We will be talking about changing lines of social acceptability and sheds fear of a hypothetical future where ideas that we consider morally degenerate are accepted. Still we have the worst mics ever...", "This episode discusses sensitive topics such as pedophilia and other morally complex issues. The episode may not be suitable for all listeners. If you are affected by these themes, we encourage you to seek support and/or avoid this episode."],
         ];
 
         const audioName = document.getElementById("title");
@@ -315,6 +365,9 @@
         const progressBar = document.querySelector(".progress-bar");
         const progress = document.getElementById("progress");
         const hoverCircle = document.getElementById("hover-circle");
+        const description = document.getElementById("description");
+        const descriptionText = document.getElementById("wbc-description");
+        const tw = document.getElementById("tw");
 
         let episode = 2;
         let interval = null;
@@ -331,12 +384,26 @@
         });
 
 
-        function selectEpisode(ep) {
-            episode = ep - 1;
-            const name = episodes[episode][0];
+        function selectEpisode(epIndex) {
+            episode = epIndex; // Store current episode index
+            const name = episodes[epIndex][0];
             audioName.textContent = name;
+            descriptionText.innerHTML = `<b>Description:</b> ${episodes[epIndex][2]}`;
+            audioPlayer.src = episodes[epIndex][1];
 
-            audioPlayer.src = episodes[episode][1];
+            if (episodes[epIndex][3]) {
+                tw.style.display = "block";
+                playPauseButton.onclick = doesNothing;
+                playPauseButton.style.opacity = "30%";
+                tw.innerHTML = `<b>Trigger Warning</b>: ${episodes[epIndex][3]}&nbsp;<button onclick="twRemove()" class="blur-poem">I'll be Fine</button>`;
+                tw.style.marginBottom = "20px";
+                tw.style.lineHeight = "2em";
+            } else {
+                tw.innerHTML = "";
+                tw.style.display = "none";
+                playPauseButton.onclick = playEpisode;
+                playPauseButton.style.opacity = "100%";
+            }
 
             audioPlayer.addEventListener('loadedmetadata', () => {
                 const minutes = Math.floor(audioPlayer.duration / 60);
@@ -347,6 +414,17 @@
             audioPlayer.load();
             audioElaLabel.textContent = "00:00";
             progress.style.width = "0%";
+        }
+
+
+        function doesNothing() {
+
+        }
+
+        function twRemove() {
+            playPauseButton.onclick = playEpisode;
+            playPauseButton.style.opacity = "100%"
+            tw.style.display = "none";
         }
 
         function updateTime() {
@@ -374,31 +452,39 @@
 
         function pauseEpisode() {
             audioPlayer.pause();
-            playPauseButton.onclick = playEpisode;
+            const triggerWarning = episodes[episode][3];
+            if (!triggerWarning || tw.style.display === "none") {
+                playPauseButton.onclick = playEpisode;
+            } else {
+                playPauseButton.onclick = doesNothing;
+            }
             playPauseLabel.innerHTML = "&#xf04b;";
         }
 
+
         function nextEpisode() {
-            const newEp = episode + 2;
-            if (newEp <= episodes.length) {
-                selectEpisode(newEp);
+            if (episode + 1 < episodes.length) {
+                selectEpisode(episode + 1);
                 pauseEpisode();
             }
         }
 
         function prevEpisode() {
-            const newEp = episode;
-            if (0 <= newEp) {
-                selectEpisode(episode);
+            if (episode - 1 >= 0) {
+                selectEpisode(episode - 1);
                 pauseEpisode();
             }
         }
+
 
         function showList() {
             playlist.classList.toggle("collapsed");
         }
 
-        // Click to seek
+        function showDesc() {
+            description.classList.toggle("collapsed");
+        }
+
         progressBar.addEventListener("click", (e) => {
             const rect = progressBar.getBoundingClientRect();
             const clickX = e.clientX - rect.left;
@@ -406,11 +492,10 @@
             const percent = clickX / width;
             const newTime = percent * audioPlayer.duration;
             audioPlayer.currentTime = newTime;
-            updateTime(); // immediate feedback
+            updateTime();
         });
 
-        // Load initial episode
-        selectEpisode(2);
+        selectEpisode(1);
 
         document.body.appendChild(footerDiv);
     </script>
