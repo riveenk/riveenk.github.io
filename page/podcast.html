@@ -302,9 +302,6 @@
                     <div class="audio-player">
                         <h2 id="title">EP3 - How Society Always Moves On</h2>
                         <p>Wolfie and Riveen</p>
-                        <audio controls id="audio-file">
-                            <source id="audio-source" src="" type="audio/mp3">
-                        </audio>
                         <table>
                             <tr>
                                 <td class="time" id="spent">00:00</td>
@@ -358,7 +355,6 @@
 
         const audioName = document.getElementById("title");
         const playlist = document.getElementById("wbc-episodes");
-        var audioPlayer = null;
         const playPauseButton = document.getElementById("play-pause");
         const playPauseLabel = document.getElementById("fSLabel");
         const audioLenLabel = document.getElementById("length");
@@ -370,6 +366,7 @@
         const descriptionText = document.getElementById("wbc-description");
         const tw = document.getElementById("tw");
 
+        var audioPlayer = null;
         let episode = 2;
         let interval = null;
 
@@ -386,10 +383,15 @@
 
 
         function selectEpisode(epIndex) {
-            episode = epIndex; // Store current episode index
+            episode = epIndex;
             const name = episodes[epIndex][0];
             audioName.textContent = name;
             descriptionText.innerHTML = `<b>Description:</b> ${episodes[epIndex][2]}`;
+            if (audioPlayer) {
+                audioPlayer.pause();
+                audioPlayer.src = "";
+                audioPlayer = null;
+            }
             audioPlayer = new Audio(episodes[epIndex][1]);
 
             if (episodes[epIndex][3]) {
