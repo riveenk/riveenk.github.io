@@ -515,9 +515,11 @@
             if (sideChick.style.display === "none") {
                 mainPlayer.style.display = "none";
                 sideChick.style.display = "";
+                pauseEpisode();
             } else {
                 mainPlayer.style.display = "";
                 sideChick.style.display = "none";
+                pauseEpisode();
             }
         }
 
