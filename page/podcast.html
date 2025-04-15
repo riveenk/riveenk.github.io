@@ -358,7 +358,7 @@
 
         const audioName = document.getElementById("title");
         const playlist = document.getElementById("wbc-episodes");
-        const audioPlayer = document.getElementById("audio-file");
+        var audioPlayer = null;
         const playPauseButton = document.getElementById("play-pause");
         const playPauseLabel = document.getElementById("fSLabel");
         const audioLenLabel = document.getElementById("length");
@@ -390,8 +390,7 @@
             const name = episodes[epIndex][0];
             audioName.textContent = name;
             descriptionText.innerHTML = `<b>Description:</b> ${episodes[epIndex][2]}`;
-            audioPlayer.src = episodes[epIndex][1];
-            audioPlayer.innerHTML = `<source id="audio-source" src="${episodes[epIndex][1]}" type="audio/mp3">`;
+            audioPlayer = new Audio(episodes[epIndex][1]);
 
             if (episodes[epIndex][3]) {
                 tw.style.display = "block";
