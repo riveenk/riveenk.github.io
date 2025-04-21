@@ -269,6 +269,10 @@
             flex-grow: 1;
         }
 
+        .wbc-episode p {
+            display: none;
+        }
+
         .title-box {
             margin-bottom: 60px;
             text-align: left;
@@ -301,21 +305,21 @@
                         <h2 id="title">EP3 - How Society Always Moves On</h2>
                         <p>Wolfie and Riveen</p>
                         <div id="sideChick" style="margin-top: 15px; display: none;">
-                        <audio controls id="audio-file">
-                            <source id="audio-source" src="" type="audio/mp3">
-                        </audio>
-                        <div class="audio-func">
-                            <button id="previous" onclick="prevEpisode()" title="Previous Episode"><i style="font-size:large"
-                                    class="fa">&#xf04a;</i></button>
-                            <button id="next" onclick="nextEpisode()" title="Next Episode"><i style="font-size:large"
-                                    class="fa">&#xf04e;</i></button>
-                            <button id="playlist" onclick="showList()" title="Show Playlist"><i style="font-size:large"
-                                    class="fa">&#xf0c9;</i></button>
-                            <button id="toggle-desc" onclick="showDesc()" title="Show Description"><i style="font-size:large"
-                                    class="fa">&#xf249;</i></button>
-                            <button id="toggle-desc" onclick="brokenPlayer()" title="Change Audio Player"><i style="font-size:large"
-                                    class="fa">&#xf362;</i></button>
-                        </div>
+                            <audio controls id="audio-file">
+                                <source id="audio-source" src="" type="audio/mp3">
+                            </audio>
+                            <div class="audio-func">
+                                <button id="previous" onclick="prevEpisode()" title="Previous Episode"><i
+                                        style="font-size:large" class="fa">&#xf04a;</i></button>
+                                <button id="next" onclick="nextEpisode()" title="Next Episode"><i
+                                        style="font-size:large" class="fa">&#xf04e;</i></button>
+                                <button id="playlist" onclick="showList()" title="Show Playlist"><i
+                                        style="font-size:large" class="fa">&#xf0c9;</i></button>
+                                <button id="toggle-desc" onclick="showDesc()" title="Show Description"><i
+                                        style="font-size:large" class="fa">&#xf249;</i></button>
+                                <button id="toggle-desc" onclick="brokenPlayer()" title="Change Audio Player"><i
+                                        style="font-size:large" class="fa">&#xf362;</i></button>
+                            </div>
                         </div>
                         <div id="mainPlayer" style="display: block;">
                             <table>
@@ -332,18 +336,16 @@
                                 </tr>
                             </table>
                             <div class="audio-func">
-                                <button id="previous" onclick="prevEpisode()" title="Previous Episode"><i style="font-size:large"
-                                        class="fa">&#xf04a;</i></button>
-                                <button id="play-pause" onclick="playEpisode()" title="Play/ Pause Episode"><i id="fSLabel" style="font-size:large"
-                                        class="fa">&#xf04b;</i></button>
-                                <button id="next" onclick="nextEpisode()" title="Next Episode"><i style="font-size:large"
-                                        class="fa">&#xf04e;</i></button>
-                                <button id="playlist" onclick="showList()" title="Show Playlist"><i style="font-size:large"
-                                        class="fa">&#xf0c9;</i></button>
-                                <button id="toggle-desc" onclick="showDesc()" title="Show Description"><i style="font-size:large"
-                                        class="fa">&#xf249;</i></button>
-                               <button id="toggle-desc" onclick="brokenPlayer()" title="Change Audio Player"><i style="font-size:large"
-                                        class="fa">&#xf362;</i></button>
+                                <button id="previous" onclick="prevEpisode()" title="Previous Episode"><i
+                                        style="font-size:large" class="fa">&#xf04a;</i></button>
+                                <button id="play-pause" onclick="playEpisode()" title="Play/ Pause Episode"><i
+                                        id="fSLabel" style="font-size:large" class="fa">&#xf04b;</i></button>
+                                <button id="next" onclick="nextEpisode()" title="Next Episode"><i
+                                        style="font-size:large" class="fa">&#xf04e;</i></button>
+                                <button id="playlist" onclick="showList()" title="Show Playlist"><i
+                                        style="font-size:large" class="fa">&#xf0c9;</i></button>
+                                <button id="toggle-desc" onclick="showDesc()" title="Show Description"><i
+                                        style="font-size:large" class="fa">&#xf249;</i></button>
                             </div>
                         </div>
                     </div>
@@ -352,14 +354,22 @@
                     <p id="wbc-description" style="text-align: left;"></p>
                 </div>
                 <div class="wbc-episodes collapsed" id="wbc-episodes">
+                    <div class="search-container" style = "margin-bottom: 5px;">
+                        <button><i class="fa fa-search" style="font-size: medium;"></i></button>
+                        <input type="text" id="search" placeholder="Search for a term..."
+                            oninput="filterGlossary('search', '.wbc-episode', '.wbc-episode h3', '.wbc-episode p')">
+                    </div>
+
                     <div class="wbc-episode" id="ep2" onclick="selectEpisode(1)">
                         <img src="/media/wbc-image.png">
                         <h3>EP2 - The Limit of Opinion Entitlement</h3>
+                        <p>People are entitled to their opinions. Many say that there is a certain extent to it. But, what is this extent? Listen to us yap for about this for almost an hour. We will be talking about changing lines of social acceptability and sheds fear of a hypothetical future where ideas that we consider morally degenerate are accepted. Still we have the worst mics ever...</p>
                     </div>
 
                     <div class="wbc-episode" id="ep1" onclick="selectEpisode(0)">
                         <img src="/media/wbc-image.png">
                         <h3>EP1 - Social Media and the Whole Thing</h3>
+                        <p>What does it take to be an influencer? And what role does the audience actually play within this system? Find out with us! (Wolfie regrets his bad mic and would like to apologise)</p>
                     </div>
                 </div>
             </div>
