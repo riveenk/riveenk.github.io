@@ -164,12 +164,6 @@ body {
     margin: 0 auto;
 }
 
-.post-holder {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-top: 30px;
-}
 
 .post {
     background-color: white;      
@@ -184,12 +178,21 @@ body {
     margin-top: 10px;
     color: #223322;
     font-size: larger;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: normal;
+    margin-bottom: 5px;
 }
+
 
 .post p {
     color: #626262;
     font-size: small;
+    overflow: hidden;
+    margin-bottom: 20px;
+    word-break: normal;
 }
+
 
 .post button {
     width: 100%;
@@ -209,6 +212,7 @@ body {
     width: 100%;
     height: auto;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .gallery {

@@ -141,3 +141,22 @@ function createNavBar(primary, secondary, hover, highlight) {
   document.body.appendChild(navBar);
 }
 
+function textWrap(selector, lines = 3) {
+  const elements = document.querySelectorAll(selector);
+
+  elements.forEach(el => {
+    const lineHeight = parseFloat(getComputedStyle(el).lineHeight);
+    const maxHeight = lines * lineHeight + 1;
+
+    el.style.overflow = 'hidden';
+    el.style.maxHeight = `${maxHeight}px`;
+
+    let text = el.textContent;
+    let words = text.split(' ');
+
+    while (el.scrollHeight > maxHeight && words.length > 0) {
+      words.pop();
+      el.textContent = words.join(' ') + '…';
+    }
+  });
+}
