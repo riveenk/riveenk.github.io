@@ -13,6 +13,24 @@
 </head>
 
 <body style="padding: 0px;">
+    <style>
+        @media screen and (min-width: 801px) {
+            .search-container {
+                width: 60%;
+            }
+        }
+        @media screen and (max-width: 801px) {
+            .search-container {
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 701px) {
+            .search-container {
+                width: 100%;
+                margin: 5px;
+            }
+        }
+    </style>
     <script>
         createNavBar("#1b1b32", "#363457", "#2d2c52", 1);
     </script>
@@ -23,13 +41,11 @@
 
 
     <div class="web-body" style="background-color: #C6D8FF;">
-        <div style="background-color: #C6D8FF; width: 100%;">
-            <div class="body-main" style="background-color: #C6D8FF;">
+        <div class="search-container" style="background-color: #C6D8FF; width: 100vw;">
                 <div class="search-container">
                     <button><i class="fa fa-search" style="font-size: medium;"></i></button>
-                    <input type="text" id="search" placeholder="Search for a term..."
+                    <input type="text" id="search" placeholder="Search for a title..."
                         oninput="filterGlossary('search', '.post', '.post h3', '.post p')">
-                </div>
             </div>
         </div>
         <div class="post">
