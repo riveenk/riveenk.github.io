@@ -160,3 +160,19 @@ function textWrap(selector, lines = 3) {
     }
   });
 }
+
+function filterGlossary(search, items, title, description) {
+  const searchInput = document.getElementById(search).value.toLowerCase();
+  const glossaryItems = document.querySelectorAll(items);
+
+  glossaryItems.forEach(item => {
+      const term = item.querySelector(title).textContent.toLowerCase();
+      const definition = item.querySelector(description).textContent.toLowerCase();
+
+      if (term.includes(searchInput) || definition.includes(searchInput)) {
+          item.style.display = '';
+      } else {
+          item.style.display = 'none';
+      }
+  });
+}
