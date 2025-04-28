@@ -14,7 +14,7 @@
 
 <body style="padding: 0px;">
     <script>
-        createNavBar("#222", "#563c5c", "#412947", 3);
+        createNavBar("#363062", "#4D4C7D", "#443D7B", 3);
     </script>
     <style>
         body {
@@ -28,7 +28,7 @@
         }
 
         .wbc-player {
-            background-color: #563c5c;
+            background-color: #4D4C7D;
             padding: 20px;
             box-sizing: border-box;
             display: flex;
@@ -84,13 +84,13 @@
 
         .audio-func button {
             background-color: #fff;
-            color: #563c5c;
+            color: #4D4C7D;
             padding: 10px;
             border-width: 0px;
         }
 
         .audio-func button:hover {
-            background-color: #412947;
+            background-color: #363062;
             color: #fff;
             cursor: pointer;
         }
@@ -109,12 +109,12 @@
             padding: 5px 10px;
             border-width: 0;
             background-color: white;
-            color: a91101;
+            color: #a91101;
         }
 
         .description {
-            background-color: #412947;
-            color: #dcdcdc;
+            background-color: #363062;
+            color: #f5efe7;
             padding: 20px;
             font-size: small;
             overflow: hidden;
@@ -209,7 +209,7 @@
 
         .wbc-episodes {
             padding: 20px;
-            background-color: #412947;
+            background-color: #4D4C7D;
             margin-top: 10px;
             display: flex;
             flex-wrap: wrap;
@@ -243,8 +243,7 @@
 
 
         .wbc-episode:hover {
-            background-color: #563c5c;
-            color: #fff;
+            background-color: #D8C4B6;
             cursor: pointer;
         }
 
@@ -355,7 +354,7 @@
                 </div>
                 <div class="wbc-episodes collapsed" id="wbc-episodes">
                     <div class="search-container" style = "margin-bottom: 5px;">
-                        <button><i class="fa fa-search" style="font-size: medium;"></i></button>
+                        <button style="background-color: #D8C4B6;"><i class="fa fa-search" style="font-size: medium;"></i></button>
                         <input type="text" id="search" placeholder="Search for an episode..."
                             oninput="filterGlossary('search', '.wbc-episode', '.wbc-episode h3', '.wbc-episode p')">
                     </div>
