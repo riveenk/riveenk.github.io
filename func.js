@@ -93,6 +93,9 @@ function blurPoem() {
 function createNavBar(primary, secondary, hover, highlight) {
   const navBar = document.createElement("ul");
   navBar.className = "navbar";
+  if (primary === "#1b1b32") {primary = "#213555";}
+  if (secondary === "#363457") {secondary = "#3E5879";}
+  if (hover === "#2d2c52") {hover = "#2E4976";}
   navBar.style.backgroundColor = primary;
 
   const navList = [
@@ -100,7 +103,7 @@ function createNavBar(primary, secondary, hover, highlight) {
     ["Writing", "/publications/index.html"],
     ["Debating", "/debating/index.html"],
     ["Podcast", "/page/podcast.html"],
-    ["About Me", "/page/about-me"]
+    ["About Me", "/page/about-me.html"]
   ];
 
   const css = `
