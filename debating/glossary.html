@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riveen Kumanayaka</title>
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/design.css">
+    <link rel="stylesheet" type="text/css" href="/pages.css">
+    <script src="/func.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<style>
+</style>
+
+<body style="padding: 0px;">
+    <script>
+        createNavBar("#1b1b32", "#363457", "#2d2c52", 10);
+    </script>
+    <div class="header">
+        <h1 class="header-text">On My Wavelength</h1>
+        <h3 class="subheader-text">with a larger frequency</h3>
+    </div>
+
+
+    <div class="web-body" style="background-color: #C6D8FF;">
+        <div class="body-main" style="background-color: #C6D8FF;">
+            <div class="search-container">
+                <button><i class="fa fa-search" style="font-size: medium;"></i></button>
+                <input type="text" id="search" placeholder="Search for a term..."
+                    oninput="filterGlossary('search', '.glossary-item', '.term', '.definition')">
+            </div>
+
+            <ul class="glossary-list" id="glossary">
+                <li class="glossary-item" id="term-html">
+                    <span class="term">HTML</span>
+                    <div class="definition">The standard markup language for creating web pages.</div>
+                </li>
+                <li class="glossary-item" id="term-css">
+                    <span class="term">CSS</span>
+                    <div class="definition">A style sheet language used for describing the presentation of a document
+                        written in HTML.</div>
+                </li>
+                <li class="glossary-item" id="term-javascript">
+                    <span class="term">JavaScript</span>
+                    <div class="definition">A programming language commonly used in web development to create
+                        interactive effects within web browsers.</div>
+                </li>
+                <li class="glossary-item" id="term-api">
+                    <span class="term">API</span>
+                    <div class="definition">An Application Programming Interface is a set of functions that allow
+                        applications to access data and interact with external software components.</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        document.body.appendChild(footerDiv);
+    </script>
+</body>
+
+</html>
