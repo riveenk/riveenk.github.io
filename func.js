@@ -99,7 +99,7 @@ function createNavBar(primary, secondary, hover, highlight) {
   navBar.style.backgroundColor = primary;
 
   const navList = [
-    ["Home", "/index.html"],
+    ["Blog", "/index.html"],
     ["Writing", "/publications/index.html"],
     ["Debating", "/debating/index.html"],
     ["Podcast", "/page/podcast.html"],
