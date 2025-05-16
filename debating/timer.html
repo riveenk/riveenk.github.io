@@ -17,14 +17,17 @@
     <script>
         createNavBar("#1b1b32", "#363457", "#2d2c52", 10);
     </script>
-    <div class="web-body" id="webBody" style="min-height: 90vh; height: max-content;">
+    <div class="web-body" id="webBody" style="min-height: 90vh; height: max-content; background-color: #d8c4b6;">
         <div class="body-main" id="bodyMain"
             style="justify-items: center; background-color: transparent; margin-top: auto; margin-bottom: auto; overflow-x: hidden;">
             <div class="stopwatch">00:00:00</div>
             <div class="controls">
-                <button id="startPauseBtn"><img src="/media/icon-play.png"></button>
-                <button id="resetBtn"><img src="/media/icon-reset.png"></button>
-                <button class="toggle-settings" id="toggleSettingsBtn"><img src="/media/icon-settings.png"></button>
+                <button id="startPauseBtn"><i id="fSLabel" style="font-size:x-large"
+                    class="fa">&#xf04b;</i></button>
+                <button id="resetBtn"><i id="fSLabel" style="font-size:x-large"
+                    class="fa">&#xf2ea;</i></button>
+                <button class="toggle-settings" id="toggleSettingsBtn"><i id="fSLabel" style="font-size:large"
+                    class="fa">&#xf013;</i></button>
                 <button id="fullScreenButton" onclick="openFullscreen()"><i id="fSLabel" style="font-size:large"
                         class="fa">&#xf065;</i></button>
             </div>
@@ -104,10 +107,14 @@
                 // Pause the stopwatch
                 clearInterval(intervalId);
                 elapsedTime += new Date().getTime() - startTime;
+                startPauseBtn.innerHTML= `<i id="fSLabel" style="font-size:x-large"
+                class="fa">&#xf04b;</i>`;
             } else {
                 // Start or resume the stopwatch based on system time
                 startTime = new Date().getTime();
                 intervalId = setInterval(updateDisplay, 10);
+                startPauseBtn.innerHTML= `<i id="fSLabel" style="font-size:x-large"
+                class="fa">&#xf04c;</i>`;
             }
             isRunning = !isRunning;
         });

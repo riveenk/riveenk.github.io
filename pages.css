@@ -483,7 +483,7 @@ td {
 .stopwatch {
   margin-bottom: 20px;
   font-family: 'Fira Mono', monospace;
-  color: #213555;
+  color: #333;
   margin-left: auto;
   margin-right: auto;
   justify-self: center;
@@ -526,11 +526,13 @@ td {
   cursor: pointer;
   border: none;
   border-radius: 8px;
-  background-color: #3E5879;
+  background-color: #83443d;
   color: white;
   transition: background-color 0.3s;
   box-sizing: border-box;
   opacity: 0.5;
+  max-width: 80px;
+  max-height: 80px;
 }
 
 .controls img {
@@ -538,7 +540,6 @@ td {
 }
 
 .controls button:hover {
-  background-color: #3E5879;
   opacity: 1;
 }
 
@@ -551,7 +552,7 @@ td {
   margin-top: 10px;
   padding: 25px;
   background-color: rgb(175, 214, 239);
-  border: 1px solid #213555;
+  border: 1px solid transparent;
   border-radius: 5px;
   color: #213555;
   box-sizing: border-box;
@@ -575,13 +576,13 @@ td {
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  background-color: #213555;
+  background-color: #8e443d;
   color: white;
   transition: background-color 0.3s;
 }
 
 .toggle-settings:hover {
-  background-color: #213555;
+  background-color: #8e443d;
 }
 
 .search-container {
@@ -730,7 +731,6 @@ td {
 
 .timings {
   border-color: #444444;
-  background-color: #efefef;
   border-width: 2px;
   border-style: solid;
   width: 100%;

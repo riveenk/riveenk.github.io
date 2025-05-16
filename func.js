@@ -60,7 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "/page/about-me.html",
     "/debating/timer.html",
     "/page/notice.html",
-    "/page/archive.html"
+    "/page/archive.html",
+    "/404.html"
   ];
 
   const customPathsTitle = [
@@ -73,7 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "On My Wavelength: About Me",
     "On My Wavelength: Debating Timer",
     "On My Wavelength: Notice to Visitors",
-    "On My Wavelength: Archive"
+    "On My Wavelength: Archive",
+    "404 Not Found"
   ];
 
   const currentPath = window.location.pathname;
@@ -138,9 +140,6 @@ function blurPoem() {
   });
 }
 
-
-
-
 function textWrap(selector, lines = 3) {
   const elements = document.querySelectorAll(selector);
 
@@ -198,6 +197,10 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
     body, .header, .footer {
       background-color: ${secondary};
       margin: 0;
+    }
+
+    .web-body {
+      overflow: hidden;
     }
 
     .custom-navbar {
@@ -267,6 +270,7 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
       padding: 15px 20px;
       list-style-type: none;
       margin: 0px;
+      box-sizing: border-box;
     }
 
     .nav-links-mobile li{
@@ -314,7 +318,6 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
   `;
   document.head.appendChild(script);
 }
-
 
 function filterGlossary(search, items, title, description) {
   const searchInput = document.getElementById(search).value.toLowerCase();
