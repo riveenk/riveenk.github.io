@@ -181,30 +181,31 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
     }
 
     .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
-    .site-title {
+.site-title {
   font-size: 1.5em;
   font-weight: bold;
   padding: 20px 30px;
-  max-width: 70%;
+  flex: 1 1 auto;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  min-width: 0;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  padding: 20px 30px;
+  flex-shrink: 0;
+}
 
-    .menu-toggle {
-      display: none;
-      font-size: 1.5em;
-      cursor: pointer;
-      padding: 20px 30px;
-
-    }
 
     .nav-links {
       list-style: none;
