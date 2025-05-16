@@ -138,140 +138,7 @@ function blurPoem() {
   });
 }
 
-function createNavBar(primary, secondary, hover, highlight, title = "On My Wavelength") {
-  if (primary === "#1b1b32") primary = "#213555";
-  if (secondary === "#363457") secondary = "#3E5879";
-  if (hover === "#2d2c52") hover = "#2E4976";
 
-  const navList = [
-    ["Blog", "/index.html"],
-    ["Publications", "/publications/index.html"],
-    ["Debating", "/debating/index.html"],
-    ["Podcast", "/page/podcast.html"],
-    ["About Me", "/page/about-me.html"]
-  ];
-
-  // Create nav container
-  const nav = document.createElement("nav");
-  nav.className = "custom-navbar";
-  nav.innerHTML = `
-    <div class="nav-container">
-      <div class="site-title"><a href="/index.html" style= "color: white; text-decoration: none;">${title}</a></div>
-      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-      <ul class="nav-links">
-        ${navList.map(([label, link], i) =>
-    `<li><a href="${link}" : ""}>${label}</a></li>`
-  ).join("")}
-      </ul>
-    </div>
-  `;
-  document.body.insertBefore(nav, document.body.firstChild);
-
-  // Inject styles
-  const css = `
-    body, .header, .footer {
-      background-color: ${secondary};
-      margin: 0;
-    }
-
-    .custom-navbar {
-      background-color: ${primary};
-      color: white;
-      width: 100%;
-    }
-
-    .nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.site-title {
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 20px 30px;
-  flex: 1 1 auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  min-width: 0;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  padding: 20px 30px;
-  flex-shrink: 0;
-}
-
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 20px 30px;
-    }
-
-    .nav-links li a {
-      text-decoration: none;
-      color: white;
-      padding: 8px 12px;
-      display: block;
-    }
-
-    .nav-links li:hover a {
-      background-color: ${hover};
-      border-radius: 4px;
-    }
-
-    /* Responsive layout */
-    @media (max-width: 768px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        width: 100%;
-        flex-direction: column;
-        gap: 5px;
-        padding: 15px 20px;
-      }
-
-      .nav-links.show {
-        display: flex;
-        background-color: ${secondary};
-        width: 100%;
-      }
-
-      .nav-links li {
-        text-align: left;
-        cursor: pointer;
-      }
-
-      .web-body {
-        padding-top: 10px;
-      }
-    }
-  `;
-
-  const style = document.createElement("style");
-  style.appendChild(document.createTextNode(css));
-  document.head.appendChild(style);
-
-  // Inject global toggleMenu function
-  const script = document.createElement("script");
-  script.textContent = `
-    function toggleMenu() {
-      const nav = document.querySelector(".nav-links");
-      nav.classList.toggle("show");
-    }
-  `;
-  document.head.appendChild(script);
-}
 
 
 function textWrap(selector, lines = 3) {
@@ -293,6 +160,161 @@ function textWrap(selector, lines = 3) {
     }
   });
 }
+
+function createNavBar(primary, secondary, hover, highlight, title = "On My Wavelength") {
+  if (primary === "#1b1b32") primary = "#213555";
+  if (secondary === "#363457") secondary = "#3E5879";
+  if (hover === "#2d2c52") hover = "#2E4976";
+
+  const navList = [
+    ["Blog", "/index.html"],
+    ["Publications", "/publications/index.html"],
+    ["Debating", "/debating/index.html"],
+    ["Podcast", "/page/podcast.html"],
+    ["About Me", "/page/about-me.html"]
+  ];
+
+  const nav = document.createElement("nav");
+  nav.className = "custom-navbar";
+  nav.innerHTML = `
+    <div class="nav-container">
+      <div class="top-row">
+        <div class="site-title">
+          <a href="/index.html" style="color: white; text-decoration: none;">${title}</a>
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-links-desktop">
+          ${navList.map(([label, link]) => `<li><a href="${link}">${label}</a></li>`).join("")}
+        </ul>
+      </div>
+      <ul class="nav-links-mobile">
+        ${navList.map(([label, link]) => `<li><a href="${link}">${label}</a></li>`).join("")}
+      </ul>
+    </div>
+  `;
+  document.body.insertBefore(nav, document.body.firstChild);
+
+  const css = `
+    body, .header, .footer {
+      background-color: ${secondary};
+      margin: 0;
+    }
+
+    .custom-navbar {
+      background-color: ${primary};
+      color: white;
+      width: 100%;
+    }
+
+    .nav-container {
+      width: 100%;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      padding: 0 20px;
+    }
+
+    .site-title {
+      font-size: 1.5em;
+      font-weight: bold;
+      padding: 20px 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+      padding: 20px;
+    }
+
+    .nav-links-desktop {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    .nav-links-desktop li a,
+    .nav-links-mobile li a {
+      text-decoration: none;
+      color: white;
+      padding: 8px 12px;
+      display: block;
+    }
+
+    .nav-links-desktop li:hover a,
+    .nav-links-mobile li:hover a {
+      background-color: ${hover};
+      border-radius: 4px;
+    }
+
+    .nav-links-mobile {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: ${secondary};
+      padding: 15px 20px;
+      list-style-type: none;
+      margin: 0px;
+    }
+
+    .nav-links-mobile li{
+      width: max-content;
+    }
+
+    .nav-links-mobile.show {
+      display: flex;
+    }
+
+    @media (max-width: 890px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links-desktop {
+        display: none;
+      }   
+    }
+
+    @media (max-width: 700px) {
+      .web-body {
+        padding-top: 15px;
+      }
+    }
+
+    @media (min-width: 890px) {
+      .nav-links-mobile {
+        display: none !important;
+      }
+    }
+  `;
+
+  const style = document.createElement("style");
+  style.appendChild(document.createTextNode(css));
+  document.head.appendChild(style);
+
+  const script = document.createElement("script");
+  script.textContent = `
+    function toggleMenu() {
+      const nav = document.querySelector(".nav-links-mobile");
+      nav.classList.toggle("show");
+
+    }
+  `;
+  document.head.appendChild(script);
+}
+
 
 function filterGlossary(search, items, title, description) {
   const searchInput = document.getElementById(search).value.toLowerCase();
