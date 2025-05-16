@@ -49,8 +49,8 @@
   color: #fff;
 }
 
-.image-block {
-  width: 100%;
+.image-box {
+  width: 60%;
   height: auto;
   overflow: hidden;
   position: relative;
@@ -749,225 +749,6 @@ td {
   text-align: left;
 }
 
-.navbar-wbc {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-left: 35px;
-  background-color: #222;
-  width: 100%;
-  display: flex;
-  overflow-x: scroll;
-  box-sizing: border-box;
-  border-width: 0px;
-  scrollbar-width: none;
-}
-
-.navbar-wbc::-webkit-scrollbar { /* WebKit */
-  width: 0;
-  height: 0;
-}
-
-.navbar-wbc ul {
-  flex: 1;
-  background-color: #222;
-}
-
-.navbar-wbc li {
-  padding: 20px;
-  padding-top: 15px;
-  margin-bottom: 0;
-  color: aliceblue;
-}
-
-@media screen and (max-width: 700px) {
-  .navbar-wbc li {
-    min-width: 75px;
-  }
-
-  .navbar-wbc {
-    padding-left: 10px;
-    padding-right: 60px;
-  }
-}
-
-.navbar-wbc a {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-}
-
-.navbar-wbc li:hover {
-  background-color: #412947;
-  color: aliceblue;
-}
-
-.wbc-main-box {
-  display: flex;
-  gap: 20px;
-  font-size: medium;
-  margin: auto;
-}
-
-.wbc-main-box img {
-  max-width: 500px;
-}
-
-.wbc-about-box p {
-  margin: 0px;
-  width: 100%;
-  text-align: left;
-}
-
-.wbc-about-box h1 {
-  font-size: xx-large;
-}
-
-
-.wbc-hr {
-  margin-top: 25px;
-  margin-bottom: 20px;
-}
-
-@media screen and (min-width: 1400px) {
-
-  .wbc-main-box,
-  .wbc-hr {
-    width: 65%;
-  }
-
-  .wbc-about-box {
-    padding: 15px 20px;
-  }
-
-  .wbc-main-box img {
-    width: 20vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-
-  .wbc-main-box,
-  .wbc-hr {
-    width: 75%;
-  }
-
-  .wbc-about-box {
-    padding: 0;
-  }
-
-  .wbc-main-box img {
-    width: 25vw;
-    margin-right: auto;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-
-  .wbc-main-box,
-  .wbc-hr {
-    width: 85%;
-    flex-wrap: wrap;
-  }
-
-  .wbc-about-box {
-    padding: 0;
-    width: 100%;
-  }
-
-  .wbc-main-box img {
-    width: 25vw;
-    margin-right: auto;
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 550px) {
-
-  .wbc-main-box,
-  .wbc-hr {
-    width: 75%;
-    flex-wrap: wrap;
-  }
-
-  .wbc-about-box {
-    padding: 0;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .title-box {
-    width: 85%;
-    margin: auto;
-  }
-
-  .wbc-main-box img {
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 20px;
-  }
-}
-
-.error-msg {
-  vertical-align: middle;
-}
-
-.presentations {
-  display: flex;
-  flex-wrap: wrap;
-  justify-items: left;
-  padding: 10px auto;
-  padding-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-
-.presentations div {
-  background-color: #dfdfdf;
-  padding: 10px;
-  text-align: center;
-  width: 100%;
-  max-width: 300px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-  margin-right: 20px;
-}
-
-.presentations div img {
-  width: 100%;
-  margin-bottom: 0px;
-}
-
-.presentations div h3 {
-  font-size: 16px;
-  color: #f5f5f5;
-  background-color: #666;
-  padding: 10px;
-  margin-bottom: 0px;
-  font-weight: 400;
-  margin-top: 10px;
-}
-
-.presentations div h2 {
-  font-size: 18px;
-  text-align: left;
-  text-wrap: wrap;
-  margin: 12px 05px;
-}
-
-.presentations div p {
-  font-size: 14px;
-  text-align: left;
-  margin: -5px 5px;
-  margin-bottom: 15px;
-}
-
 .debating-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -980,15 +761,18 @@ td {
   font-size: 15px;
   padding: 10px 15px;
   border-radius: 10px;
-  background-color: #16166B;
+  background-color: #8E443D;
   color: #f5f5f5;
   border-width: 0px;
   margin: 5px;
-  opacity: 0.7;
+  opacity: 1;
+  height: 100px;
+  min-width: 100px;
+  max-width: 100px;
 }
 
 .debating-buttons button:hover {
-  opacity: 1;
+  opacity: 0.7;
   cursor: pointer;
 }
 
@@ -997,6 +781,8 @@ td {
   margin-top: 2px;
   font-size: x-small;
   color: #555;
+  margin-right: 10px;
+  text-align: right;
 }
 
 .img-caption a {

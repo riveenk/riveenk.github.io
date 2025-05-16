@@ -100,13 +100,7 @@ body {
 }
 
 .header {
-    background-color: #3E5879;
-    width: 100%;
-    height: fit-content;
-    padding: 10px 70px;
-    box-sizing: border-box;
-    margin: 0;
-    border-width: 0px;
+    display: none;
 }
 
 .header-text {
@@ -159,11 +153,24 @@ body {
     background-color: #f5efe7;
     color: #213555;
     padding: 50px;
-    width: 60%;
+    width: 65%;
     text-align: justify;
     margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 20px;
 }
 
+.image-box {
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-color: #f5efe7;
+}
+
+.post-image {
+    width: 100%;
+}
 
 .post {
     background-color: #f5efe7;      
@@ -238,14 +245,20 @@ body {
 
 @media screen and (max-width: 700px) {
     .body-main {
-        padding: 20px;
+        padding: 35px;
         width: 100%;
         font-size: small;
+        padding-top: 15px;
+    }
+
+    .image-box {
+        width: 100% !important;
     }
 
     .web-body {
-        padding: 10px;
+        padding: 0px;
         background-color: #f5efe7;
+        width: 100%;
     }
 
     .footer-items {
@@ -282,10 +295,18 @@ body {
         padding: 40px;
         width: 60%;
     }
+
+    .image-box {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 801px) {
     .body-main {
+        width: 60%;
+    }
+
+    .image-box {
         width: 60%;
     }
 
