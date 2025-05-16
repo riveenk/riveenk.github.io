@@ -160,8 +160,8 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
       <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
       <ul class="nav-links">
         ${navList.map(([label, link], i) =>
-          `<li><a href="${link}" : ""}>${label}</a></li>`
-        ).join("")}
+    `<li><a href="${link}" : ""}>${label}</a></li>`
+  ).join("")}
       </ul>
     </div>
   `;
@@ -188,10 +188,15 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
     }
 
     .site-title {
-      font-size: 1.5em;
-      font-weight: bold;
-      padding: 20px 30px;
-    }
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 20px 30px;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 
     .menu-toggle {
       display: none;
@@ -231,25 +236,19 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
         display: none;
         width: 100%;
         flex-direction: column;
-        gap: 10px;
-        padding: 10px 0px;
+        gap: 5px;
+        padding: 15px 20px;
       }
 
       .nav-links.show {
         display: flex;
-        background-color: #3e5879;
+        background-color: ${secondary};
         width: 100%;
       }
 
       .nav-links li {
-        width: 20%;
         text-align: left;
-        margin-left: 20px;
         cursor: pointer;
-      }
-
-      .nav-links li:hover {
-        background-color: #213555; 
       }
 
       .web-body {
