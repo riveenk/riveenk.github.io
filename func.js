@@ -195,7 +195,7 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
 
   const css = `
     body, .header, .footer {
-      background-color: ${secondary};
+      background-color: ${primary};
       margin: 0;
     }
 

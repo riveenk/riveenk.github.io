@@ -480,13 +480,18 @@ td {
   }
 }
 
+@font-face {
+  font-family: "timerText";
+  src: url('/resources/fonts/Chivo_Mono/ChivoMono-VariableFont_wght.ttf') format('truetype');
+}
+
 .stopwatch {
   margin-bottom: 20px;
-  font-family: 'Fira Mono', monospace;
+  font-family: 'timerText', 'Fira Mono', monospace;
   color: #333;
   margin-left: auto;
   margin-right: auto;
-  justify-self: center;
+  justify-self: center; 
 }
 
 @media screen and (min-width: 1200px) {
