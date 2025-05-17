@@ -491,7 +491,7 @@ td {
   color: #333;
   margin-left: auto;
   margin-right: auto;
-  justify-self: center; 
+  width: 100%;
 }
 
 @media screen and (min-width: 1200px) {
@@ -522,6 +522,7 @@ td {
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .controls button {
@@ -747,7 +748,7 @@ td {
 }
 
 .time-val {
-  font-family: Consolas;
+  font-family: "timertext";
 }
 
 .debating-intro {
