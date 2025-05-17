@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" href="/media/favicon.png">
     <link rel="stylesheet" type="text/css" href="/design.css">
     <link rel="stylesheet" type="text/css" href="/pages.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/resources/fontawesome/css/all.css">
     <script src = "/func.js"></script>
 </head>
 
@@ -19,7 +19,7 @@
     </script>
     <div class="web-body" id="webBody" style="min-height: 90vh; height: max-content; background-color: #d8c4b6;">
         <div class="body-main" id="bodyMain"
-            style="justify-items: center; background-color: transparent; margin-top: auto; margin-bottom: auto;">
+            style="justify-items: center; background-color: transparent; margin-top: auto; margin-bottom: auto; text-align: center; min-width: 100%;">
             <div class="stopwatch">00:00:00</div>
             <div class="controls">
                 <button id="startPauseBtn"><i id="fSLabel" style="font-size:x-large"
@@ -125,6 +125,8 @@
             isRunning = false;
             startTime = null;
             elapsedTime = 0;
+            startPauseBtn.innerHTML = `<i id="fSLabel" style="font-size:x-large"
+                class="fa">&#xf04b;</i>`;
             stopwatchDisplay.textContent = '00:00:00';
             webBody.style.backgroundColor = '#d8c4b6';
             nav.style.backgroundColor = '#d8c4b6';
