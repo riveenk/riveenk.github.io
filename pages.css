@@ -533,21 +533,39 @@ td {
   cursor: pointer;
   border: none;
   border-radius: 8px;
-  background-color: #83443d;
+  background-color: #3E5879;
   color: white;
   transition: background-color 0.3s;
   box-sizing: border-box;
-  opacity: 0.5;
   max-width: 80px;
   max-height: 80px;
+}
+
+.settings button {
+  font-size: 1em;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background-color: #f5efe7;
+  color: #213555;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+
 }
 
 .controls img {
   width: 30px;
 }
 
+.settings button:hover {
+  background-color: #d8c4b6;
+}
+
 .controls button:hover {
-  opacity: 1;
+  background-color: #213555;
 }
 
 .settings-container {
@@ -555,22 +573,52 @@ td {
 }
 
 .settings {
+  position: absolute;
   display: none;
-  margin-top: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
   padding: 25px;
-  background-color: rgb(175, 214, 239);
+  background-color: #f5efe7;
   border: 1px solid transparent;
   border-radius: 5px;
   color: #213555;
   box-sizing: border-box;
 }
 
+.settings div {
+  width: 100%;
+  margin-top: 3px;
+  color: #213555;
+  text-align: left;
+}
+
 .settings input {
+  max-width: 55px;
+  height: 1.5em;
+  border-width: 0px;
+  background-color: #fff;
+  text-align: center;
+  font-size: medium;
+  color: #213555;
   margin: 5px;
+  padding: 3px;
+}
+.settings select {
+  border-width: 0px;
+  background-color: #fff;
+  text-align: left;
+  font-size: medium;
+  color: #213555;
+  margin-top: 5px;
   padding: 5px;
-  font-size: 1em;
-  border: 1px solid #ccc;
-  border-radius: 3px;
+}
+
+.blur {
+  width: 100%;
+  height: 100%;
+  filter: blur(0) saturate(1);
 }
 
 .settings label {

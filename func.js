@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "The Scalmropia Archive",
     "On My Wavelength: Copyright Notice",
     "Wanna Be Cancelled?",
-    "On My Wavelength: Publications",
-    "On My Wavelength: Debating",
-    "On My Wavelength: About Me",
+    "Reading My Wavelength",
+    "Debating On My Wavelength",
+    "Wave Properties",
     "On My Wavelength: Debating Timer",
     "On My Wavelength: Notice to Visitors",
     "On My Wavelength: Archive",
-    "404 Not Found"
+    "On the Wrong Wavelength"
   ];
 
   const currentPath = window.location.pathname;
