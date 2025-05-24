@@ -827,12 +827,16 @@ td {
 }
 
 .debating-buttons button:hover {
-  opacity: 0.7;
   cursor: pointer;
 }
 
-.debating-buttons i {
+.debating-buttons i:hover {
+  cursor: pointer;
   background-color: #213555;
+}
+
+.debating-buttons i {
+  background-color: #3E5879;
   padding: 22px 15px;
   color: #f5efe7;
   font-size: 45px;
