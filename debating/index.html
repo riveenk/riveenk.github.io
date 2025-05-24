@@ -8,28 +8,56 @@
     <link rel="stylesheet" type="text/css" href="/design.css">
     <link rel="stylesheet" type="text/css" href="/pages.css">
     <script src="/func.js"></script>
-
 </head>
 
 <body style="padding: 0px;">
     <script>
-        createNavBar("#213555", "#3E5879", "#2E4976", 4);
+        createNavBar("#1b1b32", "#363457", "#2d2c52", 2);
     </script>
-
+    <style>
+        @media screen and (min-width: 801px) {
+            .search-container {
+                width: 60%;
+            }
+        }
+        @media screen and (max-width: 801px) {
+            .search-container {
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 701px) {
+            .search-container {
+                width: 100%;
+                margin: 5px;
+            }
+        }
+        @media screen and (min-width: 701px) {
+            .body-main {
+                padding: 0%;
+            }
+        }
+    </style>
 
     <div class="web-body" style="background-color: #D8C4B6; padding-top: 0px;">
+        <div class="body-main" style="background-color: transparent;">
         <div style="margin-bottom: 25px; margin-top: 40px; width: 100%; justify-content: center;"
             class="debating-buttons">
-            <a href="/debating/timer.html"><button>Debating Timer</button></a>
-            <a href="/debating/glossary.html"><button>Glossary</button></a>
-            <a href="/debating/apd.html"><button style="width: 90px; background-color: #006D6F;">APD</button></a>
-            <a href="/debating/bpd.html"><button style="width: 90px; background-color: #006D6F;">BPD</button></a>
-            <a href="/debating/wsdc.html"><button style="width: 90px; background-color: #006D6F;">WSDC</button></a>
-            <a href="/debating/jwsdc.html"><button style="width: 90px; background-color: #006D6F;">JWSDC</button></a>
+            <a href="/debating/timer.html"><button> <i class="fa">&#xf017;</i><br>Timer</button></a>
+            <a href="/debating/glossary.html"><button> <i class="fa">&#xf02d;</i><br>Glossary</button></a>
+            <a href="/debating/apd.html"><button> <i class="fa">&#xf57e;</i><br>APD</button></a>
+            <a href="/debating/bpd.html"><button> <i class="fa">&#xf24e;</i><br>BPD</button></a>
+            <a href="/debating/wsdc.html"><button> <i class="fa">&#xf549;</i><br>WSDC</button></a>
+            <a href="/debating/jwsdc.html"><button> <i class="fa">&#xf549;</i><br>JWSDC</button></a>
         </div>
 
-        <div class="post">
-            <img src="/media/how-to-make-a-debating-motion.jpg">
+        <div class="search-container" style="width: 100%; margin-bottom: 30px;">
+            <button style="background-color: #3E5879;"><i class="fa fa-search"
+                    style="font-size: medium; color: #f5efe7;"></i></button>
+            <input type="text" id="search" placeholder="Search by title, description, or type..."
+                oninput="filterGlossary('search', '.thing', '.thing h3', '.thing p')">
+        </div>
+
+        <div class="thing">
             <h3>How to make a Debating Motion?</h3>
             <p>Today we will be talking about motions. I would be using debating terms like “motion” here and there,
                 but I will always include a link of that word to my debating terminology glossary.
@@ -44,6 +72,7 @@
                 into play. You shouldn’t make a motion where there is a defined answer to, for example, a motion like
                 “THBT crime should not be punished”. These are questions which have a recognised answer to. </p>
             <a href="/post/2024/05/how-to-make-a-debating-motion.html"><button>Read More</button></a>
+        </div>
         </div>
 
         <script>
@@ -62,10 +91,7 @@
                 });
             }
 
-            textWrap(".post h3", 1)
-            textWrap(".post p", 3)
-            document.body.appendChild(footerDiv);
-
+            textWrap(".thing p", 2)
             document.body.appendChild(footerDiv);
         </script>
 </body>
