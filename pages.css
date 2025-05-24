@@ -585,6 +585,7 @@ td {
   border-radius: 5px;
   color: #213555;
   box-sizing: border-box;
+  width: 60%;
 }
 
 .settings div {
