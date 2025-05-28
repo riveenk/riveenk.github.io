@@ -17,35 +17,45 @@
         createNavBar("#213555", "#3E5879", "#2E4976", 4);
     </script>
 
-    <style>
-        @media screen and (min-width: 801px) {
-            .search-container {
-                width: 60%;
-            }
+<style>
+    @media screen and (min-width: 801px) {
+        .search-container {
+            width: 60%;
         }
-        @media screen and (max-width: 801px) {
-            .search-container {
-                width: 100%;
-            }
+    }
+    @media screen and (max-width: 801px) {
+        .search-container {
+            width: 100%;
         }
-        @media screen and (max-width: 701px) {
-            .search-container {
-                width: 100%;
-                margin: 5px;
-            }
+    }
+    @media screen and (max-width: 701px) {
+        .search-container {
+            width: 100%;
+            margin: 5px;
         }
-    </style>
+        .body-main {
+            padding: 10px;
+        }
+        .thing button {
+            width: fit-content;
+        }
+    }
+    @media screen and (min-width: 701px) {
+        .body-main {
+            padding: 0%;
+        }
+    }
+</style>
 
     <div class="web-body">
-        <div class="search-container" style="background-color: transparent; width: 100vw;">
-            <div class="search-container">
+        <div class="body-main" style="background-color: transparent;">
+        <div class="search-container" style="width: 100%; margin-bottom: 30px; margin-left: 0px; margin-right: 0px; margin-top: 45px;">
                 <button style="background-color: #3E5879;"><i class="fa fa-search"
                         style="font-size: medium; color: #f5efe7;"></i></button>
                 <input type="text" id="search" placeholder="Search for by title or description..."
-                    oninput="filterGlossary('search', '.post', '.post h3', '.post p')">
-            </div>
+                    oninput="filterGlossary('search', '.thing', '.thing h3', '.thing p')">
         </div>
-        <div class="post">
+        <div class="thing">
             <h3>50 Shades of Gender: Gender Complexity and Post-Gender Society</h3>
             <p>For much of recorded history, gender and sex were used interchangeably: male meant XY chromosomes and
                 masculinity, female meant XX chromosomes and femininity. However, modern gender has evolved into a
@@ -59,7 +69,7 @@
                 explore this. Suppose you have a gradient of colours. Perhaps it looks like the one below:</p>
             <a href="/post/2025/04/fifty-shades-of-gender.html"><button>Read More</button></a>
         </div>
-        <div class="post">
+        <div class="thing">
             <h3>why it matters to remember</h3>
             <p>cecil richard’s under a star called sun is a reader-led short story about a narrator where “the
                 trajectory of [his] ship is unchanging.” he (i like to see myself on the ship; you may too) recalls that
@@ -74,7 +84,7 @@
                 usually climb the ladder to the stars when we are alone on the soil.</p>
             <a href="/post/2024/08/why-it-matters-to-remember.html"><button>Read More</button></a>
         </div>
-        <div class="post">
+        <div class="thing">
             <h3>Laboratory life: my work experience week at BGS</h3>
             <p>My week began with a welcome tour of the research facilities at BGS and, more specifically, the
                 geochemistry laboratories. The team provided an introduction to the field of mass spectrometry and the
@@ -87,7 +97,7 @@
             <a href="https://www.bgs.ac.uk/news/laboratory-life-my-work-experience-week-at-bgs/"><button>BGS Blogs <i
                         style="font-size:small" class="fa">&#xf08e;</i></button></a>
         </div>
-        <div class="post">
+        <div class="thing">
             <h3>How to make a Debating Motion?</h3>
             <p> Today we will be talking about motions. I would be using debating terms like “motion” here and there,
                 but I will always include a link of that word to my debating terminology glossary.
@@ -103,10 +113,11 @@
                 “THBT crime should not be punished”. These are questions which have a recognised answer to. </p>
             <a href="/post/2024/05/how-to-make-a-debating-motion.html"><button>Read More</button></a>
         </div>
+        </div>
     </div>
     <script>
-        textWrap(".post h3", 1)
-        textWrap(".post p", 3)
+        textWrap(".thing h3", 1)
+        textWrap(".thing p", 3)
         document.body.appendChild(footerDiv);
     </script>
 </body>
