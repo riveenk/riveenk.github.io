@@ -191,6 +191,7 @@ input {
     width: 30%;
     margin: 10px;
     height: fit-content;
+    overflow: hidden;
 }
 
 .post h3 {
@@ -229,10 +230,15 @@ input {
 }
 
 .post img {
-    width: 100%;
+    width: calc(100% + 40px);
     height: auto;
-    margin-top: 5px;
+    margin-top: -15px;
     margin-bottom: 5px;;
+    margin-left: -20px;
+    margin-right: -20px;
+    position: relative;
+    top: -50%;
+    left: 0%;
 }
 
 .gallery {
