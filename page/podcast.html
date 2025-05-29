@@ -428,15 +428,14 @@
                 playPauseButton.style.opacity = "30%";
                 document.getElementById("description").style.opacity = "30%";
                 stuff.innerHTML = "";
-                stuff.style.borderColor = "red";
-                stuff.style.backgroundColor = "#fe9f9f";
+                stuff.style.backgroundColor = "#FDC3C3";
                 stuff.style.color = "#a91101";
                 stuff.style.padding = "20px";
                 stuff.style.overflowY = "scroll";
                 stuff.innerHTML = `<b>Trigger Warning</b>: ${episodes[epIndex][3]}&nbsp;<button onclick="twRemove()" class="blur-poem">I'll be Fine</button>`;
+                stuff.scrollTop = 0;
             } else {
                 stuff.innerHTML = "<img src='/media/wbc-image.png'>";
-                stuff.style.borderColor = "transparent";
                 stuff.style.backgroundColor = "transparent";
                 stuff.style.color = "transparent";
                 stuff.style.padding = "0px";
@@ -468,7 +467,6 @@
             desc.onclick = showDesc;
             desc.style.opacity = "100%"
             stuff.innerHTML = "<img src='/media/wbc-image.png'>";
-            stuff.style.borderColor = "transparent";
             stuff.style.backgroundColor = "transparent";
             stuff.style.color = "transparent";
             stuff.style.padding = "0px";
@@ -527,7 +525,6 @@
             desc.classList.toggle("collapsed");
             if (descShow) {
                 stuff.innerHTML = "<img src='/media/wbc-image.png'>";
-                stuff.style.borderColor = "transparent";
                 stuff.style.backgroundColor = "transparent";
                 stuff.style.color = "transparent";
                 stuff.style.overflow = "visible";
@@ -535,13 +532,13 @@
                 descShow = 0;
             } else {
                 stuff.innerHTML = "";
-                stuff.style.borderColor = "#363062";
                 stuff.style.backgroundColor = "#C0ADD7";
                 stuff.style.color = "#363062";
                 stuff.style.padding = "20px";
                 stuff.style.overflowY = "scroll";
                 stuff.innerHTML = `${descText}`;
                 descShow = 1;
+                stuff.scrollTop = 0;
             }
         }
 
