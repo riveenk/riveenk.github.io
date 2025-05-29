@@ -37,12 +37,26 @@
         }
 
         .wbc-player img {
-            width: 30%;
+            width: 100%;
             height: auto;
             /* Maintain aspect ratio */
             object-fit: cover;
             border-radius: 10px;
             box-shadow: 0px 0px 3px 3px #222;
+        }
+
+        .stuff-holder {
+            width: 30%;
+            border: transparent 3px solid;
+            background-color: transparent;
+            color: transparent;
+            border-radius: 10px;
+            overflow: scroll;
+            font-size: small;
+            text-align: left;
+            box-sizing: border-box;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
         .audio-player {
@@ -94,21 +108,13 @@
             cursor: pointer;
         }
 
-        .tw {
-            border: red 3px solid;
-            background-color: #fe9f9f;
-            color: #a91101;
-            padding: 20px;
-            font-size: small;
-            border-radius: 10px;
-            display: inline;
-        }
-
-        .tw button {
+        .stuff-holder button {
             padding: 5px 10px;
             border-width: 0;
             background-color: white;
             color: #a91101;
+            margin-top: 10px;
+            width: 100%;
         }
 
         .description {
@@ -138,7 +144,7 @@
                 padding: 50px;
             }
 
-            .wbc-player img {
+            .stuff-holder {
                 width: 100%;
             }
 
@@ -159,7 +165,7 @@
 
             }
 
-            .wbc-player img {
+            .stuff-holder {
                 width: 100%;
             }
 
@@ -294,11 +300,10 @@
                         and let our
                         thoughts stack.</p>
                 </div>
-                <div class="warning" id="tw">
-
-                </div>
                 <div class="wbc-player" style="margin-top: 5px;">
-                    <img src="/media/wbc-image.png">
+                    <div class="stuff-holder" id="stuff">
+                        <img src="/media/wbc-image.png">
+                    </div>
                     <div class="audio-player">
                         <h2 id="title">EP3 - How Society Always Moves On</h2>
                         <p>Wolfie and Riveen</p>
@@ -313,9 +318,9 @@
                                         style="font-size:large" class="fa">&#xf04e;</i></button>
                                 <button id="playlist" onclick="showList()" title="Show Playlist"><i
                                         style="font-size:large" class="fa">&#xf0c9;</i></button>
-                                <button id="toggle-desc" onclick="showDesc()" title="Show Description"><i
+                                <button id="toggle" onclick="showDesc()" title="Show Description"><i
                                         style="font-size:large" class="fa">&#xf249;</i></button>
-                                <button id="toggle-desc" onclick="brokenPlayer()" title="Change Audio Player"><i
+                                <button id="toggle-player" onclick="brokenPlayer()" title="Change Audio Player"><i
                                         style="font-size:large" class="fa">&#xf362;</i></button>
                             </div>
                         </div>
@@ -342,18 +347,16 @@
                                         style="font-size:large" class="fa">&#xf04e;</i></button>
                                 <button id="playlist" onclick="showList()" title="Show Playlist"><i
                                         style="font-size:large" class="fa">&#xf0c9;</i></button>
-                                <button id="toggle-desc" onclick="showDesc()" title="Show Description"><i
+                                <button id="description" onclick="showDesc()" title="Show Description"><i
                                         style="font-size:large" class="fa">&#xf249;</i></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="description collapsed" id="description" style="text-align: left;">
-                    <p id="wbc-description" style="text-align: left;"></p>
-                </div>
                 <div class="wbc-episodes collapsed" id="wbc-episodes">
-                    <div class="search-container" style = "margin-bottom: 5px;">
-                        <button style="background-color: #D8C4B6;"><i class="fa fa-search" style="font-size: medium;"></i></button>
+                    <div class="search-container" style="margin-bottom: 5px;">
+                        <button style="background-color: #D8C4B6;"><i class="fa fa-search"
+                                style="font-size: medium;"></i></button>
                         <input type="text" id="search" placeholder="Search for an episode..."
                             oninput="filterGlossary('search', '.wbc-episode', '.wbc-episode h3', '.wbc-episode p')">
                     </div>
@@ -361,13 +364,18 @@
                     <div class="wbc-episode" id="ep2" onclick="selectEpisode(1)">
                         <img src="/media/wbc-image.png">
                         <h3>EP2 - The Limit of Opinion Entitlement</h3>
-                        <p>People are entitled to their opinions. Many say that there is a certain extent to it. But, what is this extent? Listen to us yap for about this for almost an hour. We will be talking about changing lines of social acceptability and sheds fear of a hypothetical future where ideas that we consider morally degenerate are accepted. Still we have the worst mics ever...</p>
+                        <p>People are entitled to their opinions. Many say that there is a certain extent to it. But,
+                            what is this extent? Listen to us yap for about this for almost an hour. We will be talking
+                            about changing lines of social acceptability and sheds fear of a hypothetical future where
+                            ideas that we consider morally degenerate are accepted. Still we have the worst mics ever...
+                        </p>
                     </div>
 
                     <div class="wbc-episode" id="ep1" onclick="selectEpisode(0)">
                         <img src="/media/wbc-image.png">
                         <h3>EP1 - Social Media and the Whole Thing</h3>
-                        <p>What does it take to be an influencer? And what role does the audience actually play within this system? Find out with us! (Wolfie regrets his bad mic and would like to apologise)</p>
+                        <p>What does it take to be an influencer? And what role does the audience actually play within
+                            this system? Find out with us! (Wolfie regrets his bad mic and would like to apologise)</p>
                     </div>
                 </div>
             </div>
@@ -390,14 +398,28 @@
         const progressBar = document.querySelector(".progress-bar");
         const progress = document.getElementById("progress");
         const hoverCircle = document.getElementById("hover-circle");
-        const description = document.getElementById("description");
-        const descriptionText = document.getElementById("wbc-description");
-        const tw = document.getElementById("tw");
+        const desc = document.getElementById("description");
         const sideChick = document.getElementById("sideChick");
-        const mainPlayer = document.getElementById("mainPlayer")
+        const mainPlayer = document.getElementById("mainPlayer");
+        const stuff = document.getElementById("stuff");
+
+        var descShow = 0;
+        var descText = null;
+        var twText = null;
 
         let episode = 2;
         let interval = null;
+
+        function updateStuffHeight() {
+            stuff.style.height = stuff.offsetWidth + "px";
+        }
+
+        // On page load
+        document.addEventListener("DOMContentLoaded", updateStuffHeight);
+
+        // On window resize
+        window.addEventListener("resize", updateStuffHeight);
+
 
         progressBar.addEventListener("mousemove", (e) => {
             const rect = progressBar.getBoundingClientRect();
@@ -411,25 +433,39 @@
         });
 
         function selectEpisode(epIndex) {
+            twRemove();
+
             episode = epIndex; // Store current episode index
             const name = episodes[epIndex][0];
             audioName.textContent = name;
-            descriptionText.innerHTML = `<b>Description:</b> ${episodes[epIndex][2]}`;
+            descShow = 0;
+            descText = `<b>Description:</b> ${episodes[epIndex][2]}`;
             audioPlayer.src = episodes[epIndex][1]
             audioPlayer.innerHTML = `<source id="audio-source" src="${episodes[epIndex][1]}" type="audio/mp3">`
 
             if (episodes[epIndex][3]) {
-                tw.style.display = "block";
                 playPauseButton.onclick = doesNothing;
+                desc.onclick = doesNothing;
                 playPauseButton.style.opacity = "30%";
-                tw.innerHTML = `<b>Trigger Warning</b>: ${episodes[epIndex][3]}&nbsp;<button onclick="twRemove()" class="blur-poem">I'll be Fine</button>`;
-                tw.style.marginBottom = "20px";
-                tw.style.lineHeight = "2em";
+                document.getElementById("description").style.opacity = "30%";
+                stuff.innerHTML = "";
+                stuff.style.borderColor = "red";
+                stuff.style.backgroundColor = "#fe9f9f";
+                stuff.style.color = "#a91101";
+                stuff.style.padding = "20px";
+                stuff.style.overflowY = "scroll";
+                stuff.innerHTML = `<b>Trigger Warning</b>: ${episodes[epIndex][3]}&nbsp;<button onclick="twRemove()" class="blur-poem">I'll be Fine</button>`;
             } else {
-                tw.innerHTML = "";
-                tw.style.display = "none";
+                stuff.innerHTML = "<img src='/media/wbc-image.png'>";
+                stuff.style.borderColor = "transparent";
+                stuff.style.backgroundColor = "transparent";
+                stuff.style.color = "transparent";
+                stuff.style.padding = "0px";
+                stuff.style.overflow = "visible";
                 playPauseButton.onclick = playEpisode;
                 playPauseButton.style.opacity = "100%";
+                desc.onclick = showDesc;
+                desc.style.opacity = "100%"
             }
 
             audioPlayer.addEventListener('loadedmetadata', () => {
@@ -444,13 +480,20 @@
         }
 
         function doesNothing() {
-
+            // haha, nerd!
         }
 
         function twRemove() {
             playPauseButton.onclick = playEpisode;
             playPauseButton.style.opacity = "100%"
-            tw.style.display = "none";
+            desc.onclick = showDesc;
+            desc.style.opacity = "100%"
+            stuff.innerHTML = "<img src='/media/wbc-image.png'>";
+            stuff.style.borderColor = "transparent";
+            stuff.style.backgroundColor = "transparent";
+            stuff.style.color = "transparent";
+            stuff.style.padding = "0px";
+            stuff.style.overflow = "visible";
         }
 
         function updateTime() {
@@ -506,7 +549,25 @@
         }
 
         function showDesc() {
-            description.classList.toggle("collapsed");
+            desc.classList.toggle("collapsed");
+            if (descShow) {
+                stuff.innerHTML = "<img src='/media/wbc-image.png'>";
+                stuff.style.borderColor = "transparent";
+                stuff.style.backgroundColor = "transparent";
+                stuff.style.color = "transparent";
+                stuff.style.overflow = "visible";
+                stuff.style.padding = "0px";
+                descShow = 0;
+            } else {
+                stuff.innerHTML = "";
+                stuff.style.borderColor = "#363062";
+                stuff.style.backgroundColor = "#C0ADD7";
+                stuff.style.color = "#363062";
+                stuff.style.padding = "20px";
+                stuff.style.overflowY = "scroll";
+                stuff.innerHTML = `${descText}`;
+                descShow = 1;
+            }
         }
 
         progressBar.addEventListener("click", (e) => {
