@@ -151,6 +151,10 @@
             .audio-player {
                 width: 100%;
             }
+
+            .title-box h1 {
+            font-size: xx-large;
+        }
         }
 
         @media (max-width: 650px) {
@@ -172,6 +176,10 @@
             .audio-player {
                 width: 100%;
             }
+
+            .title-box h1 {
+            font-size: xx-large;
+        }
         }
 
         .hover-circle {
@@ -215,7 +223,7 @@
         .wbc-episodes {
             padding: 20px;
             background-color: #4D4C7D;
-            margin-top: 10px;
+            margin-top: 40px;
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
@@ -224,62 +232,37 @@
             transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
         }
 
-        .wbc-episodes.collapsed {
-            max-height: 0;
-            padding: 0 !important;
-            margin-top: 0 !important;
-        }
-
-
         .wbc-episode {
-            display: flex;
-            align-items: center;
-            /* vertically center the image + text */
-            gap: 15px;
-            /* space between image and text */
             background-color: #fcfcfc;
             width: 100%;
             padding: 15px;
-            flex-wrap: nowrap;
-            /* prevents breaking onto next line */
-            overflow: hidden;
-            /* avoids layout break from long text */
         }
-
 
         .wbc-episode:hover {
             background-color: #D8C4B6;
             cursor: pointer;
         }
 
-        .wbc-episode img {
-            height: 50px;
-            width: 50px;
-            object-fit: cover;
-            flex-shrink: 0;
-            /* don’t let image shrink */
-        }
-
-
         .wbc-episode h3 {
             margin: 0;
-            font-size: 1rem;
-            white-space: nowrap;
-            /* optional: prevent text wrap */
-            overflow: hidden;
-            /* optional: truncate overflow */
-            text-overflow: ellipsis;
-            /* optional: show "..." if too long */
-            flex-grow: 1;
+            font-size: medium;
+            width: 100%;
+            text-align: left;
         }
 
         .wbc-episode p {
-            display: none;
+            font-size: small;
+            text-align: left;
+            margin-bottom: 0px;
         }
 
         .title-box {
             margin-bottom: 60px;
             text-align: left;
+        }
+
+        .title-box h1 {
+            font-size: 60px;
         }
     </style>
 
@@ -316,8 +299,6 @@
                                         style="font-size:large" class="fa">&#xf04a;</i></button>
                                 <button id="next" onclick="nextEpisode()" title="Next Episode"><i
                                         style="font-size:large" class="fa">&#xf04e;</i></button>
-                                <button id="playlist" onclick="showList()" title="Show Playlist"><i
-                                        style="font-size:large" class="fa">&#xf0c9;</i></button>
                                 <button id="toggle" onclick="showDesc()" title="Show Description"><i
                                         style="font-size:large" class="fa">&#xf249;</i></button>
                                 <button id="toggle-player" onclick="brokenPlayer()" title="Change Audio Player"><i
@@ -345,15 +326,13 @@
                                         id="fSLabel" style="font-size:large" class="fa">&#xf04b;</i></button>
                                 <button id="next" onclick="nextEpisode()" title="Next Episode"><i
                                         style="font-size:large" class="fa">&#xf04e;</i></button>
-                                <button id="playlist" onclick="showList()" title="Show Playlist"><i
-                                        style="font-size:large" class="fa">&#xf0c9;</i></button>
                                 <button id="description" onclick="showDesc()" title="Show Description"><i
                                         style="font-size:large" class="fa">&#xf249;</i></button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="wbc-episodes collapsed" id="wbc-episodes">
+                <div class="wbc-episodes" id="wbc-episodes">
                     <div class="search-container" style="margin-bottom: 5px;">
                         <button style="background-color: #D8C4B6;"><i class="fa fa-search"
                                 style="font-size: medium;"></i></button>
@@ -362,8 +341,7 @@
                     </div>
 
                     <div class="wbc-episode" id="ep2" onclick="selectEpisode(1)">
-                        <img src="/media/wbc-image.png">
-                        <h3>EP2 - The Limit of Opinion Entitlement</h3>
+                        <h3>Episode 2 - The Limit of Opinion Entitlement</h3>
                         <p>People are entitled to their opinions. Many say that there is a certain extent to it. But,
                             what is this extent? Listen to us yap for about this for almost an hour. We will be talking
                             about changing lines of social acceptability and sheds fear of a hypothetical future where
@@ -372,8 +350,7 @@
                     </div>
 
                     <div class="wbc-episode" id="ep1" onclick="selectEpisode(0)">
-                        <img src="/media/wbc-image.png">
-                        <h3>EP1 - Social Media and the Whole Thing</h3>
+                        <h3>Episode 1 - Social Media and the Whole Thing</h3>
                         <p>What does it take to be an influencer? And what role does the audience actually play within
                             this system? Find out with us! (Wolfie regrets his bad mic and would like to apologise)</p>
                     </div>
@@ -544,10 +521,6 @@
             }
         }
 
-        function showList() {
-            playlist.classList.toggle("collapsed");
-        }
-
         function showDesc() {
             desc.classList.toggle("collapsed");
             if (descShow) {
@@ -593,7 +566,7 @@
         }
 
         selectEpisode(1);
-
+        textWrap(".wbc-episode p", 2)
         document.body.appendChild(footerDiv);
     </script>
 </body>
