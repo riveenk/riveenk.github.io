@@ -98,8 +98,11 @@
         .audio-func button {
             background-color: #fff;
             color: #4D4C7D;
-            padding: 10px;
             border-width: 0px;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            vertical-align: middle;
         }
 
         .audio-func button:hover {
@@ -322,14 +325,14 @@
                                 </tr>
                             </table>
                             <div class="audio-func">
-                                <button id="previous" onclick="prevEpisode()" title="Previous Episode"><i
+                                <button class = "func-button" id="previous" onclick="prevEpisode()" title="Previous Episode"><i
                                         style="font-size:large" class="fa">&#xf04a;</i></button>
-                                <button id="play-pause" onclick="playEpisode()" title="Play/ Pause Episode"><i
+                                <button class = "func-button" id="play-pause" onclick="playEpisode()" title="Play/ Pause Episode"><i
                                         id="fSLabel" style="font-size:large" class="fa">&#xf04b;</i></button>
-                                <button id="next" onclick="nextEpisode()" title="Next Episode"><i
+                                <button class = "func-button" id="next" onclick="nextEpisode()" title="Next Episode"><i
                                         style="font-size:large" class="fa">&#xf04e;</i></button>
-                                <button id="description" onclick="showDesc()" title="Show Description"><i
-                                        style="font-size:large" class="fa">&#xf249;</i></button>
+                                <button class = "func-button" id="description" onclick="showDesc()" title="Show Description"><i
+                                        style="font-size:large" class="fa">&#x2a;</i></button>
                             </div>
                         </div>
                     </div>
@@ -381,6 +384,7 @@
         const sideChick = document.getElementById("sideChick");
         const mainPlayer = document.getElementById("mainPlayer");
         const stuff = document.getElementById("stuff");
+        const func = document.getElementsByClassName("func-buttons");
 
         var descShow = 0;
         var descText = null;
@@ -388,6 +392,8 @@
 
         let episode = 2;
         let interval = null;
+
+        //func.style.width = func.height;
 
         function updateStuffHeight() {
             stuff.style.height = stuff.offsetWidth + "px";
