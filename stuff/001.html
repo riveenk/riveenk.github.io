@@ -4,60 +4,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riveen Kumanayaka</title>
     <link rel="icon" type="image/png" href="/media/favicon.png">
-    <link rel="stylesheet" type="text/css" href="/design.css">
-    <link rel="stylesheet" type="text/css" href="/pages.css">
+    <link rel="stylesheet" type="text/css" href="design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/func.js"></script>
 </head>
 
-<style>
-    .circle-container {
-        width: 100%;
-    }
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .circle {
-        width: 30vw;
-        height: 30vw;
-        min-width: 270px;
-        min-height: 270px;
-        background-color: transparent;
-        border-radius: 50%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 45px;
-    }
+        html,
+        body {
+            height: 100vh;
+            overflow: hidden;
+            font-family: sans-serif;
+        }
 
-    .heart {
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        width: 40%;
-        min-width: 220px;
-    }
-</style>
+        .scene-wrapper {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
 
-<body style="padding: 0px;">
-    <script>
-        createNavBar("#0c0e29", "#0c0e29", "#111335", 0);
-    </script>
+        .scene {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
 
-    <div class="web-body" style="background-color: #0c0e29;">
-        <div class="body-main" style="position: relative; background-color: transparent; height: 90vh;">
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url('/media/sky-map.svg');
+            background-position: center;
+            background-position-y: center;
+            z-index: 0;
+        }
 
-            <div class="circle-container">
-                <div class="circle">
-                    <img src="/media/heart.svg" id="heart" alt="heart" class="heart">
-                </div>
-            </div>
+        .shrubs {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            z-index: 0;
+            height: 20%;
+        }
+
+        .heart-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -65%);
+            z-index: 1;
+            pointer-events: none;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heart {
+            width: 22.5%;
+            max-width: 600px;
+            min-width: 270px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sprites-container {
+            position: fixed;
+            bottom: 20px;
+            display: flex;
+            gap: 20px;
+            z-index: 2;
+            width: fit-content;
+        }
+
+        .sprite {
+            width: 80px;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        @media (max-width: 768px) {
+            .sprite {
+                width: 50px;
+            }
+        }
+    </style>
+
+    <div class="heart-container" id="heart-container">
+        <img src="/media/heart.svg" class="heart" alt="Heart" id="heart"/>
+    </div>
+
+    <div class="scene-wrapper">
+        <div class="scene">
+            <div class="background"></div>
+            <img src="/media/shrubs.png" class="shrubs" alt="Shrubs" />
         </div>
     </div>
+
     <script>
-        function updateheartPosition() {
-            const backContainer = document.querySelector('.circle-container');
+        function updateHeartOpacity() {
+            const backContainer = document.getElementById('heart-container');
             const heart = document.getElementById('heart');
             if (!backContainer || !heart) return;
 
@@ -72,13 +130,15 @@
             const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
 
             const val = Math.sin((Math.PI * (diffDays - root1)) / (root2 - root1));
-            const val2 = 1 - Math.abs(val);
+            const val2 = 1.1 - Math.abs(val);
             const opacity = Math.round(val2 * 100) / 100
+
+            heart.style.opacity = opacity;
         }
-        updateheartPosition();
-    </script>
-    <script>
-        document.body.appendChild(footerDiv);
+
+        updateHeartOpacity()
+        flipSprites();
+        animate();
     </script>
 </body>
 
