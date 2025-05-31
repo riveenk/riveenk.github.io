@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="/media/favicon.png">
-    <link rel="stylesheet" type="text/css" href="design.css">
+    <link rel="stylesheet" type="text/css" href="/design.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="/func.js"></script>
 </head>
 
 <body>
     <style>
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
@@ -22,13 +23,14 @@
         body {
             height: 100dvh;
             overflow: hidden;
-            font-family: sans-serif;
         }
 
         .scene-wrapper {
             width: 100vw;
             height: 100vh;
             overflow: hidden;
+            font-family: "mainBody";
+            filter: sepia(0.3) saturate(1.5) hue-rotate(-10deg) brightness(1.1);
         }
 
         .scene {
@@ -58,6 +60,7 @@
             z-index: 0;
         }
 
+
         .heart-container {
             position: fixed;
             top: 50%;
@@ -81,69 +84,287 @@
 
         .sprites-container {
             position: fixed;
-            bottom: 20px;
             display: flex;
-            gap: 20px;
             z-index: 2;
-            width: fit-content;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            transform: translateX(-50%);
+            padding: 0;
+            margin-bottom: -7px;
         }
 
         .sprite {
-            width: 80px;
-            height: auto;
-            transition: transform 0.3s;
+            width: auto;
+            height: 40dvh;
+            transition: transform 0.1s;
+            margin-left: -80px;
+        }
+
+        .sprite-me:hover{
+            cursor: pointer;
+        }
+
+        .float-bar {
+            position: absolute;
+            z-index: 4;
+            background-color: #0c0e27;
+            top: 0;
+            right: 0;
+            margin: 15px;
+            padding: 10px;
+
+        }
+
+        .cuteMsg {
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            background-color: #0d1324;
+            padding: 20px;
+            height: fit-content;
+            width: 40%;
+            min-width: 280px;
+            color: #fef1dd;
+            display: none;
+            line-height: 1.5em;
+        }
+
+        .cuteMsg p {
+            font-size: small;
+
+        }
+
+        .credits {
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -100%);
+            background-color: #575960;
+            padding: 20px;
+            height: fit-content;
+            width: 40%;
+            min-width: 280px;
+            color: #fcfeda;
+            display: none;
+        }
+
+        .credits a {
+            color: #fcfeda;
+        }
+
+        .credits p {
+            margin-top: 10px;
+            font-size: small;
+        }
+
+        .float-bar button {
+            background-color: #575960;
+            width: 30px;
+            height: 30px;
+            border: #575960 0px none;
+            color: #0c0e27;
+            font-size: medium;
+        }
+
+        .credits button {
+            background-color: #fcfeda;
+            width: 20px;
+            height: 20px;
+            border: #575960 0px none;
+            color: #575960;
+            font-size: medium;
+            margin-bottom: 10px;
+            margin-left: auto;
+        }
+
+        .cuteMsg button {
+            background-color: #fef1dd;
+            width: 20px;
+            height: 20px;
+            border: #575960 0px none;
+            color: #0d1324;
+            font-size: medium;
+            margin-bottom: 10px;
+            margin-left: auto;
+        }
+
+
+        .float-bar button:hover {
+            cursor: pointer;
+            color: #575960;
+            background-color: #0c0e27;
+        }
+
+        .credits button:hover {
+            cursor: pointer;
+            color: #fcfeda;
+            background-color: #575960;
+        }
+
+        .cuteMsg button:hover {
+            cursor: pointer;
+            color: #fcfeda;
+            background-color: #0d1324;
         }
 
         @media (max-width: 768px) {
             .sprite {
-                width: 50px;
+                height: 35dvh;
+                width: auto;
             }
+
             .shrubs {
                 height: 13%;
             }
         }
     </style>
 
+<div class="credits" id="credits">
+    <button id="hide-credits"><i class="fa">&#xf00d;</i></button>
+    <h3> Thanks for All </h3>
+    <p>Skymap © Dominic Ford via <a href="https://in-the-sky.org/skymap.php">in-the-sky.org</a> (Modified)</p>
+    <p>Pixelated Flower Bush by Diego Solas via <a href="https://canva.com">canva.com</a></p>
+    <p>Sprites contributed as part of the <a href="http://opengameart.org/content/lpc-collection">Liberated
+            Pixel Cup project from OpenGameArt.org</a> CC-BY-SA 3.0</p>
+</div>
+
+<div class="cuteMsg" id="msg">
+    <button id="hide-message"><i class="fa">&#xf00d;</i></button>
+    <p id="cute-message">Until a little while ago, the letter <span style="font-family: 'timerText';">f</span> didn't exist i Sinhala. It meant that back then, I could not have written your name in my script. Then they adopted the letter, <i style="font-family: 'timerText'; font-style: normal; font-size: large;">&#3526;</i>, in 1989. A whole language reinvented itself for me to write and speak your name in my tongue. Maybe this is proof that I can reinvent myself for you too.</p>
+</div>
+
+<div id="blur">
+
     <div class="heart-container" id="heart-container">
-        <img src="/media/heart.svg" class="heart" alt="Heart" id="heart"/>
+        <svg id="heart" class="heart" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <g translate="yes">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V4C12.75 4.41421 12.4142 4.75 12 4.75C11.5858 4.75 11.25 4.41421 11.25 4V2C11.25 1.58579 11.5858 1.25 12 1.25ZM5.46967 5.46967C5.76256 5.17678 6.23744 5.17678 6.53033 5.46967L6.87359 5.81293C7.16648 6.10582 7.16648 6.5807 6.87359 6.87359C6.5807 7.16648 6.10582 7.16648 5.81293 6.87359L5.46967 6.53033C5.17678 6.23744 5.17678 5.76256 5.46967 5.46967ZM18.5303 5.46967C18.8232 5.76256 18.8232 6.23744 18.5303 6.53033L18.1871 6.87359C17.8942 7.16648 17.4193 7.16648 17.1264 6.87359C16.8335 6.5807 16.8335 6.10582 17.1264 5.81293L17.4697 5.46967C17.7626 5.17678 18.2374 5.17678 18.5303 5.46967ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H4C4.41421 11.25 4.75 11.5858 4.75 12C4.75 12.4142 4.41421 12.75 4 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM19.25 12C19.25 11.5858 19.5858 11.25 20 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H20C19.5858 12.75 19.25 12.4142 19.25 12ZM6.87338 17.1266C7.16627 17.4195 7.16627 17.8944 6.87338 18.1873L6.53033 18.5303C6.23744 18.8232 5.76256 18.8232 5.46967 18.5303C5.17678 18.2374 5.17678 17.7626 5.46967 17.4697L5.81272 17.1266C6.10561 16.8337 6.58048 16.8337 6.87338 17.1266ZM17.1266 17.1266C17.4195 16.8337 17.8944 16.8337 18.1873 17.1266L18.5303 17.4697C18.8232 17.7626 18.8232 18.2374 18.5303 18.5303C18.2374 18.8232 17.7626 18.8232 17.4697 18.5303L17.1266 18.1873C16.8337 17.8944 16.8337 17.4195 17.1266 17.1266ZM12 19.25C12.4142 19.25 12.75 19.5858 12.75 20V22C12.75 22.4142 12.4142 22.75 12 22.75C11.5858 22.75 11.25 22.4142 11.25 22V20C11.25 19.5858 11.5858 19.25 12 19.25Z M7 11.0595C7 13.6018 9.00971 14.9566 10.4809 16.1692C11 16.5971 11.5 17 12 17C12.5 17 13 16.5971 13.5191 16.1692C14.9903 14.9566 17 13.6018 17 11.0595C17 8.51718 14.2499 6.71421 12 9.15837C9.75008 6.71421 7 8.51718 7 11.0595Z" />
+            </g>
+        </svg>
     </div>
 
-    <div class="scene-wrapper">
+    <div class="sprites-container">
+        <img src="/media/sprite-me.gif" class="sprite sprite-me" id="me" alt="me" />
+        <img src="/media/sprite-her.gif" class="sprite" id="you" alt="you"/>
+    </div>
+
+    <div class="scene-wrapper" id="scene-wrapper">
+        <div class="float-bar">
+            <a href="/index.html"><button><i class="fa">&#xf015;</i></button></a>
+            <button id="show-credits"><i class="far">&#xf1f9;</i></button>
+        </div>
         <div class="scene">
             <div class="background"></div>
-            <a href="/index.html">
-                <img src="/media/shrubs.png" class="shrubs" alt="Shrubs" />
-            </a>
+                <img src="/media/shrubs.png" class="shrubs" id="shrubs" />
         </div>
     </div>
-
+</div>
     <script>
-        function updateHeartOpacity() {
-            const backContainer = document.getElementById('heart-container');
-            const heart = document.getElementById('heart');
-            if (!backContainer || !heart) return;
-
-            const root1 = 106;
-            const root2 = 286;
-
-            const today = new Date();
-            const year = new Date().getFullYear();
-            const start = new Date(year, 0, 1);
-
-            const diffTime = Math.abs(today - start);
-            const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-            const val = Math.sin((Math.PI * (diffDays - root1)) / (root2 - root1));
-            const val2 = 1.1 - Math.abs(val);
-            const opacity = Math.round(val2 * 100) / 100
-
-            heart.style.opacity = opacity;
+        function showHideCred() {
+            const credits = document.getElementById("credits");
+            const blurBox = document.getElementById("blur")
+            const visible = credits.style.display === 'block';
+            const heart = document.getElementById("heart");
+            credits.style.display = visible ? 'none' : 'block';
+            heart.style.display = visible ? 'block' : 'none';
+            blurBox.style.filter = visible ? 'blur(0) saturate(1)' : 'saturate(0)';
+            [startPauseBtn, resetBtn, toggleSettingsBtn, fSButton].forEach(btn => btn.disabled = !visible);
         }
 
-        updateHeartOpacity()
-        flipSprites();
-        animate();
+        function showCuteMessage() {
+            const msg = document.getElementById("msg");
+            const blurBox = document.getElementById("scene-wrapper");
+            const heart = document.getElementById("heart");
+            const visible = msg.style.display === 'block';
+            msg.style.display = visible ? 'none' : 'block';
+            blurBox.style.filter = visible ? 'sepia(0.3) saturate(1.5) hue-rotate(-10deg) brightness(1.1)' : 'sepia(0.3) saturate(1) hue-rotate(-10deg) brightness(1.1)';
+            heart.style.display = visible ? 'block' : 'none';
+        }
+
+
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const showBtn = document.getElementById("show-credits");
+            const hideBtn = document.getElementById("hide-credits");
+            const msgBtn = document.getElementById("me");
+            const msgHideBtn = document.getElementById("hide-message");
+
+            showBtn?.addEventListener("click", showHideCred);
+            hideBtn?.addEventListener("click", showHideCred);
+            msgBtn?.addEventListener("click", showCuteMessage);
+            msgHideBtn?.addEventListener("click", showCuteMessage)
+
+            const container = document.querySelector(".sprites-container");
+            const you = document.getElementById("you");
+            const me = document.getElementById("me");
+
+            let direction = 1;
+            let speed = 3;
+            let x = -150;
+            let screenWidth = window.innerWidth;
+
+            function animate() {
+                x += speed * direction;
+                container.style.transform = `translateX(${x}px)`;
+
+                if (direction === 1 && x > screenWidth) {
+                    direction = -1;
+                    flipSprites();
+                    x = screenWidth;
+                }
+
+                if (direction === -1 && x < -container.offsetWidth) {
+                    direction = 1;
+                    flipSprites();
+                    x = -container.offsetWidth;
+                }
+
+                requestAnimationFrame(animate);
+            }
+
+            function flipSprites() {
+                const scaleX = direction === 1 ? 1 : -1;
+                you.style.transform = `scaleX(${scaleX})`;
+                me.style.transform = `scaleX(${scaleX})`;
+            }
+
+            function updateHeartColor() {
+                const heart = document.querySelector('#heart path');
+                if (!heart) return;
+
+                const root1 = 106;
+                const root2 = 286;
+
+                const today = new Date();
+                const year = new Date().getFullYear();
+                const start = new Date(year, 0, 1);
+
+                const diffTime = Math.abs(today - start);
+                const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+                const val = Math.sin((Math.PI * (diffDays - root1)) / (root2 - root1));
+                const val2 = 1.1 - Math.abs(val);
+                const t = Math.max(0, Math.min(val2, 1));
+
+                const colorStart = { r: 0x25, g: 0x27, b: 0x3b };
+                const colorEnd = { r: 0xe4, g: 0xe6, b: 0xc8 };
+
+                const r = Math.round(colorStart.r + (colorEnd.r - colorStart.r) * t);
+                const g = Math.round(colorStart.g + (colorEnd.g - colorStart.g) * t);
+                const b = Math.round(colorStart.b + (colorEnd.b - colorStart.b) * t);
+
+                heart.style.fill = `rgb(${r}, ${g}, ${b})`;
+            }
+
+            updateHeartColor();
+            flipSprites();
+            animate();
+        });
     </script>
 </body>
-
 </html>
