@@ -19,7 +19,7 @@
         <div id="bodyMain"
             style="justify-items: center; background-color: transparent; margin-top: auto; margin-bottom: auto; text-align: center; min-width: 100%;">
             <div class="blur" id="blur">
-                <div class="stopwatch">00:00:00</div>
+                <div class="stopwatch" style="margin: 0;">00:00:00</div>
                 <div class="controls">
                     <button id="startPauseBtn"><i id="fSLabel" style="font-size:x-large"
                             class="fa">&#xf04b;</i></button>
@@ -35,19 +35,24 @@
                         class="fa">&#xf00d;</i></button>
                 <div>
                     <label for="speechLength">Speech Duration</label>
-                    <input type="text" id="speechLengthMin" placeholder="mm" value="07" maxlength="2" pattern="\\d{2}" title="Enter 2 digit minutes (00-99)">
+                    <input type="text" id="speechLengthMin" placeholder="mm" value="07" maxlength="2" pattern="\\d{2}"
+                        title="Enter 2 digit minutes (00-99)">
                     :
-                    <input type="text" id="speechLengthSec" placeholder="ss" value="00" maxlength="2" pattern="[0-5][0-9]" title="Enter 2 digit seconds (00-59)">
+                    <input type="text" id="speechLengthSec" placeholder="ss" value="00" maxlength="2"
+                        pattern="[0-5][0-9]" title="Enter 2 digit seconds (00-59)">
 
                     <br>
                     <label for="replyLength">Reply Duration</label>
-                    <input type="text" id="replyLengthMin" placeholder="mm" value="04" maxlength="2" pattern="\\d{2}" title="Enter 2 digit minutes (00-99)">
+                    <input type="text" id="replyLengthMin" placeholder="mm" value="04" maxlength="2" pattern="\\d{2}"
+                        title="Enter 2 digit minutes (00-99)">
                     :
-                    <input type="text" id="replyLengthSec" placeholder="ss" value="00" maxlength="2" pattern="[0-5][0-9]" title="Enter 2 digit seconds (00-59)">
+                    <input type="text" id="replyLengthSec" placeholder="ss" value="00" maxlength="2"
+                        pattern="[0-5][0-9]" title="Enter 2 digit seconds (00-59)">
 
                     <br>
                     <label for="gracePeriod">Grace Period</label>
-                    <input type="text" id="gracePeriod" placeholder="ss" value="15" maxlength="2" pattern="[0-5]?[0-9]" title="Enter seconds (0-59)">
+                    <input type="text" id="gracePeriod" placeholder="ss" value="15" maxlength="2" pattern="[0-5]?[0-9]"
+                        title="Enter seconds (0-59)">
                     <label for="speechLength">sec</label>
                     <br>
                     <label for="toggleReply">Speech Type:</label>
@@ -163,7 +168,7 @@
 
             const gracePeriod = parseInt(gracePeriodInput.value, 10) || 0;
             const enableReply = toggleReplyInput.value === "reply" ? 1 : 0;
-            return {speechLength, replyLength, gracePeriod, enableReply};
+            return { speechLength, replyLength, gracePeriod, enableReply };
         }
 
         function openFullscreen() {
@@ -201,6 +206,34 @@
             icon.innerHTML = "&#xf065;";
             fSButton.appendChild(icon);
         }
+
+        document.addEventListener('keyup', event => {
+            if (event.code === "Space") {
+                if (isRunning) {
+                    clearInterval(intervalId);
+                    elapsedTime += new Date().getTime() - startTime;
+                    startPauseBtn.innerHTML = `<i id="fSLabel" style="font-size:x-large" class="fa">&#xf04b;</i>`;
+                } else {
+                    startTime = new Date().getTime();
+                    intervalId = setInterval(updateDisplay, 10);
+                    startPauseBtn.innerHTML = `<i id="fSLabel" style="font-size:x-large" class="fa">&#xf04c;</i>`;
+                }
+                isRunning = !isRunning;
+            }
+        });
+
+        document.addEventListener('keyup', event => {
+            if (event.code === "KeyR") {
+                clearInterval(intervalId);
+                isRunning = false;
+                startTime = null;
+                elapsedTime = 0;
+                startPauseBtn.innerHTML = `<i id="fSLabel" style="font-size:x-large" class="fa">&#xf04b;</i>`;
+                stopwatchDisplay.textContent = '00:00:00';
+                webBody.style.backgroundColor = '#d8c4b6';
+                if (nav) nav.style.backgroundColor = '#d8c4b6';
+            }
+        });
     </script>
 </body>
 
