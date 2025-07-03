@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/design.css">
+    <link rel="stylesheet" type="text/css" href="/pages.css">
+    <script src="/func.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body style="padding: 0px;">
+    <style>
+        @media screen and (min-width: 801px) {
+            .search-container {
+                width: 60%;
+            }
+        }
+
+        @media screen and (max-width: 801px) {
+            .search-container {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 701px) {
+            .search-container {
+                width: 100%;
+            }
+
+            .body-main {
+                padding: 10px;
+            }
+
+        }
+
+        @media screen and (min-width: 701px) {
+            .body-main {
+                padding: 0%;
+            }
+        }
+    </style>
+    <script>
+        createNavBar("#213555", "#3E5879", "#2E4976", 10);
+    </script>
+
+
+
+    <div class="web-body" style="background-color: #D8C4B6;">
+        <div class="body-main" style="background-color: transparent;">
+            <div class="search-container" style="width: 100%; margin-bottom: 10px;">
+                <button style="background-color: #3E5879;"><i class="fa fa-search"
+                        style="font-size: medium; color: #f5efe7;"></i></button>
+                <input type="text" id="search" placeholder="Search by title, description, or type..."
+                    oninput="filterGlossary('search', '.thing', '.thing h3', '.thing p')">
+            </div>
+            <div style="margin-top: 0px; margin-bottom: 20px;">
+                <button class="filter" id="all" onclick="filterSelect('all')">All</button>
+                <button class="filter" id="rev" onclick="filterSelect('rev')">Revision</button>
+                <button class="filter" id="prog" onclick="filterSelect('prog')">Programs</button>
+                <button class="filter" id="oth" onclick="filterSelect('others')">Others</button>
+            </div>
+
+
+
+            <div class="thing" id="1">
+                <h3>Keats' Poetry for AQA A Level English Literature B Tragedy</h3>
+                <p> This is a downloadable revision sheet with summaries, mini-analysis, and key quotes for
+                    Lamia, Isabella, the Eve of St. Agnes, and <span style="font-style: italic;">La Belle Dame Sans
+                        Merci</span> &nbsp;
+                    <span class="tag">Revision</span>
+                    <span class="tag">English</span>
+                    <span class="tag">Literature</span>
+                    <span class="tag">Keats</span>
+                    <span class="tag">Tragedy</span>
+                </p>
+                <div>
+                    <a href='/stuff/revision/aqa-e-lit-b-a-level-keats-poetry.html'><button>View it</button></a>
+                </div>
+            </div>
+            <div class="thing" id="2">
+                <h3>Death of a Salesman for AQA A Level English Literature B Tragedy</h3>
+                <p> This is a downloadable revision sheet with a summary, time-line, character analysis with
+                    quotes, theme mindmaps, and a motif mindmap for Arthur Miller's Death of a Salesman &nbsp;
+                    <span class="tag">Revision</span>
+                    <span class="tag">English</span>
+                    <span class="tag">Literature</span>
+                    <span class="tag">Miller</span>
+                    <span class="tag">Tragedy</span>
+                </p>
+                <a href='/stuff/revision/aqa-e-lit-b-a-level-doas.html'><button>View it</button></a>
+            </div>
+            <div class="thing" id="3">
+                <h3>AQA A Level Physics Year One Topics Mindmaps</h3>
+                <p> This is a downloadable collection of mindmaps created around the topics for the AS Level/ Year One syllabus. These include diagrams and keyword descriptions for the subject content.
+                    <span class="tag">Revision</span>
+                    <span class="tag">Physics</span>
+                    <span class="tag">Year One</span>
+                    <span class="tag">Waves and Optics</span>
+                    <span class="tag">Particles and Radiation</span>
+                    <span class="tag">Mechanics and Materials</span>
+                    <span class="tag">Electricity</span>
+                </p>
+                <a href='/stuff/revision/aqa-physics-a-level-year-one.html'><button>View it</button></a>
+            </div>
+            <div class="thing" id="6">
+                <h3>OCR A Level Maths Mechanics Revision Notes</h3>
+                <p> This is a downloadable revision sheet detailing some common topic areas in the mechanics syllabus. This includes a collection of general rigid body solutions with forces and moments labelled (including laminas!!).
+                    <span class="tag">Revision</span>
+                    <span class="tag">Mathematics</span>
+                    <span class="tag">Kinematics</span>
+                    <span class="tag">Rigid Bodies</span>
+                    <span class="tag">Friction</span>
+                    <span class="tag">Moments</span>
+                    <span class="tag">Laminas</span>
+                </p>
+                <a href='/stuff/revision/ocr-maths-a-level-mechanics.html'><button>View it</button></a>
+            </div>
+            <div class="thing" id="7">
+                <h3>OCR A Level Maths Statistics Revision Notes</h3>
+                <p> This is a downloadable revision sheet detailing some common topic areas in the statistics syllabus. This includes a collection of worked solutions for example questions in major hypothesis tests.
+                    <span class="tag">Revision</span>
+                    <span class="tag">Mathematics</span>
+                    <span class="tag">Probabilities</span>
+                    <span class="tag">Sampling</span>
+                    <span class="tag">Hypothesis Testing</span>
+                </p>
+                <a href='/stuff/revision/ocr-maths-a-level-statistics.html'><button>View it</button></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const all = document.getElementById("all");
+        const revision = document.getElementById("rev");
+        const programs = document.getElementById("prog");
+        const others = document.getElementById("oth");
+
+        const allList = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        const revisionList = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+        const programsList = []; // fill in as needed
+        const othersList = [];   // fill in as needed
+
+        function filterSelect(id) {
+            const filterMap = {
+                rev: revisionList,
+                prog: programsList,
+                others: othersList
+            };
+
+            const buttonMap = {
+                rev: revision,
+                prog: programs,
+                others: others,
+                all: all
+            };
+
+            const activeList = filterMap[id] || [];
+            const showIds = id === "all" ? allList : activeList;
+            const hideIds = id === "all" ? [] : allList.filter(item => !activeList.includes(item));
+
+            Object.entries(buttonMap).forEach(([key, button]) => {
+                const isActive = (key === id) || (id === "all" && key === "all");
+                button.style.backgroundColor = isActive ? '#3e5879' : '#f5efe7';
+                button.style.color = isActive ? '#f5efe7' : '#3e5879';
+            });
+
+            showIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = '';
+            });
+
+            hideIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
+        }
+
+        filterSelect('all');
+
+        document.body.appendChild(footerDiv);
+    </script>
+</body>
+
+</html>
