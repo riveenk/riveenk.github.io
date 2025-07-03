@@ -18,15 +18,27 @@
                 width: 60%;
             }
         }
+
         @media screen and (max-width: 801px) {
             .search-container {
                 width: 100%;
             }
         }
+
         @media screen and (max-width: 701px) {
             .search-container {
                 width: 100%;
-                margin: 5px;
+            }
+
+            .body-main {
+                padding: 10px;
+            }
+
+        }
+
+        @media screen and (min-width: 701px) {
+            .body-main {
+                padding: 0%;
             }
         }
     </style>
@@ -36,121 +48,214 @@
 
 
     <div class="web-body" style="background-color: #D8C4B6;">
-        <div class="search-container" style="background-color: transparent; width: 100vw;">
-                <div class="search-container">
-                    <button style="background-color: #3E5879;"><i class="fa fa-search" style="font-size: medium; color: #f5efe7;"></i></button>
-                    <input type="text" id="search" placeholder="Search by title or description..."
-                        oninput="filterGlossary('search', '.post', '.post h3', '.post p')">
+        <div class="body-main" style="background-color: transparent;">
+            <div class="search-container" style="width: 100%; margin-bottom: 10px;">
+                <button style="background-color: #3E5879;"><i class="fa fa-search"
+                        style="font-size: medium; color: #f5efe7;"></i></button>
+                <input type="text" id="search" placeholder="Search by title, description, or type..."
+                    oninput="filterGlossary('search', '.thing', '.thing h3', '.thing p')">
             </div>
-        </div>
-        <div class="post">
+            <div style="margin-top: 0px; margin-bottom: 20px;">
+                <button class="filter" id="all" onclick="filterSelect('all')">All</button>
+                <button class="filter" id="poems" onclick="filterSelect('poems')">Poetry</button>
+                <button class="filter" id="prose" onclick="filterSelect('prose')">Prose</button>
+                <button class="filter" id="essay" onclick="filterSelect('essay')">Essays</button>
+                <button class="filter" id="oth" onclick="filterSelect('others')">Others</button>
+            </div>
+        <div class="thing" id="TuB">
             <h3>Tumblr Blog</h3>
-            <p> (Blog) This is my Tumblr for mini-blogging. Posts here would be much shorter, and perhaps more frequent.
+            <p> This is my Tumblr for mini-blogging. Posts here would be much shorter, and perhaps more frequent.
                 Many posts would involve rants, movies/ books reviews, and short writings.
+                    <span class="tag">Blog</span>
+                    <span class="tag">Tumblr</span>
             </p>
             <a href='https://geeky-poet.tumblr.com/'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="ScA">
             <h3>The Scalmropia Archive</h3>
-            <p> (Collection) A Collection of archival notes, leaked documents, story snippets, and royal decrees from
+            <p> A Collection of archival notes, leaked documents, story snippets, and royal decrees from
                 Scalmropia. This is where much of the world-building is concentrated.
+                    <span class="tag">Collection</span>
+                    <span class="tag">World Building</span>
+                    <span class="tag">Stories</span>
             </p>
             <a href='/page/scalmropia.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="11">
             <h3>Paint My Skies With Yellow Sparks</h3>
-            <p> (Poem) As someone who has lived through the end of a civil war, yet at great relative safety, it was very easy to be disillusioned. The horror of war is not a myth, but many wish it was and many think it is.
+            <p> As someone who has lived through the end of a civil war, yet at great relative safety, it was very easy to be disillusioned. The horror of war is not a myth, but many wish it was and many think it is.
+                    <span class="tag">Poetry</span>
+                    <span class="tag">Social Protest</span>
+                    <span class="tag">War</span>
             </p>
             <a href='/publications/paint-my-skies-with-yellow-sparks.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="10">
             <h3>Maybe the Gods are playing Cricket</h3>
-            <p> (Poem) As a child, I liked to imagine the scary and loud thunderstorms were just cricket matches in heaven. There was a sense of comfort in it, but also felt gross to be under the rain.
+            <p> As a child, I liked to imagine the scary and loud thunderstorms were just cricket matches in heaven. There was a sense of comfort in it, but also felt gross to be under the rain.
+                    <span class="tag">Poetry</span>
+                    <span class="tag">Crazy</span>
             </p>
             <a href='/publications/maybe-the-gods-are-playing-cricket.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="9">
             <h3>The Crying Maiden</h3>
-            <p> (Short Story) When Prof. Senavitharana is gifted a mysterious painting of a crying maiden, he does not believe the strange tale behind it. But when the tale comes alive to haunt him, he soon realises his mistake.
+            <p>When Prof. Senavitharana is gifted a mysterious painting of a crying maiden, he does not believe the strange tale behind it. But when the tale comes alive to haunt him, he soon realises his mistake.
+                    <span class="tag">Prose</span>
+                    <span class="tag">Horror</span>
+                    <span class="tag">Death</span>
+                    <span class="tag">Gore</span>
             </p>
             <a href='/publications/the-crying-maiden.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="8">
             <h3> You'll Love Me</h3>
-            <p> (Poem) It's easy to tell someone to love themselves, much easier than loving them yourself. This is for
+            <p> It's easy to tell someone to love themselves, much easier than loving them yourself. This is for
                 those of us who need that little push, that little hug to hold them from falling.
+                    <span class="tag">Poetry</span>
+                    <span class="tag">Love</span>
+                    <span class="tag">Self-love</span>
             </p>
             <a href='/publications/youll-love-me.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="7">
             <h3> Maybe in a Few Years</h3>
-            <p> (Poem) Do ever think of your friends two minutes to midnight and only feel unreserved love for those
+            <p> Do ever think of your friends two minutes to midnight and only feel unreserved love for those
                 idiots? Yeah, me too. This is for my goof balls (they'll hate me for calling them that).
+                    <span class="tag">Poetry</span>
+                    <span class="tag">Friendship</span>
+                    <span class="tag">Nostalgia</span>
             </p>
             <a href='/publications/maybe-in-a-few-years.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="6">
             <h3> He Fought for You</h3>
-            <p> (Poem) Mahmoud Darwish once wrote, "The wars will end and the leaders will shake hands, [...] I do not
+            <p> Mahmoud Darwish once wrote, "The wars will end and the leaders will shake hands, [...] I do not
                 know who sold the homeland but I know who paid the price." This is for all those who paid the price.
+                    <span class="tag">Poetry</span>
+                    <span class="tag">War</span>
+                    <span class="tag">Trauma</span>
             </p>
             <a href='/publications/he-fought-for-you.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="5">
             <h3> Collided Galaxies</h3>
-            <p> (Poem) Grief is often raw and remains a sad and tender reminder of the past. It is a soft ache that
+            <p> Grief is often raw and remains a sad and tender reminder of the past. It is a soft ache that
                 refuses to go away. Maybe in this cosmic dance, you may see someone else's stars embedded in your
                 galaxy.
+                    <span class="tag">Poetry</span>
+                    <span class="tag">Romance</span>
+                    <span class="tag">Lost Love</span>
             </p>
             <a href='/publications/colliding-galaxies.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="4">
             <h3> A Summer Night Under the Moon</h3>
-            <p> (Poem) The stars hide a grand secret we are too stupid to know. But does it ever matter? Does anything
+            <p> The stars hide a grand secret we are too stupid to know. But does it ever matter? Does anything
                 hold meaning when you're drunk with love and run over by her beauty?
+                    <span class="tag">Poetry</span>
+                    <span class="tag">Romance</span>
+                    <span class="tag">Night</span>
             </p>
             <a href='/publications/a-summer-night-under-the-moon.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="3">
             <h3> Masked Figures</h3>
-            <p> (Poem) The pandemic, and the lonliness that stemmed from it, left a large imprint on all of us
+            <p> The pandemic, and the lonliness that stemmed from it, left a large imprint on all of us
                 that survived it. This is for the horrors we all battled with ourselves and fear during then.
+                <span class="tag">Poetry</span>
+                <span class="tag">Death</span>
+                <span class="tag">Identity</span>
+                <span class="tag">Covid</span>
             </p>
             <a href='/publications/masked-figures.html'><button>Read it</button></a>
         </div>
 
-        <div class="post">
+        <div class="thing" id="2">
             <h3> A Name I Didn't Think Of </h3>
-            <p> (Short Story) This is a story of a slow-burn on fast-forward. He is a Physicist and she is a
-                Philosopher, and they both end up finding that there's more that attracts than Gravity. </p>
+            <p> This is a story of a slow-burn on fast-forward. He is a Physicist and she is a
+                Philosopher, and they both end up finding that there's more that attracts than Gravity. 
+                    <span class="tag">Prose</span>
+                    <span class="tag">Romance</span>
+                    <span class="tag">School</span>
+            </p>
             <a href='/publications/a-name-i-didnt-think-of.html'><button>Read it</button></a>
         </div>
 
-        <!-- <div class=writings>
-	<h3> Polly's Revenge </h3>
-    <p> Short Story (Golden State Universe): A mysterious typewriter appears at heartbroken Polly's door step. When it is revealed that the typewriter grants wishes, Polly decides that this new found power is perfect for exacting revenge. <w> Warning: Graphic storytelling - Not suitable for some audiences. </w> </p>
-    <a href='/publications/pollys-revenge.html'><button>Read it</button></a>
-</div> -->
-
-
-        <div class="post">
+        <div class="thing" id="1">
             <h3> Death's Fear </h3>
-            <p> (Poetry) Death is though to be the ultimate villain, the ghost that haunts over our shoulders.
-                This is how death sees some people, and it's never about our pretty little lives. </p>
+            <p> Death is though to be the ultimate villain, the ghost that haunts over our shoulders.
+                This is how death sees some people, and it's never about our pretty little lives. 
+                    <span class="tag">Poetry</span>
+                    <span class="tag">Death</span>
+                    <span class="tag">Horror</span>
+            </p>
             <a href='/publications/deaths-fear.html'><button>Read it</button></a>
         </div>
     </div>
     <script>
+        const all = document.getElementById("all");
+        const poems = document.getElementById("poems");
+        const prose = document.getElementById("prose");
+        const essays = document.getElementById("essay");
+        const others = document.getElementById("oth");
+
+        const allList = ['TuB', 'ScA', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'];
+        const poemsList = ['1', '3', '4', '5', '6', '7', '8'];
+        const proseList = ['2', '9'];
+        const essaysList = [];
+        const othersList = ['TuB', 'ScA'];
+
+        const filterMap = {
+                poems: poemsList,
+                prose: proseList,
+                essays: essaysList,
+                others: othersList
+            };
+
+        const buttonMap = {
+                poems: poems,
+                prose: prose,
+                essays: essays,
+                others: others,
+                all: all
+            };
+
+
+        function filterSelect(id) {
+            const activeList = filterMap[id] || [];
+            const showIds = id === "all" ? allList : activeList;
+            const hideIds = id === "all" ? [] : allList.filter(item => !activeList.includes(item));
+
+            Object.entries(buttonMap).forEach(([key, button]) => {
+                const isActive = (key === id) || (id === "all" && key === "all");
+                button.style.backgroundColor = isActive ? '#3e5879' : '#f5efe7';
+                button.style.color = isActive ? '#f5efe7' : '#3e5879';
+            });
+
+            showIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = '';
+            });
+
+            hideIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
+        }
+
+        filterSelect('all');
+
         textWrap(".post h3", 1)
         textWrap(".post p", 3)
         document.body.appendChild(footerDiv);
