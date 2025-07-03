@@ -61,7 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "/debating/timer.html",
     "/page/notice.html",
     "/page/archive.html",
-    "/404.html"
+    "/404.html",
+    "/stuff/index.html",
+    "/stuff/for-you.html"
   ];
 
   const customPathsTitle = [
@@ -75,7 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "On My Wavelength: Debating Timer",
     "On My Wavelength: Notice to Visitors",
     "On My Wavelength: Archive",
-    "On the Wrong Wavelength"
+    "On the Wrong Wavelength",
+    "Sharing On My Wavelength",
+    "Constructive Interference"
   ];
 
   const currentPath = window.location.pathname;
@@ -160,7 +164,7 @@ function textWrap(selector, lines = 3) {
   });
 }
 
-function createNavBar(primary, secondary, hover, highlight, title = "On My Wavelength") {
+function createNavBar(primary, secondary, hover, highlight, title = "On My Wavelength", type = "normal") {
   if (primary === "#1b1b32") primary = "#213555";
   if (secondary === "#363457") secondary = "#3E5879";
   if (hover === "#2d2c52") hover = "#2E4976";
@@ -169,6 +173,8 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
     ["Blog", "/index.html"],
     ["Publications", "/publications/index.html"],
     ["Debating", "/debating/index.html"],
+    ["Sinhala", "/sinhala/index.html"],
+    ["Stuff", "/stuff/index.html"],
     ["Podcast", "/page/podcast.html"],
     ["About Me", "/page/about-me.html"]
   ];
@@ -333,4 +339,48 @@ function filterGlossary(search, items, title, description) {
       item.style.display = 'none';
     }
   });
+}
+
+// The 404 page function
+
+function fillFadingText(div, text) {
+  div.innerHTML = '';
+
+  const testSpan = document.createElement('span');
+  testSpan.style.visibility = 'hidden';
+  testSpan.style.position = 'absolute';
+  testSpan.style.whiteSpace = 'nowrap';
+  testSpan.textContent = text;
+  div.appendChild(testSpan);
+
+  const targetWidth = div.clientWidth;
+  let min = 1, max = 500, fontSize;
+
+  while (min <= max) {
+    const mid = Math.floor((min + max) / 2);
+    testSpan.style.fontSize = mid + 'px';
+    if (testSpan.offsetWidth <= targetWidth) {
+      fontSize = mid;
+      min = mid + 1;
+    } else {
+      max = mid - 1;
+    }
+  }
+
+  div.removeChild(testSpan);
+
+  const lineHeight = fontSize * 1.2;
+  const totalHeight = div.clientHeight;
+  const totalLines = Math.floor(totalHeight / lineHeight);
+
+  for (let i = 0; i < totalLines; i++) {
+    const opacity = 1 - (0.9 * i / (totalLines - 1));
+    const line = document.createElement('div');
+    line.className = 'fading-line';
+    line.style.fontSize = fontSize + 'px';
+    line.style.lineHeight = lineHeight + 'px';
+    line.style.opacity = opacity.toFixed(2);
+    line.textContent = text;
+    div.appendChild(line);
+  }
 }
