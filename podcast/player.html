@@ -445,6 +445,8 @@
                 // Update UI text
                 document.getElementById("episodeName").textContent = `#${index + 1}: ${episode[0]}`;
                 document.getElementById("descriptionText").textContent = episode[2];
+                document.getElementById("lenLabel").textContent = "--:--"
+                
 
                 // Set audio source dynamically
                 const source = audio.querySelector("source");
@@ -492,11 +494,9 @@
                     const seconds = Math.floor(epDuration % 60).toString().padStart(2, "0");
                     epLength.textContent = `${minutes}:${seconds}`;
 
-                    // Reset progress bar width
                     const lapsedBar = document.getElementById("timelapsed");
                     lapsedBar.style.width = "0%";
 
-                    // Remove this listener to prevent multiple calls
                     audio.removeEventListener("loadedmetadata", onLoadedMetadata);
                 });
             }
