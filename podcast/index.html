@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/design.css">
+    <link rel="stylesheet" type="text/css" href="/pages.css">
+    <script src="/func.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body style="padding: 0px;">
+    <script>
+        createNavBar("#363062", "#4D4C7D", "#443D7B", 3, "Wanna Be Cancelled?");
+    </script>
+    <style>
+        body {
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .web-body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        .wbc-player {
+            background-color: #4D4C7D;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            color: #fff;
+        }
+
+        .wbc-player img {
+            width: 100%;
+            height: auto;
+            /* Maintain aspect ratio */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px 3px #222;
+        }
+
+        .stuff-holder {
+            width: 30%;
+            border: transparent 3px solid;
+            background-color: transparent;
+            color: transparent;
+            border-radius: 10px;
+            overflow: scroll;
+            font-size: small;
+            text-align: left;
+            box-sizing: border-box;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .audio-player {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .audio-player audio {
+            width: 100%;
+        }
+
+        .audio-player h2 {
+            text-align: left;
+            margin-bottom: 0px;
+            margin-top: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .audio-player p {
+            text-align: left;
+            margin: 2px auto;
+        }
+
+        .audio-player table,
+        th,
+        td {
+            width: 100%;
+            border: 0px none;
+        }
+
+        .audio-func {
+            margin-bottom: 10px;
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .audio-func button {
+            background-color: #fff;
+            color: #4D4C7D;
+            border-width: 0px;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .audio-func button:hover {
+            background-color: #363062;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .stuff-holder button {
+            padding: 5px 10px;
+            border-width: 0;
+            background-color: white;
+            color: #a91101;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .description {
+            background-color: #363062;
+            color: #f5efe7;
+            padding: 20px;
+            font-size: small;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+        }
+
+        .description.collapsed {
+            display: none;
+            max-height: 0;
+            padding: 0 !important;
+            margin-top: 0 !important;
+        }
+
+
+        .title-box h1 {
+            font-size: 60px;
+        }
+
+        @media (min-width: 700px) and (max-width: 1320px) {
+            .wbc-player {
+                flex-direction: column;
+                align-items: center;
+                padding: 50px;
+            }
+
+            .description {
+                padding: 50px;
+            }
+
+            .stuff-holder {
+                width: 100%;
+            }
+
+            .audio-player {
+                width: 100%;
+            }
+
+            .title-box h1 {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .wbc-player {
+                flex-direction: column;
+                align-items: center;
+                padding: 5vw;
+            }
+
+            .description {
+                padding: 5vw;
+
+            }
+
+            .stuff-holder {
+                width: 100%;
+            }
+
+            .audio-player {
+                width: 100%;
+            }
+
+            .title-box h1 {
+                font-size: 50px;
+            }
+        }
+
+        .hover-circle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            display: none;
+            z-index: 2;
+        }
+
+
+        .progress-bar {
+            height: 5px;
+            background-color: #fff;
+            padding: 0px;
+            margin: 5px auto;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #ae93cb;
+            width: 0%;
+            pointer-events: none;
+        }
+
+        .time {
+            padding: 0px;
+            width: 10px;
+            font-family: consolas;
+            color: #fff;
+            font-size: small;
+        }
+
+        .wbc-episodes {
+            padding: 00px;
+            background-color: #f5efe7;
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-height: 1000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+        }
+
+        .wbc-episode {
+            background-color: #fcfcfc;
+            width: 100%;
+            padding: 18px;
+            color: #363062;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .wbc-episodes a {
+            text-decoration: none;
+        } 
+
+        .wbc-episode:hover {
+            background-color: #D8C4B6;
+            cursor: pointer;
+        }
+
+        .wbc-episode h3 {
+            margin: 0;
+            font-size: medium;
+            width: 100%;
+            text-align: left;
+        }
+
+        .wbc-episode p {
+            font-size: small;
+            text-align: left;
+            margin-bottom: 0px;
+            width: 100%;
+        }
+
+        .title-box {
+            margin-bottom: 60px;
+            text-align: left;
+        }
+    </style>
+
+    <div class="web-body" style="background-color: #f5efe7;">
+        <div class="body-main">
+            <div class="wbc-about-box">
+                <div class="title-box">
+                    <h1>Wanna Be Cancelled?</h1>
+                    <p>We're a podcast about humans and, I don't know, everything! It could seem like the most innocent
+                        episode at a
+                        point and us just, asking to be cancelled in another. Trust me, we're worth the trouble.
+                        Anyways,
+                        thank you
+                        for reading the description up to this point. You can go back to doing something important now.
+                        Unless you are
+                        bored and just want to listen to two randos' yapping... Then, feel free to sit back, grab a
+                        snack,
+                        and let our
+                        thoughts stack.</p>
+                </div>
+                <div class="wbc-episodes" id="wbcEpisodes">
+                    Loading episodes...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const episodes = [
+            ["Social Media and the Whole Thing", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e1.mp3", "What does it take to be an influencer? And what role does the audience actually play within this system? Find out with us! (Wolfie regrets his bad mic and would like to apologise)", null],
+            ["The Limit of Opinion Entitlement", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e2.mp3", " People are entitled to their opinions. Many say that there is a certain extent to it. But, what is this extent? Listen to us yap for about this for almost an hour. We will be talking about changing lines of social acceptability and sheds fear of a hypothetical future where ideas that we consider morally degenerate are accepted. Still we have the worst mics ever...", "This episode discusses sensitive topics such as pedophilia and other morally complex issues. The episode may not be suitable for all listeners. If you are affected by these themes, we encourage you to seek support and/or avoid this episode."],
+        ];
+
+        const episodeBox = document.getElementById("wbcEpisodes");
+        let htmlBit = ` <div class="search-container" style="margin-bottom: 5px;">
+                            <button style="background-color: #4D4C7D;"><i class="fa fa-search"
+                                style="font-size: medium;"></i></button>
+                            <input type="text" id="search" placeholder="Search for an episode..."
+                            oninput="filterGlossary('search', '.wbc-episode', '.wbc-episode h3', '.wbc-episode p')">
+                        </div>`;
+        let epID = 1;
+
+        episodes.forEach(episode => {
+            codeBit = ` <a href = "/podcast/player.html#${epID}">
+                            <div class="wbc-episode" id="ep${epID}">
+                                <h3>Episode ${epID}: ${episode[0]}</h3>
+                                <p>${episode[2]}</p>
+                            </div>
+                        </a>`;
+
+            htmlBit = htmlBit + codeBit;
+            epID = epID + 1
+        });
+
+        episodeBox.innerHTML = htmlBit;
+
+        textWrap(".wbc-episode p", 2)
+        document.body.appendChild(footerDiv);
+    </script>
+</body>
+
+</html>

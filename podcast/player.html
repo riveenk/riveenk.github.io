@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/design.css">
+    <link rel="stylesheet" type="text/css" href="/pages.css">
+    <script src="/func.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body style="padding: 0px;">
+    <script>
+        createNavBar("#363062", "#4D4C7D", "#443D7B", 3, "Wanna Be Cancelled?");
+    </script>
+    <style>
+        .web-body {
+            padding: 0px;
+        }
+
+        .player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background-color: whitesmoke;
+        }
+
+
+        .body-main {
+            display: flex;
+            flex-wrap: wrap;
+            height: 68vh;
+        }
+
+        .body-main img {
+            width: 250px;
+            height: 250px;
+        }
+
+        .title {
+            width: 70%;
+            padding-left: 30px;
+            box-sizing: border-box;
+            text-align: left;
+            color: #363062;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .title h3 {
+            font-size: xx-large;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .author {
+            font-size: larger;
+            margin-top: 0px;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            width: 100%;
+            background-color: #c0add7;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            scrollbar-width: 0px;
+            border-radius: 10px;
+            font-size: small;
+            overflow-y: scroll;
+            max-height: 200px;
+        }
+
+        .twText {
+            width: 100%;
+            background-color: #fdc3c3;
+            color: #a91101;
+            padding: 10px 20px;
+            box-sizing: border-box;
+            scrollbar-width: 0px;
+            border-radius: 10px;
+            font-size: small;
+            overflow-y: scroll;
+            max-height: 200px;
+            display: none;
+        }
+
+        .twText button {
+            width: 100%;
+            margin-bottom: 10px;
+            height: 30px;
+            background-color: whitesmoke;
+            border: #000 none;
+            color: #a91101;
+            border-radius: 5px;
+        }
+
+        .twText button:hover {
+            cursor: pointer;
+            background-color: #a91101;
+            color: whitesmoke;
+        }
+
+        .controls button {
+            background-color: #4d4c7d;
+            color: whitesmoke;
+            border-radius: 10px;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .controls button:hover {
+            background-color: #363062;
+            color: whitesmoke;
+        }
+
+        .controls {
+            width: auto;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            margin-bottom: 25px;
+        }
+
+        .progress {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: small;
+            color: #363062;
+            padding: 30px 0px;
+            margin-bottom: 0px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .progressbar {
+            width: 70vw;
+            height: 5px;
+            background-color: lightgray;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: auto;
+            margin-bottom: auto;
+            position: relative;
+        }
+
+        .timelapsed {
+            position: absolute;
+            height: 100%;
+            background: #4d4c7d;
+            width: 0%;
+            z-index: 1;
+        }
+
+        .bufferedBar {
+            position: absolute;
+            height: 100%;
+            background: #aaa;
+            width: 0%;
+            z-index: 0;
+        }
+
+        .hoverCircle {
+            position: absolute;
+            top: 50%;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border: 2px solid #363062;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            display: none;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .author a {
+            background-color: #9A9AC1;
+            width: 20px;
+            padding: 5px 8px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 700px) {
+            .title {
+                width: 100%;
+                text-align: center;
+                padding: 0px;
+            }
+
+            .body-main img {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .description,
+            .twText {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                text-align: left;
+                max-height: none;
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+
+            .description,
+            .twText {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .progressbar {
+                width: 60vw;
+                font-size: smaller;
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            .title {
+                width: 100%;
+            }
+        }
+    </style>
+
+    <div class="web-body" style="background-color: #f5efe7;">
+        <div class="body-main">
+            <div class="title">
+                <h3 id="episodeName"></h3>
+                <p class="author"><a href="/podcast/index.html">Wanna Be Cancelled</a> by Wolfie and Riveen</p>
+                <div class="description" id="description">
+                    <p class="descriptionText" id="descriptionText"></p>
+                </div>
+                <div class="twText" id="twText">
+                    <button id="ibf">loading...</button>
+                </div>
+            </div>
+        </div>
+        <div class="player">
+            <audio id="episodeAudio" preload="metadata">
+                <source src="/podcast/episodes/wbc-e2.mp3" type="audio/mpeg" />
+            </audio>
+            <div class="progress">
+                <span id="lapsedLabel" class="time">00:00</span>
+                <div id="progressbar" class="progressbar">
+                    <div id="bufferedBar" class="bufferedBar"></div>
+                    <div id="timelapsed" class="timelapsed"></div>
+                    <div id="hoverCircle" class="hoverCircle"></div>
+                </div>
+                <span id="lenLabel" class="time">00:00</span>
+            </div>
+            <div class="controls">
+                <button id="prev"><i class="fa">&#xf04a;</i></button>
+                <button id="play-pause"><i class="fa">&#xf04b;</i></button>
+                <button id="next"><i class="fa">&#xf04e;</i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const episodes = [
+                ["Social Media and the Whole Thing", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e1.mp3", "What does it take to be an influencer? And what role does the audience actually play within this system? Find out with us! (Wolfie regrets his bad mic and would like to apologise)", null],
+                ["The Limit of Opinion Entitlement", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e2.mp3", " People are entitled to their opinions. Many say that there is a certain extent to it. But, what is this extent? Listen to us yap for about this for almost an hour. We will be talking about changing lines of social acceptability and sheds fear of a hypothetical future where ideas that we consider morally degenerate are accepted. Still we have the worst mics ever...", "This episode discusses sensitive topics such as pedophilia and other morally complex issues. The episode may not be suitable for all listeners. If you are affected by these themes, we encourage you to seek support and/or avoid this episode."],
+            ];
+
+            let consentedList = JSON.parse(sessionStorage.getItem("consentedList") || "[]");
+
+            let episodeNo = episodes.length;
+            const episodeCount = episodes.length;
+            let url = window.location.href;
+            const playPauseBtn = document.getElementById("play-pause");
+
+            let urlEp = Number(url.split("#")[1]);
+            if (!isNaN(urlEp) && urlEp >= 1 && urlEp <= episodes.length) {
+                episodeNo = urlEp - 1;
+                selectEpisode(episodeNo);
+            } else {
+                selectEpisode(episodeNo - 1);
+            }
+
+            const audio = document.getElementById("episodeAudio");
+            const epLength = document.getElementById("lenLabel");
+            const epLapsed = document.getElementById("lapsedLabel");
+            const lapsedBar = document.getElementById("timelapsed");
+            const progressbar = document.getElementById("progressbar");
+            const bufferedBar = document.getElementById("bufferedBar");
+            let lapsedTime = 0
+            let epDuration = 0;
+
+            audio.addEventListener("loadedmetadata", function () {
+                epDuration = audio.duration;
+                const minutes = Math.floor(epDuration / 60);
+                const seconds = Math.floor(epDuration % 60).toString().padStart(2, "0");
+                epLength.textContent = `${minutes}:${seconds}`;
+                updateBufferedBar();
+                updateTime();
+            });
+
+            function updateTime() {
+                const currentTime = audio.currentTime;
+                const duration = audio.duration || epDuration;
+
+                const progressPercent = (currentTime / duration) * 100;
+                lapsedBar.style.width = `${Math.min(progressPercent, 100)}%`;
+
+                const minutes = Math.floor(currentTime / 60);
+                const seconds = Math.floor(currentTime % 60).toString().padStart(2, "0");
+                epLapsed.textContent = `${minutes}:${seconds}`;
+            }
+
+            const intervalId = setInterval(updateTime, 500);
+
+            audio.addEventListener("ended", () => {
+                clearInterval(intervalId);
+            });
+
+            let isDragging = false;
+
+            function getSeekPosition(clientX) {
+                const rect = progressbar.getBoundingClientRect();
+                const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+                return (x / rect.width) * audio.duration;
+            }
+
+            function handleSeek(e) {
+                let clientX;
+                if (e.touches) {
+                    clientX = e.touches[0].clientX;
+                } else {
+                    clientX = e.clientX;
+                }
+                const newTime = getSeekPosition(clientX);
+                audio.currentTime = newTime;
+            }
+
+            progressbar.addEventListener("mousedown", (e) => {
+                isDragging = true;
+                handleSeek(e);
+            });
+            progressbar.addEventListener("touchstart", (e) => {
+                isDragging = true;
+                handleSeek(e);
+            }, { passive: false });
+
+            document.addEventListener("mousemove", (e) => {
+                if (isDragging) handleSeek(e);
+            });
+            document.addEventListener("touchmove", (e) => {
+                if (isDragging) {
+                    e.preventDefault();
+                    handleSeek(e);
+                }
+            }, { passive: false });
+
+            document.addEventListener("mouseup", () => {
+                isDragging = false;
+            });
+            document.addEventListener("touchend", () => {
+                isDragging = false;
+            });
+
+
+            const hoverCircle = document.getElementById("hoverCircle");
+
+            progressbar.addEventListener("mousemove", (e) => {
+                const rect = progressbar.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                hoverCircle.style.left = `${x}px`;
+                hoverCircle.style.display = "block";
+            });
+
+            progressbar.addEventListener("touchmove", (e) => {
+                const rect = progressbar.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                hoverCircle.style.left = `${x}px`;
+                hoverCircle.style.display = "block";
+            });
+
+            progressbar.addEventListener("mouseleave", () => {
+                hoverCircle.style.display = "none";
+            });
+
+            progressbar.addEventListener("touchend", () => {
+                hoverCircle.style.display = "none";
+            });
+
+            function updateBufferedBar() {
+                if (!audio.buffered || audio.buffered.length === 0) return;
+
+                const bufferedEnd = audio.buffered.end(audio.buffered.length - 1);
+                const duration = audio.duration || epDuration;
+                const percentBuffered = (bufferedEnd / duration) * 100;
+
+                bufferedBar.style.width = `${Math.min(percentBuffered, 100)}%`;
+            }
+
+            audio.addEventListener("progress", updateBufferedBar);
+            audio.addEventListener("loadedmetadata", updateBufferedBar);
+            audio.addEventListener("timeupdate", updateBufferedBar);
+
+            playPauseBtn.onclick = function playPause() {
+                if (audio.paused) {
+                    // play the audio
+                    playPauseBtn.innerHTML = "";
+                    playPauseBtn.innerHTML = "<i class='fa'>&#xf04c;</i>";
+                    audio.play();
+                } else {
+                    // pause the audio
+                    playPauseBtn.innerHTML = "";
+                    playPauseBtn.innerHTML = "<i class='fa'>&#xf04b;</i>";
+                    audio.pause();
+                }
+            }
+
+
+            function selectEpisode(index) {
+                if (index < 0 || index >= episodes.length) return;
+
+                const episode = episodes[index];
+                const tw = document.getElementById("twText");
+                const desc = document.getElementById("description");
+                const playPauseBtn = document.getElementById("play-pause");
+                const audio = document.getElementById("episodeAudio");
+
+                // Update UI text
+                document.getElementById("episodeName").textContent = `#${index + 1}: ${episode[0]}`;
+                document.getElementById("descriptionText").textContent = episode[2];
+
+                // Set audio source dynamically
+                const source = audio.querySelector("source");
+                source.src = episode[1];
+                audio.load();
+
+                // Disable play until user consents or no TW
+                playPauseBtn.setAttribute("disabled", "");
+
+                // Show/hide TW or description based on consent
+                if (episode[3] && !consentedList.includes(index)) {
+                    desc.style.display = "none";
+                    tw.style.display = "block";
+                    tw.innerHTML = `
+            <p>${episode[3]}</p>
+            <button id="ibf">I'll be fine</button>
+        `;
+
+                    // Attach listener safely after button is inserted into DOM
+                    const ibfButton = document.getElementById("ibf");
+                    if (ibfButton) {
+                        ibfButton.onclick = function () {
+                            tw.style.display = "none";
+                            desc.style.display = "block";
+                            playPauseBtn.removeAttribute("disabled");
+
+                            if (!consentedList.includes(index)) {
+                                consentedList.push(index);
+                                sessionStorage.setItem("consentedList", JSON.stringify(consentedList));
+                            }
+                        };
+                    }
+                } else {
+                    desc.style.display = "block";
+                    tw.style.display = "none";
+                    tw.innerHTML = "";
+                    playPauseBtn.removeAttribute("disabled");
+                }
+
+                // Wait for metadata load to update length label and reset progress bar
+                audio.addEventListener("loadedmetadata", function onLoadedMetadata() {
+                    const epLength = document.getElementById("lenLabel");
+                    const epDuration = audio.duration;
+                    const minutes = Math.floor(epDuration / 60);
+                    const seconds = Math.floor(epDuration % 60).toString().padStart(2, "0");
+                    epLength.textContent = `${minutes}:${seconds}`;
+
+                    // Reset progress bar width
+                    const lapsedBar = document.getElementById("timelapsed");
+                    lapsedBar.style.width = "0%";
+
+                    // Remove this listener to prevent multiple calls
+                    audio.removeEventListener("loadedmetadata", onLoadedMetadata);
+                });
+            }
+
+
+            const nextButton = document.getElementById("next");
+            nextButton.onclick = function nextEpisode() {
+                if (episodeNo < episodeCount - 1) {
+                    episodeNo = episodeNo + 1;
+                    selectEpisode(episodeNo);
+                }
+            }
+
+            const prevButton = document.getElementById("prev");
+            prevButton.onclick = function prevEpisode() {
+                if (0 < episodeNo) {
+                    episodeNo = episodeNo - 1;
+                    selectEpisode(episodeNo);
+                }
+            }
+        });
+
+        textWrap(".wbc-episode p", 2)
+        document.body.appendChild(footerDiv);
+    </script>
+</body>
+
+</html>
