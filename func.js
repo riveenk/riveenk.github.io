@@ -175,7 +175,7 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
     ["Debating", "/debating/index.html"],
     ["Sinhala", "/sinhala/index.html"],
     ["Stuff", "/stuff/index.html"],
-    ["Podcast", "/page/podcast.html"],
+    ["Podcast", "/podcast/index.html"],
     ["About Me", "/page/about-me.html"]
   ];
 
