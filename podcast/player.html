@@ -455,6 +455,7 @@
 
                 // Disable play until user consents or no TW
                 playPauseBtn.setAttribute("disabled", "");
+                playPauseBtn.style.opacity = 0.5;
 
                 // Show/hide TW or description based on consent
                 if (episode[3] && !consentedList.includes(index)) {
@@ -472,6 +473,7 @@
                             tw.style.display = "none";
                             desc.style.display = "block";
                             playPauseBtn.removeAttribute("disabled");
+                            playPauseBtn.style.opacity = 1;
 
                             if (!consentedList.includes(index)) {
                                 consentedList.push(index);
@@ -484,6 +486,7 @@
                     tw.style.display = "none";
                     tw.innerHTML = "";
                     playPauseBtn.removeAttribute("disabled");
+                    playPauseBtn.style.opacity = 1;
                 }
 
                 // Wait for metadata load to update length label and reset progress bar
