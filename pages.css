@@ -936,3 +936,36 @@ td {
   padding-top: 20px;
   padding-bottom: 0px;
 }
+
+.sinhala-letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.sinhala-letter {
+  width: 15%;
+  background-color: #f5efe7;
+  text-align: center;
+  padding: 0%;
+  margin-bottom: 2%;
+}
+
+.sinhala {
+  font-size: xx-large;
+  margin: 0px;
+  padding: 0%;
+}
+
+.english {
+  font-size: medium;
+  margin: 0px;
+  padding: 0%;
+}
+
+.the-letter {
+  height: 100%;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 0%;
+}

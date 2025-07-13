@@ -78,6 +78,7 @@ input {
     height: 100%;
     width: 100%;
     padding: 50px;
+    padding-top: 100px;
     box-sizing: border-box;
     justify-content: center;
     line-height: 1.5;
@@ -266,9 +267,8 @@ input {
     .body-main {
         padding: 35px;
         width: 100%;
-
         font-size: small;
-        padding-top: 15px;
+        margin-top: 15px;
     }
 
     .image-box {
@@ -276,7 +276,9 @@ input {
     }
 
     .web-body {
-        padding: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
         background-color: #f5efe7;
         width: 100%;
     }

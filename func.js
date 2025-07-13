@@ -187,12 +187,13 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
         <div class="site-title">
           <a href="/index.html" style="color: white; text-decoration: none;">${title}</a>
         </div>
-        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fa">&#9776; </i></div>
         <ul class="nav-links-desktop">
           ${navList.map(([label, link]) => `<li><a href="${link}">${label}</a></li>`).join("")}
         </ul>
       </div>
       <ul class="nav-links-mobile">
+        <div class="menu-toggle fa" onclick="toggleMenu()" style = "margin-top: 15px;"><i class="fa">&#xf00d;</i></div>
         ${navList.map(([label, link]) => `<li><a href="${link}">${label}</a></li>`).join("")}
       </ul>
     </div>
@@ -204,7 +205,6 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
       background-color: ${primary};
       margin: 0;
     }
-
     .web-body {
       overflow: hidden;
     }
@@ -213,6 +213,8 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
       background-color: ${primary};
       color: white;
       width: 100%;
+      position: fixed;
+      z-index: 999;
     }
 
     .nav-container {
@@ -243,6 +245,17 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
       font-size: 1.5em;
       cursor: pointer;
       padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .menu-toggle i {
+      padding: 4px;
+    }
+
+    .menu-toggle i:hover {
+      background-color: ${hover};
+      border-radius: 4px;
     }
 
     .nav-links-desktop {
@@ -271,16 +284,21 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
     .nav-links-mobile {
       display: none;
       flex-direction: column;
-      width: 100%;
+      width: 40%;
+      min-width: 250px;
       background-color: ${secondary};
       padding: 15px 20px;
       list-style-type: none;
       margin: 0px;
       box-sizing: border-box;
+      height: 100%;
+      position: fixed;
+      top: 0%;
+      right: 0%;
     }
 
     .nav-links-mobile li{
-      width: max-content;
+      width: 100%;
     }
 
     .nav-links-mobile.show {
@@ -299,7 +317,7 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
 
     @media (max-width: 700px) {
       .web-body {
-        padding-top: 15px;
+        padding-top: 57px;
       }
     }
 
