@@ -315,12 +315,6 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
       }   
     }
 
-    @media (max-width: 700px) {
-      .web-body {
-        padding-top: 57px;
-      }
-    }
-
     @media (min-width: 890px) {
       .nav-links-mobile {
         display: none !important;
