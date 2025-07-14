@@ -254,8 +254,8 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
     }
 
     .menu-toggle i:hover {
-      background-color: ${hover};
       border-radius: 4px;
+      transform: scale(1.1);
     }
 
     .nav-links-desktop {
