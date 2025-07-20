@@ -43,11 +43,11 @@
         }
     </style>
     <script>
-        createNavBar("#213555", "#3E5879", "#2E4976", 10);
+        createNavBar("#213555", "#3E5879", "#2E4976", 1);
     </script>
 
-
-    <div class="web-body" style="background-color: #D8C4B6;">
+<div class="blurMain">
+    <div class="web-body" style="background-color: #D8C4B6;"id="bodyMain">
         <div class="body-main" style="background-color: transparent;">
             <div class="search-container" style="width: 100%; margin-bottom: 10px;">
                 <button style="background-color: #3E5879;"><i class="fa fa-search"
@@ -80,7 +80,7 @@
                     <span class="tag">World Building</span>
                     <span class="tag">Stories</span>
             </p>
-            <a href='/page/scalmropia.html'><button>Read it</button></a>
+            <a href='/scalmropia/index.html'><button>Read it</button></a>
         </div>
 
         <div class="thing" id="11">
@@ -202,7 +202,7 @@
             </p>
             <a href='/publications/deaths-fear.html'><button>Read it</button></a>
         </div>
-    </div>
+    </div></div>
     <script>
         const all = document.getElementById("all");
         const poems = document.getElementById("poems");
@@ -258,7 +258,7 @@
 
         textWrap(".post h3", 1)
         textWrap(".post p", 3)
-        document.body.appendChild(footerDiv);
+        createFooter();
     </script>
 </body>
 

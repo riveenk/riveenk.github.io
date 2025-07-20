@@ -15,30 +15,34 @@
 </style>
 
 <body style="padding: 0px;">
-    <script>
-        createNavBar("#213555", "#3E5879", "#2E4976", 4);
-    </script>
+    <div class="blurMain" id="blurMain">
+        <script>
+            createNavBar("#213555", "#3E5879", "#2E4976", 4);
+        </script>
 
-    <div class="web-body" >
-        <div class="body-main" style="background-color: transparent;">
-            <div class="search-container">
-                <button><i class="fa fa-search" style="font-size: medium;"></i></button>
-                <input type="text" id="search" placeholder="Search for a term..."
-                    oninput="filterGlossary('search', '.glossary-item', '.term', '.definition')">
+        <div class="web-body" id="bodyMain">
+            <div class="body-main" style="background-color: transparent;">
+                <div class="search-container">
+                    <button><i class="fa fa-search" style="font-size: medium;"></i></button>
+                    <input type="text" id="search" placeholder="Search for a term..."
+                        oninput="filterGlossary('search', '.glossary-item', '.term', '.definition')">
+                </div>
+
+                <ul class="glossary-list" id="glossary">
+                    <li class="glossary-item" id="term-html">
+                        <span class="term">Point of Information (POI)</span>
+                        <div class="definition">A question that a member of the opposing team can ask a speaker during
+                            their speech. This can only be asked if the speaker accepts the POI. Different formats and
+                            orgnaisers may have varying rules regarding these.</div>
+                    </li>
+                </ul>
             </div>
-
-            <ul class="glossary-list" id="glossary">
-                <li class="glossary-item" id="term-html"> 
-                    <span class="term">Point of Information (POI)</span> 
-                    <div class="definition">A question that a member of the opposing team can ask a speaker during their speech. This can only be asked if the speaker accepts the POI. Different formats and orgnaisers may have varying rules regarding these.</div> 
-                </li>
-            </ul>
         </div>
+        
     </div>
-
     <script>
-        document.body.appendChild(footerDiv);
-    </script>
+            createFooter();
+        </script>
 </body>
 
 </html>

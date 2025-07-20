@@ -9,14 +9,14 @@
   <link rel="stylesheet" type="text/css" href="/design.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="/func.js"></script>
-
 </head>
 
 <body style="padding: 0px;">
   <script>
     createNavBar("#1b1b32", "#363457", "#2d2c52", 10, "404: You're Lost, My Friend");
   </script>
-  <div class="web-body" style="background-color: #f5efe7;">
+  <div class="blurMain">
+  <div class="web-body" style="background-color: #f5efe7;"id="bodyMain">
     <div class="body-main"
       style="text-align: center; margin-top: auto; margin-bottom: auto; width: 95vw; min-height: 70vh; padding-top: auto; padding-bottom: auto;">
       <div class="error-msg">
@@ -41,9 +41,9 @@
       </div>
     </div>
   </div>
-
+</div>
   <script>
-    document.body.appendChild(footerDiv);
+    createFooter();
   </script>
 </body>
 

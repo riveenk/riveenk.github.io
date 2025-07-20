@@ -871,7 +871,7 @@ td {
 
 .thing {
   background-color: #f5efe7;
-  padding: 15px 20px;
+  padding: 20px 25px;
   width: 100%;
   margin-bottom: 20px;
   height: fit-content;
@@ -895,11 +895,11 @@ td {
   margin-bottom: 20px;
   word-break: normal;
   text-align: left;
-  line-height: 2em;
+  line-height: 1.5em;
 }
 
 .thing button {
-  width: 20%;
+  min-width: 20%;
   padding: 10px;
   background-color: #3E5879;
   border-style: none;
@@ -912,11 +912,17 @@ td {
   background-color: #213555;
 }
 
+.thing br {
+  margin-bottom: 10px;
+}
+
 .tag {
   background-color: #d8c4b6;
   padding: 2px 4px;
   margin-right: 3px;
   color: #213555;
+  opacity: 0.7;
+  line-height: 2em;
 }
 
 .filter {
@@ -972,3 +978,241 @@ td {
   margin-bottom: auto;
   padding: 0%;
 }
+
+.wbc-player {
+            background-color: #4D4C7D;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            color: #fff;
+        }
+
+        .wbc-player img {
+            width: 100%;
+            height: auto;
+            /* Maintain aspect ratio */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 0px 3px 3px #222;
+        }
+
+        .stuff-holder {
+            width: 30%;
+            border: transparent 3px solid;
+            background-color: transparent;
+            color: transparent;
+            border-radius: 10px;
+            overflow: scroll;
+            font-size: small;
+            text-align: left;
+            box-sizing: border-box;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .audio-player {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .audio-player audio {
+            width: 100%;
+        }
+
+        .audio-player h2 {
+            text-align: left;
+            margin-bottom: 0px;
+            margin-top: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .audio-player p {
+            text-align: left;
+            margin: 2px auto;
+        }
+
+        .audio-player table,
+        th,
+        td {
+            width: 100%;
+            border: 0px none;
+        }
+
+        .audio-func {
+            margin-bottom: 10px;
+            margin-top: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .audio-func button {
+            background-color: #fff;
+            color: #4D4C7D;
+            border-width: 0px;
+            height: 45px;
+            width: 45px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .audio-func button:hover {
+            background-color: #363062;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .stuff-holder button {
+            padding: 5px 10px;
+            border-width: 0;
+            background-color: white;
+            color: #a91101;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .description {
+            background-color: #363062;
+            color: #f5efe7;
+            padding: 20px;
+            font-size: small;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+        }
+
+        .description.collapsed {
+            display: none;
+            max-height: 0;
+            padding: 0 !important;
+            margin-top: 0 !important;
+        }
+
+        .descriptionText {
+          color: #363062;
+        }
+
+
+        .title-box h1 {
+            font-size: 60px;
+        }
+
+        @media (min-width: 700px) and (max-width: 1320px) {
+            .wbc-player {
+                flex-direction: column;
+                align-items: center;
+                padding: 50px;
+            }
+
+            .description {
+                padding: 50px;
+            }
+
+            .stuff-holder {
+                width: 100%;
+            }
+
+            .audio-player {
+                width: 100%;
+            }
+
+            .title-box h1 {
+                font-size: 50px;
+            }
+        }
+
+        @media (max-width: 650px) {
+            .wbc-player {
+                flex-direction: column;
+                align-items: center;
+                padding: 5vw;
+            }
+
+            .description {
+                padding: 5vw;
+
+            }
+
+            .stuff-holder {
+                width: 100%;
+            }
+
+            .audio-player {
+                width: 100%;
+            }
+
+            .title-box h1 {
+                font-size: 50px;
+            }
+        }
+
+        .hover-circle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            display: none;
+            z-index: 2;
+        }
+
+        .time {
+            padding: 0px;
+            width: 10px;
+            font-family: consolas;
+            color: #fff;
+            font-size: small;
+        }
+
+        .wbc-episodes {
+            padding: 00px;
+            background-color: #f5efe7;
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-height: 1000px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
+        }
+
+        .wbc-episode {
+            background-color: #fcfcfc;
+            width: 100%;
+            padding: 18px;
+            color: #363062;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        .wbc-episodes a {
+            text-decoration: none;
+        } 
+
+        .wbc-episode:hover {
+            background-color: #D8C4B6;
+            cursor: pointer;
+        }
+
+        .wbc-episode h3 {
+            margin: 0;
+            font-size: medium;
+            width: 100%;
+            text-align: left;
+        }
+
+        .wbc-episode p {
+            font-size: small;
+            text-align: left;
+            margin-bottom: 0px;
+            width: 100%;
+        }
+
+        .title-box {
+            margin-bottom: 60px;
+            text-align: left;
+        }

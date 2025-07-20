@@ -13,7 +13,7 @@
 
 <body style="padding: 0px;">
     <script>
-        createNavBar("#363062", "#4D4C7D", "#443D7B", 3, "Wanna Be Cancelled?");
+        createNavBar("#363062", "#4D4C7D", "#443D7B", 5, "Wanna Be Cancelled?");
     </script>
     <style>
         body {
@@ -277,8 +277,8 @@
             text-align: left;
         }
     </style>
-
-    <div class="web-body" style="background-color: #f5efe7;">
+<div class="blurMain">
+    <div class="web-body" style="background-color: #f5efe7;"id="bodyMain">
         <div class="body-main">
             <div class="wbc-about-box">
                 <div class="title-box">
@@ -301,7 +301,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <script>
         const episodes = [
             ["Social Media and the Whole Thing", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e1.mp3", "What does it take to be an influencer? And what role does the audience actually play within this system? Find out with us! (Wolfie regrets his bad mic and would like to apologise)", null],
@@ -332,7 +332,7 @@
         episodeBox.innerHTML = htmlBit;
 
         textWrap(".wbc-episode p", 2)
-        document.body.appendChild(footerDiv);
+        createFooter();
     </script>
 </body>
 

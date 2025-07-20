@@ -168,6 +168,12 @@
             z-index: 1;
         }
 
+        .time {
+            color: #363062;
+            font-family: mainBody;
+            width: fit-content;
+        }
+
         .bufferedBar {
             position: absolute;
             height: 100%;
@@ -240,9 +246,10 @@
                 width: 100%;
             }
         }
+    
     </style>
-
-    <div class="web-body" style="background-color: #f5efe7;">
+<div class="blurMain">
+    <div class="web-body" id="bodyMain"style="background-color: #f5efe7;">
         <div class="body-main">
             <div class="title">
                 <h3 id="episodeName"></h3>
@@ -275,7 +282,7 @@
             </div>
         </div>
     </div>
-
+</div>
     <script>
         window.addEventListener("DOMContentLoaded", () => {
             const episodes = [
@@ -523,7 +530,7 @@
         });
 
         textWrap(".wbc-episode p", 2)
-        document.body.appendChild(footerDiv);
+        createFooter();
     </script>
 </body>
 

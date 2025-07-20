@@ -10,29 +10,28 @@ function createNavItem(text, href) {
 }
 
 // Create footer elements
-const footerDiv = document.createElement("div");
-footerDiv.classList.add("footer");
-footerDiv.style.textAlign = "center"
-
-function createFooterItem(contentHTML) {
-  const footerItem = document.createElement("div");
-  footerItem.classList.add("footer-items");
-
-  const footerItemContent = document.createElement("div");
-  footerItemContent.innerHTML = `${contentHTML}`;
-
-  footerItem.appendChild(footerItemContent);
-
-  return footerItem;
+function createFooter() {
+  const links = [
+    ["/page/notice.html#copyright", "Copyright © All Rights Reserved"],
+    ["/page/notice.html", "Notice to Visitors"],
+    ["/page/archive.html", "Archive"]
+  ];
+  
+  const footer = `<footer class="footer" style="text-align: center;">
+    <div class="footer-items" style="margin-left: auto; margin-right: auto;">
+      <div>
+        ${links.map(([link, text]) => `<a href="${link}" class="a-no-und">${text}</a>`).join(" | ")}
+      </div>
+    </div>
+  </footer>`;
+  
+  const bodyMain = document.getElementById("bodyMain");
+  if (bodyMain) {
+    bodyMain.insertAdjacentHTML('afterend', footer);
+  } else {
+    alert("Element with ID 'bodyMain' not found.");
+  }
 }
-
-const footerItem2 = createFooterItem('<a href="/page/notice.html#copyright" class="a-no-und">Copyright © All Rights Reserved</a> | <a href="/page/notice.html" class="a-no-und">Notice to Visitors</a> | <a href="/page/archive.html" class="a-no-und">Archive</a>');
-
-// Append all footer items to the footer div
-footerItem2.style.marginLeft = "auto"
-footerItem2.style.marginRight = "auto"
-footerDiv.appendChild(footerItem2);
-
 
 // Function to add Trusted Site JS
 const script = document.createElement('script');
@@ -48,7 +47,6 @@ faSet.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.
 document.head.appendChild(faSet);
 
 // Update the title
-
 document.addEventListener("DOMContentLoaded", () => {
   const excludedPaths = [
     "/index.html",
@@ -184,158 +182,71 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
   nav.innerHTML = `
     <div class="nav-container">
       <div class="top-row">
-        <div class="site-title">
-          <a href="/index.html" style="color: white; text-decoration: none;">${title}</a>
+        <div style="display: flex">
+          <a href="./index.html" style="color: #efefef; text-decoration: none;" class="site-title">${title}</a>
         </div>
-        <div class="menu-toggle" onclick="toggleMenu()"><i class="fa">&#9776; </i></div>
+        <div class="menu-toggle" onclick="toggleMenu()"><i class="fa">&#9776;</i></div>
         <ul class="nav-links-desktop">
-          ${navList.map(([label, link]) => `<li><a href="${link}">${label}</a></li>`).join("")}
+          ${navList.map(([label, link], index) => `
+            <li class="${index === highlight ? 'highlighted' : ''}" id="${label}">
+              <a href="${link}">${label}</a>
+            </li>
+          `).join("")}
         </ul>
       </div>
       <ul class="nav-links-mobile">
-        <div class="menu-toggle fa" onclick="toggleMenu()" style = "margin-top: 15px;"><i class="fa">&#xf00d;</i></div>
-        ${navList.map(([label, link]) => `<li><a href="${link}">${label}</a></li>`).join("")}
+        <div class="menu-toggle" onclick="toggleMenu()" style="width: 100%; margin-top: 15px; margin-bottom: 20px;">
+          <i class="fa">&#xf00d;</i>
+        </div>
+        ${navList.map(([label, link], index) => `
+          <li class="${index === highlight ? 'highlighted' : ''}">
+            <a href="${link}">${label}</a>
+          </li>
+        `).join("")}
       </ul>
     </div>
   `;
+
   document.body.insertBefore(nav, document.body.firstChild);
 
   const css = `
     body, .header, .footer {
       background-color: ${primary};
-      margin: 0;
-    }
-    .web-body {
-      overflow: hidden;
     }
 
     .custom-navbar {
       background-color: ${primary};
-      color: white;
-      width: 100%;
-      position: fixed;
-      z-index: 999;
     }
 
-    .nav-container {
-      width: 100%;
+    .nav-links-desktop li:hover a {
+      background-color: ${hover};
     }
 
-    .top-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: nowrap;
-      padding: 0 20px;
-    }
-
-    .site-title {
-      font-size: 1.5em;
-      font-weight: bold;
-      padding: 20px 12px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      flex: 1 1 auto;
-      min-width: 0;
-    }
-
-    .menu-toggle {
-      display: none;
-      font-size: 1.5em;
-      cursor: pointer;
-      padding: 20px;
-      box-sizing: border-box;
-      text-align: center;
-    }
-
-    .menu-toggle i {
-      padding: 4px;
-    }
-
-    .menu-toggle i:hover {
-      border-radius: 4px;
-      transform: scale(1.1);
-    }
-
-    .nav-links-desktop {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-      list-style-type: none;
-    }
-
-    .nav-links-desktop li a,
-    .nav-links-mobile li a {
-      text-decoration: none;
-      color: white;
-      padding: 8px 12px;
-      display: block;
-    }
-
-    .nav-links-desktop li:hover a,
     .nav-links-mobile li:hover a {
       background-color: ${hover};
-      border-radius: 4px;
     }
 
     .nav-links-mobile {
-      display: none;
-      flex-direction: column;
-      width: 40%;
-      min-width: 250px;
       background-color: ${secondary};
-      padding: 15px 20px;
-      list-style-type: none;
-      margin: 0px;
-      box-sizing: border-box;
-      height: 100%;
-      position: fixed;
-      top: 0%;
-      right: 0%;
     }
 
-    .nav-links-mobile li{
-      width: 100%;
-    }
-
-    .nav-links-mobile.show {
-      display: flex;
-    }
-
-    @media (max-width: 890px) {
-      .menu-toggle {
-        display: block;
-      }
-
-      .nav-links-desktop {
-        display: none;
-      }   
-    }
-
-    @media (min-width: 890px) {
-      .nav-links-mobile {
-        display: none !important;
-      }
+    .highlighted a {
+      background-color: ${hover};
+      border-radius: 4px;
     }
   `;
 
   const style = document.createElement("style");
   style.appendChild(document.createTextNode(css));
   document.head.appendChild(style);
+}
 
-  const script = document.createElement("script");
-  script.textContent = `
-    function toggleMenu() {
+
+function toggleMenu() {
       const nav = document.querySelector(".nav-links-mobile");
       nav.classList.toggle("show");
-
+      document.querySelector(".blurMain").classList.toggle("blur");
     }
-  `;
-  document.head.appendChild(script);
-}
 
 function filterGlossary(search, items, title, description) {
   const searchInput = document.getElementById(search).value.toLowerCase();

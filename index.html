@@ -13,11 +13,11 @@
 
 <body style="padding: 0px;">
     <script>
-        createNavBar("#213555", "#3E5879", "#2E4976", 10);
+        createNavBar("#213555", "#3E5879", "#2E4976", 0);
     </script>
 
-
-    <div class="web-body" style="background-color: #D8C4B6;">
+<div class="blurMain">
+    <div class="web-body" style="background-color: #D8C4B6;"id="bodyMain">
         <div class="post">
             <img src="/media/fifty-shades-of-gender.webp">
             <h3>50 Shades of Gender: Gender Complexity and a Post-Gender Society</h3>
@@ -81,11 +81,11 @@
             <a href="/post/2024/05/how-to-make-a-debating-motion.html"><button>Read More</button></a>
         </div>
     </div>
-
+</div>
     <script>
         textWrap(".post h3", 1)
         textWrap(".post p", 4)
-        document.body.appendChild(footerDiv);
+        createFooter();
     </script>
 </body>
 
