@@ -828,6 +828,7 @@ td {
   min-width: 125px;
   max-width: 125px;
   text-align: center;
+  
 }
 
 .teach-buttons button:hover {
@@ -841,16 +842,18 @@ td {
 
 .teach-buttons i {
   background-color: #3E5879;
-  padding: 29px 15px;
   color: #f5efe7;
-  font-size: 52px;
   margin-bottom: 8px;
   text-align: center;
   vertical-align: middle;
-  width: 110px;
-  height: 110px;
   box-sizing: border-box;
+  padding: 25px 15px;
+            width: 95px;
+            height: 95px;
+            font-size: 45px;
 }
+
+
 
 .img-caption {
   margin-bottom: 0px;
@@ -877,7 +880,7 @@ td {
 
 .thing h3 {
   margin: 0px;
-  margin-top: 10px;
+  margin-top: 5px;
   color: #223322;
   font-size: larger;
   margin-bottom: 5px;

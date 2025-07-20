@@ -262,13 +262,22 @@ input {
     filter: brightness(50%);
 }
 
+.blurMain {
+  opacity: 1;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.blurMain.blur {
+  opacity: 0.1;
+  filter: blur(4px);
+}
+
 
 @media screen and (max-width: 700px) {
     .body-main {
         padding: 35px;
         width: 100%;
         font-size: small;
-        margin-top: 15px;
     }
 
     .image-box {
