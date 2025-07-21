@@ -188,7 +188,7 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa">&#9776;</i></div>
         <ul class="nav-links-desktop">
           ${navList.map(([label, link], index) => `
-            <li class="${index === highlight ? 'highlighted' : ''}" id="${label}">
+            <li id="${index === highlight ? 'highlighted' : ''}" id="${label}">
               <a href="${link}">${label}</a>
             </li>
           `).join("")}
@@ -199,7 +199,7 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
           <i class="fa">&#xf00d;</i>
         </div>
         ${navList.map(([label, link], index) => `
-          <li class="${index === highlight ? 'highlighted' : ''}">
+          <li id="${index === highlight ? 'highlighted' : ''}">
             <a href="${link}">${label}</a>
           </li>
         `).join("")}
@@ -230,9 +230,13 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
       background-color: ${secondary};
     }
 
-    .highlighted a {
-      background-color: ${hover};
-      border-radius: 4px;
+    #highlighted a {
+      text-decoration: underline;
+       text-underline-offset: 5px;
+    }
+
+    #highlighted a:hover {
+      text-decoration-color: ${hover};
     }
   `;
 
