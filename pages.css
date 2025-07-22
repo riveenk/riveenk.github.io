@@ -800,8 +800,10 @@ td {
   border-radius: 10px;
 }
 
-.time-val {
-  font-family: "timertext";
+.timings p {
+  margin: 0px;
+  line-height: 2em;
+  font-weight: 600;
 }
 
 .debating-intro {

@@ -142,6 +142,8 @@ function blurPoem() {
   });
 }
 
+
+// Cuts of text beyond the given line length
 function textWrap(selector, lines = 3) {
   const elements = document.querySelectorAll(selector);
 
@@ -162,6 +164,7 @@ function textWrap(selector, lines = 3) {
   });
 }
 
+// Creates the navbar of the website
 function createNavBar(primary, secondary, hover, highlight, title = "On My Wavelength", type = "normal") {
   if (primary === "#1b1b32") primary = "#213555";
   if (secondary === "#363457") secondary = "#3E5879";
@@ -245,13 +248,14 @@ function createNavBar(primary, secondary, hover, highlight, title = "On My Wavel
   document.head.appendChild(style);
 }
 
-
+// this is used to toggle between mobile and desktop 
 function toggleMenu() {
       const nav = document.querySelector(".nav-links-mobile");
       nav.classList.toggle("show");
       document.querySelector(".blurMain").classList.toggle("blur");
     }
 
+// this is for the search function
 function filterGlossary(search, items, title, description) {
   const searchInput = document.getElementById(search).value.toLowerCase();
   const glossaryItems = document.querySelectorAll(items);
@@ -269,7 +273,6 @@ function filterGlossary(search, items, title, description) {
 }
 
 // The 404 page function
-
 function fillFadingText(div, text) {
   div.innerHTML = '';
 
@@ -310,4 +313,27 @@ function fillFadingText(div, text) {
     line.textContent = text;
     div.appendChild(line);
   }
+}
+
+// this is used to filter by groups
+function filterSelect(id) {
+    const activeList = filterMap[id] || [];
+    const showIds = id === "all" ? allList : activeList;
+    const hideIds = id === "all" ? [] : allList.filter(item => !activeList.includes(item));
+
+    Object.entries(buttonMap).forEach(([key, button]) => {
+        const isActive = (key === id) || (id === "all" && key === "all");
+        button.style.backgroundColor = isActive ? '#3e5879' : '#f5efe7';
+        button.style.color = isActive ? '#f5efe7' : '#3e5879';
+    });
+
+    showIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = '';
+    });
+
+    hideIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = 'none';
+    });
 }
