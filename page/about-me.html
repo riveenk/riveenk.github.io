@@ -15,25 +15,83 @@
         createNavBar("#213555", "#3E5879", "#2E4976", 6);
     </script>
 
+    <style>
+        .about-me {
+            text-align: left;
+        }
+
+        .about-me h2 {
+            font-size: 3em;
+        }
+
+        .about-me p {
+            font-size: 1.2em;
+            margin-top: 15px;
+            padding: 0px;
+        }
+
+        .my-socials {
+            list-style: none;
+            display: flex;
+            padding: 0px;
+            gap: 15px;
+            margin-bottom: 60px;
+            margin-top: 30px;
+        }
+
+        .my-socials button {
+            background-color: #3e5879;
+            aspect-ratio: 1 / 1;
+            font-size: xx-large;
+            color: #f5efe7;
+            border: none 0px;
+            padding: 7px;
+        }
+
+        .my-socials button:hover {
+            cursor: pointer;
+            background-color: #213555;
+        }
+    </style>
+
     <div class="blurMain">
-        <div class="web-body" id="bodyMain">
+        <div class="web-body" id="bodyMain" style="background-color: #f5efe7;">
             <div class="body-main">
                 <div class="about-me">
-                    <h2> Riveen Kumanayaka </h2>
-                    <p> Random blogger with too much free time </p>
-                    <p> Socials for the stalkers: <a href="https://www.tumblr.com/blog/yesireadbooks">Tumblr</a>, <a
-                            href="https://www.youtube.com/@riveenkumanayaka">Youtube</a>, <a
-                            href="https://github.com/riveenk">GitHub</a>, <a
-                            href="https://www.linkedin.com/in/riveen-kumanayaka/">LinkedIn</a></p>
-                    <hr>
+                    <h2>
+                        Hey,<br>
+                        I am Riveen Kumanayaka
+                    </h2>
+                    <p class="about-me">— A random guy with too much free time</p>
+                    <ul class="my-socials">
+                        <li>
+                            <a href="https://orcid.org/0009-0008-6672-8383">
+                                <button><i class="fab">&#xf8d2;</i></button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.tumblr.com/blog/geeky-poet">
+                                <button><i class="fab">&#xf173;</i></button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/riveenk">
+                                <button><i class="fab">&#xf09b;</i></button>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/riveen-kumanayaka/">
+                                <button><i class="fab">&#xf0e1;</i></button>
+                            </a>
+                        </li>
+                    </ul>
                     <p>This is my own corner of the internet. You are welcome to stick around, because I do post stuff
                         here, even if it's rare. I like stars and poetry and books and a lot more things. I will post
-                        about pretty much all of them here. </p>
+                        about pretty much all of them here.</p>
 
                     <p>Pretty much everything will be free here because that is how I think knowledge and fun should be
                         (except when the person giving has to go broke to give it). So, pick a nice spot, sit right,
-                        relax and enjoy! </p>
-
+                        relax and enjoy!</p>
                 </div>
             </div>
         </div>
