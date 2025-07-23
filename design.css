@@ -25,7 +25,9 @@ button {
     font-family: "mainBody";
 }
 
-button, a, i {
+button,
+a,
+i {
     transition: 0.3s ease;
 }
 
@@ -1490,9 +1492,48 @@ td {
 }
 
 .alphabet {
-    font-family: sinhala; 
-    font-style: normal; 
+    font-family: sinhala;
+    font-style: normal;
     font-weight: bold;
+}
+
+.about-me {
+    text-align: left;
+}
+
+.about-me h2 {
+    font-size: 3em;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    margin-top: 15px;
+    padding: 0px;
+}
+
+.my-socials {
+    list-style: none;
+    display: flex;
+    padding: 0px;
+    gap: 15px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.my-socials button {
+    background-color: #3e5879;
+    font-size: 2em;
+    width: 2em;
+    height: 2em;
+    color: #f5efe7;
+    border: none 0px;
+    padding: 7px;
+    box-sizing: border-box;
+}
+
+.my-socials button:hover {
+    cursor: pointer;
+    background-color: #213555;
 }
 
 @media screen and (max-width: 350px) {
