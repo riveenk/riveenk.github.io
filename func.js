@@ -165,7 +165,7 @@ function textWrap(selector, lines = 3) {
 }
 
 // Creates the navbar of the website
-function createNavBar(primary, secondary, hover, highlight, title = "On My Wavelength", type = "normal") {
+function createNavBar(primary, secondary, hover, highlight = 99, title = "On My Wavelength", type = "normal") {
   if (primary === "#1b1b32") primary = "#213555";
   if (secondary === "#363457") secondary = "#3E5879";
   if (hover === "#2d2c52") hover = "#2E4976";
