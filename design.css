@@ -8,6 +8,11 @@
     src: url('/resources/fonts/Noto_Sans_Sinhala/NotoSansSinhala-VariableFont_wdth\,wght.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: "timerText";
+    src: url('/resources/fonts/Chivo_Mono/ChivoMono-VariableFont_wght.ttf') format('truetype');
+}
+
 body {
     margin: 0;
     font-family: "mainBody";
@@ -18,6 +23,10 @@ body {
 
 button {
     font-family: "mainBody";
+}
+
+button, a, i {
+    transition: 0.3s ease;
 }
 
 .header,
@@ -129,22 +138,6 @@ button {
 
 .nav-links-mobile.show {
     display: flex;
-}
-
-@media (max-width: 1100px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links-desktop {
-        display: none;
-    }
-}
-
-@media (min-width: 1100px) {
-    .nav-links-mobile {
-        display: none !important;
-    }
 }
 
 input {
@@ -332,7 +325,6 @@ input {
     margin-bottom: 5px;
 }
 
-
 .post p {
     color: #626262;
     font-size: small;
@@ -340,7 +332,6 @@ input {
     margin-bottom: 20px;
     word-break: normal;
 }
-
 
 .post button {
     width: 100%;
@@ -666,32 +657,6 @@ td {
     color: red;
 }
 
-
-@media (max-width: 1200px) {
-    .writings {
-        width: 90%;
-        padding: 15px;
-        min-height: 500px;
-    }
-}
-
-@media (max-width: 768px) {
-    .writings {
-        width: 90%;
-        padding: 15px;
-    }
-
-    .writings h3 {
-        font-size: 14px;
-    }
-
-    .writings p {
-        font-size: 11px;
-    }
-}
-
-
-
 .writingsSc {
     border: solid #960018;
     border-width: 2px;
@@ -797,7 +762,6 @@ td {
     padding: 10px;
 }
 
-
 .archive-post {
     width: 100%;
     height: auto;
@@ -874,22 +838,6 @@ td {
 
 .library-button span {
     margin-top: 10px;
-}
-
-@media (max-width: 600px) {
-    .library-button img {
-        width: 60%;
-    }
-
-    .library-button {
-        max-width: none;
-        max-height: none;
-    }
-}
-
-@font-face {
-    font-family: "timerText";
-    src: url('/resources/fonts/Chivo_Mono/ChivoMono-VariableFont_wght.ttf') format('truetype');
 }
 
 .stopwatch {
@@ -1126,7 +1074,6 @@ td {
     height: 50px;
 }
 
-
 .debating-intro {
     margin-bottom: 20px;
 }
@@ -1231,8 +1178,6 @@ td {
     font-size: 45px;
 }
 
-
-
 .img-caption {
     margin-bottom: 0px;
     margin-top: 2px;
@@ -1264,7 +1209,6 @@ td {
     margin-bottom: 5px;
     text-align: left;
 }
-
 
 .thing p {
     color: #626262;
@@ -1471,12 +1415,9 @@ td {
     color: #363062;
 }
 
-
 .title-box h1 {
     font-size: 60px;
 }
-
-
 
 .hover-circle {
     position: absolute;
@@ -1513,7 +1454,7 @@ td {
 
 .wbc-episode {
     background-color: #fcfcfc;
-    width: 100%;
+    min-width: 100%;
     padding: 18px;
     color: #363062;
     text-decoration: none;
@@ -1548,6 +1489,11 @@ td {
     text-align: left;
 }
 
+.alphabet {
+    font-family: sinhala; 
+    font-style: normal; 
+    font-weight: bold;
+}
 
 @media screen and (max-width: 350px) {
     .site-title {
@@ -1571,6 +1517,17 @@ td {
 @media screen and (max-width: 550px) {
     .stopwatch {
         font-size: 18vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .library-button img {
+        width: 60%;
+    }
+
+    .library-button {
+        max-width: none;
+        max-height: none;
     }
 }
 
@@ -1690,11 +1647,6 @@ td {
 
     .search-container {
         width: 100%;
-        margin: 5px;
-    }
-
-    .body-main {
-        padding: 10px;
     }
 
     .thing button {
@@ -1702,20 +1654,29 @@ td {
     }
 }
 
-@media screen and (min-width: 701px) {
-    .body-main {
-        padding: 0%;
-    }
-}
-
 @media screen and (min-width: 701px) and (max-width: 800px) {
     .body-main {
         padding: 40px;
-        width: 60%;
+        width: 70%;
     }
 
     .image-box {
-        width: 100%;
+        width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .writings {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .writings h3 {
+        font-size: 14px;
+    }
+
+    .writings p {
+        font-size: 11px;
     }
 }
 
@@ -1723,12 +1684,7 @@ td {
     .search-container {
         width: 100%;
     }
-
-    .body-main {
-        padding: 10px;
-    }
 }
-
 
 @media screen and (min-width: 801px) {
     .body-main {
@@ -1748,14 +1704,36 @@ td {
     }
 }
 
-@media screen and (min-width: 1200px) {
-    .stopwatch {
-        font-size: 10vw;
+@media (max-width: 1100px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links-desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 1100px) {
+    .nav-links-mobile {
+        display: none !important;
     }
 }
 
 @media screen and (max-width: 1200px) {
     .stopwatch {
         font-size: 11vw;
+    }
+
+    .writings {
+        width: 90%;
+        padding: 15px;
+        min-height: 500px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .stopwatch {
+        font-size: 10vw;
     }
 }
