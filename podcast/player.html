@@ -250,7 +250,7 @@
     </style>
 <div class="blurMain">
     <div class="web-body" id="bodyMain"style="background-color: #f5efe7;">
-        <div class="body-main">
+        <div class="body-main" style="margin-top: 72px;">
             <div class="title">
                 <h3 id="episodeName"></h3>
                 <p class="author"><a href="/podcast/index.html">Wanna Be Cancelled</a> by Wolfie and Riveen</p>
@@ -287,7 +287,7 @@
         window.addEventListener("DOMContentLoaded", () => {
             const episodes = [
                 ["Social Media and the Whole Thing", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e1.mp3", "What does it take to be an influencer? And what role does the audience actually play within this system? Find out with us! (Wolfie regrets his bad mic and would like to apologise)", null],
-                ["The Limit of Opinion Entitlement", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e2.mp3", " People are entitled to their opinions. Many say that there is a certain extent to it. But, what is this extent? Listen to us yap for about this for almost an hour. We will be talking about changing lines of social acceptability and sheds fear of a hypothetical future where ideas that we consider morally degenerate are accepted. Still we have the worst mics ever...", "This episode discusses sensitive topics such as pedophilia and other morally complex issues. The episode may not be suitable for all listeners. If you are affected by these themes, we encourage you to seek support and/or avoid this episode."],
+                ["The Limit of Opinion Entitlement", "https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e2.mp3", "People are entitled to their opinions, but general consensus agree that there is a limit to it. However, what is this limit? Where does it begin, and where does it end? Who decides the limits? Listen to us yap for almost an hour. We talk about about changing lines of social acceptability and shed fear of a hypothetical future where ideas that we consider morally degenerate are accepted. <br> Still sorry for the worst mics ever...", "This episode discusses sensitive topics such as pedophilia and other morally complex issues. The episode may not be suitable for all listeners. If you are affected by these themes, we encourage you to seek support and/or avoid this episode."],
             ];
 
             let consentedList = JSON.parse(sessionStorage.getItem("consentedList") || "[]");
@@ -451,7 +451,7 @@
 
                 // Update UI text
                 document.getElementById("episodeName").textContent = `#${index + 1}: ${episode[0]}`;
-                document.getElementById("descriptionText").textContent = episode[2];
+                document.getElementById("descriptionText").innerHTML = `<p>${episode[2]}</p>`;
                 document.getElementById("lenLabel").textContent = "--:--"
                 
 
@@ -510,7 +510,6 @@
                     audio.removeEventListener("loadedmetadata", onLoadedMetadata);
                 });
             }
-
 
             const nextButton = document.getElementById("next");
             nextButton.onclick = function nextEpisode() {
