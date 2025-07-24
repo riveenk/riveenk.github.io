@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <link rel="icon" type="image/png" href="/media/for-you/favicon.png">
     <link rel="stylesheet" type="text/css" href="/design.css">
     <link rel="stylesheet" href="/resources/fontawesome/css/all.css">
     <script src="/func.js"></script>
@@ -45,7 +45,7 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background-image: url('/media/sky-map.svg');
+            background-image: url('/media/for-you/sky-map.svg');
             background-position: center;
             background-position-y: center;
             background-repeat: no-repeat;
@@ -318,8 +318,8 @@
 
 
             <div class="sprites-container">
-                <img src="/media/sprite-me-night.gif" class="sprite sprite-me" id="me" alt="me" />
-                <img src="/media/sprite-her-night.gif" class="sprite" id="you" alt="you" />
+                <img src="/media/for-you/sprite-me-night.gif" class="sprite sprite-me" id="me" alt="me" />
+                <img src="/media/for-you/sprite-her-night.gif" class="sprite" id="you" alt="you" />
             </div>
 
             <div class="scene-wrapper" id="scene-wrapper">
@@ -335,8 +335,8 @@
             </div>
 
             <div class="shrub-bit">
-                    <img src="/media/pixel-fire.gif" class="fire" id="fire" />
-                    <img src="/media/shrubs-night.png" class="shrubs" id="shrubs" />
+                    <img src="/media/for-you/pixel-fire.gif" class="fire" id="fire" />
+                    <img src="/media/for-you/shrubs-night.png" class="shrubs" id="shrubs" />
                     </div>
         </div>
     </div>
@@ -448,7 +448,7 @@
             flipSprites();
             animate();
 
-            const gifUrl = "/media/pixel-meteor.gif";
+            const gifUrl = "/media/for-you/pixel-meteor.gif";
             const sky = document.getElementById("sky");
 
             function getRandomPosition(maxWidth, maxHeight) {
@@ -498,9 +498,9 @@
                 // Cycle status
                 currentStatusIndex = (currentStatusIndex + 1) % statusList.length;
                 status = statusList[currentStatusIndex];
-                shrub.setAttribute("src", `/media/shrubs-${status}.png?v=${Date.now}`);
-                me.setAttribute("src", `/media/sprite-me-${status}.gif?v=${Date.now}`);
-                you.setAttribute("src", `/media/sprite-her-${status}.gif?v=${Date.now}`);
+                shrub.setAttribute("src", `/media/for-you/shrubs-${status}.png?v=${Date.now}`);
+                me.setAttribute("src", `/media/for-you/sprite-me-${status}.gif?v=${Date.now}`);
+                you.setAttribute("src", `/media/for-you/sprite-her-${status}.gif?v=${Date.now}`);
                 handleStatusChange(status);
             });
 
