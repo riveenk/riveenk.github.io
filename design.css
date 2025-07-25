@@ -319,7 +319,7 @@ input {
 .post h3 {
     margin: 0px;
     margin-top: 10px;
-    color: #223322;
+    color: #141414;
     font-size: larger;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -590,25 +590,6 @@ td {
     color: white;
 }
 
-.about-me {
-    padding: 35px;
-}
-
-.about-me img {
-    border-radius: 50%;
-    width: 60%;
-
-}
-
-.about-me h2 {
-    text-decoration: none;
-    margin: 0px;
-}
-
-.about-me p {
-    margin-bottom: 0px;
-}
-
 .writings {
     border: solid #000;
     border-width: 2px;
@@ -657,68 +638,6 @@ td {
 
 .writings w {
     color: red;
-}
-
-.writingsSc {
-    border: solid #960018;
-    border-width: 2px;
-    padding: 10px 20px;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    background-color: antiquewhite;
-}
-
-.writingsSc button {
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: solid #960018;
-    background-color: #960018;
-    color: #efefef;
-    font-weight: bold;
-    margin-bottom: 5px;
-    width: 100%;
-}
-
-.writingsSc button:hover {
-    background-color: antiquewhite;
-    color: #960018;
-}
-
-.writingsSc h3 {
-    line-height: 1.2em;
-}
-
-
-.redir-notice {
-    border: #2669eb solid 3px;
-    padding: 10px 20px;
-    font-size: large;
-    text-align: center;
-    border-radius: 10px;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
-}
-
-.redir-notice button {
-    border: #2669eb solid 3px;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #2669eb;
-    color: white;
-    font-family: consolas;
-    font-weight: bold;
-    font-size: medium;
-    margin-bottom: 10px;
-}
-
-.redir-notice button:hover {
-    cursor: pointer;
 }
 
 .indent {
@@ -1206,7 +1125,7 @@ td {
 .thing h3 {
     margin: 0px;
     margin-top: 5px;
-    color: #223322;
+    color: #141414;
     font-size: larger;
     margin-bottom: 5px;
     text-align: left;
