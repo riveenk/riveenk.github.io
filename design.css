@@ -1337,7 +1337,7 @@ td {
 }
 
 .title-box h1 {
-    font-size: 60px;
+    font-size: 3em;
 }
 
 .hover-circle {
@@ -1544,7 +1544,7 @@ td {
     }
 
     .title-box h1 {
-        font-size: 50px;
+        font-size: 3em;
     }
 }
 
@@ -1634,7 +1634,7 @@ td {
     }
 
     .title-box h1 {
-        font-size: 50px;
+        font-size: 3em;
     }
 
     .search-container {
