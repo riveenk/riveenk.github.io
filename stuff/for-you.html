@@ -512,7 +512,7 @@
                 } else if (state === "starry") {
                     setStarry();
                 } else if (state === "aot") {
-                    setCleared();
+                    setCape();
                 }
             }
 
@@ -533,6 +533,13 @@
 
             function setCleared() {
                 fire.style.display = "none";
+                me.style.marginRight = "50px";
+                clearBackground();
+            }
+
+            function setCape() {
+                fire.style.display = "none";
+                me.style.marginRight = "30px";
                 clearBackground();
             }
 
