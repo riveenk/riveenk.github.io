@@ -335,9 +335,9 @@
             </div>
 
             <div class="shrub-bit">
-                    <img src="/media/for-you/pixel-fire.gif" class="fire" id="fire" />
-                    <img src="/media/for-you/shrubs-night.png" class="shrubs" id="shrubs" />
-                    </div>
+                <img src="/media/for-you/pixel-fire.gif" class="fire" id="fire" />
+                <img src="/media/for-you/shrubs-night.png" class="shrubs" id="shrubs" />
+            </div>
         </div>
     </div>
     <script>
@@ -390,21 +390,21 @@
             let speed = 2;
             let x = -150;
             let screenWidth = window.innerWidth;
+            let containerWidth = container.offsetWidth;
 
             function animate() {
                 x += speed * direction;
                 container.style.transform = `translateX(${x}px)`;
 
-                if (direction === 1 && x > screenWidth) {
+                const spriteWidth = me.offsetWidth || 200;
+
+                if (direction === 1 && x > screenWidth + spriteWidth) {
                     direction = -1;
                     flipSprites();
-                    x = screenWidth;
                 }
-
-                if (direction === -1 && x < -400) {
+                if (direction === -1 && x < - spriteWidth * 3.5) {
                     direction = 1;
                     flipSprites();
-                    x = -400;
                 }
 
                 requestAnimationFrame(animate);
