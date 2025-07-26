@@ -1432,10 +1432,12 @@ td {
     font-size: 3em;
 }
 
-.about-me p {
+
+.about-me-p {
     font-size: 1.2em;
     margin-top: 15px;
     padding: 0px;
+    color: #626262;
 }
 
 .my-socials {
