@@ -27,16 +27,12 @@
                     <button style="background-color: #3E5879;"><i class="fa fa-search"
                             style="font-size: medium; color: #f5efe7;"></i></button>
                     <input type="text" id="search" placeholder="Search by title, description, or type..."
-                        oninput="filterGlossary('search', '.glossary-item', '.term', '.definition')">
+                        oninput="filterGlossary('search', '.thing', '#term', '#definition')">
                 </div>
-                <ul class="glossary-list" id="glossary">
-                    <li class="glossary-item" id="term-html">
-                        <span class="term">Point of Information (POI)</span>
-                        <div class="definition">A question that a member of the opposing team can ask a speaker during
-                            their speech. This can only be asked if the speaker accepts the POI. Different formats and
-                            organisers may have varying rules regarding these.</div>
-                    </li>
-                </ul>
+                <div class="thing">
+                    <h3 id="term">Point of Information (POI)</h3>
+                    <p id="definition">A question that a member of the opposing team can ask a speaker during their speech. This can only be asked if the speaker accepts the POI. Different formats and organisers may have varying rules regarding these.</p>
+                </div>
             </div>
         </div>
         <script>
