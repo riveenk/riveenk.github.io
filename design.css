@@ -27,7 +27,7 @@ button {
 
 button,
 a,
-i {
+i, div {
     transition: 0.3s ease;
 }
 
@@ -1129,6 +1129,14 @@ td {
     box-sizing: border-box;
 }
 
+.thing-a {
+    text-decoration: none;
+}
+
+.thing-a:hover .thing {
+    background-color: #fff;
+}
+
 .thing h3 {
     margin: 0px;
     margin-top: 5px;
@@ -1142,24 +1150,10 @@ td {
     color: #626262;
     font-size: small;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     word-break: normal;
     text-align: left;
     line-height: 1.5em;
-}
-
-.thing button {
-    min-width: 20%;
-    padding: 10px;
-    background-color: #3E5879;
-    border-style: none;
-    color: white;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-
-.thing button:hover {
-    background-color: #213555;
 }
 
 .thing br {
