@@ -1524,6 +1524,25 @@ td {
 
 }
 
+@media screen and (max-width: 500px) {
+    .wbc-button p {
+        font-size: 15px;
+    }
+
+    #wbc-spotify p {
+        display: none;
+    }
+
+    #wbc-spotify {
+        box-sizing: border-box;
+        padding: 14px;
+    }
+
+    #wbc-spotify i {
+        margin-right: 0px;
+    }
+}
+
 @media screen and (max-width: 550px) {
     .stopwatch {
         font-size: 18vw;
