@@ -27,7 +27,8 @@ button {
 
 button,
 a,
-i, div {
+i,
+div {
     transition: 0.3s ease;
 }
 
@@ -725,7 +726,7 @@ td {
 }
 
 .controls button {
-    font-size: 1em;
+    font-size: 1.5em;
     padding: 20px;
     margin: 5px;
     cursor: pointer;
@@ -735,11 +736,10 @@ td {
     color: white;
     transition: background-color 0.3s;
     box-sizing: border-box;
-    max-width: 80px;
-    max-height: 80px;
+    aspect-ratio: 1 / 1;
 }
 
-.settings button {
+.settings-button {
     font-size: 1em;
     margin: 5px;
     cursor: pointer;
@@ -758,7 +758,7 @@ td {
     width: 30px;
 }
 
-.settings button:hover {
+.settings-button:hover {
     background-color: #d8c4b6;
 }
 
@@ -783,10 +783,12 @@ td {
     border-radius: 5px;
     color: #213555;
     box-sizing: border-box;
-    width: 60%;
+    width: 95%;
+    max-width: 400px;
+    font-size: medium;
 }
 
-.settings div {
+.settings form {
     width: 100%;
     margin-top: 3px;
     color: #213555;
@@ -803,6 +805,7 @@ td {
     color: #213555;
     margin: 5px;
     padding: 3px;
+    margin-bottom: 10px;
 }
 
 .settings select {
@@ -823,6 +826,7 @@ td {
 
 .settings label {
     margin-right: 10px;
+    line-height: 40px;
 }
 
 .toggle-settings {
@@ -1051,7 +1055,8 @@ td {
     text-decoration: none;
 }
 
-.thing-a:hover .thing, .thing:hover {
+.thing-a:hover .thing,
+.thing:hover {
     cursor: pointer;
     background-color: #fff;
 }
@@ -1421,6 +1426,37 @@ td {
     margin-bottom: 30px;
     color: #484848;
     text-align: left;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    height: 30px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 6px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 6px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.oneLineEntry {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
+
+.settings br {
+    height: 10px;
 }
 
 @media screen and (max-width: 350px) {
