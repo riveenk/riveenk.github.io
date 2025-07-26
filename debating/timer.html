@@ -13,56 +13,95 @@
 
 <body style="padding: 0px;">
     <div class="blurMain" id="blurMain">
-
         <script>
             createNavBar("#213555", "#3E5879", "#2E4976", 10);
         </script>
+
+        <style>
+            .timeEntry {
+                background-color: white;
+                width: fit-content !important;
+                height: 35px;
+            }
+
+            .timeEntry input {
+                margin: 0px;
+                height: 35px;
+                width: 50px;
+                padding: 0px;
+            }
+
+            .submitTime {
+                width: 100%;
+                padding: 10px;
+                margin-top: 20px;
+                border: 0px none;
+                background-color: #d8c4b6;
+            }
+
+            .submitTime:hover {
+                opacity: 0.7;
+                cursor: pointer;
+            }
+        </style>
+
         <div class="web-body" id="bodyMain" style="min-height: 90vh; height: max-content; background-color: #d8c4b6;">
             <div id="bodyMain"
                 style="justify-items: center; background-color: transparent; margin-top: auto; margin-bottom: auto; text-align: center; min-width: 100%;">
                 <div class="blur" id="blur">
                     <div class="stopwatch" style="margin: 0;">00:00:00</div>
                     <div class="controls">
-                        <button id="startPauseBtn"><i id="fSLabel" style="font-size:x-large"
-                                class="fa">&#xf04b;</i></button>
-                        <button id="resetBtn"><i id="fSLabel" style="font-size:x-large" class="fa">&#xf2ea;</i></button>
+                        <button id="startPauseBtn"><i id="fSLabel" class="fa">&#xf04b;</i></button>
+                        <button id="resetBtn"><i id="fSLabel" class="fa">&#xf2ea;</i></button>
                         <button onclick="showHideSettings()" id="toggleSettingsBtn"><i id="fSLabel"
-                                style="font-size:x-large" class="fa">&#xf013;</i></button>
+                                class="fa">&#xf013;</i></button>
                         <button id="fullScreenButton" onclick="openFullscreen()"><i id="fSLabel"
-                                style="font-size:x-large" class="fa">&#xf065;</i></button>
+                                class="fa">&#xf065;</i></button>
                     </div>
                 </div>
                 <div class="settings" id="settingsBox">
-                    <button onclick="showHideSettings()"><i id="fSLabel" style="font-size:small"
+                    <button class="settings-button" onclick="showHideSettings()"><i id="fSLabel" style="font-size:small"
                             class="fa">&#xf00d;</i></button>
-                    <div>
-                        <label for="speechLength">Speech Duration</label>
-                        <input type="text" id="speechLengthMin" placeholder="mm" value="07" maxlength="2"
-                            pattern="\\d{2}" title="Enter 2 digit minutes (00-99)">
-                        :
-                        <input type="text" id="speechLengthSec" placeholder="ss" value="00" maxlength="2"
-                            pattern="[0-5][0-9]" title="Enter 2 digit seconds (00-59)">
+                    <form id="timeSettings">
+                        <h3>Speech Lengths (mm:ss)</h3>
+                        <div class="oneLineEntry">
+                            <label>Constructive Speech:</label>
+                            <div class="timeEntry">
+                                <input name="const-length-min" id="const-length-min" value="07" type="text" required
+                                    placeholder="mm" pattern="^(0?[0-9]|1[0-5])$">
+                                <span>:</span>
+                                <input name="const-length-sec" id="const-length-sec" value="00" type="text" required
+                                    placeholder="ss" pattern="^(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|60)$">
+                            </div>
+                        </div>
+                        <div class="oneLineEntry">
+                            <label>Reply Speech:</label>
+                            <div class="timeEntry">
+                                <input name="reply-length-min" id="reply-length-min" value="04" type="text" required
+                                    placeholder="mm" pattern="^(0?[0-9]|1[0-5])$">
+                                <span>:</span>
+                                <input name="reply-length-sec" id="reply-length-sec" value="00" type="text" required
+                                    placeholder="ss" pattern="^(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|60)$">
+                            </div>
+                        </div>
+                        <label>Grace Period (ss):</label>
+                        <input name="grace" id="gracePeriod" value="15" type="text"
+                            pattern="^(0?[0-9]|1[0-9]|2[0-9]|3[0-9]|4[0-9]|5[0-9]|60)$">
+                        <br>
+                        <label>Speech Type:</label> <br>
 
-                        <br>
-                        <label for="replyLength">Reply Duration</label>
-                        <input type="text" id="replyLengthMin" placeholder="mm" value="04" maxlength="2"
-                            pattern="\\d{2}" title="Enter 2 digit minutes (00-99)">
-                        :
-                        <input type="text" id="replyLengthSec" placeholder="ss" value="00" maxlength="2"
-                            pattern="[0-5][0-9]" title="Enter 2 digit seconds (00-59)">
+                        <div class="radio-group">
+                            <input type="radio" name="sp-type" required value="const" id="const" checked>
+                            <label for="const">Constructive</label>
+                        </div>
 
-                        <br>
-                        <label for="gracePeriod">Grace Period</label>
-                        <input type="text" id="gracePeriod" placeholder="ss" value="15" maxlength="2"
-                            pattern="[0-5]?[0-9]" title="Enter seconds (0-59)">
-                        <label for="speechLength">sec</label>
-                        <br>
-                        <label for="toggleReply">Speech Type:</label>
-                        <select id="toggleReply">
-                            <option value="const">Constructive</option>
-                            <option value="reply">Reply</option>
-                        </select>
-                    </div>
+                        <div class="radio-group">
+                            <input type="radio" name="sp-type" required value="reply" id="reply">
+                            <label for="reply">Reply</label>
+                        </div>
+
+                        <button class="submitTime" type="submit">Save Details</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -70,10 +109,10 @@
             const stopwatchDisplay = document.querySelector('.stopwatch');
             const startPauseBtn = document.getElementById('startPauseBtn');
             const resetBtn = document.getElementById('resetBtn');
-            const speechLengthMinInput = document.getElementById('speechLengthMin');
-            const speechLengthSecInput = document.getElementById('speechLengthSec');
-            const replyLengthMinInput = document.getElementById('replyLengthMin');
-            const replyLengthSecInput = document.getElementById('replyLengthSec');
+            const speechLengthMinInput = document.getElementById("const-length-min");
+            const speechLengthSecInput = document.getElementById("const-length-sec");
+            const replyLengthMinInput = document.getElementById("reply-length-min");
+            const replyLengthSecInput = document.getElementById("reply-length-sec");
             const gracePeriodInput = document.getElementById('gracePeriod');
             const toggleReplyInput = document.getElementById('toggleReply');
             const toggleSettingsBtn = document.getElementById('toggleSettingsBtn');
@@ -112,6 +151,8 @@
                 const settings = getSettings();
                 const totalSpeechTime = (settings.enableReply ? settings.replyLength : settings.speechLength) * 60 * 1000;
                 const gracePeriod = settings.gracePeriod * 1000;
+
+                console.log(`${totalSpeechTime}, ${gracePeriod}`);
 
                 if (timeDifference >= totalSpeechTime + gracePeriod) {
                     bodyMain.style.backgroundColor = '#ff686b';
@@ -159,6 +200,16 @@
                 [startPauseBtn, resetBtn, toggleSettingsBtn, fSButton].forEach(btn => btn.disabled = !visible);
             }
 
+            document.getElementById('timeSettings').addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                const settings = getSettings();
+                console.log("Form submitted. New settings:", settings);
+
+                showHideSettings();
+            });
+
+
             function getSettings() {
                 const speechLengthMin = parseInt(speechLengthMinInput.value, 10) || 0;
                 const speechLengthSec = parseInt(speechLengthSecInput.value, 10) || 0;
@@ -169,7 +220,10 @@
                 const replyLength = replyLengthMin + (replyLengthSec / 60);
 
                 const gracePeriod = parseInt(gracePeriodInput.value, 10) || 0;
-                const enableReply = toggleReplyInput.value === "reply" ? 1 : 0;
+
+                const selectedSpeechType = document.querySelector('input[name="sp-type"]:checked')?.value;
+                const enableReply = selectedSpeechType === "reply" ? 1 : 0;
+
                 return { speechLength, replyLength, gracePeriod, enableReply };
             }
 
@@ -239,7 +293,7 @@
 
             createFooter();
         </script>
-        </div>
+    </div>
     </div>
 
 </body>
