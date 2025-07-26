@@ -723,6 +723,9 @@ td {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .controls button {
@@ -737,7 +740,7 @@ td {
     transition: background-color 0.3s;
     box-sizing: border-box;
     aspect-ratio: 1 / 1;
-    height: 64px;
+    
 }
 
 .settings-button {
