@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-16">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/media/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/design.css">
+    <link rel="stylesheet" type="text/css" href="/pages.css">
+    <script src="/func.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body style="padding: 0px;">
+    <script>
+        createNavBar("#213555", "#3E5879", "#2E4976", 10);
+    </script>
+    <style>
+    </style>
+
+    <div class="blurMain">
+        <div class="web-body" style="background-color: #D8C4B6;" id="bodyMain">
+            <div class="body-main" style="background-color: transparent;">
+                <h2>Debating Formats</h2>
+                <p class="subHeader">This is a growing collection of introductions to some common debating formats...</p>
+
+                <div class="search-container" style="width: 100%;">
+                    <button style="background-color: #3E5879;"><i class="fa fa-search"
+                            style="font-size: medium; color: #f5efe7;"></i></button>
+                    <input type="text" id="search" placeholder="Search by title, description, or type..."
+                        oninput="filterGlossary('search', '.thing', '.thing h3', '.thing p')">
+                </div>
+
+                <a href='/debating/apd.html' class="thing-a">
+                    <div class="thing" id="apd">
+                        <h3>Asian Parliamentary Debating Format</h3>
+                        <p> APD Format is a parliamentary debating model that involves two teams of three members. The Government argues for the motion, and the Opposition argues against the motion. There are three constructive speeches and a reply speech for each team. 
+                        </p>
+                    </div>
+                </a>
+
+                <a href='/debating/bpd.html' class="thing-a">
+                    <div class="thing" id="bpd">
+                        <h3>British Parliamentary Debating Format</h3>
+                        <p> BPD Format is a parliamentary debating model that involves four teams of two members. The Government argues for the motion, and the Opposition argues against the motion. The two sides are further divided into the Opening and Closing Benches, each with separate expectations on them. There are two constructive speeches for each team and no reply speeches.
+                        </p>
+                    </div>
+                </a>
+
+                <a href='/debating/jwsdc.html' class="thing-a">
+                    <div class="thing" id="jwsdc">
+                        <h3>Junior World Schools Debating Championship Format</h3>
+                        <p> JWSDC Format is used in the Junior World Schools Debating Championship and involves two teams of three members. The Proposition argues for the motion, and the Opposition argues against the motion. There will be three constructive speeches and two reply speeches. 
+                        </p>
+                    </div>
+                </a>
+
+                <a href='/debating/oxsd.html' class="thing-a">
+                    <div class="thing" id="oxsd">
+                        <h3>Oxford-Style Debating Format</h3>
+                        <p> OxSD Format is a public debating model that involves two teams of several members (typically three). The Proposition argues for the motion, and the Opposition argues against the motion. There are multiple sections to this format and it is adapted in various ways by various organisers.
+                        </p>
+                    </div>
+                </a>
+
+                <a href='/debating/wsdc.html' class="thing-a">
+                    <div class="thing" id="wsdc">
+                        <h3>World Schools Debating Championship Format</h3>
+                        <p> WSDC Format is used in the World Schools Debating Championship and involves two teams of three members. The Proposition argues for the motion, and the Opposition argues against the motion. There are three constructive speeches and a reply speech for each team. 
+                        </p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <script>
+            createFooter();
+        </script>
+</body>
+
+</html>

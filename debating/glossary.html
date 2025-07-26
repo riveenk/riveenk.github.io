@@ -12,61 +12,36 @@
 </head>
 
 <body style="padding: 0px;">
-    <style>
-        @media screen and (min-width: 801px) {
-            .search-container {
-                width: 60%;
-            }
-        }
-
-        @media screen and (max-width: 801px) {
-            .search-container {
-                width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 701px) {
-            .search-container {
-                width: 100%;
-            }
-
-            .body-main {
-                padding: 10px;
-            }
-
-        }
-
-        @media screen and (min-width: 701px) {
-            .body-main {
-                padding: 0%;
-            }
-        }
-    </style>
     <script>
         createNavBar("#213555", "#3E5879", "#2E4976", 10);
     </script>
 
-<div class="blurMain">
-    <div class="web-body" style="background-color: #D8C4B6;"id="bodyMain">
-        <div class="body-main" style="background-color: transparent;">
-            <div class="search-container" style="width: 100%; margin-bottom: 20px;">
-                <button style="background-color: #3E5879;"><i class="fa fa-search"
-                        style="font-size: medium; color: #f5efe7;"></i></button>
-                <input type="text" id="search" placeholder="Search by title, description, or type..."
-                    oninput="filterGlossary('search', '.glossary-item', '.term', '.definition')">
-            </div>
-        <ul class="glossary-list" id="glossary">
+    <div class="blurMain">
+        <div class="web-body" style="background-color: #D8C4B6;" id="bodyMain">
+            <div class="body-main" style="background-color: transparent;">
+                <h2>Debating Glossary</h2>
+                <p class="subHeader">This is a glossary of some common terms and phrases from debating...
+                </p>
+
+                <div class="search-container" style="width: 100%; margin-bottom: 20px;">
+                    <button style="background-color: #3E5879;"><i class="fa fa-search"
+                            style="font-size: medium; color: #f5efe7;"></i></button>
+                    <input type="text" id="search" placeholder="Search by title, description, or type..."
+                        oninput="filterGlossary('search', '.glossary-item', '.term', '.definition')">
+                </div>
+                <ul class="glossary-list" id="glossary">
                     <li class="glossary-item" id="term-html">
                         <span class="term">Point of Information (POI)</span>
                         <div class="definition">A question that a member of the opposing team can ask a speaker during
                             their speech. This can only be asked if the speaker accepts the POI. Different formats and
-                            orgnaisers may have varying rules regarding these.</div>
+                            organisers may have varying rules regarding these.</div>
                     </li>
                 </ul>
-    </div></div>
-    <script>
-        createFooter();
-    </script>
+            </div>
+        </div>
+        <script>
+            createFooter();
+        </script>
 </body>
 
 </html>
