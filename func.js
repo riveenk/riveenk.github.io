@@ -186,7 +186,7 @@ function createNavBar(primary, secondary, hover, highlight = 99, title = "On My 
     <div class="nav-container">
       <div class="top-row">
         <div style="display: flex">
-          <a href="./index.html" style="color: #efefef; text-decoration: none;" class="site-title">${title}</a>
+          <a href="/index.html" style="color: #efefef; text-decoration: none;" class="site-title">${title}</a>
         </div>
         <div class="menu-toggle" onclick="toggleMenu()"><i class="fa">&#9776;</i></div>
         <ul class="nav-links-desktop">
