@@ -44,10 +44,6 @@ h2 {
     margin: 0;
 }
 
-.web-body {
-    overflow: hidden;
-}
-
 .custom-navbar {
     color: white;
     width: 100%;
@@ -139,6 +135,7 @@ h2 {
     right: 0%;
     background-color: #3e5879;
     transition: 0.1s ease;
+    z-index: 10;
 
 }
 
@@ -207,6 +204,19 @@ input {
     box-sizing: border-box;
     justify-content: center;
     line-height: 1.5;
+    overflow: hidden;
+}
+
+#searchHolder {
+    width: 100%;
+    display: flex;
+    padding: 50px;
+    padding-top: 100px;
+    box-sizing: border-box;
+    justify-content: center;
+    line-height: 1.5;
+    overflow: hidden;
+    
 }
 
 .body-header,
@@ -232,6 +242,18 @@ input {
     font-weight: normal;
     font-size: large;
     margin-bottom: 30px;
+}
+
+h5 {
+    font-size: large;
+    font-weight: 700;
+    margin: 40px 0px 20px;
+}
+
+h6 {
+    font-size: medium;
+    font-weight: 700;
+    margin: 30px 0px 15px;
 }
 
 .copyright-box {
@@ -1066,7 +1088,8 @@ td {
     background-color: #fff;
 }
 
-.thing-a:hover .tag, .thing-a:hover .tw-tag {
+.thing-a:hover .tag,
+.thing-a:hover .tw-tag {
     background-color: #f5efe7;
     opacity: 1;
 }
@@ -1484,6 +1507,100 @@ td {
     text-underline-offset: 5px;
 }
 
+.see-more {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.see-more button {
+    background-color: #8E443D;
+    padding: 10px;
+    border: 0px none;
+    color: white;
+}
+
+.see-more button:hover {
+    cursor: pointer;
+    background-color: #f5efe7;
+    color: #8E443D;
+}
+
+.blink {
+    animation: blink 0.5s step-start 3;
+}
+
+.footerRef {
+    border: red 1px solid;
+    text-decoration: none;
+    color: #213555;
+}
+
+.bibliRef,
+.bibliID {
+    border: blue 1px solid;
+    text-decoration: none;
+    color: #213555;
+    text-align: left;
+}
+
+.footerRef:hover,
+.bibliID:hover,
+.bibliRef:hover {
+    cursor: pointer;
+}
+
+.quote {
+    margin-left: 50px;
+    padding-right: 50px;
+}
+
+.bibliography {
+    text-align: left;
+}
+
+.bibliography a {
+    color: #213555;
+}
+
+.postsScroll {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+.postsScroll button {
+    background-color: #f5efe7;
+    border: 0px none;
+    border-radius: 5px;
+    aspect-ratio: 4 / 3;
+    height: 100%;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    color: #213555;
+}
+
+.postsScroll button:hover {
+    cursor: pointer;
+    background-color: #ece2d8;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        border-width: 2px;
+        background-color: yellow;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
 @media screen and (max-width: 350px) {
     .site-title {
         max-width: 180px;
@@ -1579,13 +1696,17 @@ td {
         width: 100% !important;
     }
 
-    .web-body {
+    .web-body, #searchHolder {
         padding-left: 0px;
         padding-right: 0px;
         padding-bottom: 0px;
         background-color: #f5efe7;
         width: 100%;
         padding-top: 72px;
+    }
+
+    .postsScroll {
+        margin-bottom: 40px;
     }
 
     .footer-items {

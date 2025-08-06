@@ -16,7 +16,7 @@ function createFooter() {
     ["/page/notice.html", "Notice to Visitors"],
     ["/page/archive.html", "Archive"]
   ];
-  
+
   const footer = `<footer class="footer" style="text-align: center;">
     <div class="footer-items" style="margin-left: auto; margin-right: auto;">
       <div>
@@ -24,7 +24,7 @@ function createFooter() {
       </div>
     </div>
   </footer>`;
-  
+
   const bodyMain = document.getElementById("bodyMain");
   if (bodyMain) {
     bodyMain.insertAdjacentHTML('afterend', footer);
@@ -43,7 +43,7 @@ document.head.appendChild(script);
 // Function to load the Font Awesome Set
 const faSet = document.createElement('link');
 faSet.rel = "stylesheet";
-faSet.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css";
+faSet.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css";
 document.head.appendChild(faSet);
 
 // Update the title
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Adding the meta data
 const metaOne = document.createElement('meta');
-metaOne.charset = "UTF-8";
+metaOne.charset = "UTF-16";
 document.head.appendChild(metaOne);
 
 const metaTwo = document.createElement('meta');
@@ -142,7 +142,6 @@ function blurPoem() {
   });
 }
 
-
 // Cuts of text beyond the given line length
 function textWrap(selector, lines = 3) {
   const elements = document.querySelectorAll(selector);
@@ -164,21 +163,23 @@ function textWrap(selector, lines = 3) {
   });
 }
 
+// the collection of links in the navbar
+const navList = [
+  ["Blog", "/index.html"],
+  ["Publications", "/publications/index.html"],
+  ["Debating", "/debating/index.html"],
+  ["Sinhala", "/sinhala/index.html"],
+  ["Stuff", "/stuff/index.html"],
+  ["Podcast", "/podcast/index.html"],
+
+  ["About Me", "/page/about-me.html"]
+];
+
 // Creates the navbar of the website
 function createNavBar(primary, secondary, hover, highlight = 99, title = "On My Wavelength", type = "normal") {
   if (primary === "#1b1b32") primary = "#213555";
   if (secondary === "#363457") secondary = "#3E5879";
   if (hover === "#2d2c52") hover = "#2E4976";
-
-  const navList = [
-    ["Blog", "/index.html"],
-    ["Publications", "/publications/index.html"],
-    ["Debating", "/debating/index.html"],
-    ["Sinhala", "/sinhala/index.html"],
-    ["Stuff", "/stuff/index.html"],
-    ["Podcast", "/podcast/index.html"],
-    ["About Me", "/page/about-me.html"]
-  ];
 
   const nav = document.createElement("nav");
   nav.className = "custom-navbar";
@@ -250,10 +251,10 @@ function createNavBar(primary, secondary, hover, highlight = 99, title = "On My 
 
 // this is used to toggle between mobile and desktop 
 function toggleMenu() {
-      const nav = document.querySelector(".nav-links-mobile");
-      nav.classList.toggle("show");
-      document.querySelector(".blurMain").classList.toggle("blur");
-    }
+  const nav = document.querySelector(".nav-links-mobile");
+  nav.classList.toggle("show");
+  document.querySelector(".blurMain").classList.toggle("blur");
+}
 
 // this is for the search function
 function filterGlossary(search, items, title, description) {
@@ -317,23 +318,286 @@ function fillFadingText(div, text) {
 
 // this is used to filter by groups
 function filterSelect(id) {
-    const activeList = filterMap[id] || [];
-    const showIds = id === "all" ? allList : activeList;
-    const hideIds = id === "all" ? [] : allList.filter(item => !activeList.includes(item));
+  const activeList = filterMap[id] || [];
+  const showIds = id === "all" ? allList : activeList;
+  const hideIds = id === "all" ? [] : allList.filter(item => !activeList.includes(item));
 
-    Object.entries(buttonMap).forEach(([key, button]) => {
-        const isActive = (key === id) || (id === "all" && key === "all");
-        button.style.backgroundColor = isActive ? '#3e5879' : '#f5efe7';
-        button.style.color = isActive ? '#f5efe7' : '#3e5879';
-    });
+  Object.entries(buttonMap).forEach(([key, button]) => {
+    const isActive = (key === id) || (id === "all" && key === "all");
+    button.style.backgroundColor = isActive ? '#3e5879' : '#f5efe7';
+    button.style.color = isActive ? '#f5efe7' : '#3e5879';
+  });
 
-    showIds.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.style.display = '';
-    });
+  showIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = '';
+  });
 
-    hideIds.forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.style.display = 'none';
+  hideIds.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'none';
+  });
+}
+
+// Extract numeric group from an ID like 'bibRef00a' → '00'
+function extractRefGroup(id) {
+  const match = id.match(/^bibRef(\d+)/);
+  return match ? match[1] : null;
+}
+
+// Scroll an element into center view and add blink effect
+function scrollToAndBlink(element) {
+  if (!element) return;
+
+  const rect = element.getBoundingClientRect();
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const elementY = rect.top + scrollTop;
+  const centerY = elementY - (window.innerHeight / 2) + (element.offsetHeight / 2);
+
+  window.scrollTo({
+    top: centerY,
+    behavior: 'smooth'
+  });
+
+  element.classList.add(blinkClass);
+  setTimeout(() => element.classList.remove(blinkClass), blinkDuration);
+}
+
+// Handle citation click → scroll to bibliography
+function handleCitationClick(e) {
+  e.preventDefault();
+
+  const citation = e.currentTarget;
+  lastCitationId = citation.getAttribute('id');
+  lastCitationRefGroup = extractRefGroup(lastCitationId);
+
+  const bibTarget = document.getElementById(`${bibliographyPrefix}${lastCitationRefGroup}`);
+  if (bibTarget) {
+    scrollToAndBlink(bibTarget);
+    history.pushState(null, null, `#${bibTarget.id}`);
+  }
+}
+
+// Handle bibliography click → scroll to last or first citation in group
+function handleBibliographyClick(e) {
+  e.preventDefault();
+
+  const bib = e.currentTarget;
+  const refGroup = bib.getAttribute('id').replace(bibliographyPrefix, '');
+  let target = null;
+
+  // Go to last clicked citation in same group, or default to first
+  if (lastCitationId && lastCitationRefGroup === refGroup) {
+    target = document.getElementById(lastCitationId);
+  } else {
+    target = document.getElementById(`${citationPrefix}${refGroup}a`);
+  }
+
+  scrollToAndBlink(target);
+}
+
+function initCitationNavigation() {
+  // Set up citation → bibliography clicks
+  document.querySelectorAll(`.${citationClass}`).forEach(cite => {
+    cite.addEventListener('click', handleCitationClick);
+  });
+
+  // Set up bibliography → citation clicks
+  document.querySelectorAll(`.${bibliographyClass}`).forEach(bib => {
+    bib.addEventListener('click', handleBibliographyClick);
+  });
+}
+
+// sets up the scroll for footnotes 
+function initFootnoteNavigation() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href').substring(1);
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        e.preventDefault();
+        scrollToAndBlink(target);
+        history.pushState(null, null, `#${targetId}`);
+      }
     });
+  });
+}
+
+// fetches and returns the json file at give position
+async function fetchJSONData(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`HTTP error! Status: ${response.status}`);
+  }
+  return await response.json();
+}
+
+// group of functions to handle post loading in home
+async function loadPosts() {
+  const allPosts = await fetchJSONData("/allPost.json");
+  const holder = document.getElementById("postsHolder");
+  const scrollButtons = document.querySelector(".postsScroll");
+
+  const reversedEntries = Object.entries(allPosts).reverse();
+  paginatedPosts = reversedEntries;
+  const count = reversedEntries.length;
+  pageCount = Math.ceil(count / 6);
+
+  scrollButtons.style.display = pageCount <= 1 ? "none" : "flex";
+
+  filteredPosts = paginatedPosts; // no filter by default
+  renderPagination();
+  renderPage(0);
+
+}
+
+function renderPagination() {
+  const scrollButtons = document.querySelector(".postsScroll");
+  scrollButtons.innerHTML = "";
+
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+
+  const createButton = (text, page = null, className = "") => {
+    const btn = document.createElement("button");
+    btn.innerHTML = text;
+    if (page !== null) btn.dataset.page = page;
+    if (className) btn.classList.add(className);
+    return btn;
+  };
+
+  // Prev button
+  const prevBtn = createButton('<i class="fa-solid fa-angle-left"></i>', null, "nav-btn");
+  prevBtn.addEventListener("click", () => {
+    if (currentPage > 0) {
+      currentPage--;
+      renderPage(currentPage);
+      renderPagination();
+    }
+  });
+  scrollButtons.appendChild(prevBtn);
+
+  // First page
+  scrollButtons.appendChild(pageButton(0));
+
+  if (currentPage > 2) {
+    scrollButtons.appendChild(ellipsis());
+  }
+
+  for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+    if (i > 0 && i < pageCount - 1) {
+      scrollButtons.appendChild(pageButton(i));
+    }
+  }
+
+  if (currentPage < pageCount - 3) {
+    scrollButtons.appendChild(ellipsis());
+  }
+
+  if (pageCount > 1) {
+    scrollButtons.appendChild(pageButton(pageCount - 1));
+  }
+
+  // Next button
+  const nextBtn = createButton('<i class="fa-solid fa-angle-right"></i>', null, "nav-btn");
+  nextBtn.addEventListener("click", () => {
+    if (currentPage < pageCount - 1) {
+      currentPage++;
+      renderPage(currentPage);
+      renderPagination();
+    }
+  });
+  scrollButtons.appendChild(nextBtn);
+}
+
+function pageButton(pageIndex) {
+  const btn = document.createElement("button");
+  btn.textContent = pageIndex + 1;
+  btn.className = "page-btn";
+  btn.dataset.page = pageIndex;
+  if (pageIndex === currentPage) {
+    btn.classList.add("active");
+  }
+  btn.addEventListener("click", () => {
+    currentPage = pageIndex;
+    renderPage(currentPage);
+    renderPagination();
+  });
+  return btn;
+}
+
+function ellipsis() {
+  const span = document.createElement("button");
+  span.textContent = "...";
+  span.className = "dots";
+  return span;
+}
+
+function renderPage(pageIndex) {
+  const holder = document.getElementById("postsHolder");
+  holder.innerHTML = "";
+
+  // Scroll to top
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  const start = pageIndex * 6;
+  const end = start + 6;
+  const pageItems = filteredPosts.slice(start, end);
+
+  for (const [key, post] of pageItems) {
+    const block = document.createElement("div");
+    block.className = "post";
+
+    const image = document.createElement("img");
+    image.src = post.img;
+    block.appendChild(image);
+
+    const title = document.createElement("h3");
+    title.textContent = post.title;
+    block.appendChild(title);
+
+    const text = document.createElement("p");
+    text.textContent = post.description;
+    block.appendChild(text);
+
+    const click = document.createElement("button");
+    click.innerHTML = post.button;
+
+    const anchor = document.createElement("a");
+    anchor.href = post.link;
+    anchor.appendChild(click);
+    block.appendChild(anchor);
+
+    holder.appendChild(block);
+  }
+
+  if (typeof textWrap === "function") {
+    textWrap(".post h3", 1);
+    textWrap(".post p", 4);
+  }
+
+  if (pageItems.length === 0) {
+    holder.innerHTML = "<p>No results found.</p>";
+    return;
+  }
+
+}
+
+
+function filterPostsBySearchInput(inputId) {
+  const searchInput = document.getElementById(inputId).value.toLowerCase();
+
+  filteredPosts = paginatedPosts.filter(([key, post]) => {
+    const title = post.title.toLowerCase();
+    const description = post.description.toLowerCase();
+    return title.includes(searchInput) || description.includes(searchInput);
+  });
+
+  pageCount = Math.ceil(filteredPosts.length / 6);
+  currentPage = 0;
+
+  renderPagination();
+  renderPage(currentPage);
+  document.querySelector(".postsScroll").style.display = filteredPosts.length <= 6 ? "none" : "flex";
 }
