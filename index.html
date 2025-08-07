@@ -13,86 +13,102 @@
 
 <body style="padding: 0px;">
     <script>
-        createNavBar("#213555", "#3E5879", "#2E4976", 0);
+        createNavBar("#213555", "#3E5879", "#2E4976", 0, "<i class='fa-solid fa-star-of-life'></i><i class='fa-solid fa-star-of-life'></i><i class='fa-solid fa-star-of-life'></i>");
     </script>
+    <style>
+        h2 {
+            font-size: 3em;
+            color: #f5efe7;
+        }
 
-<div class="blurMain">
-    <div class="web-body" style="background-color: #D8C4B6;"id="bodyMain">
-        <div class="post">
-            <img src="/media/authorial-god.jpg">
-            <h3>The Authorial God Hypothesis</h3>
-            <p>God—in many belief systems and prominently, the Abrahamic tradition—is an omnipotent, omniscient, omnipresent, omnibenevolent, and perfect being. These faiths and beliefs also credit God for creating the universe and its inhabitants: us. Equally so, some faiths believe in multiple and more human-like Gods: the Ancient Greeks, Ancient Egyptians, and Hinduism are examples. There are even some beliefs that believe in a false God (Gnosticism) or one capable of malice (Dystheism). This is a simplified non-exhaustive overview of the diversity among those who do believe in a God/s. Within this range lies a God I would refer to as Authorial. This essay proposes a theological cosmology compatible with natural laws and divine causality, to reframe our relationship with our Creator and our understanding of will and purpose.</p>
-            <a href="/post/2025/08/authorial-god-hypothesis.html"><button>Read More</button></a></div>
-        <div class="post">
-            <img src="/media/fifty-shades-of-gender.webp">
-            <h3>50 Shades of Gender: Gender Complexity and a Post-Gender Society</h3>
-            <p>For much of recorded history, gender and sex were used interchangeably: male meant XY chromosomes and
-                masculinity, female meant XX chromosomes and femininity. However, modern gender has evolved into a
-                broader and more nuanced spectrum—some sources listing dozens—if not hundreds—of uniquely defined
-                identities. This essay examines the nature of gender, and argues for abolishing gender as a descriptive
-                identifying term.
-                Historically, and even now in some societies, gender was a binary. I, myself, have seen and experienced
-                what it feels like to be a part of such a society. Modern definition of “gender” has evolved away from
-                “sex” into a social construct. However, the restriction of sex-gender equivalence is also a social
-                construct. So, would it not be fair to argue that social categorisation is inherently restrictive? Let’s
-                explore this. Suppose you have a gradient of colours. Perhaps it looks like the one below:</p>
-            <a href="/post/2025/04/fifty-shades-of-gender.html"><button>Read More</button></a>
-        </div>
-        <div class="post">
-            <img src="/media/under-a-star-called-sun.png">
-            <h3>why it matters to remember</h3>
-            <p>cecil richard’s under a star called sun is a reader-led short story about a narrator where “the
-                trajectory of [his] ship is unchanging.” he (i like to see myself on the ship; you may too) recalls that
-                the coffee “never tastes as good as the ones you get from the cafes back home,” as a quiet
-                matter-of-fact.
-                now, it’s very unlikely that the coffee could be so physically or chemically different than the ones
-                here on earth. rather, the difference would make you laugh. i propose it is akin to how coffee your
-                loved one makes is always better than starbucks (no offence). it is not the chemistry of your mug that
-                matters, but rather the chemistry of your mind. but what is so important about this? he, remembers what
-                earth felt like and what a world full of love feels like. even in his solitary moments with just coffee,
-                his mind takes the trip back to home. it takes a very lonely astronaut to wish they were back home. we
-                usually climb the ladder to the stars when we are alone on the soil.</p>
-            <a href="/post/2024/08/why-it-matters-to-remember.html"><button>Read More</button></a>
-        </div>
-        <div class="post">
-            <img src="/media/bgs-image.png">
-            <h3>Laboratory life: my work experience week at BGS</h3>
-            <p>My week began with a welcome tour of the research facilities at BGS and, more specifically, the
-                geochemistry laboratories. The team provided an introduction to the field of mass spectrometry and the
-                use of isotopes in archaeological research. The sample preparation, which happens under very precise,
-                controlled conditions to exclude contamination, involves a huge amount work prior to analysis. It wasn’t
-                long before I was gaining hands-on experience working with carbon isotopes from organic and inorganic
-                materials, preparing samples and then analysing them on mass spectrometers. For me, one of the
-                highlights was learning how to handle samples down to 40 micrograms in weight — which I can confirm is
-                difficult to see with the naked eye!</p>
-            <a href="https://www.bgs.ac.uk/news/laboratory-life-my-work-experience-week-at-bgs/"><button>BGS Blogs <i
-                        style="font-size:small" class="fa">&#xf08e;</i></button></a>
-        </div>
-        <div class="post">
-            <img src="/media/how-to-make-a-debating-motion.jpg">
-            <h3>How to make a Debating Motion?</h3>
-            <p> Today we will be talking about motions. I would be using debating terms like “motion” here and there,
-                but I will always include a link of that word to my debating terminology glossary.
+        #intro {
+            font-size: x-large;
+            margin-top: 0px;
+        }
 
-                Let’s get started. So, what is a motion? Basically, it is the topic which the debate is about. There are
-                two sides which would be arguing this (although there could be four teams, sometimes). Without further
-                ado, point number one:
-                1. Balance is Key
+        .search-container {
+            box-sizing: border-box;
+            max-width: 380px;
+        }
 
-                The first thing I would suggest you consider is whether there is a balanced argument to both sides. Can
-                both sides make a case, can either side win? This is where the real skill of creating a motion comes
-                into play. You shouldn’t make a motion where there is a defined answer to, for example, a motion like
-                “THBT crime should not be punished”. These are questions which have a recognised answer to. </p>
-            <a href="/post/2024/05/how-to-make-a-debating-motion.html"><button>Read More</button></a>
+        #newThing:hover {
+            transform: rotate(360deg);
+        }
+
+        @media screen and (min-width: 700px) {
+            #bodyMain {
+                padding-top: 50px;
+            }
+
+            .search-container {
+                width: calc(60% - 50px);
+                margin-left: 0px;
+                margin-right: auto;
+            }
+        }
+
+        @media screen and (max-width: 701px) {
+            #bodyMain {
+                padding-top: 0px;
+            }
+
+            h2 {
+                margin-top: 55px;
+                font-size: 2em;
+            }
+
+            #intro {
+                font-size: 1.3em;
+            }
+
+            .search-container {
+                width: 100%;
+                margin: 0px 20px 0px 0px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            #searchHolder {
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-bottom: 30px;
+            }
+
+            h2 {
+                margin-top: 40px;
+            }
+        }
+    </style>
+
+    <div class="blurMain">
+        <div style="background-color: #3e5879;" id="searchHolder">
+            <h2>Hey, Found You On My Wavelength</h2>
+            <p id="intro">I am Riveen, someone with too much free time</p>
+            <div class="search-container">
+                <button style="background-color: #f5efe7; padding-right: 0px;"><i class="fa fa-search"
+                        style="font-size: medium; color: #706e6a;"></i></button>
+                <input type="text" id="search" placeholder="Search for a Blog Post..."
+                    oninput="filterPostsBySearchInput('search')" style="padding-left: 0px;">
+            </div>
+        </div>
+        <div class="web-body" style="background-color: #D8C4B6;" id="bodyMain">
+            <div class="web-body" style="padding: 0px; background-color: #D8C4B6;" id="postsHolder"></div>
+            <div class="postsScroll">
+            </div>
         </div>
     </div>
-</div>
     <script>
-        textWrap(".post h3", 1)
-        textWrap(".post p", 4)
-        createFooter();
+        let paginatedPosts = [];
+        let filteredPosts = [];
+        let currentPage = 0;
+        let pageCount = 0;
+
+        window.addEventListener("DOMContentLoaded", () => {
+            loadPosts();
+            createFooter();
+            document.getElementById("bodyMain").style.paddingTop = document.getElementById("bodyMain").style.paddingLeft + "px";
+        });
     </script>
 </body>
-
 
 </html>

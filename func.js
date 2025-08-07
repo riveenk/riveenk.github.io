@@ -435,7 +435,7 @@ async function fetchJSONData(url) {
 
 // group of functions to handle post loading in home
 async function loadPosts() {
-  const allPosts = await fetchJSONData("/allPost.json");
+  const allPosts = await fetchJSONData("/post/allPost.json");
   const holder = document.getElementById("postsHolder");
   const scrollButtons = document.querySelector(".postsScroll");
 
