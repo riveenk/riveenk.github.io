@@ -13,8 +13,7 @@ function createNavItem(text, href) {
 function createFooter() {
   const links = [
     ["/page/notice.html#copyright", "Copyright © All Rights Reserved"],
-    ["/page/notice.html", "Notice to Visitors"],
-    ["/page/archive.html", "Archive"]
+    ["/page/notice.html", "Notice to Visitors"]
   ];
 
   const footer = `<footer class="footer" style="text-align: center;">
