@@ -209,14 +209,18 @@ input {
 
 #searchHolder {
     width: 100%;
-    display: flex;
     padding: 50px;
     padding-top: 100px;
     box-sizing: border-box;
     justify-content: center;
     line-height: 1.5;
     overflow: hidden;
-    
+    color: #f5efe7;
+}
+
+#searchHolder i {
+    font-size: large;
+    line-height: 100%;
 }
 
 .body-header,
@@ -1148,6 +1152,7 @@ td {
     border-width: 0px;
     padding: 7px 10px;
     margin-right: 3px;
+    margin-bottom: 10px;
 }
 
 .filter:hover {
@@ -1696,10 +1701,19 @@ td {
         width: 100% !important;
     }
 
-    .web-body, #searchHolder {
+    .web-body {
         padding-left: 0px;
         padding-right: 0px;
         padding-bottom: 0px;
+        background-color: #f5efe7;
+        width: 100%;
+        padding-top: 72px;
+    }
+
+    #searchHolder {
+        padding-left: 55px;
+        padding-right: 55px;
+        padding-bottom: 55px;
         background-color: #f5efe7;
         width: 100%;
         padding-top: 72px;
@@ -1752,6 +1766,14 @@ td {
     .navbar {
         padding-left: 10px;
         padding-right: 60px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #searchHolder {
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 30px;
     }
 }
 
