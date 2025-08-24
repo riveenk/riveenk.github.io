@@ -8,10 +8,19 @@
     <link rel="stylesheet" type="text/css" href="/design.css">
     <link rel="stylesheet" type="text/css" href="/pages.css">
     <script src="/func.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 
 <body style="padding: 0px;">
+    <style>
+        #ScA {
+            background-color: #036c5f;
+        }
+        #ScA:hover {
+            cursor: pointer;
+            background-color: #025043;
+        }
+    </style>
 
     <script>
         createNavBar("#213555", "#3E5879", "#2E4976", 1);
@@ -22,7 +31,14 @@
         <div class="body-main" style="background-color: transparent;">
             <h2>My Publications</h2>
                 <p class="subHeader">This is the collection of the stories, poems, essays, and everything else I have written and shared...</p>
-            <div class="search-container" style="width: 100%; margin-bottom: 10px;">
+
+            <div class="teach-buttons">
+                <a href="https://geeky-poet.tumblr.com/"><button> <i class="fa-brands fa-square-tumblr"></i>Tumblr</button></a>
+                <a href="https://riveenk.substack.com/"><button> <i class="fa-solid fa-bookmark"></i>Substack</button></a>
+                <a href="/scalmropia/index.html" ><button id="ScA"> Scalmropia Archive</button></a>
+            </div>
+
+            <div class="search-container" style="width: 100%; margin-bottom: 10px; margin-top: 45px;">
                 <button style="background-color: #3E5879;"><i class="fa fa-search"
                         style="font-size: medium; color: #f5efe7;"></i></button>
                 <input type="text" id="search" placeholder="Search by title, description, or type..."
@@ -35,26 +51,6 @@
                 <button class="filter" id="essay" onclick="filterSelect('essay')">Essays</button>
                 <button class="filter" id="oth" onclick="filterSelect('others')">Others</button>
             </div>
-        <a class="thing-a" href='https://geeky-poet.tumblr.com/'><div class="thing" id="TuB">
-            <h3>Tumblr Blog</h3>
-            <p> This is my Tumblr for mini-blogging. Posts here would be much shorter, and perhaps more frequent.
-                Many posts would involve rants, movies/ books reviews, and short writings.
-                    <br>
-                    <span class="tag">Blog</span>
-                    <span class="tag">Tumblr</span>
-            </p>
-        </div></a>
-
-        <a class="thing-a" href='/scalmropia/index.html'><div class="thing" id="ScA">
-            <h3>The Scalmropia Archive</h3>
-            <p> A Collection of archival notes, leaked documents, story snippets, and royal decrees from
-                Scalmropia. This is where much of the world-building is concentrated.
-                    <br>
-                    <span class="tag">Collection</span>
-                    <span class="tag">World Building</span>
-                    <span class="tag">Stories</span>
-            </p>
-        </div></a>
 
         <a class="thing-a" href='/post/2025/08/girl-children-in-lolita.html'><div class="thing" id="13">
             <h3>Are Girl-Children Immoral and Dangerous Seductresses in Lolita?</h3>
@@ -216,11 +212,11 @@
         const essay = document.getElementById("essay");
         const others = document.getElementById("oth");
 
-        const allList = ['TuB', 'ScA', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', "UniCh"];
+        const allList = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', "UniCh"];
         const poemsList = ['1', '3', '4', '5', '6', '7', '8'];
         const proseList = ['2', '9'];
         const essaysList = ['12', '13'];
-        const othersList = ['TuB', 'ScA', "UniCh"];
+        const othersList = ["UniCh"];
 
         const filterMap = {
                 poems: poemsList,
