@@ -1,0 +1,12 @@
+Fonts via Google Fonts (https://fonts.google.com) under the Open Font Licence: 
+    Golos Text by Alexandra Korolkova & Vitaly Kuzmin
+    Chivo Mono by Omnibus-Type
+    Noto Sans Sinhala by The Noto Project Authors
+
+Icons via Font Awesome: https://fontawesome.com/
+
+Photos via https://pexels.com are individually credited on page
+Photos from elsewhere are individually credited on page
+
+SVGs from https://www.svgrepo.com:
+    Woods SVG Vector by Fabric Design System under MIT Licence (https://opensource.org/license/mit): 
