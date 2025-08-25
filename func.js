@@ -48,6 +48,7 @@ document.head.appendChild(faSet);
 // Update the title
 document.addEventListener("DOMContentLoaded", () => {
   const excludedPaths = [
+    "/",
     "/index.html",
     "/page/scalmropia.html",
     "/page/copyright.html",
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
 
   const customPathsTitle = [
+    "On My Wavelength", 
     "On My Wavelength",
     "The Scalmropia Archive",
     "On My Wavelength: Copyright Notice",
