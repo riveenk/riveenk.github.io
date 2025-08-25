@@ -9,4 +9,5 @@ Photos via https://pexels.com are individually credited on page
 Photos from elsewhere are individually credited on page
 
 SVGs from https://www.svgrepo.com:
-    Woods SVG Vector by Fabric Design System under MIT Licence (https://opensource.org/license/mit): 
+    Woods SVG Vector by Fabric Design System under MIT Licence (https://opensource.org/license/mit)
+    Warning SVG Vector by element-plus under MIT Licence (https://opensource.org/license/mit) 
