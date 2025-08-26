@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -43,6 +42,14 @@
                 opacity: 0.7;
                 cursor: pointer;
             }
+
+            .controls.fullscreen {
+                opacity: 0.1;
+            }
+
+            .controls.fullscreen:hover {
+                opacity: 1;
+            }
         </style>
 
         <div class="web-body" id="bodyMain" style="min-height: 90vh; height: max-content; background-color: #d8c4b6;">
@@ -50,7 +57,7 @@
                 style="justify-items: center; background-color: transparent; margin-top: auto; margin-bottom: auto; text-align: center; min-width: 100%;">
                 <div class="blur" id="blur">
                     <div class="stopwatch" style="margin: 0;">00:00:00</div>
-                    <div class="controls">
+                    <div class="controls" id="controls">
                         <button id="startPauseBtn"><i id="fSLabel" class="fa">&#xf04b;</i></button>
                         <button id="resetBtn"><i id="fSLabel" class="fa">&#xf2ea;</i></button>
                         <button onclick="showHideSettings()" id="toggleSettingsBtn"><i id="fSLabel"
@@ -243,6 +250,7 @@
                 icon.className = "fa";
                 icon.innerHTML = "&#xf066;";
                 fSButton.appendChild(icon);
+                document.getElementById("controls").classList.toggle("fullscreen");
             }
 
             function closeFullscreen() {
@@ -261,6 +269,7 @@
                 icon.className = "fa";
                 icon.innerHTML = "&#xf065;";
                 fSButton.appendChild(icon);
+                document.getElementById("controls").classList.toggle("fullscreen");
             }
 
             document.addEventListener('keyup', event => {
@@ -275,11 +284,7 @@
                         startPauseBtn.innerHTML = `<i id="fSLabel" style="font-size:x-large" class="fa">&#xf04c;</i>`;
                     }
                     isRunning = !isRunning;
-                }
-            });
-
-            document.addEventListener('keyup', event => {
-                if (event.code === "KeyR") {
+                } else if (event.code === "KeyR") {
                     clearInterval(intervalId);
                     isRunning = false;
                     startTime = null;
