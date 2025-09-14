@@ -51,6 +51,26 @@
         min-width: 150px;
       }
 
+      .disclaimer {
+        display: none;
+        opacity: 0;
+        transition: 3ms ease-in-out;
+        font-size: small;
+      }
+
+      .showDisclaimer {
+        color: #732c2c;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+      .showDisclaimer:hover + .disclaimer {
+        display: block;
+        opacity: 1;
+        margin-top: 15px;
+        margin-bottom: 25px;
+      }
+
       @media screen and (max-width: 700px) {
         svg {
           margin-bottom: 20px;
@@ -67,10 +87,10 @@
         <h2>
           403: Access Denied
         </h2>
-        <p>Please exit this webpage. Intrustive attempts to access classified government sources is punishable by Court of Law.</p>
+        <p>Please exit this webpage. Intrustive attempts to access classified government sources is punishable by Court of Law <span class="showDisclaimer">**</span> <span class="disclaimer">(This is not an actual government website. This is a page designed for a fictional state. NO legal action will be taken for how you access the webpage as long as you adhere to the Notice to Visitors)</span></p>
         <div>
           <a href="/index.html"><button id="home"><i class="fa-regular fa-house"></i> Return to Public Access</button></a>
-          <a href="https://google.com"><button id="leave">Exist Website <i
+          <a href="https://google.com"><button id="leave">Exit Website <i
                 class="fa-solid fa-arrow-up-right-from-square"></i></button></a>
         </div>
       </div>
