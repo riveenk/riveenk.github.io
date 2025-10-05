@@ -817,6 +817,8 @@ td {
     width: 95%;
     max-width: 400px;
     font-size: medium;
+    max-height: 85vh;
+    overflow: scroll;
 }
 
 .settings form {
@@ -1030,7 +1032,6 @@ td {
     background-color: #3E5879;
     border-width: 0px;
     opacity: 1;
-    width: max-content;
     line-height: 1em;
     display: flex;
     padding: 15px 18px;
@@ -1041,7 +1042,7 @@ td {
 }
 
 .teach-buttons i {
-    margin-right: 5px;
+    margin-right: 8px;
 }
 
 
