@@ -329,6 +329,10 @@ h6 {
     padding-top: 20px;
 }
 
+.body-main h2 {
+    margin-bottom: 30px;
+}
+
 .image-box {
     height: auto;
     overflow: hidden;
@@ -1474,13 +1478,6 @@ td {
     display: flex;
     gap: 15px;
     margin-top: 32px;
-}
-
-.subHeader {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    color: #484848;
-    text-align: left;
 }
 
 .radio-group {
