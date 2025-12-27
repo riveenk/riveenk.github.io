@@ -238,6 +238,7 @@ input {
     color: #213555;
     font-size: xx-large;
     margin: 8px 0;
+    margin-bottom: 8px !important;
 }
 
 .publication-title {
