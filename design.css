@@ -615,13 +615,15 @@ td {
     padding: 20px;
     background-color: #FEC2C2;
     color: #A91101;
-    line-height: 1.5em;
+    line-height: 2.1em;
     text-align: left;
 }
 
 .blur-poem {
     background-color: white;
-    padding: 6px 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 2em;
     font-size: small;
     border-style: none;
     border-radius: 5px;
