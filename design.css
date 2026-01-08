@@ -1827,6 +1827,10 @@ td {
         width: 90%;
     }
 
+    .publication-title {
+        margin-top: 0px;
+    }
+
     .image-box {
         width: 90%;
     }
