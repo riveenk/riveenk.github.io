@@ -4,21 +4,21 @@
                 "title": "How to make a Debating Motion?",
                 "description": "Today we will be talking about motions. I would be using debating terms like “motion” here and there, but I will  always include a link of that word to my debating terminology glossary. Let’s get started. So, what is a motion? Basically, it is the topic which the debate is about. There are two sides which would be arguing this (although there could be four teams, sometimes). Without further ado, point number one: 1. Balance is Key The first thing I would suggest you consider is whether there is a balanced argument to both sides. Can both sides make a case, can either side win? This is where the real skill of creating a motion comes into play. You shouldn’t make a motion where there is a defined answer to, for example, a motion like “THBT crime should not be punished”. These are questions which have a recognised answer to.",
                 "link": "/post/2024/05/how-to-make-a-debating-motion.html",
-                "button": "button"
+                "button": "Read More"
         },
         "1": {
-                "img": "/media/bgs-image.png",
-                "title": "Laboratory life: my work experience week at BGS",
-                "description": "My week began with a welcome tour of the research facilities at BGS and, more specifically, the geochemistry  laboratories. The team provided an introduction to the field of mass spectrometry and the use of isotopes in archaeological research. The sample preparation, which happens under very precise, controlled conditions to exclude contamination, involves a huge amount work prior to analysis. It wasn’t long before I was gaining hands-on experience working with carbon isotopes from organic and inorganic materials, preparing samples and then analysing them on mass spectrometers. For me, one of the highlights was learning how to handle samples down to 40 micrograms in weight — which I can confirm is difficult to see with the naked eye!",
-                "link": "https://www.bgs.ac.uk/news/laboratory-life-my-work-experience-week-at-bgs/",
-                "button": "BGS Blogs <i style='font-size:small' class='fa'>&#xf08e;</i>"
-        },
-        "2": {
                 "img": "/media/under-a-star-called-sun.png",
                 "title": "why it matters to remember",
                 "description": "cecil richard’s under a star called sun is a  reader-led short story about a narrator where “the trajectory  of [his] ship is unchanging.” he (i like to see myself on the ship; you may too) recalls that  coffee “never tastes as good as the ones you get from the cafes back home,” as a quiet matter-of-fact. now, it’s very unlikely that the coffee could be so physically or chemically different than the ones here on earth. rather, the difference would make you laugh. i propose it is akin to how coffee your loved one makes is always better than starbucks (no offence). it is not the chemistry of your mug that matters, but rather the chemistry of your mind. but what is so important about this? he, remembers what earth felt like and what a world full of love feels like. even in his solitary moments with just coffee, his mind takes the trip back to home. it takes a very lonely astronaut to wish they were back home. we usually climb the ladder to the stars when we are alone on the soil.",
                 "link": "/post/2024/08/why-it-matters-to-remember.html",
                 "button": "Read More"
+        },
+        "2": {
+                "img": "/media/bgs-image.png",
+                "title": "Laboratory life: my work experience week at BGS",
+                "description": "My week began with a welcome tour of the research facilities at BGS and, more specifically, the geochemistry  laboratories. The team provided an introduction to the field of mass spectrometry and the use of isotopes in archaeological research. The sample preparation, which happens under very precise, controlled conditions to exclude contamination, involves a huge amount work prior to analysis. It wasn’t long before I was gaining hands-on experience working with carbon isotopes from organic and inorganic materials, preparing samples and then analysing them on mass spectrometers. For me, one of the highlights was learning how to handle samples down to 40 micrograms in weight — which I can confirm is difficult to see with the naked eye!",
+                "link": "https://www.bgs.ac.uk/news/laboratory-life-my-work-experience-week-at-bgs/",
+                "button": "BGS Blogs <i style='font-size:small' class='fa'>&#xf08e;</i>"
         },
         "3": {
                 "img": "/media/fifty-shades-of-gender.webp",
