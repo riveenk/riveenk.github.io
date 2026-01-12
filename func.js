@@ -13,7 +13,8 @@ function createNavItem(text, href) {
 function createFooter() {
   const links = [
     ["/page/notice.html#copyright", "Copyright © All Rights Reserved"],
-    ["/page/notice.html", "Notice to Visitors"]
+    ["/page/notice.html", "Notice to Visitors"],
+    ["/rss.xml", " RSS Feed <i class='fa-solid fa-square-rss'></i>"]
   ];
 
   const footer = `<footer class="footer" style="text-align: center;">
@@ -450,7 +451,6 @@ async function loadPosts() {
   filteredPosts = paginatedPosts; // no filter by default
   renderPagination();
   renderPage(0);
-
 }
 
 function renderPagination() {
@@ -584,7 +584,6 @@ function renderPage(pageIndex) {
   }
 
 }
-
 
 function filterPostsBySearchInput(inputId) {
   const searchInput = document.getElementById(inputId).value.toLowerCase();
