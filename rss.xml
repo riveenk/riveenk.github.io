@@ -6,7 +6,13 @@
         <copyright>Riveen Kumanayaka All Rights Reserved</copyright>
         <language>en</language>
         <description>This is an aggregated RSS feed of all my publications.</description>
-
+        <item>
+            <title>Not All Men, But Always a Man</title>
+            <description>Why more abusers are men than any other demographic.</description>
+            <link>https://riveenk.substack.com/p/not-all-men-but-always-a-man</link>
+            <pubDate>Sat, 17 Jan 2026</pubDate>
+            <category>Substack</category>
+        </item>
         <item>
             <title>You Don't Come Closer</title>
             <description>It's a late November night at a cafe when the past decides to visit you. For your luck or
@@ -195,4 +201,5 @@
         </item>
 
     </channel>
+
 </rss>
