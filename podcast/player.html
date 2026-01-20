@@ -453,7 +453,9 @@
                 document.getElementById("episodeName").textContent = `#${index + 1}: ${episode[0]}`;
                 document.getElementById("descriptionText").innerHTML = `<p>${episode[2]}</p>`;
                 document.getElementById("lenLabel").textContent = "--:--"
-                
+
+                // Changes the url to the current episode                
+                window.history.pushState("object or string", "Title", `#${index + 1}`);
 
                 // Set audio source dynamically
                 const source = audio.querySelector("source");
@@ -532,6 +534,5 @@
         createFooter();
     </script>
 </body>
-
 
 </html>

@@ -75,7 +75,7 @@
         ];
 
         const episodeBox = document.getElementById("wbcEpisodes");
-        let htmlBit = ` <div class="search-container" style="margin-bottom: 5px;">
+        let htmlBit = ` <div class="search-container" style="margin-bottom: 20px;">
                             <button style="background-color: #4D4C7D;"><i class="fa fa-search"
                                 style="font-size: medium;"></i></button>
                             <input type="text" id="search" placeholder="Search for an episode..."
@@ -96,6 +96,10 @@
         });
 
         episodeBox.innerHTML = htmlBit;
+
+        const style = document.createElement("style")
+        style.textContent = `#ep${epID - 1} { border-width: 0 0 0 0 !important; }`
+        document.head.appendChild(style)
 
         textWrap(".wbc-episode p", 2)
         createFooter();
