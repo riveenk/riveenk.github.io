@@ -1046,6 +1046,8 @@ td {
     line-height: 1em;
     display: flex;
     padding: 15px 18px;
+    flex-wrap: wrap;
+    width: auto;
 }
 
 .teach-buttons a {
@@ -1365,19 +1367,22 @@ td {
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
     max-height: 1000px;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out, margin 0.3s ease-in-out;
 }
 
 .wbc-episode {
-    background-color: #fcfcfc;
+    background-color: #f5efe7;
     min-width: 100%;
     padding: 18px;
     color: #363062;
     text-decoration: none;
     box-sizing: border-box;
+    border-width: 0 0 2px 0;
+    border-color: #D8C4B6;
+    border-style: solid;
+    transition: 300ms ease-in-out;
 }
 
 .wbc-episodes a {
@@ -1385,8 +1390,10 @@ td {
 }
 
 .wbc-episode:hover {
-    background-color: #D8C4B6;
+    background-color: #ffffff;
     cursor: pointer;
+    opacity: 0.75;
+    border-color: #ffffff;
 }
 
 .wbc-episode h3 {
@@ -1606,6 +1613,16 @@ td {
 
 .navbarArt {
     height: 1.5em;
+}
+
+.revision-pdf {
+            width: 100vw;
+            height: 80vw;
+        }
+
+.inpage-pdf {
+    width: 100%;
+    height: 80vh;
 }
 
 @keyframes blink {
