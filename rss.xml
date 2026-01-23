@@ -6,6 +6,14 @@
         <copyright>Riveen Kumanayaka All Rights Reserved</copyright>
         <language>en</language>
         <description>This is an aggregated RSS feed of all my publications.</description>
+
+        <item>
+            <title>Physicists Can Be Poets Too</title>
+            <description>Physicists work on problems and cases that may directly involve the general public. However, often times, physicists and the public don’t seem to be able to work on the same level. Poetry is one of the most effective methods to bring everyone to the same table—not through lecture, but through dialogue.</description>
+            <link>https://blogs.ed.ac.uk/physics-astronomy/2026/01/23/physicists-can-be-poets-too/</link>
+            <pubDate>Fri, 23 Jan 2026</pubDate>
+            <category>Blog</category>
+        </item>
         <item>
             <title>Not All Men, But Always a Man</title>
             <description>Why more abusers are men than any other demographic.</description>
@@ -19,7 +27,7 @@
                             otherwise, there is someone to listen to you—someone that actually cares.</description>
             <link>https://riveenk.github.io/publications/you-dont-come-closer.html</link>
             <pubDate>Sat, 27 Dec 2025</pubDate>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>Gen-AI is just a fancy bootlicker</title>
@@ -33,7 +41,7 @@
             <description>Aragalaya ("Struggle") was one of the most pivotal events I have ever witnessed and taken part in. It was an experience of both pride and fear alike. Ousting a family of war criminals and thieves, along with the toxic political world they built, cost more than just sweat and tears.</description>
             <link>https://riveenk.github.io/publications/the-nights-were-young.html</link>
             <pubDate>Sat, 06 Dec 2025</pubDate>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>I See Only You</title>
@@ -41,7 +49,7 @@
                             their partner, the guilt of it consumes them into an irreversible spiral.</description>
             <link>https://riveenk.github.io/publications/i-see-only-you.html</link>
             <pubDate>Sun, 23 Nov 2025</pubDate>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>Are Girl-Children Immoral and Dangerous Seductresses in Lolita?</title>
@@ -71,7 +79,7 @@
                             many think it is.</description>
             <link>https://riveenk.github.io/publications/paint-my-skies-with-yellow-sparks.html</link>
             <pubDate>10 May, 2025</pubDate>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>Maybe the Gods are Playing Cricket</title>
@@ -79,7 +87,7 @@
                             heaven. There was a sense of comfort in it, but also felt gross to be under the rain.</description>
             <link>https://riveenk.github.io/publications/maybe-the-gods-are-playing-cricket.html</link>
             <pubDate>Sat, 10 May 2025</pubDate>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>The Crying Maiden</title>
@@ -88,7 +96,7 @@
                             realises his mistake.</description>
             <link>https://riveenk.github.io/publications/the-crying-maiden.html</link>
             <pubDate>Mon, 28 Apr 2025</pubDate>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>50 Shades of Gender: Gender Complexity and a Post-Gender Society</title>
@@ -104,7 +112,7 @@
                             idiots? Yeah, me too. This is for my goof balls (they'll hate me for calling them that).</description>
             <link>https://riveenk.github.io/publications/maybe-in-a-few-years.html</link>
             <pubDate>Wed, 09 Apr 2025</pubDate>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>Laboratory life: my work experience week at BGS</title>
@@ -127,7 +135,7 @@
                             know who sold the homeland but I know who paid the price." This is for all those who paid
                             the price.</description>
             <link>https://riveenk.github.io/publications/he-fought-for-you.html</link>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>Collided Galaxies</title>
@@ -136,7 +144,7 @@
                             your
                             galaxy.</description>
             <link>https://riveenk.github.io/publications/colliding-galaxies.html</link>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>A Summer Night Under the Moon</title>
@@ -144,7 +152,7 @@
                             anything
                             hold meaning when you're drunk with love and run over by her beauty?</description>
             <link>https://riveenk.github.io/publications/a-summer-night-under-the-moon.html</link>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>#2: The Limit of Opinion Entitlement</title>
@@ -189,7 +197,7 @@
                             Philosopher, and they both end up finding that there's more that attracts than Gravity.</description>
             <link>https://riveenk.github.io/publications/a-name-i-didnt-think-of.html</link>
             <pubDate>Wed, 03 Apr 2024</pubDate>
-            <category></category>
+            <category>Publications</category>
         </item>
         <item>
             <title>Death's Fear</title>
@@ -197,9 +205,22 @@
                             This is how death sees some people, and it's never about our pretty little lives.</description>
             <link>https://riveenk.github.io/publications/deaths-fear.html</link>
             <pubDate>Sun, 04 Jun 2023</pubDate>
+            <category>Publications</category>
+        </item>
+        <item>
+            <title></title>
+            <description></description>
+            <link></link>
+            <pubDate></pubDate>
             <category></category>
         </item>
-
+        <item>
+            <title></title>
+            <description></description>
+            <link></link>
+            <enclosure url="#" length="0" type="image/jpeg"/>
+            <pubDate></pubDate>
+            <category></category>
+        </item>
     </channel>
-
 </rss>
