@@ -2,11 +2,18 @@
 <rss version="2.0">
     <channel>
         <title>On My Wavelength</title>
-        <link>/index.html</link>
+        <link>https://riveenk.github.io/index.html</link>
         <copyright>Riveen Kumanayaka All Rights Reserved</copyright>
         <language>en</language>
         <description>This is an aggregated RSS feed of all my publications.</description>
-
+	
+	<item>
+            <title>But she had a crush on him</title>
+            <description>The issue of blaming-children for being exploited.</description>
+            <linkhttps://riveenk.substack.com/p/but-she-had-a-crush-on-him</link>
+            <pubDate>Mon, 2 Mar 2026</pubDate>
+            <category>Substack</category>
+        </item>
         <item>
             <title>Physicists Can Be Poets Too</title>
             <description>Physicists work on problems and cases that may directly involve the general public. However, often times, physicists and the public don’t seem to be able to work on the same level. Poetry is one of the most effective methods to bring everyone to the same table—not through lecture, but through dialogue.</description>
