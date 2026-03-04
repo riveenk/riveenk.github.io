@@ -6,11 +6,17 @@
         <copyright>Riveen Kumanayaka All Rights Reserved</copyright>
         <language>en</language>
         <description>This is an aggregated RSS feed of all my publications.</description>
-	
-	<item>
+         <item>
+            <title>Three Body Problem</title>
+            <description>You are the third body watching them make a system with another and throw you away. You know what you have lost. But when the forces are beyond you to deal with, what can you do except watch?</description>
+            <link>https://riveenk.github.io/publications/three-body-problem.html</link>
+            <pubDate>Wed, 4 Mar 2026</pubDate>
+            <category>Publications</category>
+        </item>
+	    <item>
             <title>But she had a crush on him</title>
             <description>The issue of blaming-children for being exploited.</description>
-            <linkhttps://riveenk.substack.com/p/but-she-had-a-crush-on-him</link>
+            <link>https://riveenk.substack.com/p/but-she-had-a-crush-on-him</link>
             <pubDate>Mon, 2 Mar 2026</pubDate>
             <category>Substack</category>
         </item>
