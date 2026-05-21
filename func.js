@@ -40,6 +40,13 @@ script.type = 'text/javascript';
 script.async = true;
 document.head.appendChild(script);
 
+// Function to add google analytics
+
+const meta = document.createElement('meta');
+meta.name = 'google-site-verification';
+meta.content = 'CKa0EHaFlhi4gkSRk35pc8Rmpq_jboSIjJy8iedeHWE';
+document.head.appendChild(meta);
+
 // Function to load the Font Awesome Set
 const faSet = document.createElement('link');
 faSet.rel = "stylesheet";
