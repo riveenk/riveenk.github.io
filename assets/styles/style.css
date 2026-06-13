@@ -491,17 +491,16 @@ a {
 }
 
 .fofcomeHomeButton:hover {
+    border: 2px solid var(--highlight);
+}
+
+.fofleaveTheWoodsBtn {
     background-color: var(--primary);
     color: var(--light-text);
 }
 
-.fofleaveTheWoodsBtn {
-    background-color: var(--dark-text);
-    color: var(--light-text);
-}
-
 .fofleaveTheWoodsBtn:hover {
-    background-color: var(--darker-text);
+    border: 2px solid var(--highlight);
 }
 
 .searchBar {
