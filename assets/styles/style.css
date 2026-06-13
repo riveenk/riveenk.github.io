@@ -789,6 +789,10 @@ textarea {
     cursor: pointer;
 }
 
+.themeSelecterPopUp h3 {
+    margin: 0 0 10px 5px;
+}
+
 .themeButtons {
     font-family: var(--main-font);
     background-color: var(--dark);
