@@ -1,0 +1,705 @@
+{
+    "blog": {
+        "metaData": {
+            "name": "Blog",
+            "summary": "",
+            "buttonLinksText": [],
+            "buttonsLinksDest": []
+        },
+        "listItems": [
+            {
+                "id": "sopablogpoets",
+                "title": "Physicists Can Be Poets Too",
+                "subtitle": "23 January, 2026",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/sopablogpoets01.jpg",
+                "imgDetails": {
+                    "author": "Vika Glitter",
+                    "source": "Pexels",
+                    "sourceLink": "https://www.pexels.com",
+                    "altText": "Close-up image of a person writing on a book."
+                },
+                "blurb": "Physicists work on problems and cases that may directly involve the general public. However, often times, physicists and the public don’t seem to be able to work on the same level. Poetry is one of the most effective methods to bring everyone to the same table—not through lecture, but through dialogue.",
+                "link": "https://blogs.ed.ac.uk/physics-astronomy/2026/01/23/physicists-can-be-poets-too/",
+                "linkText": "Blogs.Ed <i class='fa-solid fa-arrow-up-right-from-square' style='vertical-align: top; font-size: small; color: cyan;'></i>",
+                "twTags": [],
+                "generalTags": []
+            },
+            {
+                "id": "girlchildsnabkov",
+                "title": "To what extent does Nabokov present ‘girl-children’ as ‘immoral and dangerous seductress[es]’ in Lolita?",
+                "subtitle": "19 August, 2025 | 2025 A Level English Literature NEA",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/girlchildsnabkov01.jpg",
+                "imgDetails": {
+                    "author": "Pixabay",
+                    "source": "Pexels",
+                    "sourceLink": "https://www.pexels.com",
+                    "altText": "Close up image of a butterfly sitting on a hand."
+                },
+                "blurb": "In Nabokov’s Lolita, readers are presented with Humbert Humbert, who grooms and eventually rapes Dolores Haze, his “Lolita”. Despite his regret of the “foul lust [he] had inflicted upon [her],” and Dr. John Ray’s denouncement of Humbert as “horrible [and] abject,” in the preface, the social perception of Dolores and the “girl-children” is far from being absolved. Bertens (2001) argues that one of the “cultural stereotypes” imposed on female characters is, the “immoral and dangerous seductress,” which is true for Lolita and the “nymphets”, created by both Humbert and society, but not necessarily Dolores and the “girl-children”, created by Nabokov. ",
+                "link": "/page.html?id=girlchildsnabkov",
+                "linkText": "Read More",
+                "twTags": ["Rape", "Child Sexual Abuse"],
+                "generalTags": []
+            },
+            {
+                "id": "buddhisminsl",
+                "title": "Implications of Buddhism on Political Thought, Governance, and Authority Figures in Sri Lanka",
+                "subtitle": "19 August, 2025 | 2025 EPQ Submission",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/buddhisminsl01.jpeg",
+                "imgDetails": {
+                    "author": "MediaJet - Own Work, CC BY-SA 3.0",
+                    "source": "Wikimedia Commons",
+                    "sourceLink": "https://commons.wikimedia.org/w/index.php?curid=18884609",
+                    "altText": "Framed view of the Temple of the Tooth Relic, Sri Lanka"
+                },
+                "blurb": "Buddhism, the state religion of Sri Lanka, has remained entangled in all lives and institutions of Sri Lanka. Historically, royal patronage and religious loyalty have elevated Buddhism to a state of authority. This report examines existing literature, including public opinion, to explore implications of Buddhism on political thought, governance, and authority figures in Sri Lanka. Main findings characterise Buddhist clergy and institutions to be embedded in the Sri Lankan political landscape. They act as informal political advisory bodies, influencing state governance often overruling electoral mandates. Furthermore, Buddhist Nationalist rhetoric significantly shapes public opinion, potentially even causing extremist behaviour. Buddhist symbolism and monastic endorsement also shape electoral support which is both highly sought after by political leaders and detrimental for non-Buddhist politicians. The uneven power Buddhist figures hold in Sri Lankan politics suggests challenging and hostile social structures towards non-Sinhala-Buddhists. These institutions often propagate messages that are not representative of traditional Buddhist teachings, suggesting that the authority vested on Buddhist figures due to their Buddhist affiliation is misused in Sri Lanka.",
+                "link": "/page.html?id=buddhisminsl",
+                "linkText": "Read More",
+                "twTags": [],
+                "generalTags": []
+            },
+            {
+                "id": "authgodhypt",
+                "title": "The Authorial God Hypothesis",
+                "subtitle": "07 August, 2025",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/authgodhypt01.jpg",
+                "imgDetails": {
+                    "author": "Arina Krasnikova",
+                    "source": "Pexels",
+                    "sourceLink": "https://www.pexels.com",
+                    "altText": "Top view of a person writing on a notepad."
+                },
+                "blurb": "God—in many belief systems and prominently, the Abrahamic tradition—is an omnipotent, omniscient, omnipresent, omnibenevolent, and perfect being. These faiths and beliefs also credit God for creating the universe and its inhabitants: us. Equally so, some faiths believe in multiple and more human-like Gods: the Ancient Greeks, Ancient Egyptians, and Hinduism are examples. There are even some beliefs that believe in a false God (Gnosticism) or one capable of malice (Dystheism). This is a simplified non-exhaustive overview of the diversity among those who do believe in a God/s. Within this range lies a God I would refer to as Authorial. This essay proposes a theological cosmology compatible with natural laws and divine causality, to reframe our relationship with our Creator and our understanding of will and purpose.",
+                "link": "/page.html?id=authgodhypt",
+                "linkText": "Read More",
+                "twTags": [],
+                "generalTags": []
+            },
+            {
+                "id": "20250421A",
+                "title": "50 Shades of Gender: Gender Complexity and a Post-Gender Society",
+                "subtitle": "21 April, 2025",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/20250421A01.webp",
+                "imgDetails": {
+                    "author": "Alexander Grey",
+                    "source": "Pexels",
+                    "sourceLink": "https://www.pexels.com",
+                    "altText": "Underside view of a multicoloured umbrella."
+                },
+                "blurb": "For much of recorded history, gender and sex were used interchangeably: male meant XY chromosomes and masculinity, and female meant XX chromosomes and femininity. However, modern gender has evolved into a broader and more nuanced spectrum—some sources listing dozens, if not hundreds, of uniquely defined identities. This essay examines the nature of gender and argues for abolishing it as a descriptive identifying term.",
+                "link": "/page.html?id=20250421A",
+                "linkText": "Read More",
+                "twTags": [],
+                "generalTags": []
+            },
+            {
+                "id": "bgsworkexperience",
+                "title": "Laboratory life: my work experience week at BGS",
+                "subtitle": "20 August, 2024",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/bgsworkexperience01.png",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": "Picture of a person in a lab working with test tube samples"
+                },
+                "blurb": "This is a blog post summarising my work experience week at the British Geological Survey, Keyworth Laboratories. My week began with a welcome tour of the research facilities at BGS and, more specifically, the geochemistry laboratories. The team provided an introduction to the field of mass spectrometry and the use of isotopes in archaeological research. The sample preparation, which happens under very precise, controlled conditions to exclude contamination, involves a huge amount work prior to analysis.",
+                "link": "https://www.bgs.ac.uk/news/laboratory-life-my-work-experience-week-at-bgs/",
+                "linkText": "BGS Blogs <i class='fa-solid fa-arrow-up-right-from-square' style='vertical-align: top; font-size: small; color: cyan;'></i>",
+                "twTags": [],
+                "generalTags": []
+            },
+            {
+                "id": "20240814A",
+                "title": "why it matters to remember",
+                "subtitle": "14 August, 2024",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/20240814A01.png",
+                "imgDetails": {
+                    "author": "Cecil Richard",
+                    "source": "itch.io",
+                    "sourceLink": "https://haraiva.itch.io/under-a-star-called-sun",
+                    "altText": "Pixel art of a person going up a space elevator"
+                },
+                "blurb": "cecil richard’s under a star called sun is a reader-led short story about a narrator where “the trajectory of [his] ship is unchanging.” he (i like to see myself on the ship; you may too) recalls that the coffee “never tastes as good as the ones you get from the cafes back home,” as a quiet matter-of-fact.",
+                "link": "/page.html?id=20240814A",
+                "linkText": "Read More",
+                "twTags": [],
+                "generalTags": []
+            }
+        ]
+    },
+    "publications": {
+        "metaData": {
+            "name": "My Publications",
+            "summary": "",
+            "buttonLinksText": ["<i class='fa-brands fa-square-tumblr'></i>&nbsp;Tumblr","<i class='fa-solid fa-bookmark'></i>&nbsp;Substack","Scalmropia Archive"],
+            "buttonsLinksDest": ["https://geeky-poet.tumblr.com/","https://riveenk.substack.com/","/scalmropia"]
+        },
+        "listItems": [ 
+            {
+                "id": "complexlife",
+                "title": "My Complex Life",
+                "subtitle": "31 May, 2026",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "fill in later",
+                "link": "/page.html?id=complexlife",
+                "linkText": "Read Poem",
+                "twTags": [],
+                "generalTags": ["Poetry", "Mental health"]
+            },  
+            {
+                "id": "threebodyproblem",
+                "title": "Three Body Problem",
+                "subtitle": "04 March, 2026",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "You are the third body watching them make a system with another and throw you away. You know what you have lost. But when the forces are beyond you to deal with, what can you do except watch?",
+                "link": "/page.html?id=threebodyproblem",
+                "linkText": "Read Poem",
+                "twTags": [],
+                "generalTags": ["Poetry", "Grief", "Loss", "Lost Love"]
+            },
+            {
+                "id": "youdontcomecloser",
+                "title": "You Don't Come Closer",
+                "subtitle": "27 December, 2025",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "It's a late November night at a cafe when the past decides to visit you. For your luck or otherwise, there is someone to listen to you—someone that actually cares.",
+                "link": "/page.html?id=youdontcomecloser",
+                "linkText": "Read Poem",
+                "twTags": [],
+                "generalTags": ["Poetry", "Grief"]
+            },    
+            {
+                "id": "thenightswereyoung",
+                "title": "The Nights Were Young",
+                "subtitle": "06 December, 2025 | Published in <a href='https://thecreatormagazine.co.uk/'>The Creator Magazine</a> (<a href='https://drive.google.com/file/d/1mdqEyLazj5qRSLrl-SoNuOtxcClAMuEe/preview'>8th Edition</a>)",
+                "smallStory": "Aragalaya ('Struggle') was one of the most pivotal events I have ever witnessed and taken part in. It was an experience of both pride and fear alike. Ousting a family of war criminals and thieves, along with the toxic political world they built, cost more than just sweat and tears. Walking among brave protesters, trembling as buses burned nearby, I too lived through this period of change. Sri Lanka has always been my home at heart, and I am proud that I have fought for it. I'm glad I can share a part of our story through this poem.",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "Aragalaya ('Struggle') was one of the most pivotal events I have ever witnessed and taken part in. It was an experience of both pride and fear alike. Ousting a family of war criminals and thieves, along with the toxic political world they built, cost more than just sweat and tears.",
+                "link": "/page.html?id=thenightswereyoung",
+                "linkText": "Read Poem",
+                "twTags": ["Political Violence"],
+                "generalTags": ["Poetry", "Politics", "Sri Lanka", "Aragalaya"]
+            },
+            {
+                "id": "iseeonlyyou",
+                "title": "I See Only You",
+                "subtitle": "23 November, 2025",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "If you end up killing someone you love, what would you do to bring them back? The guilt would be parasitic in its way of decaying away your soul. Maybe you will spiral away into delirium.",
+                "link": "/page.html?id=iseeonlyyou",
+                "linkText": "Read Poem",
+                "twTags": ["Horror", "Murder", "Self-harm"],
+                "generalTags": ["Poem", "Grief"]
+            },
+            {
+                "id": "yellowsparks",
+                "title": "Paint My Skies With Yellow Sparks",
+                "subtitle": "10 May, 2025",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "Today, war has become a non-negligble fact of our lives. Everyday, people are massacred in dozens and life is inherently fractured to thousands. Amongst this chaos, sometimes, children's simple sayings make more sense than the actions of the adults.",
+                "link": "/page.html?id=yellowsparks",
+                "linkText": "Read Poem",
+                "twTags": ["War"],
+                "generalTags": ["Poetry", "Social Protest"]
+            },
+            {
+                "id": "godsplayingcricket",
+                "title": "Maybe the Gods are Playing Cricket",
+                "subtitle": "08 May, 2025",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "As a child, I liked to imagine the scary and loud thunderstorms were just cricket matches in heaven. There was a sense of comfort in it, but also felt gross to be under the rain.",
+                "link": "/page.html?id=godsplayingcricket",
+                "linkText": "Read Poem",
+                "twTags": [],
+                "generalTags": ["Poetry", "Playful"]
+            },
+            {
+                "id": "cryingmaiden",
+                "title": "The Crying Maiden",
+                "subtitle": "28 April, 2025",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "Professor Senavirathne is gifted a painting notorious for being cursed. But when his agnostic approach leaves him vulnerable, the tales reveal their truth. Haunted by his mistake, he is left choiceless and helpless.",
+                "link": "/page.html?id=cryingmaiden",
+                "linkText": "Read Story",
+                "twTags": ["Horror", "Death", "Gore"],
+                "generalTags": ["Story"]
+            },
+            {
+                "id": "inafewyears",
+                "title": "Maybe in a Few Years",
+                "subtitle": "09 April, 2025",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "fillInLater",
+                "link": "/page.html?id=inafewyears",
+                "linkText": "Read Poem",
+                "twTags": [],
+                "generalTags": ["Poetry", "Friendship", "Nostalgic"]
+            },
+            {
+                "id": "tapresearchcolc",
+                "title": "Cost of Living and University Choices <i class='fa-solid fa-arrow-up-right-from-square' style='vertical-align: top; font-size: small; color: var(--highlight);'></i>",
+                "subtitle": "24 June, 2024",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "This is a report compiled with Adam Runacres, Freya Neason, and Ismail Choudary at The Access Project. We researched into the effects of the cost of living crisis on young people and their higher-education choices.",
+                "link": "https://theaccessproject.org.uk/2024/06/24/cost-of-living-university-choices-report/",
+                "linkText": "Read Report <i class='fa-solid fa-arrow-up-right-from-square'></i>",
+                "twTags": [],
+                "generalTags": ["External", "Report", "The Access Project", "Cost of Living", "University"]
+            },
+            {
+                "id": "maskedfigures",
+                "title": "Masked Figures",
+                "subtitle": "14 June, 2024",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "The isolation of being quaratined during Covid has impacted many of us in a myriad of ways. The clinical routine we had to conform to, and the constant fear of death, robbed us of the simple need of feeling like ourselves. It makes no sense, in a way that it would've to the versions of us stuck in our houses.",
+                "link": "/page.html?id=maskedfigures",
+                "linkText": "Read Poem",
+                "twTags": ["Death", "Covid", "Blood"],
+                "generalTags": ["Poetry"]
+            },
+            {
+                "id": "foughtforyou",
+                "title": "He Fought for You",
+                "subtitle": "18 October, 2023",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "Mahmoud Darwish once wrote, 'The wars will end and the leaders will shake hands, [...] I do not know who sold the homeland but I know who paid the price.' This is for all those who paid the price.",
+                "link": "/page.html?id=foughtforyou",
+                "linkText": "Read Poem",
+                "twTags": ["War", "Death"],
+                "generalTags": ["Poetry"]
+            },
+            {
+                "id": "collidedgalaxies",
+                "title": "Collided Galaxies",
+                "subtitle": "18 October, 2023",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "Grief is a raw tenderness that keeps you anchored to your past. It is a soft ache that will always refuse to go away. Maybe in this cosmic dance, you'll find someone else's stars embedded in your galaxy.",
+                "link": "/page.html?id=collidedgalaxies",
+                "linkText": "Read Poem",
+                "twTags": [],
+                "generalTags": ["Poetry", "Romance", "Lost Love"]
+            },
+            {
+                "id": "summernightundermoon",
+                "title": "A Summer Night Under the Moon",
+                "subtitle": "18 October, 2023",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "In the cold stillness of the night, the moon has shone a bright spotlight on her own face. But though she stole the hearts of many across all ages before me, the warmth of my lover will keep my heart warm and my eyes affixed on them.",
+                "link": "/page.html?id=summernightundermoon",
+                "linkText": "Read Poem",
+                "twTags": [],
+                "generalTags": ["Poetry", "Romance", "Night", "Love"]
+            },
+            {
+                "id": "deathsfear",
+                "title": "Death's Fear",
+                "subtitle": "04 June, 2023",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "Death is often viewed as the ultimate cruelty, the heaviest theft committed upon anyone. But when put in effort, man-made horrors just may be able to scare even death herself.",
+                "link": "/page.html?id=deathsfear",
+                "linkText": "Read Poem",
+                "twTags": ["Gore", "Death"],
+                "generalTags": ["Poetry", "Horror"]
+            }
+        ]
+    },
+    "debating": {
+        "metaData": {
+            "name": "Debating Collection",
+            "summary": "",
+            "buttonLinksText": ["<i class='fa-solid fa-hourglass-half'></i>&nbsp;Timer","<i class='fa-solid fa-list-ul'></i>&nbsp;Glossary","<i class='fa-solid fa-scale-balanced'></i>&thinsp;&thinsp;Formats"],
+            "buttonsLinksDest": ["/debating/timer.html","/debating/glossary.html","/debating/formats.html"],
+            "hideTag": true
+        },
+        "listItems": [
+            {
+                "id": "20240520A",
+                "title": "How to Make a Debating Motion",
+                "subtitle": "20 May, 2024",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/20240520A01.jpg",
+                "imgDetails": {
+                    "author": "Czapp Árpád",
+                    "source": "Pexels",
+                    "sourceLink": "https://www.pexels.com",
+                    "altText": "Angled view of the inside of a large domed parliamentary building"
+                },
+                "blurb": "A motion is the topic of discussion in many debating styles. During practices and hosting tournaments, you will be expected to create motions. Whilst you'd have great creative liberty, it is still important to produce motions that spark fruitful and fair debates.",
+                "link": "/page.html?id=20240520A",
+                "linkText": "Read Post",
+                "twTags": [],
+                "generalTags": ["Debating"]
+            }
+        ]
+    },
+    "debatingFormats": {
+        "metaData": {
+            "name": "Debating Formats",
+            "summary": "",
+            "buttonLinksText": [],
+            "buttonsLinksDest": [],
+            "hideTag": true
+        },
+        "listItems": [
+            {
+                "id": "apd",
+                "title": "Asian Parliamentary Format",
+                "subtitle": "A Basic Introduction | 1 January, 2025",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/debating.jpg",
+                "imgDetails": {
+                    "author": "Unknown",
+                    "source": "Public Domain",
+                    "sourceLink": "https://commons.wikimedia.org/wiki/File:A_debate_at_the_Union_Club_-_c1887.JPG",
+                    "altText": "Sketched art of a debate at the Cambridge University Union Society."
+                },
+                "blurb": "APD Format is a parliamentary debating model that involves two teams of three members. The Government argues for the motion, and the Opposition argues against the motion. There are three constructive speeches and a reply speech for each team.",
+                "link": "/page.html?id=apd",
+                "linkText": "Read Post",
+                "twTags": [],
+                "generalTags": ["Debating"]
+            },
+            {
+                "id": "bpd",
+                "title": "British Parliamentary Format",
+                "subtitle": "A Basic Introduction | 1 January, 2025",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/debating.jpg",
+                "imgDetails": {
+                    "author": "Unknown",
+                    "source": "Public Domain",
+                    "sourceLink": "https://commons.wikimedia.org/wiki/File:A_debate_at_the_Union_Club_-_c1887.JPG",
+                    "altText": "Sketched art of a debate at the Cambridge University Union Society."
+                },
+                "blurb": "BPD Format is a parliamentary debating model that involves four teams of two members. The Government argues for the motion, and the Opposition argues against the motion. The two sides are further divided into the Opening and Closing Benches, each with separate expectations on them. There are two constructive speeches for each team and no reply speeches.",
+                "link": "/page.html?id=bpd",
+                "linkText": "Read Post",
+                "twTags": [],
+                "generalTags": ["Debating"]
+            },
+            {
+                "id": "jwsdc",
+                "title": "Junior World Schools Debating Championship Format ",
+                "subtitle": "A Basic Introduction | 1 January, 2025",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/debating.jpg",
+                "imgDetails": {
+                    "author": "Unknown",
+                    "source": "Public Domain",
+                    "sourceLink": "https://commons.wikimedia.org/wiki/File:A_debate_at_the_Union_Club_-_c1887.JPG",
+                    "altText": "Sketched art of a debate at the Cambridge University Union Society."
+                },
+                "blurb": "JWSDC Format is used in the Junior World Schools Debating Championship and involves two teams of three members. The Proposition argues for the motion, and the Opposition argues against the motion. There will be three constructive speeches and two reply speeches.",
+                "link": "/page.html?id=jwsdc",
+                "linkText": "Read Post",
+                "twTags": [],
+                "generalTags": ["Debating"]
+            },
+            {
+                "id": "oxsd",
+                "title": "Oxford-Style Debating Format",
+                "subtitle": "A Basic Introduction | 1 January, 2025",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/debating.jpg",
+                "imgDetails": {
+                    "author": "Unknown",
+                    "source": "Public Domain",
+                    "sourceLink": "https://commons.wikimedia.org/wiki/File:A_debate_at_the_Union_Club_-_c1887.JPG",
+                    "altText": "Sketched art of a debate at the Cambridge University Union Society."
+                },
+                "blurb": "OxSD Format is a public debating model that involves two teams of several members (typically three). The Proposition argues for the motion, and the Opposition argues against the motion. There are multiple sections to this format and it is adapted in various ways by various organisers.",
+                "link": "/page.html?id=oxsd",
+                "linkText": "Read Post",
+                "twTags": [],
+                "generalTags": ["Debating"]
+            },
+            {
+                "id": "wsdc",
+                "title": "World Schools Debating Championship Format",
+                "subtitle": "A Basic Introduction | 1 January, 2025",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/debating.jpg",
+                "imgDetails": {
+                    "author": "Unknown",
+                    "source": "Public Domain",
+                    "sourceLink": "https://commons.wikimedia.org/wiki/File:A_debate_at_the_Union_Club_-_c1887.JPG",
+                    "altText": "Sketched art of a debate at the Cambridge University Union Society."
+                },
+                "blurb": "WSDC Format is used in the World Schools Debating Championship and involves two teams of three members. The Proposition argues for the motion, and the Opposition argues against the motion. There are three constructive speeches and a reply speech for each team.",
+                "link": "/page.html?id=wsdc",
+                "linkText": "Read Post",
+                "twTags": [],
+                "generalTags": ["Debating"]
+            }
+        ]
+    },
+    "debatingGlossary": {
+        "metaData": {
+            "name": "Debating Glossary",
+            "summary": "",
+            "buttonLinksText": [],
+            "buttonsLinksDest": [],
+            "hideTag": true
+        },
+        "listItems": []
+    },
+    "sinhala": {
+        "metaData": {
+            "name": "Sinhala",
+            "summary": "",
+            "buttonLinksText": [],
+            "buttonsLinksDest": []
+        },
+        "listItems": []
+    },
+    "stuff": {
+        "metaData": {
+            "name": "Random Stuff",
+            "summary": "",
+            "buttonLinksText": [],
+            "buttonsLinksDest": [],
+            "hideTag": true
+        },
+        "listItems": [
+            {
+                "id": "alelitbtragedy",
+                "title": "AQA A Level English Literature Revision Notes",
+                "subtitle": "19 August, 2025",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "This is a downloadable revision sheet with summaries, mini-analysis, and key quotes for the tragedy part of the course. Includes notes for Keats' Poetry and Arthur Miller's Death of a Salesman.",
+                "link": "/page.html?id=alelitbtragedy",
+                "linkText": "Listen",
+                "twTags": [],
+                "generalTags": []
+            },
+            {
+                "id": "alphysy1",
+                "title": "AQA A Level Physics Year One Mindmaps",
+                "subtitle": "19 August, 2025",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "This is a downloadable collection of mindmaps created around the topics for the AS Level/ Year One syllabus. These include diagrams and keyword descriptions for the subject content.",
+                "link": "/page.html?id=alphysy1",
+                "linkText": "Listen",
+                "twTags": [],
+                "generalTags": []
+            },
+            {
+                "id": "almaths",
+                "title": "OCR A Level Mathematics Revision Notes",
+                "subtitle": "19 August, 2025",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "This is a downloadable revision sheet detailing some common topic areas in the mechanics and statistics syllabus. This includes a collection of general rigid body solutions with forces and moments labelled (including laminas!!), and a collection of worked solutions for example questions in major hypothesis tests.",
+                "link": "/page.html?id=almaths",
+                "linkText": "Listen",
+                "twTags": [],
+                "generalTags": []
+            }
+        ]
+    },
+    "podcast": {
+        "metaData": {
+            "name": "Wanna Be Cancelled?",
+            "summary": "We're a podcast about humans and, I don't know, everything! It could seem like the most innocent episode at a point and us just, asking to be cancelled in another. Trust me, we're worth the trouble. Anyways, thank you for reading the description up to this point. You can go back to doing something important now. Unless you are bored and just want to listen to two randos' yapping... Then, feel free to sit back, grab a snack, and let our thoughts stack.",
+            "buttonLinksText": ["<i class='fa-solid fa-circle-play'></i>&nbsp;Listen Now","<i class='fa-brands fa-spotify'></i>&nbsp;Find us on Spotify"],
+            "buttonsLinksDest": ["/wbc/player.html","https://open.spotify.com/show/3JOaF66buYbpTTc8qaMJ5F"],
+            "hideTag": true
+        },
+        "listItems": [
+            {
+                "id": "wbc20240809",
+                "episode": 2,
+                "title": "#2: The Limit of Opinion Entitlement",
+                "subtitle": "09 August, 2024",
+                "src":"https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e2.mp3",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "People have a right to hold an opinion. But we all understand that there is a limit to it. Listen to us yap for about an hour trying to understand where that line stands and who decides where it lies. We will talk about some possible (bleak and horrifying) futures where ideas we now consider degenerate may be seen more favourably. We're still sorry for the worst mics ever.",
+                "link": "/wbc/player.html?ep=2",
+                "linkText": "Listen",
+                "twTags": ["abuse", "pedophilia"],
+                "generalTags": []
+            },
+            {
+                "id": "wbc20240731",
+                "episode": 1,
+                "title": "#1: Social Media and the Whole Thing",
+                "subtitle": "31 July, 2024",
+                "src":"https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e1.mp3",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "What does it actually takes to be an influencer? In this episode, we will explore the role of the audience in this system and how social media is shaped by it. (Wolfie would like to apologise for his bad mic)",
+                "link": "/wbc/player.html?ep=1",
+                "linkText": "Listen",
+                "twTags": [],
+                "generalTags": []
+            }   
+        ]
+    },
+    "misc": {
+        "listItems": [
+          {
+                "id": "sitenotice",
+                "title": "Notice to Visitors",
+                "subtitle": "Last Updated: 19th June, 2025",
+                "smallStory": "",
+                "imgSrc": "/assets/media/coverImage/sitenotice01.jpg",
+                "imgDetails": {
+                    "author": "Honoré-Victorin Daumier",
+                    "source": "Les Gens De Justice",
+                    "sourceLink": "https://commons.wikimedia.org/wiki/Category:Les_Gens_de_Justice_(Honor%C3%A9_Daumier)",
+                    "altText": "Sketch art of a crowded court-room"
+                },
+                "blurb": "People have a right to hold an opinion. But we all understand that there is a limit to it. Listen to us yap for about an hour trying to understand where that line stands and who decides where it lies. We will talk about some possible (bleak and horrifying) futures where ideas we now consider degenerate may be seen more favourably. We're still sorry for the worst mics ever.",
+                "link": "/wbc/player.html?ep=2",
+                "linkText": "Listen",
+                "twTags": [],
+                "generalTags": []
+            }  
+        ]
+    }
+}

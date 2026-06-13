@@ -1,239 +1,352 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
-    <channel>
-        <title>On My Wavelength</title>
-        <link>https://riveenk.github.io/index.html</link>
-        <copyright>Riveen Kumanayaka All Rights Reserved</copyright>
-        <language>en</language>
-        <description>This is an aggregated RSS feed of all my publications.</description>
-         <item>
-            <title>Three Body Problem</title>
-            <description>You are the third body watching them make a system with another and throw you away. You know what you have lost. But when the forces are beyond you to deal with, what can you do except watch?</description>
-            <link>https://riveenk.github.io/publications/three-body-problem.html</link>
-            <pubDate>Wed, 4 Mar 2026</pubDate>
-            <category>Publications</category>
-        </item>
-	    <item>
-            <title>But she had a crush on him</title>
-            <description>The issue of blaming-children for being exploited.</description>
-            <link>https://riveenk.substack.com/p/but-she-had-a-crush-on-him</link>
-            <pubDate>Mon, 2 Mar 2026</pubDate>
-            <category>Substack</category>
-        </item>
-        <item>
-            <title>Physicists Can Be Poets Too</title>
-            <description>Physicists work on problems and cases that may directly involve the general public. However, often times, physicists and the public don’t seem to be able to work on the same level. Poetry is one of the most effective methods to bring everyone to the same table—not through lecture, but through dialogue.</description>
-            <link>https://blogs.ed.ac.uk/physics-astronomy/2026/01/23/physicists-can-be-poets-too/</link>
-            <pubDate>Fri, 23 Jan 2026</pubDate>
-            <category>Blog</category>
-        </item>
-        <item>
-            <title>Not All Men, But Always a Man</title>
-            <description>Why more abusers are men than any other demographic.</description>
-            <link>https://riveenk.substack.com/p/not-all-men-but-always-a-man</link>
-            <pubDate>Sat, 17 Jan 2026</pubDate>
-            <category>Substack</category>
-        </item>
-        <item>
-            <title>You Don't Come Closer</title>
-            <description>It's a late November night at a cafe when the past decides to visit you. For your luck or
-                            otherwise, there is someone to listen to you—someone that actually cares.</description>
-            <link>https://riveenk.github.io/publications/you-dont-come-closer.html</link>
-            <pubDate>Sat, 27 Dec 2025</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>Gen-AI is just a fancy bootlicker</title>
-            <description>Making a set of equations write poetry is not just lazy, it's a betrayal to what human creativity is.</description>
-            <link>https://riveenk.substack.com/p/gen-ai-is-just-a-fancy-bootlicker</link>
-            <pubDate>Sat, 13 Dec 2025</pubDate>
-            <category>Substack</category>
-        </item>
-        <item>
-            <title>The Nights Were Young</title>
-            <description>Aragalaya ("Struggle") was one of the most pivotal events I have ever witnessed and taken part in. It was an experience of both pride and fear alike. Ousting a family of war criminals and thieves, along with the toxic political world they built, cost more than just sweat and tears.</description>
-            <link>https://riveenk.github.io/publications/the-nights-were-young.html</link>
-            <pubDate>Sat, 06 Dec 2025</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>I See Only You</title>
-            <description>Grief and guilt breaks the soul of all affected by it. When the narrator accidentally kills
-                            their partner, the guilt of it consumes them into an irreversible spiral.</description>
-            <link>https://riveenk.github.io/publications/i-see-only-you.html</link>
-            <pubDate>Sun, 23 Nov 2025</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>Are Girl-Children Immoral and Dangerous Seductresses in Lolita?</title>
-            <description>In Nabokov’s Lolita, readers are presented with Humbert Humbert, who grooms and eventually rapes Dolores Haze, his “Lolita”. Despite his regret of the “foul lust [he] had inflicted upon [her],” and Dr. John Ray’s denouncement of Humbert as “horrible [and] abject,” in the preface, the social perception of Dolores and the “girl-children” is far from being absolved.</description>
-            <link>https://riveenk.github.io/post/2025/08/girl-children-in-lolita.html</link>
-            <pubDate>Sat, 16 Aug 2025</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>Implications of Buddhism on Political Systems</title>
-            <description>Buddhism, the state religion of Sri Lanka, has remained entangled in all lives and institutions of Sri Lanka. Historically, royal patronage and religious loyalty have elevated Buddhism to a state of authority.</description>
-            <link>https://riveenk.github.io/post/2025/08/buddhism-in-sri-lanka.html</link>
-            <pubDate>Sat, 16 Aug 2025</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>The Authorial God Hypothesis</title>
-            <description>God—in many belief systems and prominently, the Abrahamic tradition—is an omnipotent, omniscient, omnipresent, omnibenevolent, and perfect being. These faiths and beliefs also credit God for creating the universe and its inhabitants: us.</description>
-            <link>https://riveenk.github.io/post/2025/08/authorial-god-hypothesis.html</link>
-            <pubDate>Thu, 07 Aug 2025</pubDate>
-            <category>Blog</category>
-        </item>
-        <item>
-            <title>Paint My Skies With Yellow Sparks</title>
-            <description>As someone who has lived through the end of a civil war, yet at great relative safety, it
-                            was very easy to be disillusioned. The horror of war is not a myth, but many wish it was and
-                            many think it is.</description>
-            <link>https://riveenk.github.io/publications/paint-my-skies-with-yellow-sparks.html</link>
-            <pubDate>10 May, 2025</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>Maybe the Gods are Playing Cricket</title>
-            <description>As a child, I liked to imagine the scary and loud thunderstorms were just cricket matches in
-                            heaven. There was a sense of comfort in it, but also felt gross to be under the rain.</description>
-            <link>https://riveenk.github.io/publications/maybe-the-gods-are-playing-cricket.html</link>
-            <pubDate>Sat, 10 May 2025</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>The Crying Maiden</title>
-            <description>When Prof. Senavitharana is gifted a mysterious painting of a crying maiden, he does not
-                            believe the strange tale behind it. But when the tale comes alive to haunt him, he soon
-                            realises his mistake.</description>
-            <link>https://riveenk.github.io/publications/the-crying-maiden.html</link>
-            <pubDate>Mon, 28 Apr 2025</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>50 Shades of Gender: Gender Complexity and a Post-Gender Society</title>
-            <description>For much of recorded history, gender and sex were used interchangeably: male meant XY chromosomes and masculinity, and female meant XX chromosomes and femininity. However, modern gender has evolved into a broader and more nuanced spectrum.</description>
-            <link>https://riveenk.github.io/post/2025/04/fifty-shades-of-gender.html</link>
-            <pubDate>Mon, 21 Apr 2025</pubDate>
-            <category>Blog</category>
-        </item>
-        <item>
-            <title>Maybe in a Few Years</title>
-            <description>Do ever think of your friends two minutes to midnight and only feel unreserved love for
-                            those
-                            idiots? Yeah, me too. This is for my goof balls (they'll hate me for calling them that).</description>
-            <link>https://riveenk.github.io/publications/maybe-in-a-few-years.html</link>
-            <pubDate>Wed, 09 Apr 2025</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>Laboratory life: my work experience week at BGS</title>
-            <description>My week began with a welcome tour of the research facilities at BGS and, more specifically, the geochemistry laboratories. The team provided an introduction to the field of mass spectrometry and the use of isotopes in archaeological research.</description>
-            <link>https://www.bgs.ac.uk/news/laboratory-life-my-work-experience-week-at-bgs/</link>
-            <pubDate>Tue, 20 Aug 2024</pubDate>
-            <category>Blog</category>
-        </item>
-        <item>
-            <title>why it matters to remember</title>
-            <description>cecil richard’s under a star called sun is a reader-led short story about a narrator where “the trajectory of [his] ship is unchanging.” he (i like to see myself on the ship; you may too) recalls that coffee “never tastes as good as the ones you get from the cafes back home”.</description>
-            <link>https://riveenk.github.io/post/2024/08/why-it-matters-to-remember.html</link>
-            <pubDate>Wed, 14 Aug 2024</pubDate>
-            <category>Blog</category>
-        </item>
-        <item>
-            <title>He Fought for You</title>
-            <description>Mahmoud Darwish once wrote, "The wars will end and the leaders will shake hands, [...] I do
-                            not
-                            know who sold the homeland but I know who paid the price." This is for all those who paid
-                            the price.</description>
-            <link>https://riveenk.github.io/publications/he-fought-for-you.html</link>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>Collided Galaxies</title>
-            <description>Grief is often raw and remains a sad and tender reminder of the past. It is a soft ache that
-                            refuses to go away. Maybe in this cosmic dance, you may see someone else's stars embedded in
-                            your
-                            galaxy.</description>
-            <link>https://riveenk.github.io/publications/colliding-galaxies.html</link>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>A Summer Night Under the Moon</title>
-            <description>The stars hide a grand secret we are too stupid to know. But does it ever matter? Does
-                            anything
-                            hold meaning when you're drunk with love and run over by her beauty?</description>
-            <link>https://riveenk.github.io/publications/a-summer-night-under-the-moon.html</link>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>#2: The Limit of Opinion Entitlement</title>
-            <description>People are entitled to their opinions, but general consensus agree that there is a limit to it. However, what is this limit? Where does it begin, and where does it end? Who decides the limits?</description>
-            <link>https://riveenk.github.io/podcast/player.html#2</link>
-            <pubDate>Fri, 09 Aug 2024</pubDate>
-            <category>Podcast</category>
-        </item>
-        <item>
-            <title>#1: Social Media and the Whole Thing</title>
-            <description>What does it take to be an influencer? And what role does the audience actually play within this system? Find out with us!</description>
-            <link>https://riveenk.github.io/podcast/player.html#1</link>
-            <pubDate>Wed, 31 Jul 2024</pubDate>
-            <category>Podcast</category>
-        </item>
-        <item>
-            <title>Cost of Living and University Choices</title>
-            <description>This is a report I co-authored with Adam Runacres, Freya Neason, and Ismail Choudhury for
-                            The Access Project. We conducted introductory research on the relationship between the
-                            university choices of students and the economic background.</description>
-            <link>https://theaccessproject.org.uk/2024/06/24/cost-of-living-university-choices-report/</link>
-            <pubDate>Mon, 24 Jun 2024</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>Masked Figures</title>
-            <description>The pandemic, and the lonliness that stemmed from it, left a large imprint on all of us that survived it. This is for the horrors we all battled with ourselves, and fear during then.</description>
-            <link>https://riveenk.github.io/publications/masked-figures.html</link>
-            <pubDate>Fri, 14 Jun 2024</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>How to make a Debating Motion?</title>
-            <description>So, what is a motion? Basically, it is the topic which the debate is about. There are two sides which would be arguing this (although there could be four teams, sometimes).</description>
-            <link>https://riveenk.github.io/post/2024/05/how-to-make-a-debating-motion.html</link>
-            <pubDate>Mon, 20 May 2024</pubDate>
-            <category>Debating</category>
-        </item>
-        <item>
-            <title>A Name I Didn't Think Of</title>
-            <description>This is a story of a slow-burn on fast-forward. He is a Physicist and she is a
-                            Philosopher, and they both end up finding that there's more that attracts than Gravity.</description>
-            <link>https://riveenk.github.io/publications/a-name-i-didnt-think-of.html</link>
-            <pubDate>Wed, 03 Apr 2024</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title>Death's Fear</title>
-            <description>Death is though to be the ultimate villain, the ghost that haunts over our shoulders.
-                            This is how death sees some people, and it's never about our pretty little lives.</description>
-            <link>https://riveenk.github.io/publications/deaths-fear.html</link>
-            <pubDate>Sun, 04 Jun 2023</pubDate>
-            <category>Publications</category>
-        </item>
-        <item>
-            <title></title>
-            <description></description>
-            <link></link>
-            <pubDate></pubDate>
-            <category></category>
-        </item>
-        <item>
-            <title></title>
-            <description></description>
-            <link></link>
-            <enclosure url="#" length="0" type="image/jpeg"/>
-            <pubDate></pubDate>
-            <category></category>
-        </item>
-    </channel>
+  <channel>
+    <title>On My Wavelength</title>
+    <link>https://riveenk.github.io/index.html</link>
+    <description>This is an aggregated list of all my publications across my blog, podcast, and external publications.</description>
+    <language>en</language>
+    <copyright>Riveen Kumanayaka All Rights Reserved</copyright>
+    <item>
+      <title>My Complex Life</title>
+      <description>fill in later</description>
+      <link>https://riveenk.github.io/page.html?id=complexlife</link>
+      <guid>complexlife</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Sun, 31 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Representation in Media is Almost Never Organic</title>
+      <description>A significant portion of the mainstream media and literature that we consume today feature people of varying genders, sexualities, religions, ethnicities, disabilities, etc. However, often when I consume such media I see that half the school is made up of gay, Muslim, autistic, transgender people (caricature, of course).</description>
+      <link>https://substack.com/@riveenk/p-196642526</link>
+      <guid>substack20260506</guid>
+      <category>Substack</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 06 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>You make me do too much labour</title>
+      <description>Labelling domestic roles as unpaid work and inherently a sign of oppression is problematic. It is with no doubt that domestic exploitation of women in heterosexual relationships—marriages particularly—are one of the most common modes of oppression against women. But, domestic work is not the same as domestic exploitation. </description>
+      <link>https://substack.com/@riveenk/p-194556214</link>
+      <guid>substack20260418</guid>
+      <category>Substack</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Three Body Problem</title>
+      <description>You are the third body watching them make a system with another and throw you away. You know what you have lost. But when the forces are beyond you to deal with, what can you do except watch?</description>
+      <link>https://riveenk.github.io/page.html?id=threebodyproblem</link>
+      <guid>threebodyproblem</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>But she had a crush on him</title>
+      <description>We live in a dangerous world where children are often at risk of being exploited by people who are expected to protect them. Despite widely researched and understood evidence of the harms of sexual relations with minors, there is a non-negligible minority of people who legally or otherwise engage in such actions. One of the major justifications for this disgusting behaviour lies in blaming children for finding adults attractive.</description>
+      <link>https://substack.com/@riveenk/p-189667077</link>
+      <guid>substack20260302</guid>
+      <category>Substack</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Mon, 02 Mar 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Physicists Can Be Poets Too</title>
+      <description>Physicists work on problems and cases that may directly involve the general public. However, often times, physicists and the public don’t seem to be able to work on the same level. Poetry is one of the most effective methods to bring everyone to the same table—not through lecture, but through dialogue.</description>
+      <link>https://blogs.ed.ac.uk/physics-astronomy/2026/01/23/physicists-can-be-poets-too/</link>
+      <guid>sopablogpoets</guid>
+      <category>External</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Not All Men, But Always a Man</title>
+      <description>Why more abusers are men than any other demographic. Anyone who has been on social media for long enough has heard the phrase, “not all men, but always a man”, for better or for worse. Hearing this repeatedly has had me thinking. Are men inherently that bad? Is it truly fair to apply labels to entire demographics before understanding the inner workings? </description>
+      <link>https://substack.com/@riveenk/p-184192641</link>
+      <guid>substack20260117</guid>
+      <category>Substack</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Sat, 17 Jan 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>You Don't Come Closer</title>
+      <description>It's a late November night at a cafe when the past decides to visit you. For your luck or otherwise, there is someone to listen to you—someone that actually cares.</description>
+      <link>https://riveenk.github.io/page.html?id=youdontcomecloser</link>
+      <guid>youdontcomecloser</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Gen-AI is just a fancy bootlicker</title>
+      <description>Making a set of equations to write poetry is not just lazy, it's a betrayal to what human creativity is. When AI began off as a new technology, I was among the many who were excited—glad even. A few years into the future, which included the point where I decided to delete that post, I have realised that AI wasn’t a wave to ride. It was a tsunami. </description>
+      <link>https://substack.com/@riveenk/p-181539982</link>
+      <guid>substack20251213</guid>
+      <category>Substack</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Sat, 13 Dec 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Nights Were Young</title>
+      <description>Aragalaya ('Struggle') was one of the most pivotal events I have ever witnessed and taken part in. It was an experience of both pride and fear alike. Ousting a family of war criminals and thieves, along with the toxic political world they built, cost more than just sweat and tears. Walking among brave protesters, trembling as buses burned nearby, I too lived through this period of change. Sri Lanka has always been my home at heart, and I am proud that I have fought for it. I'm glad I can share a part of our story through this poem.</description>
+      <link>https://riveenk.github.io/page.html?id=thenightswereyoung</link>
+      <guid>thenightswereyoung</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Sat, 06 Dec 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>I See Only You</title>
+      <description>If you end up killing someone you love, what would you do to bring them back? The guilt would be parasitic in its way of decaying away your soul. Maybe you will spiral away into delirium.</description>
+      <link>https://riveenk.github.io/page.html?id=iseeonlyyou</link>
+      <guid>iseeonlyyou</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Sun, 23 Nov 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AQA A Level English Literature Revision Notes</title>
+      <description>This is a downloadable revision sheet with summaries, mini-analysis, and key quotes for the tragedy half of the course. Includes notes for Keats' Poetry and Arthur Miller's Death of a Salesman.</description>
+      <link>https://riveenk.github.io/page.html?id=alelitbtragedy</link>
+      <guid>alelitbtragedy</guid>
+      <category>Revision</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>AQA A Level Physics Year One Mindmaps</title>
+      <description>This is a downloadable collection of mindmaps created around the topics for the AS Level/ Year One syllabus. These include diagrams and keyword descriptions for the subject content.</description>
+      <link>https://riveenk.github.io/page.html?id=alphysy1</link>
+      <guid>alphysy1</guid>
+      <category>Revision</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>OCR A Level Mathematics Revision Notes</title>
+      <description>This is a downloadable revision sheet detailing some common topic areas in the mechanics and statistics syllabus. This includes a collection of general rigid body solutions with forces and moments labelled (including laminas!!), and a collection of worked solutions for example questions in major hypothesis tests.</description>
+      <link>https://riveenk.github.io/page.html?id=almaths</link>
+      <guid>almaths</guid>
+      <category>Revision</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Implications of Buddhism on Political Thought, Governance, and Authority Figures in Sri Lanka</title>
+      <description>Buddhism, the state religion of Sri Lanka, has remained entangled in all lives and institutions of Sri Lanka. Historically, royal patronage and religious loyalty have elevated Buddhism to a state of authority. This report examines existing literature, including public opinion, to explore implications of Buddhism on political thought, governance, and authority figures in Sri Lanka. Main findings characterise Buddhist clergy and institutions to be embedded in the Sri Lankan political landscape. They act as informal political advisory bodies, influencing state governance often overruling electoral mandates. Furthermore, Buddhist Nationalist rhetoric significantly shapes public opinion, potentially even causing extremist behaviour. Buddhist symbolism and monastic endorsement also shape electoral support which is both highly sought after by political leaders and detrimental for non-Buddhist politicians. The uneven power Buddhist figures hold in Sri Lankan politics suggests challenging and hostile social structures towards non-Sinhala-Buddhists. These institutions often propagate messages that are not representative of traditional Buddhist teachings, suggesting that the authority vested on Buddhist figures due to their Buddhist affiliation is misused in Sri Lanka.</description>
+      <link>https://riveenk.github.io/page.html?id=buddhisminsl</link>
+      <guid>buddhisminsl</guid>
+      <category>Report</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>To what extent does Nabokov present ‘girl-children’ as ‘immoral and dangerous seductress[es]’ in Lolita?</title>
+      <description>In Nabokov’s Lolita, readers are presented with Humbert Humbert, who grooms and eventually rapes Dolores Haze, his “Lolita”. Despite his regret of the “foul lust [he] had inflicted upon [her],” and Dr. John Ray’s denouncement of Humbert as “horrible [and] abject,” in the preface, the social perception of Dolores and the “girl-children” is far from being absolved. Bertens (2001) argues that one of the “cultural stereotypes” imposed on female characters is, the “immoral and dangerous seductress,” which is true for Lolita and the “nymphets”, created by both Humbert and society, but not necessarily Dolores and the “girl-children”, created by Nabokov. </description>
+      <link>https://riveenk.github.io/page.html?id=girlchildsnabkov</link>
+      <guid>girlchildsnabkov</guid>
+      <category>Report</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Tue, 19 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Authorial God Hypothesis</title>
+      <description>God—in many belief systems and prominently, the Abrahamic tradition—is an omnipotent, omniscient, omnipresent, omnibenevolent, and perfect being. These faiths and beliefs also credit God for creating the universe and its inhabitants: us. Equally so, some faiths believe in multiple and more human-like Gods: the Ancient Greeks, Ancient Egyptians, and Hinduism are examples. There are even some beliefs that believe in a false God (Gnosticism) or one capable of malice (Dystheism). This is a simplified non-exhaustive overview of the diversity among those who do believe in a God/s. Within this range lies a God I would refer to as Authorial. This essay proposes a theological cosmology compatible with natural laws and divine causality, to reframe our relationship with our Creator and our understanding of will and purpose.</description>
+      <link>https://riveenk.github.io/page.html?id=authgodhypt</link>
+      <guid>authgodhypt</guid>
+      <category>Blog</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Paint My Skies With Yellow Sparks</title>
+      <description>Today, war has become a non-negligble fact of our lives. Everyday, people are massacred in dozens and life is inherently fractured to thousands. Amongst this chaos, sometimes, children's simple sayings make more sense than the actions of the adults.</description>
+      <link>https://riveenk.github.io/page.html?id=yellowsparks</link>
+      <guid>yellowsparks</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Sat, 10 May 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Maybe the Gods are Playing Cricket</title>
+      <description>As a child, I liked to imagine the scary and loud thunderstorms were just cricket matches in heaven. There was a sense of comfort in it, but also felt gross to be under the rain.</description>
+      <link>https://riveenk.github.io/page.html?id=godsplayingcricket</link>
+      <guid>godsplayingcricket</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Thu, 08 May 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>The Crying Maiden</title>
+      <description>Professor Senavirathne is gifted a painting notorious for being cursed. But when his agnostic approach leaves him vulnerable, the tales reveal their truth. Haunted by his mistake, he is left choiceless and helpless.</description>
+      <link>https://riveenk.github.io/page.html?id=cryingmaiden</link>
+      <guid>cryingmaiden</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Mon, 28 Apr 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>50 Shades of Gender: Gender Complexity and a Post-Gender Society</title>
+      <description>For much of recorded history, gender and sex were used interchangeably: male meant XY chromosomes and masculinity, and female meant XX chromosomes and femininity. However, modern gender has evolved into a broader and more nuanced spectrum—some sources listing dozens, if not hundreds, of uniquely defined identities. This essay examines the nature of gender and argues for abolishing it as a descriptive identifying term.</description>
+      <link>https://riveenk.github.io/page.html?id=20250421A</link>
+      <guid>20250421A</guid>
+      <category>Blog</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Mon, 21 Apr 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Maybe in a Few Years</title>
+      <description>fillInLater</description>
+      <link>https://riveenk.github.io/page.html?id=inafewyears</link>
+      <guid>inafewyears</guid>
+      <category>Debating</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 09 Apr 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Asian Parliamentary Format</title>
+      <description>APD Format is a parliamentary debating model that involves two teams of three members. The Government argues for the motion, and the Opposition argues against the motion. There are three constructive speeches and a reply speech for each team.</description>
+      <link>https://riveenk.github.io/page.html?id=apd</link>
+      <guid>apd</guid>
+      <category>Debating</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>British Parliamentary Format</title>
+      <description>BPD Format is a parliamentary debating model that involves four teams of two members. The Government argues for the motion, and the Opposition argues against the motion. The two sides are further divided into the Opening and Closing Benches, each with separate expectations on them. There are two constructive speeches for each team and no reply speeches.</description>
+      <link>https://riveenk.github.io/page.html?id=bpd</link>
+      <guid>bpd</guid>
+      <category>Debating</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Junior World Schools Debating Championship Format </title>
+      <description>JWSDC Format is used in the Junior World Schools Debating Championship and involves two teams of three members. The Proposition argues for the motion, and the Opposition argues against the motion. There will be three constructive speeches and two reply speeches.</description>
+      <link>https://riveenk.github.io/page.html?id=jwsdc</link>
+      <guid>jwsdc</guid>
+      <category>Debating</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Oxford-Style Debating Format</title>
+      <description>OxSD Format is a public debating model that involves two teams of several members (typically three). The Proposition argues for the motion, and the Opposition argues against the motion. There are multiple sections to this format and it is adapted in various ways by various organisers.</description>
+      <link>https://riveenk.github.io/page.html?id=oxsd</link>
+      <guid>oxsd</guid>
+      <category>Debating</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>World Schools Debating Championship Format</title>
+      <description>WSDC Format is used in the World Schools Debating Championship and involves two teams of three members. The Proposition argues for the motion, and the Opposition argues against the motion. There are three constructive speeches and a reply speech for each team. </description>
+      <link>https://riveenk.github.io/page.html?id=wsdc</link>
+      <guid>wsdc</guid>
+      <category>Debating</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Laboratory life: my work experience week at BGS</title>
+      <description>This is a blog post summarising my work experience week at the British Geological Survey, Keyworth Laboratories.</description>
+      <link>https://www.bgs.ac.uk/news/laboratory-life-my-work-experience-week-at-bgs/</link>
+      <guid>bgsworkexperience</guid>
+      <category>External</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Tue, 20 Aug 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>why it matters to remember</title>
+      <description>cecil richard’s under a star called sun is a reader-led short story about a narrator where “the trajectory of [his] ship is unchanging.” he (i like to see myself on the ship; you may too) recalls that the coffee “never tastes as good as the ones you get from the cafes back home,” as a quiet matter-of-fact.</description>
+      <link>https://riveenk.github.io/page.html?id=20240814A</link>
+      <guid>20240814A</guid>
+      <category>Blog</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>#2: The Limit of Opinion Entitlement</title>
+      <description>People have a right to hold an opinion. But we all understand that there is a limit to it. Listen to us yap for about an hour trying to understand where that line stands and who decides where it lies. We will talk about some possible (bleak and horrifying) futures where ideas we now consider degenerate may be seen more favourably. We're still sorry for the worst mics ever.</description>
+      <link>https://riveenk.github.io/podcast/player.html?ep=2</link>
+      <guid>wbc20240809</guid>
+      <category>Podcast</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Fri, 09 Aug 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>#1: Social Media and the Whole Thing</title>
+      <description>What does it actually takes to be an influencer? In this episode, we will explore the role of the audience in this system and how social media is shaped by it. (Wolfie would like to apologise for his bad mic)</description>
+      <link>https://riveenk.github.io/podcast/player.html?ep=1</link>
+      <guid>wbc20240731</guid>
+      <category>Podcast</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 31 Jul 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Cost of Living and University Choices &lt;i class='fa-solid fa-arrow-up-right-from-square'&gt;&lt;/i&gt;</title>
+      <description>This is a report compiled with Adam Runacres, Freya Neason, and Ismail Choudary at The Access Project. We researched into the effects of the cost of living crisis on young people and their higher-education choices.</description>
+      <link>https://theaccessproject.org.uk/2024/06/24/cost-of-living-university-choices-report/</link>
+      <guid>tapresearchcolc</guid>
+      <category>External</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Mon, 24 Jun 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Masked Figures</title>
+      <description>The isolation of being quaratined during Covid has impacted many of us in a myriad of ways. The clinical routine we had to conform to, and the constant fear of death, robbed us of the simple need of feeling like ourselves. It makes no sense, in a way that it would've to the versions of us stuck in our houses.</description>
+      <link>https://riveenk.github.io/page.html?id=maskedfigures</link>
+      <guid>maskedfigures</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Fri, 14 Jun 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How to Make a Debating Motion</title>
+      <description>A motion is the topic of discussion in many debating styles. During practices and hosting tournaments, you will be expected to create motions. Whilst you'd have great creative liberty, it is still important to produce motions that spark fruitful and fair debates.</description>
+      <link>https://riveenk.github.io/page.html?id=20240520A</link>
+      <guid>20240520A</guid>
+      <category>Debating</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Mon, 20 May 2024 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>He Fought for You</title>
+      <description>Mahmoud Darwish once wrote, 'The wars will end and the leaders will shake hands, [...] I do not know who sold the homeland but I know who paid the price.' This is for all those who paid the price.</description>
+      <link>https://riveenk.github.io/page.html?id=foughtforyou</link>
+      <guid>foughtforyou</guid>
+      <category>Publication</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Collided Galaxies</title>
+      <description>Grief is a raw tenderness that keeps you anchored to your past. It is a soft ache that will always refuse to go away. Maybe in this cosmic dance, you'll find someone else's stars embedded in your galaxy.</description>
+      <link>https://riveenk.github.io/page.html?id=collidedgalaxies</link>
+      <guid>collidedgalaxies</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>A Summer Night Under the Moon</title>
+      <description>In the cold stillness of the night, the moon has shone a bright spotlight on her own face. But though she stole the hearts of many across all ages before me, the warmth of my lover will keep my heart warm and my eyes affixed on them.</description>
+      <link>https://riveenk.github.io/page.html?id=summernightundermoon</link>
+      <guid>summernightundermoon</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Death's Fear</title>
+      <description>Often death is viewed as ultimate cruelty, the heaviest theft committed upon anyone. But when put in effort, man-made horrors just may be able to scare even death herself.</description>
+      <link>https://riveenk.github.io/page.html?id=deathsfear</link>
+      <guid>deathsfear</guid>
+      <category>Publications</category>
+      <author>Riveen Kumanayaka</author>
+      <pubDate>Sun, 04 Jun 2023 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
 </rss>

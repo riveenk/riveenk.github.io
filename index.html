@@ -2,116 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/media/favicon.png">
-    <link rel="stylesheet" type="text/css" href="design.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/func.js"></script>
-    <title>On My Wavelength</title>
+    <script src="/script.js"></script>
 </head>
 
-<body style="padding: 0px;">
-    <script>
-        createNavBar("#213555", "#3E5879", "#2E4976", 0, "<i class='fa-solid fa-star-of-life'></i><i class='fa-solid fa-star-of-life'></i><i class='fa-solid fa-star-of-life'></i>");
-    </script>
-    <style>
-        h2 {
-            font-size: 2.5em;
-            color: #f5efe7;
-        }
-
-        .search-container {
-            box-sizing: border-box;
-            max-width: 380px;
-        }
-
-        #newThing:hover {
-            transform: rotate(360deg);
-        }
-
-        .page-btn.active {
-            background-color: #3e5879;
-            color: #ece2d8;
-        }
-
-        .page-btn.active:hover {
-            color: #3e5879;
-        }
-
-        @media screen and (min-width: 700px) {
-            #bodyMain {
-                padding-top: 50px;
-            }
-
-            .search-container {
-                width: calc(60% - 50px);
-                margin-left: 0px;
-                margin-right: auto;
-            }
-        }
-
-        @media screen and (max-width: 701px) {
-            #bodyMain {
-                padding-top: 0px;
-            }
-
-            h2 {
-                margin-top: 55px;
-                font-size: 2em;
-            }
-
-            #intro {
-                font-size: 1.3em;
-            }
-
-            .search-container {
-                width: 100%;
-                margin: 0px 20px 0px 0px;
-            }
-        }
-
-        @media screen and (max-width: 500px) {
-            #searchHolder {
-                padding-left: 30px;
-                padding-right: 30px;
-                padding-bottom: 30px;
-            }
-
-            h2 {
-                margin-top: 40px;
-            }
-        }
-    </style>
-
-    <div class="blurMain">
-        <div style="background-color: #3e5879;" id="searchHolder">
-            <h2>Hey, Found You On My Wavelength</h2>
-            <div class="search-container">
-                <button style="background-color: #f5efe7; padding-right: 0px;"><i class="fa fa-search"
-                        style="font-size: medium; color: #706e6a;"></i></button>
-                <input type="text" id="search" placeholder="Search for a Blog Post..."
-                    oninput="filterPostsBySearchInput('search')" style="padding-left: 0px;">
-            </div>
-        </div>
-        <div class="web-body" style="background-color: #D8C4B6;" id="bodyMain">
-            <div class="web-body" style="padding: 0px; background-color: #D8C4B6;" id="postsHolder"></div>
-            <div class="postsScroll">
-            </div>
-        </div>
+<body id="body">
+    <nav class="navBar" id="navBarItem"></nav> <!-- This is filled by JS Injection-->
+    <nav class="mobileNavBar1" id="mobileNavBar1"></nav>
+    <div class="mainBanner" id="mainBanner">
+        <h1>Found You On My Wavelength</h1>
     </div>
-    <script>
-        let paginatedPosts = [];
-        let filteredPosts = [];
-        let currentPage = 0;
-        let pageCount = 0;
-
-        window.addEventListener("DOMContentLoaded", () => {
-            loadPosts();
-            createFooter();
-            document.getElementById("bodyMain").style.paddingTop = document.getElementById("bodyMain").style.paddingLeft + "px";
-        });
-    </script>
+    <main class="mainBodySpace" id="mainBodySpace">
+        <div class="blogPosts" id="blogPostArea"></div>
+        <div class="blogPostsHistoryButtons" id="blogPostsHistoryButtons"></div>
+    </main>
+    <footer class="footer" id="footerHolder"></footer>
 </body>
+<script>
+    initialisePage("<i class='fa-solid fa-star-of-life'></i> <i class='fa-solid fa-star-of-life'></i> <i class='fa-solid fa-star-of-life'></i>");
+    insertSearchBar("mainBanner");
+    initialiseBlogPage();
+
+</script>
 
 </html>

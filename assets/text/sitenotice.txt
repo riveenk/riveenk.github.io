@@ -1,0 +1,57 @@
+<p>Welcome to my blog. These Terms of Use govern your access to and use of my personal blog hosted at https://riveenk.github.io. By continuing to use this blog, you agree to the terms below. If you do not agree with any part of these terms, please discontinue your use of this site.</p>
+
+<h3>1. Definitions</h3>
+
+<p>&ldquo;I&rdquo; / &ldquo;me&rdquo; / &ldquo;my&rdquo; refers to the owner and author, Riveen Kumanayaka.</p>
+
+<p>&ldquo;Blog&rdquo; refers to the website hosted at https://riveenk.github.io.</p>
+
+<p>&ldquo;You&rdquo; refers to any user or visitor of the blog.</p>
+
+<h3>2. General Use</h3>
+
+<p>2.1. This blog is intended for general personal and educational use. It is not a substitute for formal education, certification, or professional training.</p>
+
+<p>2.2. All content is provided as is without warranties or guarantees. You are responsible for determining whether the content suits your needs.</p>
+
+<p>2.3. I reserve the right to modify, remove, or restrict access to any part of the blog at any time without notice.</p>
+
+<p>2.4. These terms may be updated without prior notice. Your continued use of the blog indicates acceptance of the updated terms.</p>
+
+<h3>3. Educational Content</h3>
+
+<p>3.1. The following content types are offered with educational intent, but no guarantees are made regarding accuracy or effectiveness:</p>
+
+<ul>
+
+<li>Debating Posts &ndash; Based on personal experience as a debating trainer.</li>
+
+<li>Revision Notes &ndash; Personal study aids made available in good faith.</li>
+
+</ul>
+
+<p>3.2. You are encouraged to evaluate this content critically and supplement it with authoritative sources where necessary.</p>
+
+<h3>4. Personal Opinions and Sensitive Topics</h3>
+
+<p>4.1. This blog expresses personal views. You may agree or disagree freely.</p>
+
+<p>4.2. Some content may address sensitive topics. Any such material will be flagged appropriately, and you are responsible for choosing whether to engage with it.</p>
+
+<h3>5. Data and Advertising</h3>
+
+<p>5.1. This blog does not use cookies, tracking software, affiliate links, or advertising services.</p>
+
+<p>5.2. This blog employs "local storage" to store information about the chosen theme. Local Storage exists entirely in your browser and no data is sent to servers.
+
+<h3>6. Copyright and Licensing</h3>
+
+<p>6.1. Code (HTML, CSS, JS):</p>
+
+<ul>
+
+<li>Licensed as &ldquo;viewable only&rdquo; under GitHub&rsquo;s Terms of Use.</li>
+
+<li>Forking is permitted only within GitHub, as per GitHub's platform policy.</li>
+
+<li>Reuse of code requires removal of all non-code content (e.g., text, media).</li>

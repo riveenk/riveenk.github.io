@@ -1,0 +1,27 @@
+<p>JWSDC Format is used in the Junior World Schools Debating Championship and involves two teams of three members. The Proposition argues for the motion, and the Opposition argues against the motion. There will be three constructive speeches and two reply speeches.</p>
+<p>Preparation Time: 30:00 Minutes</p>
+<p>Constructive Speech: 05:00 Minutes</p>
+<p>Reply Speech: 03:00 Minutes</p>
+<h3>Team Line-Up</h3>
+<ul>
+<li>Proposition (Prop): Introduces and defends the motion</li>
+<li>Opposition (Opp): Introduces the case against the motion</li>
+</ul>
+<h3>Roles Present in the Room</h3>
+<ul>
+<li>Adjudicator [a-juudikater]: An adjudicator moderates and evaluates the debate to produce feedback and a winner at the end. Always be respectful to the adjudicator and it is common courtesy to refer to them as "Honourable Adjudicator" or "Honourable Chair" (when there is only one adjudicator).</li>
+<li>Timer: The timer is responsible for displaying the speech length of each debater. They may use a bell or an alarm system to indicate the first minute, last minute, and the end. You may request for a stopwatch or a timer based on your preference.</li>
+<li>Organising Committee Member: Some tournaments may assign members from the OC to observe and assist rooms during a debate. This may involve a dedicated member or a roaming member/s.</li>
+<li>Debaters: This is you (hopefully). Your job is to debate for the motion you have prepared for and give it your best job. Remember, a debate is just a debate. Doing your best is more than enough. A win is just a bonus.</li>
+<li>Observers: Observers are non-participating members in a debate. They are typically present only in final rounds or online rounds. However, some in-person tournaments may allow a limited number of observers in preliminary rounds as well. It is important that observers maintain good behaviour and not disrupt the debate or provide any support to the debaters.</li>
+</ul>
+<h3>Speaker Order &amp; Roles</h3>
+<ul>
+<li>First Speakers: The First Speakers introduce the motion, define the key terms, and characterise the context of the debate. Sometimes, they would introduce a module if it is a practical or actor motion. They are expected to present the greater portion of the government case, often at least two constructives. Their definitions hold for the Closing Benches as well.</li>
+<li>Second Speakers: The Second Speakers support the case presented by the PM or LO, extend any left out parts, and present new constructives. They are not expected to present more than one constructive. However, the DPM and DLO are expected to present rebuttals against the other case. They are often advised to maintain a balance between the amount of constructives and rebuttals in their speeches.</li>
+<li>Whip Speakers: A Whip Speaker carries the main responsibility of analysing common themes and clash-points within the whole debate. They are expected to share how their side's case is more justified and stands victorious over the other case. They are also not expected to rebut, but may find it useful as part of their clash-point analysis. The Whip Speaker is not allowed to produce new constructives. However, it is possible to shed clarity over and further substantiate existing constructives. They must defend and analyse the cases of both the opening and closing benches.</li>
+</ul>
+<h3>How to Win</h3>
+<p>Government vs. Opposition: Teams will be judged based on the quality of their arguments, completeness of their presentation, resilience against the other team, and quality of rebuttals. Inpidual contributions will also be factored in when assessing a team's overall score. There must be clear balance between constructives and rebuttals ensuring that the case is both defensive and offensive.</p>
+<h3>Adjudication Outcome</h3>
+<p>The winner team is selected and revealed. Some tournaments also recognise a best speaker for every debate. Many adjudicators will provide an extended description and explanation for their decision (known as an Oral Adjudication or OA).</p>
