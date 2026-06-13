@@ -20,7 +20,7 @@ const navBarItems = [
     ["Sinhala", "/sinhala"],
     ["Stuff", "/stuff"],
     ["Podcast", "/wbc"],
-    ["About Me", "/page/about-me.html"]
+    ["About Me", "/about.html"]
 ];
 const footerItems = [
     ["Copyright © All Rights Reserved", "#"],
@@ -192,7 +192,7 @@ const fofErrorMainMsg = "404: You're Not Supposed To Be Here"
 const fofErrorSecoMsg = "The dark woods of 404 are not safe for you"
 const homePageBtnTxt = `<i class="fa-regular fa-house"></i> Come Home`
 const internetBtnTxt = `Leave the Woods <i class="fa-solid fa-arrow-up-right-from-square"></i>`
-const internetBtnUrl = "https://google.com"
+const internetBtnUrl = "https://www.ecosia.org/"
 
 const pageLoadErrorMsg = "<p>Oops, you broke something. It's okay, I forgive you.</p>"
 const searchLoadErrorMsg = "You Seek Forbidden Knowledge"
@@ -772,14 +772,7 @@ function addThemeSettings() {
         <div class="themeSelecterPopUp" id="themeSelecterPopUp">
     <p class="icon"><button id="closeThemeSelector"><i class="fa-solid fa-xmark"></i></button></p>
     <div class="theme-preview">
-        <div class="preview-header">Theme Preview</div>
-        <div class="preview-box primary"></div>
-        <div class="preview-box secondary"></div>
-        <div class="preview-box dark"></div>
-        <div class="preview-box light"></div>
-
-        <div class="preview-text">Sample text</div>
-        <button class="preview-button">Button</button>
+        <h3>Select Website Theme</h3>
     </div>
     <button id="lightMode" class="themeButtons">Light Mode</button>
     <button id="darkMode" class="themeButtons">Dark Mode</button>
