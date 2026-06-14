@@ -175,8 +175,8 @@ function initialise404ErrorPage(textBoxId = "textBodySpace", svgImage = fofError
             <p>${secondaryMessage}</p>
             <br>
             <div>
-                <a class="fofcomeHomeButton" href="/index.html">${homePageButton}</a>
-                <a class="fofleaveTheWoodsBtn" href="${internetButtonLink}">${internetButton}</a>
+                <a href="/index.html"><button class="fofcomeHomeButton">${homePageButton}</button></a>
+                <a href="${internetButtonLink}"><button class="fofleaveTheWoodsBtn">${internetButton}</button></a>
             </div>
         </div>
     `
