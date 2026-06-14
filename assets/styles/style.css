@@ -626,7 +626,7 @@ textarea {
     list-style: none;
     padding: 0px;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
 }
 
 .primaryListButtons {
@@ -684,6 +684,7 @@ textarea {
 .listedItem ul {
     margin: 5px 0 0 0;
     font-size: small;
+    gap: 5px;
 }
 
 .listedItem li {
