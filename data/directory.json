@@ -21,7 +21,7 @@
                 },
                 "blurb": "Physicists work on problems and cases that may directly involve the general public. However, often times, physicists and the public don’t seem to be able to work on the same level. Poetry is one of the most effective methods to bring everyone to the same table—not through lecture, but through dialogue.",
                 "link": "https://blogs.ed.ac.uk/physics-astronomy/2026/01/23/physicists-can-be-poets-too/",
-                "linkText": "Blogs.Ed <i class='fa-solid fa-arrow-up-right-from-square' style='vertical-align: top; font-size: small; color: cyan;'></i>",
+                "linkText": "Blogs.Ed <i class='fa-solid fa-arrow-up-right-from-square' style='vertical-align: top; font-size: small; color: var(--highlight);'></i>",
                 "twTags": [],
                 "generalTags": []
             },
@@ -111,7 +111,7 @@
                 },
                 "blurb": "This is a blog post summarising my work experience week at the British Geological Survey, Keyworth Laboratories. My week began with a welcome tour of the research facilities at BGS and, more specifically, the geochemistry laboratories. The team provided an introduction to the field of mass spectrometry and the use of isotopes in archaeological research. The sample preparation, which happens under very precise, controlled conditions to exclude contamination, involves a huge amount work prior to analysis.",
                 "link": "https://www.bgs.ac.uk/news/laboratory-life-my-work-experience-week-at-bgs/",
-                "linkText": "BGS Blogs <i class='fa-solid fa-arrow-up-right-from-square' style='vertical-align: top; font-size: small; color: cyan;'></i>",
+                "linkText": "BGS Blogs <i class='fa-solid fa-arrow-up-right-from-square' style='vertical-align: top; font-size: small; color: var(--highlight);'></i>",
                 "twTags": [],
                 "generalTags": []
             },
@@ -139,8 +139,8 @@
         "metaData": {
             "name": "My Publications",
             "summary": "",
-            "buttonLinksText": ["<i class='fa-brands fa-square-tumblr'></i>&nbsp;Tumblr","<i class='fa-solid fa-bookmark'></i>&nbsp;Substack","Scalmropia Archive"],
-            "buttonsLinksDest": ["https://geeky-poet.tumblr.com/","https://riveenk.substack.com/","/scalmropia"]
+            "buttonLinksText": ["<i class='fa-solid fa-bookmark'></i>&nbsp;Substack","Scalmropia Archive"],
+            "buttonsLinksDest": ["https://riveenk.substack.com/","/scalmropia"]
         },
         "listItems": [ 
             {
@@ -682,7 +682,7 @@
     },
     "misc": {
         "listItems": [
-          {
+            {
                 "id": "sitenotice",
                 "title": "Notice to Visitors",
                 "subtitle": "Last Updated: 19th June, 2025",
@@ -694,9 +694,27 @@
                     "sourceLink": "https://commons.wikimedia.org/wiki/Category:Les_Gens_de_Justice_(Honor%C3%A9_Daumier)",
                     "altText": "Sketch art of a crowded court-room"
                 },
-                "blurb": "People have a right to hold an opinion. But we all understand that there is a limit to it. Listen to us yap for about an hour trying to understand where that line stands and who decides where it lies. We will talk about some possible (bleak and horrifying) futures where ideas we now consider degenerate may be seen more favourably. We're still sorry for the worst mics ever.",
-                "link": "/wbc/player.html?ep=2",
-                "linkText": "Listen",
+                "blurb": "",
+                "link": "",
+                "linkText": "",
+                "twTags": [],
+                "generalTags": []
+            },
+            {
+                "id": "about",
+                "title": "Hey, I'm Riveen",
+                "subtitle": "You found me on my wavelength!",
+                "smallStory": "",
+                "imgSrc": "",
+                "imgDetails": {
+                    "author": "",
+                    "source": "",
+                    "sourceLink": "",
+                    "altText": ""
+                },
+                "blurb": "",
+                "link": "",
+                "linkText": "",
                 "twTags": [],
                 "generalTags": []
             }  
