@@ -987,6 +987,29 @@ textarea {
     text-decoration: none;
 }
 
+.socialButtons {
+    margin: 0 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.socialButtons button {
+    font-size: 30px;
+    aspect-ratio: 1;
+    color: var(--light-text);
+    background-color: var(--primary);
+    border: var(--primary) 2px solid;
+    padding: 7px;
+    border-radius: 25%;
+}
+
+.socialButtons button:hover {
+    border: var(--highlight) 2px solid;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 700px) {
     .title {
         width: 100%;
@@ -1006,6 +1029,10 @@ textarea {
         margin-right: auto;
         text-align: left;
         max-height: none;
+    }
+
+    .socialButtons button {
+        font-size: 22px;
     }
 }
 
