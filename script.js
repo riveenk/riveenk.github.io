@@ -20,7 +20,7 @@ const navBarItems = [
     ["Sinhala", "/sinhala"],
     ["Stuff", "/stuff"],
     ["Podcast", "/wbc"],
-    ["About Me", "/about.html"]
+    ["About Me", "/page.html?id=about"]
 ];
 const footerItems = [
     ["Copyright © All Rights Reserved", "#"],
@@ -45,7 +45,7 @@ const primaryPalette = [
     ["--main-text", "#213555"],
     ["--light-text", "#ddd"],
 
-    ["--highlight", "#0437F2"]
+    ["--highlight", "#6cc0f0"]
 ]
 
 const primaryDarkPalette = [
