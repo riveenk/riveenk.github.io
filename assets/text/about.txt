@@ -1,0 +1,9 @@
+<div class="socialButtons">
+<button title="Github"><i class="fa-brands fa-github"></i></button>
+<button title="Letterboxd"><i class="fa-brands fa-letterboxd"></i></button>
+<button title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></button>
+<button title="ORCID"><i class="fa-brands fa-orcid"></i></button>
+<button title="Substack"><i class="fa-solid fa-bookmark"></i></button>
+</div>
+<p>Welcome to my corner of the internet. I'm married to the stars, but I love poetry just as much. I write poems, opinion pieces, and technical pieces in a wide range of platforms. I do some teaching on the side as well. </p>
+<p>I publish regular-ish-ly but no promises. It's the company that matters, right? So, pick a nice spot and scroll about a bit. I hope you find something you enjoy or find useful!</p>
