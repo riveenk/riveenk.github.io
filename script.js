@@ -153,10 +153,9 @@ const favicon = document.createElement("link");
     document.head.appendChild(favicon)
 
 // Font Awesome CDN
-const fontAwesome = document.createElement("link");
-    fontAwesome.rel = "stylesheet"
-    fontAwesome.type = "text/css"
-    fontAwesome.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+const fontAwesome = document.createElement("script");
+    fontAwesome.src = "https://kit.fontawesome.com/2f796ba423.js"
+    fontAwesome.crossOrigin = "anonymous"
     document.head.appendChild(fontAwesome)
 
 const pageTitle = document.createElement("title");
