@@ -1,3 +1,11 @@
+// TO DO LIST
+// > Global Data Centralised with JS and Py
+// > Pagination of displayPages()
+// Get rid of as much innerHTML as possible
+// better naming and useful comments
+// render modules
+// a state obj and config ob
+
 // ==================================
 // Global Variables
 // ==================================
@@ -145,9 +153,10 @@ const favicon = document.createElement("link");
     document.head.appendChild(favicon)
 
 // Font Awesome CDN
-const fontAwesome = document.createElement("script");
-    fontAwesome.src = "https://kit.fontawesome.com/2f796ba423.js"
-    fontAwesome.crossOrigin = "anonymous"
+const fontAwesome = document.createElement("link");
+    fontAwesome.rel = "stylesheet"
+    fontAwesome.type = "text/css"
+    fontAwesome.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
     document.head.appendChild(fontAwesome)
 
 const pageTitle = document.createElement("title");
@@ -291,15 +300,21 @@ function runSearch(term, type) {
     } else {
         currentItemListData = chooseSearchStructure(type, term, [...allItemListData]);
     }
-    console.log(currentItemListData)
     currentPage = 1;
     showAllReturnedValues(type);
-} // This doesn't seem to work in the list page... :(
-
-function chooseSearchStructure(type, term, data) {
-    return searchByKeyWord(term, data);
 }
+function chooseSearchStructure(type, term, data) {
+    switch (type) {
 
+        case "blog":
+        case "list":
+        case "review":
+            return searchByKeyWord(term, data);
+
+        default:
+            return data;
+    }
+}
 function debounce(fn, delay = 300) {
     let timeout;
 
@@ -320,7 +335,11 @@ function setupSearch(type) {
     }, 300);
 
     input.addEventListener("input", (e) => {
-        const displayPl = type === "blog" ? "blogPostArea" : "listedItemGroup"
+        const displayPl = {
+            blog: "blogPostArea",
+            list: "listedItemGroup",
+            review: "listedItemGroup"
+        }[type];
         showSearchingState(displayPl);
         debounced(e.target.value);
     });
@@ -377,13 +396,21 @@ function goToPage(page, type) {
 }
 
 function showAllReturnedValues(type) {
-    if (type === "blog") {
-        displayPosts();
-        displayBlogDisplayUI();
-    }
 
-    if (type === "list") {
-        displayPages();
+    switch (type) {
+
+        case "blog":
+            displayPosts();
+            displayBlogDisplayUI();
+            break;
+
+        case "list":
+            displayPages();
+            break;
+
+        case "review":
+            displayReviews();
+            break;
     }
 }
 
@@ -681,6 +708,86 @@ document.addEventListener("DOMContentLoaded", () => {
 function initiateThemeChange(mode, transition) {
     localStorage.setItem("mode", mode)
     setColourPalette(transition)
+}
+
+// ==================================
+// Review Functions
+// ==================================
+
+function initialiseReviews() {
+
+    document.getElementById("listBodySpace").innerHTML = `
+        <h1>Reviews</h1>
+        <div id="searchEntryBox"></div>
+        <div id="listedItemGroup"></div>
+    `;
+
+    insertSearchBar(
+        "searchEntryBox",
+        "review",
+        "Search reviews..."
+    );
+
+    fetchNParseJSON("/data/reviews.json").then(data => {
+
+        allItemListData = data.reviews;
+        currentItemListData = [...allItemListData];
+
+        displayReviews();
+        setupSearch("review");
+    });
+}
+
+function displayReviews(displayLocation = "listedItemGroup") {
+
+    if (currentItemListData.length === 0) {
+        document.getElementById(displayLocation).innerHTML =
+            "<p>I don't think I've reviewed that.</p>";
+        return;
+    }
+
+    let html = ""
+
+    currentItemListData.forEach(review => {
+
+        let ratingValue = review.rating;
+        let halfStarsCount = 0
+        let starString = ""
+
+        if (ratingValue % 2) {
+            ratingValue = (ratingValue - 1) / 2
+            halfStarsCount = 1
+        } else {
+            ratingValue = ratingValue / 2
+        }
+
+        for (let i = 0; i < ratingValue; i++) {
+            starString += '<i class="fa-solid fa-star"></i>'
+        }
+
+        if (halfStarsCount) { starString += '<i class="fa-solid fa-star-half"></i>'}
+
+        html += `
+        <div class="reviewedItem" id="review-${review.id}">
+        <hr>
+            <div class="reviewedItemImageHolder"><img src="${review.imgSrc}"></div>
+            <h2>${review.name}</h2>
+            <subtitle>
+                <span class="reviewRating">${starString}</span>
+                | ${review.itemType}
+                | ${review.viewerAdvisory}
+                | ${review.reviewType} Review
+            </subtitle>
+            <p id="reviewText-${review.id}" onclick="toggleCSSClass('reviewText-${review.id}', 'showAll')" class="reviewText" title="Click to read more.">${review.reviewText}</p>
+        </div>
+        `;
+    });
+
+    document.getElementById(displayLocation).innerHTML = html;
+}
+
+function handleSpoilerAlert() {
+
 }
 
 // ==================================
