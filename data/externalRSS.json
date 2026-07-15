@@ -8,8 +8,17 @@
     },
     "items": [
         {
+            "title": "Black Hole",
+            "description": "In the dark void where physics ends, imagination holds as much truth as an educated guess. When collapsed under its own weight, blackholes rip apart and consume anything that nears it, even out of love. So, spend your love wisely from an allowed distance and avoid being consumed.",
+            "link": "https://riveenk.github.io/page.html?id=blackhole",
+            "pubDate": "2026-07-14",
+            "category": "Publications",
+            "author": "Riveen Kumanayaka",
+            "guid": "blackhole"
+        },
+        {
             "title": "My Complex Life",
-            "description": "fill in later",
+            "description": "When lonely nights grow longer and darker, the only escape lies in the imaginary. Our lives are often too complete to only have a real part. The real and the imaginary both sum up to create what we call life.",
             "link": "https://riveenk.github.io/page.html?id=complexlife",
             "pubDate": "2026-05-31",
             "category": "Publications",
