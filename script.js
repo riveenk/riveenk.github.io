@@ -156,7 +156,7 @@ const favicon = document.createElement("link");
 const fontAwesome = document.createElement("script");
     fontAwesome.src = "https://kit.fontawesome.com/2f796ba423.js"
     fontAwesome.crossOrigin = "anonymous"
-    document.head.appendChild(fontAwesome)
+    //document.head.appendChild(fontAwesome)
 
 const pageTitle = document.createElement("title");
     pageTitle.innerText = webTitle
@@ -506,7 +506,7 @@ function getPostByID(data, id) {
     return null;
 } // looks for the unique id in every list
 
-function getPageIdAndInitialise() {
+function getPageIdAndInitialise(format="post") {
     const itemID = new URLSearchParams(window.location.search).get("id");
     let changeBackgroundColour = `.mainBodySpace {
         background-color: var(--light);
@@ -514,7 +514,11 @@ function getPageIdAndInitialise() {
     let styleSheet = document.createElement("style");
     styleSheet.textContent = changeBackgroundColour;
     document.head.appendChild(styleSheet) 
-    initialisePostOrPublicationPage(itemID)
+    if (format === "post") {
+        initialisePostOrPublicationPage(itemID)
+    } else if (format === "doc") {
+        initialiseDocumentPage(itemID)
+    }
 } // this produces the page contents
 
 function initialisePostOrPublicationPage(itemID, src = mainDataFile, postDisplayLocation = "textBodySpace") {
@@ -577,6 +581,54 @@ function initialisePostOrPublicationPage(itemID, src = mainDataFile, postDisplay
     });
 } // this loads the page content
 
+function initialiseDocumentPage(itemID, src = mainDataFile, postDisplayLocation = "textBodySpace") {
+    fetchNParseJSON(src).then(data => {
+        const post = getPostByID(data, itemID);
+        if (post) {
+            let postContent = "";
+            if (post.imgSrc != ""){
+                postContent += `
+                <img src="${post.imgSrc}" alt="${post.imgDetails.altText}" class="mainBannerImage">
+                <p id="imageID">By ${post.imgDetails.author} from <a href="${post.imgDetails.sourceLink}">${post.imgDetails.source}</a></p>`
+            }
+
+            postContent += `
+                <h1>${post.title}</h1>
+                <h2>${post.subtitle}</h2>`
+
+            postContent += "<div id='mainTextContent'>\n"
+
+            if (post.smallStory) {
+                postContent += `
+                    <hr>
+                    <div class = "smallStory" id="smallStory">
+                        <p>${post.smallStory}</p>
+                    </div>
+                    <hr>
+                `
+            } // checks if the post has a small story and displays it
+
+            if (post["twTags"].length) {
+                let tagList = post["twTags"].join(", ");
+
+                postContent += `
+                <div class="triggerWarning">
+                <p><b>Trigger Warning</b>: ${tagList}</p>
+                </div>\n`
+            } // checks if the post has tws and displays the message
+
+            postContent += "\n</div>\n<div id='pdf-viewer' style='height: 100vh; position:unset;'></div>"
+            document.getElementById(postDisplayLocation).innerHTML = postContent;
+            
+        } else {
+            initialise404ErrorPage()
+        }
+
+    }).catch(err => {
+        initialise404ErrorPage(postDisplayLocation);
+    });
+} // this loads the document and details
+
 // ==================================
 // Pages List Display and Retrieval
 // ==================================
@@ -587,7 +639,7 @@ function initialiseItemsPage(name, subtext, linkTexts, links, tagStat) {
         if (linkTexts.length > 0) {
             primaryButtonList += `<ul class="primaryListButtons">\n`
             for (let i = 0; i < linkTexts.length; i++) {
-                primaryButtonList += `<li><a href="${links[i]}"><button>${linkTexts[i]}</button></a></li>`
+                primaryButtonList += `<li id="${linkTexts[i].toLowerCase().replace(/<.*>/, "").replace("&nbsp;", "").trim().split(" ").join("-")}"><a href="${links[i]}"><button>${linkTexts[i]}</button></a></li>`
             }
             primaryButtonList += `</ul>`
         }
@@ -815,7 +867,7 @@ function changeCSSVar(varName, newValue) {
 function setColourPalette(transition = false) {
     const root = document.documentElement;
     const paletteName = localStorage.getItem("theme") || "primary";
-    const mode = localStorage.getItem("mode") || "light"
+    const mode = localStorage.getItem("mode") || "light";
 
     const run = () => {
         applyColourPalette(paletteName, mode);
@@ -844,6 +896,8 @@ function applyColourPalette(paletteName, mode) {
     palette.forEach(([variable, value]) => {
         root.style.setProperty(variable, value);
     });
+
+    document.dispatchEvent(new CustomEvent('theme-changed', {"detail":"Tells that the theme has changed"}))
 }
 
 function loadTextFile(src) {

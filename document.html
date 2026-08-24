@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
+</head>
+
+<body id="body">
+    <nav class="navBar" id="navBarItem"></nav> <!-- This is filled by JS Injection -->
+    <nav class="mobileNavBar1" id="mobileNavBar1"></nav>
+    <main class="mainBodySpace" id="mainBodySpace" style="background-color: var(--light);">
+        <div class="textBodySpace" id="textBodySpace">
+        </div>
+    </main>
+    <footer class="footer" id="footerHolder"></footer>
+</body>
+<script>
+    initialisePage();
+    getPageIdAndInitialise("doc")
+    const itemID = new URLSearchParams(window.location.search).get("id");
+</script>
+<script type="module">
+    import EmbedPDF from 'https://cdn.jsdelivr.net/npm/@embedpdf/snippet@2/dist/embedpdf.js';
+
+    const pdfViewer = EmbedPDF.init({
+        type: 'container',
+        target: document.getElementById('pdf-viewer'),
+        src: '/assets/documents/' + itemID + '.pdf',
+        theme: {
+            preference: localStorage.getItem("mode") === 'light' ? 'light' : 'dark',
+            light: {
+                background: {
+                    app: palettes[localStorage.getItem("theme") || "primary"]["light"][1][1]
+                }
+            },
+            dark: {
+                background: {
+                    app: palettes[localStorage.getItem("theme") || "primary"]["dark"][2][1]
+                }
+            }
+        }
+    });
+
+    document.addEventListener("theme-changed", (e) => {
+        pdfViewer.setTheme(localStorage.getItem("mode") === 'light' ? 'light' : 'dark')
+    })
+
+
+</script>
+
+</html>
