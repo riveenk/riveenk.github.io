@@ -39,7 +39,8 @@
                     app: palettes[localStorage.getItem("theme") || "primary"]["dark"][2][1]
                 }
             }
-        }
+        },
+        disabledCategories: ['form', 'redaction', 'annotation-shape', 'insert', 'document-open', 'document-close', 'document-protect']
     });
 
     document.addEventListener("theme-changed", (e) => {
