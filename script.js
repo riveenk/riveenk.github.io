@@ -1,11 +1,3 @@
-// TO DO LIST
-// > Global Data Centralised with JS and Py
-// > Pagination of displayPages()
-// Get rid of as much innerHTML as possible
-// better naming and useful comments
-// render modules
-// a state obj and config ob
-
 // ==================================
 // Global Variables
 // ==================================
@@ -156,7 +148,7 @@ const favicon = document.createElement("link");
 const fontAwesome = document.createElement("script");
     fontAwesome.src = "https://kit.fontawesome.com/2f796ba423.js"
     fontAwesome.crossOrigin = "anonymous"
-    //document.head.appendChild(fontAwesome)
+    document.head.appendChild(fontAwesome)
 
 const pageTitle = document.createElement("title");
     pageTitle.innerText = webTitle
