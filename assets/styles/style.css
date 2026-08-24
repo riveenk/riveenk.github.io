@@ -1161,6 +1161,9 @@ textarea {
     }
 }
 
+#pdf-viewer {
+    margin: 40px 0 0 0;
+}
 
 .footer {
     background-color: var(--primary);
