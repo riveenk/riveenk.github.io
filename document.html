@@ -3,7 +3,6 @@
 
 <head>
     <script src="/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.4.456/pdf.min.js"></script>
 </head>
 
 <body id="body">
@@ -21,7 +20,7 @@
     const itemID = new URLSearchParams(window.location.search).get("id");
 </script>
 <script type="module">
-    import EmbedPDF from 'https://cdn.jsdelivr.net/npm/@embedpdf/snippet@2/dist/embedpdf.js';
+    import EmbedPDF, {ZoomMode} from 'https://cdn.jsdelivr.net/npm/@embedpdf/snippet@2/dist/embedpdf.js';
 
     const pdfViewer = EmbedPDF.init({
         type: 'container',
@@ -40,7 +39,10 @@
                 }
             }
         },
-        disabledCategories: ['form', 'redaction', 'annotation-shape', 'insert', 'document-open', 'document-close', 'document-protect']
+        disabledCategories: ['form', 'redaction', 'annotation-shape', 'insert', 'document-open', 'document-close', 'document-protect'],
+        zoom: {
+            defaultZoomLevel: ZoomMode.FitWidth
+        }
     });
 
     document.addEventListener("theme-changed", (e) => {
