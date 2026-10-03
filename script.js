@@ -11,7 +11,6 @@ const navBarItems = [
     ["Debating", "/debating"],
     ["Sinhala", "/sinhala"],
     ["Stuff", "/stuff"],
-    ["Podcast", "/wbc"],
     ["About Me", "/page.html?id=about"]
 ];
 const footerItems = [
