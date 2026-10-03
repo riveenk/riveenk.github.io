@@ -8,6 +8,15 @@
     },
     "items": [
         {
+            "title": "Humanity began with war",
+            "description": "Humanity began with war. Experts even theorise that a possible reason behind the sudden extinction of other human species could have been direct conflict with Homo Sapiens (us). Following that, we have come so far. From spears we made for hunting and fire we made for warmth, we have developed weapons and evolved beyond its primitive reaches.",
+            "link": "https://riveenk.substack.com/p/humanity-began-with-war",
+            "pubDate": "2026-09-26",
+            "category": "Substack",
+            "author": "Riveen Kumanayaka",
+            "guid": "substack20260926"
+        },
+        {
             "title": "Black Hole",
             "description": "In the dark void where physics ends, imagination holds as much truth as an educated guess. When collapsed under its own weight, blackholes rip apart and consume anything that nears it, even out of love. So, spend your love wisely from an allowed distance and avoid being consumed.",
             "link": "https://riveenk.github.io/page.html?id=blackhole",
@@ -276,24 +285,6 @@
             "category": "Blog",
             "author": "Riveen Kumanayaka",
             "guid": "20240814A"
-        },
-        {
-            "title": "#2: The Limit of Opinion Entitlement",
-            "description": "People have a right to hold an opinion. But we all understand that there is a limit to it. Listen to us yap for about an hour trying to understand where that line stands and who decides where it lies. We will talk about some possible (bleak and horrifying) futures where ideas we now consider degenerate may be seen more favourably. We're still sorry for the worst mics ever.",
-            "link": "https://riveenk.github.io/podcast/player.html?ep=2",
-            "pubDate": "2024-08-09",
-            "category": "Podcast",
-            "author": "Riveen Kumanayaka",
-            "guid": "wbc20240809"
-        },
-        {
-            "title": "#1: Social Media and the Whole Thing",
-            "description": "What does it actually takes to be an influencer? In this episode, we will explore the role of the audience in this system and how social media is shaped by it. (Wolfie would like to apologise for his bad mic)",
-            "link": "https://riveenk.github.io/podcast/player.html?ep=1",
-            "pubDate": "2024-07-31",
-            "category": "Podcast",
-            "author": "Riveen Kumanayaka",
-            "guid": "wbc20240731"
         },
         {
             "title": "Cost of Living and University Choices <i class='fa-solid fa-arrow-up-right-from-square'></i>",

@@ -40,7 +40,10 @@
                 "blurb": "In Nabokov’s Lolita, readers are presented with Humbert Humbert, who grooms and eventually rapes Dolores Haze, his “Lolita”. Despite his regret of the “foul lust [he] had inflicted upon [her],” and Dr. John Ray’s denouncement of Humbert as “horrible [and] abject,” in the preface, the social perception of Dolores and the “girl-children” is far from being absolved. Bertens (2001) argues that one of the “cultural stereotypes” imposed on female characters is, the “immoral and dangerous seductress,” which is true for Lolita and the “nymphets”, created by both Humbert and society, but not necessarily Dolores and the “girl-children”, created by Nabokov. ",
                 "link": "/document.html?id=girlchildsnabkov",
                 "linkText": "Read More",
-                "twTags": ["Rape", "Child Sexual Abuse"],
+                "twTags": [
+                    "Rape",
+                    "Child Sexual Abuse"
+                ],
                 "generalTags": []
             },
             {
@@ -139,10 +142,18 @@
         "metaData": {
             "name": "My Publications",
             "summary": "",
-            "buttonLinksText": ["<i class='fa-solid fa-bookmark'></i>&nbsp;Substack", "Reviews", "Scalmropia Archive"],
-            "buttonsLinksDest": ["https://riveenk.substack.com/", "/reviews.html","/scalmropia"]
+            "buttonLinksText": [
+                "<i class='fa-solid fa-bookmark'></i>&nbsp;Substack",
+                "Reviews",
+                "Scalmropia Archive"
+            ],
+            "buttonsLinksDest": [
+                "https://riveenk.substack.com/",
+                "/reviews.html",
+                "/scalmropia"
+            ]
         },
-        "listItems": [ 
+        "listItems": [
             {
                 "id": "blackhole",
                 "title": "Black Hole",
@@ -158,8 +169,15 @@
                 "blurb": "In the dark void where physics ends, imagination holds as much truth as an educated guess. When collapsed under its own weight, blackholes rip apart and consume anything that nears it, even out of love. So, spend your love wisely from an allowed distance and avoid being consumed.",
                 "link": "/page.html?id=blackhole",
                 "linkText": "Read More",
-                "twTags": ["Depression", "Isolation"],
-                "generalTags": ["Poetry", "Mental Health", "Grief"]
+                "twTags": [
+                    "Depression",
+                    "Isolation"
+                ],
+                "generalTags": [
+                    "Poetry",
+                    "Mental Health",
+                    "Grief"
+                ]
             },
             {
                 "id": "complexlife",
@@ -177,8 +195,11 @@
                 "link": "/page.html?id=complexlife",
                 "linkText": "Read Poem",
                 "twTags": [],
-                "generalTags": ["Poetry", "Mental health"]
-            },  
+                "generalTags": [
+                    "Poetry",
+                    "Mental health"
+                ]
+            },
             {
                 "id": "threebodyproblem",
                 "title": "Three Body Problem",
@@ -195,7 +216,12 @@
                 "link": "/page.html?id=threebodyproblem",
                 "linkText": "Read Poem",
                 "twTags": [],
-                "generalTags": ["Poetry", "Grief", "Loss", "Lost Love"]
+                "generalTags": [
+                    "Poetry",
+                    "Grief",
+                    "Loss",
+                    "Lost Love"
+                ]
             },
             {
                 "id": "youdontcomecloser",
@@ -213,8 +239,11 @@
                 "link": "/page.html?id=youdontcomecloser",
                 "linkText": "Read Poem",
                 "twTags": [],
-                "generalTags": ["Poetry", "Grief"]
-            },    
+                "generalTags": [
+                    "Poetry",
+                    "Grief"
+                ]
+            },
             {
                 "id": "thenightswereyoung",
                 "title": "The Nights Were Young",
@@ -230,8 +259,15 @@
                 "blurb": "Aragalaya ('Struggle') was one of the most pivotal events I have ever witnessed and taken part in. It was an experience of both pride and fear alike. Ousting a family of war criminals and thieves, along with the toxic political world they built, cost more than just sweat and tears.",
                 "link": "/page.html?id=thenightswereyoung",
                 "linkText": "Read Poem",
-                "twTags": ["Political Violence"],
-                "generalTags": ["Poetry", "Politics", "Sri Lanka", "Aragalaya"]
+                "twTags": [
+                    "Political Violence"
+                ],
+                "generalTags": [
+                    "Poetry",
+                    "Politics",
+                    "Sri Lanka",
+                    "Aragalaya"
+                ]
             },
             {
                 "id": "iseeonlyyou",
@@ -248,8 +284,15 @@
                 "blurb": "If you end up killing someone you love, what would you do to bring them back? The guilt would be parasitic in its way of decaying away your soul. Maybe you will spiral away into delirium.",
                 "link": "/page.html?id=iseeonlyyou",
                 "linkText": "Read Poem",
-                "twTags": ["Horror", "Murder", "Self-harm"],
-                "generalTags": ["Poem", "Grief"]
+                "twTags": [
+                    "Horror",
+                    "Murder",
+                    "Self-harm"
+                ],
+                "generalTags": [
+                    "Poem",
+                    "Grief"
+                ]
             },
             {
                 "id": "yellowsparks",
@@ -266,8 +309,13 @@
                 "blurb": "Today, war has become a non-negligble fact of our lives. Everyday, people are massacred in dozens and life is inherently fractured to thousands. Amongst this chaos, sometimes, children's simple sayings make more sense than the actions of the adults.",
                 "link": "/page.html?id=yellowsparks",
                 "linkText": "Read Poem",
-                "twTags": ["War"],
-                "generalTags": ["Poetry", "Social Protest"]
+                "twTags": [
+                    "War"
+                ],
+                "generalTags": [
+                    "Poetry",
+                    "Social Protest"
+                ]
             },
             {
                 "id": "godsplayingcricket",
@@ -285,7 +333,10 @@
                 "link": "/page.html?id=godsplayingcricket",
                 "linkText": "Read Poem",
                 "twTags": [],
-                "generalTags": ["Poetry", "Playful"]
+                "generalTags": [
+                    "Poetry",
+                    "Playful"
+                ]
             },
             {
                 "id": "cryingmaiden",
@@ -302,8 +353,14 @@
                 "blurb": "Professor Senavirathne is gifted a painting notorious for being cursed. But when his agnostic approach leaves him vulnerable, the tales reveal their truth. Haunted by his mistake, he is left choiceless and helpless.",
                 "link": "/page.html?id=cryingmaiden",
                 "linkText": "Read Story",
-                "twTags": ["Horror", "Death", "Gore"],
-                "generalTags": ["Story"]
+                "twTags": [
+                    "Horror",
+                    "Death",
+                    "Gore"
+                ],
+                "generalTags": [
+                    "Story"
+                ]
             },
             {
                 "id": "inafewyears",
@@ -321,7 +378,11 @@
                 "link": "/page.html?id=inafewyears",
                 "linkText": "Read Poem",
                 "twTags": [],
-                "generalTags": ["Poetry", "Friendship", "Nostalgic"]
+                "generalTags": [
+                    "Poetry",
+                    "Friendship",
+                    "Nostalgic"
+                ]
             },
             {
                 "id": "tapresearchcolc",
@@ -339,7 +400,13 @@
                 "link": "https://theaccessproject.org.uk/2024/06/24/cost-of-living-university-choices-report/",
                 "linkText": "Read Report <i class='fa-solid fa-arrow-up-right-from-square'></i>",
                 "twTags": [],
-                "generalTags": ["External", "Report", "The Access Project", "Cost of Living", "University"]
+                "generalTags": [
+                    "External",
+                    "Report",
+                    "The Access Project",
+                    "Cost of Living",
+                    "University"
+                ]
             },
             {
                 "id": "maskedfigures",
@@ -356,8 +423,14 @@
                 "blurb": "The isolation of being quaratined during Covid has impacted many of us in a myriad of ways. The clinical routine we had to conform to, and the constant fear of death, robbed us of the simple need of feeling like ourselves. It makes no sense, in a way that it would've to the versions of us stuck in our houses.",
                 "link": "/page.html?id=maskedfigures",
                 "linkText": "Read Poem",
-                "twTags": ["Death", "Covid", "Blood"],
-                "generalTags": ["Poetry"]
+                "twTags": [
+                    "Death",
+                    "Covid",
+                    "Blood"
+                ],
+                "generalTags": [
+                    "Poetry"
+                ]
             },
             {
                 "id": "foughtforyou",
@@ -374,8 +447,13 @@
                 "blurb": "Mahmoud Darwish once wrote, 'The wars will end and the leaders will shake hands, [...] I do not know who sold the homeland but I know who paid the price.' This is for all those who paid the price.",
                 "link": "/page.html?id=foughtforyou",
                 "linkText": "Read Poem",
-                "twTags": ["War", "Death"],
-                "generalTags": ["Poetry"]
+                "twTags": [
+                    "War",
+                    "Death"
+                ],
+                "generalTags": [
+                    "Poetry"
+                ]
             },
             {
                 "id": "collidedgalaxies",
@@ -393,7 +471,11 @@
                 "link": "/page.html?id=collidedgalaxies",
                 "linkText": "Read Poem",
                 "twTags": [],
-                "generalTags": ["Poetry", "Romance", "Lost Love"]
+                "generalTags": [
+                    "Poetry",
+                    "Romance",
+                    "Lost Love"
+                ]
             },
             {
                 "id": "summernightundermoon",
@@ -411,7 +493,12 @@
                 "link": "/page.html?id=summernightundermoon",
                 "linkText": "Read Poem",
                 "twTags": [],
-                "generalTags": ["Poetry", "Romance", "Night", "Love"]
+                "generalTags": [
+                    "Poetry",
+                    "Romance",
+                    "Night",
+                    "Love"
+                ]
             },
             {
                 "id": "deathsfear",
@@ -428,8 +515,14 @@
                 "blurb": "Death is often viewed as the ultimate cruelty, the heaviest theft committed upon anyone. But when put in effort, man-made horrors just may be able to scare even death herself.",
                 "link": "/page.html?id=deathsfear",
                 "linkText": "Read Poem",
-                "twTags": ["Gore", "Death"],
-                "generalTags": ["Poetry", "Horror"]
+                "twTags": [
+                    "Gore",
+                    "Death"
+                ],
+                "generalTags": [
+                    "Poetry",
+                    "Horror"
+                ]
             }
         ]
     },
@@ -437,8 +530,16 @@
         "metaData": {
             "name": "Debating Collection",
             "summary": "",
-            "buttonLinksText": ["<i class='fa-solid fa-hourglass-half'></i>&nbsp;Timer","<i class='fa-solid fa-list-ul'></i>&nbsp;Glossary","<i class='fa-solid fa-scale-balanced'></i>&thinsp;&thinsp;Formats"],
-            "buttonsLinksDest": ["/debating/timer.html","/debating/glossary.html","/debating/formats.html"],
+            "buttonLinksText": [
+                "<i class='fa-solid fa-hourglass-half'></i>&nbsp;Timer",
+                "<i class='fa-solid fa-list-ul'></i>&nbsp;Glossary",
+                "<i class='fa-solid fa-scale-balanced'></i>&thinsp;&thinsp;Formats"
+            ],
+            "buttonsLinksDest": [
+                "/debating/timer.html",
+                "/debating/glossary.html",
+                "/debating/formats.html"
+            ],
             "hideTag": true
         },
         "listItems": [
@@ -458,7 +559,9 @@
                 "link": "/page.html?id=20240520A",
                 "linkText": "Read Post",
                 "twTags": [],
-                "generalTags": ["Debating"]
+                "generalTags": [
+                    "Debating"
+                ]
             }
         ]
     },
@@ -487,7 +590,9 @@
                 "link": "/page.html?id=apd",
                 "linkText": "Read Post",
                 "twTags": [],
-                "generalTags": ["Debating"]
+                "generalTags": [
+                    "Debating"
+                ]
             },
             {
                 "id": "bpd",
@@ -505,7 +610,9 @@
                 "link": "/page.html?id=bpd",
                 "linkText": "Read Post",
                 "twTags": [],
-                "generalTags": ["Debating"]
+                "generalTags": [
+                    "Debating"
+                ]
             },
             {
                 "id": "jwsdc",
@@ -523,7 +630,9 @@
                 "link": "/page.html?id=jwsdc",
                 "linkText": "Read Post",
                 "twTags": [],
-                "generalTags": ["Debating"]
+                "generalTags": [
+                    "Debating"
+                ]
             },
             {
                 "id": "oxsd",
@@ -541,7 +650,9 @@
                 "link": "/page.html?id=oxsd",
                 "linkText": "Read Post",
                 "twTags": [],
-                "generalTags": ["Debating"]
+                "generalTags": [
+                    "Debating"
+                ]
             },
             {
                 "id": "wsdc",
@@ -559,7 +670,9 @@
                 "link": "/page.html?id=wsdc",
                 "linkText": "Read Post",
                 "twTags": [],
-                "generalTags": ["Debating"]
+                "generalTags": [
+                    "Debating"
+                ]
             }
         ]
     },
@@ -647,57 +760,6 @@
             }
         ]
     },
-    "podcast": {
-        "metaData": {
-            "name": "Wanna Be Cancelled?",
-            "summary": "We're a podcast about humans and, I don't know, everything! It could seem like the most innocent episode at a point and us just, asking to be cancelled in another. Trust me, we're worth the trouble. Anyways, thank you for reading the description up to this point. You can go back to doing something important now. Unless you are bored and just want to listen to two randos' yapping... Then, feel free to sit back, grab a snack, and let our thoughts stack.",
-            "buttonLinksText": ["<i class='fa-solid fa-circle-play'></i>&nbsp;Listen Now","<i class='fa-brands fa-spotify'></i>&nbsp;Find us on Spotify"],
-            "buttonsLinksDest": ["/wbc/player.html","https://open.spotify.com/show/3JOaF66buYbpTTc8qaMJ5F"],
-            "hideTag": true
-        },
-        "listItems": [
-            {
-                "id": "wbc20240809",
-                "episode": 2,
-                "title": "#2: The Limit of Opinion Entitlement",
-                "subtitle": "09 August, 2024",
-                "src":"https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e2.mp3",
-                "smallStory": "",
-                "imgSrc": "",
-                "imgDetails": {
-                    "author": "",
-                    "source": "",
-                    "sourceLink": "",
-                    "altText": ""
-                },
-                "blurb": "People have a right to hold an opinion. But we all understand that there is a limit to it. Listen to us yap for about an hour trying to understand where that line stands and who decides where it lies. We will talk about some possible (bleak and horrifying) futures where ideas we now consider degenerate may be seen more favourably. We're still sorry for the worst mics ever.",
-                "link": "/wbc/player.html?ep=2",
-                "linkText": "Listen",
-                "twTags": ["abuse", "pedophilia"],
-                "generalTags": []
-            },
-            {
-                "id": "wbc20240731",
-                "episode": 1,
-                "title": "#1: Social Media and the Whole Thing",
-                "subtitle": "31 July, 2024",
-                "src":"https://ia801403.us.archive.org/3/items/wbc_20250414/wbc-e1.mp3",
-                "smallStory": "",
-                "imgSrc": "",
-                "imgDetails": {
-                    "author": "",
-                    "source": "",
-                    "sourceLink": "",
-                    "altText": ""
-                },
-                "blurb": "What does it actually takes to be an influencer? In this episode, we will explore the role of the audience in this system and how social media is shaped by it. (Wolfie would like to apologise for his bad mic)",
-                "link": "/wbc/player.html?ep=1",
-                "linkText": "Listen",
-                "twTags": [],
-                "generalTags": []
-            }   
-        ]
-    },
     "misc": {
         "listItems": [
             {
@@ -753,7 +815,16 @@
                 "linkText": "",
                 "twTags": [],
                 "generalTags": []
-            }    
+            }
+        ]
+    },
+    "archived": {
+        "listItems": [
+            {
+                "id": "bgsworkexperience",
+                "originalURL": "https://www.bgs.ac.uk/news/laboratory-life-my-work-experience-week-at-bgs/",
+                "archivedDay": "26-08-2026"
+            }
         ]
     }
 }
